@@ -9,3 +9,5 @@ target
 build/
 !**/src/**/build/
 !**/xtend-gen/**/build/
+
+*.gitignore
