@@ -31,6 +31,8 @@ public class AntlrOptions {
   
   private int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS;
   
+  private boolean forceHoisting = false;
+  
   @Pure
   public boolean isBacktrack() {
     return this.backtrack;
@@ -101,5 +103,14 @@ public class AntlrOptions {
   
   public void setMethodsPerClass(final int methodsPerClass) {
     this.methodsPerClass = methodsPerClass;
+  }
+  
+  @Pure
+  public boolean isForceHoisting() {
+    return this.forceHoisting;
+  }
+  
+  public void setForceHoisting(final boolean forceHoisting) {
+    this.forceHoisting = forceHoisting;
   }
 }

@@ -100,6 +100,17 @@ public class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenera
             _builder.newLineIfNotEmpty();
           }
         }
+        {
+          boolean _isForceHoisting = options.isForceHoisting();
+          if (_isForceHoisting) {
+            _builder.append("\t");
+            _builder.append("forceHoisting=");
+            boolean _isForceHoisting_1 = options.isForceHoisting();
+            _builder.append(_isForceHoisting_1, "\t");
+            _builder.append(";");
+            _builder.newLineIfNotEmpty();
+          }
+        }
       }
     }
     _builder.append("}");

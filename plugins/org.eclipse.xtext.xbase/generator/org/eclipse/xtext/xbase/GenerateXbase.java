@@ -44,6 +44,7 @@ final class GenerateXbase {
 		final String uiProject = runtimeProject + ".ui";
 		final boolean backtrack = false;
 		final boolean memoize = false;
+		final boolean forceHoisting = false;
 		final String lineDelimiter = "\n";
 		final String fileHeader = "/*******************************************************************************\n" +
 			" * Copyright (c) 2010-${year} itemis AG (http://www.itemis.eu) and others.\n" +
@@ -87,6 +88,7 @@ final class GenerateXbase {
 		final AntlrOptions antlrOptions = new AntlrOptions();
 		antlrOptions.setBacktrack(backtrack);
 		antlrOptions.setMemoize(memoize);
+		antlrOptions.setForceHoisting(forceHoisting);
 		
 		final XtextGenerator generator = new XtextGenerator() {{
 			setConfiguration(new DefaultGeneratorModule() {{

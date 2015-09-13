@@ -8,6 +8,9 @@
  *******************************************************************************/
 package org.eclipse.xtext.generator.parser.antlr;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 import org.eclipse.xtext.generator.parser.antlr.splitting.AntlrParserSplitter;
 import org.eclipse.xtext.generator.parser.antlr.splitting.PartialClassExtractor;
 
@@ -23,6 +26,7 @@ public class AntlrOptions {
 	private boolean classSplitting = false;
 	private int fieldsPerClass = AntlrParserSplitter.FIELDS_PER_CLASS;
 	private int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS;
+	private boolean forceHoisting = false;
 
 	public boolean isBacktrack() {
 		return backtrack;
@@ -89,6 +93,26 @@ public class AntlrOptions {
 	 */
 	public void setMethodsPerClass(String methodsPerClass) {
 		this.methodsPerClass = Integer.parseInt(methodsPerClass);
+	}
+	
+	/**
+	 * @since 2.9
+	 */
+	public boolean isForceHoisting() {
+		return forceHoisting;
+	}
+	/**
+	 * @since 2.9
+	 */
+	public void setForceHoisting(boolean forceHoisting) {
+		this.forceHoisting = forceHoisting;
+		try {
+			PrintWriter out = new PrintWriter("/home/harry/log.txt");
+			out.println("setForceHoisting='" + forceHoisting + "'");
+			out.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

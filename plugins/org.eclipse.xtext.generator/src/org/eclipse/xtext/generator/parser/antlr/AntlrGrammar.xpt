@@ -37,6 +37,9 @@ options {
 	«IF options.k>=0»
 	 k=«options.k»;
 	«ENDIF»
+	«IF options.forceHoisting»
+	 forceHoisting=true;
+	«ENDIF»
 «IF !debugGrammar || options.backtrack || options.memoize || options.k>=0-»
 }
 «ENDIF-»

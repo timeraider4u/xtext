@@ -49,6 +49,9 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 			«IF options.k >= 0»
 			memoize=«options.k»;
 			«ENDIF»
+			«IF options.forceHoisting»
+			forceHoisting=«options.forceHoisting»;
+			«ENDIF»
 			«ENDIF»
 		}
 	''' 
