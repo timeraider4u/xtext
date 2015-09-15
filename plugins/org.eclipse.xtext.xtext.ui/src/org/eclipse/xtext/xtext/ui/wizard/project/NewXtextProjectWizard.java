@@ -21,6 +21,7 @@ import org.eclipse.xtext.ui.wizard.XtextNewProjectWizard;
 import org.eclipse.xtext.xtext.ui.Activator;
 import org.eclipse.xtext.xtext.wizard.BuildSystem;
 import org.eclipse.xtext.xtext.wizard.LanguageDescriptor;
+import org.eclipse.xtext.xtext.wizard.ProjectLayout;
 import org.eclipse.xtext.xtext.wizard.LanguageDescriptor.FileExtensions;
 
 import com.google.inject.Inject;
@@ -70,22 +71,19 @@ public class NewXtextProjectWizard extends XtextNewProjectWizard {
 		}
 		projectInfo.setEncoding(encoding);
 		projectInfo.setWorkbench(getWorkbench());
-		BuildSystem buildSystem = advancedPage.getBuildSystem();
-		projectInfo.setBuildSystem(buildSystem);
+		BuildSystem buildSystem = advancedPage.getPreferredBuildSystem();
+		projectInfo.setPreferredBuildSystem(buildSystem);
 		projectInfo.setSourceLayout(advancedPage.getSourceLayout());
 		
-		projectInfo.getRuntimeProject().setEnabled(true);
 		projectInfo.getUiProject().setEnabled(advancedPage.isCreateUiProject());
+		if (buildSystem != BuildSystem.ECLIPSE) {
+			projectInfo.setProjectLayout(ProjectLayout.HIERARCHICAL);
+			projectInfo.getTargetPlatformProject().setEnabled(advancedPage.isCreateUiProject());
+		}
 		projectInfo.getRuntimeProject().getTestProject().setEnabled(advancedPage.isCreateTestProject());
 		projectInfo.getIdeProject().setEnabled(advancedPage.isCreateIdeProject());
 		projectInfo.getIntellijProject().setEnabled(advancedPage.isCreateIntellijProject());
 		projectInfo.getWebProject().setEnabled(advancedPage.isCreateWebProject());
-		if (buildSystem.isMavenBuild() || buildSystem.isGradleBuild()) {
-			projectInfo.getParentProject().setEnabled(true);
-		}
-		if (buildSystem.isPluginBuild() && buildSystem.isMavenBuild()) {
-			projectInfo.getTargetPlatformProject().setEnabled(true);
-		}
 		return projectInfo;
 	}
 

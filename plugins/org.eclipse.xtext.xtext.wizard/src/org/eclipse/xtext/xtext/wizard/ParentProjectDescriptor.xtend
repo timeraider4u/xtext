@@ -8,23 +8,35 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 	override getNameQualifier() {
 		".parent"
 	}
+	
+	override isEnabled() {
+		config.needsGradleBuild || config.needsMavenBuild
+	}
+	
+	override setEnabled(boolean enabled) {
+		throw new UnsupportedOperationException("The parent project is automatically enabled depending on the build system")
+	}
 
 	override getLocation() {
-		if (config.projectLayout == ProjectLayout.FLAT) {
-			config.rootLocation + "/" + name
-		} else {
-			config.rootLocation + "/" + config.baseName
-		}
+		config.rootLocation + "/" + name
 	}
 
 	override isEclipsePluginProject() {
 		false
 	}
+	
+	override isPartOfGradleBuild() {
+		true
+	}
+	
+	override isPartOfMavenBuild() {
+		true
+	}
 
 	override getFiles() {
 		val files = newArrayList
 		files += super.files
-		if (config.buildSystem.isGradleBuild) {
+		if (config.needsGradleBuild) {
 			files += file(Outlet.ROOT, 'settings.gradle', settingsGradle)
 			if (config.sourceLayout == SourceLayout.PLAIN) {
 				files += file(Outlet.ROOT, 'gradle/plain-layout.gradle', plainLayout)
@@ -65,7 +77,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 	}
 
 	def settingsGradle() '''
-		«FOR p : config.enabledProjects.filter[it != this]»
+		«FOR p : config.enabledProjects.filter[it != this && partOfGradleBuild]»
 			«IF config.projectLayout == ProjectLayout.FLAT»includeFlat«ELSE»include«ENDIF» '«p.name»'
 		«ENDFOR»
 	'''
@@ -94,7 +106,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 			packaging = "pom"
 			buildSection = '''
 				<properties>
-					«IF config.buildSystem == BuildSystem.TYCHO»
+					«IF config.needsTychoBuild»
 						<tycho-version>0.23.1</tycho-version>
 					«ENDIF»
 					<xtextVersion>«config.xtextVersion»</xtextVersion>
@@ -103,12 +115,12 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					<maven.compiler.target>1.6</maven.compiler.target>
 				</properties>
 				<modules>
-					«FOR p : config.enabledProjects.filter[it != this]»
+					«FOR p : config.enabledProjects.filter[it != this && partOfMavenBuild]»
 						<module>«IF config.projectLayout == ProjectLayout.FLAT»../«ENDIF»«p.name»</module>
 					«ENDFOR»
 				</modules>
 				<build>
-					«IF config.buildSystem == BuildSystem.TYCHO»
+					«IF config.needsTychoBuild»
 						<plugins>
 							<plugin>
 								<groupId>org.eclipse.tycho</groupId>

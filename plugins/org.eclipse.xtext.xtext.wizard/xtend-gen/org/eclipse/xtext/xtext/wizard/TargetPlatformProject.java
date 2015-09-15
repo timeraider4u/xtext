@@ -2,11 +2,14 @@ package org.eclipse.xtext.xtext.wizard;
 
 import com.google.common.collect.Iterables;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Set;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
+import org.eclipse.xtext.xtext.generator.XtextVersion;
 import org.eclipse.xtext.xtext.wizard.GeneratedFile;
 import org.eclipse.xtext.xtext.wizard.GradleBuildFile;
 import org.eclipse.xtext.xtext.wizard.Outlet;
@@ -14,7 +17,6 @@ import org.eclipse.xtext.xtext.wizard.PlainTextFile;
 import org.eclipse.xtext.xtext.wizard.PomFile;
 import org.eclipse.xtext.xtext.wizard.ProjectDescriptor;
 import org.eclipse.xtext.xtext.wizard.WizardConfiguration;
-import org.eclipse.xtext.xtext.wizard.XtextVersion;
 
 @FinalFieldsConstructor
 @SuppressWarnings("all")
@@ -27,6 +29,16 @@ public class TargetPlatformProject extends ProjectDescriptor {
   @Override
   public boolean isEclipsePluginProject() {
     return false;
+  }
+  
+  @Override
+  public boolean isPartOfGradleBuild() {
+    return false;
+  }
+  
+  @Override
+  public boolean isPartOfMavenBuild() {
+    return true;
   }
   
   @Override
@@ -44,6 +56,11 @@ public class TargetPlatformProject extends ProjectDescriptor {
       _xblockexpression = files;
     }
     return _xblockexpression;
+  }
+  
+  @Override
+  public Set<String> getSourceFolders() {
+    return Collections.<String>unmodifiableSet(CollectionLiterals.<String>newHashSet());
   }
   
   public CharSequence target() {

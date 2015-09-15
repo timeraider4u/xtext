@@ -11,12 +11,28 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 		testProject = new RuntimeTestProjectDescriptor(this)
 	}
 	
+	override isEnabled() {
+		true
+	}
+	
+	override setEnabled(boolean enabled) {
+		throw new UnsupportedOperationException("The runtime project is always enabled")
+	}
+	
 	override getNameQualifier() {
 		""
 	}
 	
 	override isEclipsePluginProject() {
-		config.buildSystem.isPluginBuild || config.uiProject.enabled
+		config.preferredBuildSystem == BuildSystem.ECLIPSE || config.uiProject.enabled
+	}
+	
+	override isPartOfGradleBuild() {
+		true
+	}
+	
+	override isPartOfMavenBuild() {
+		true
 	}
 	
 	override getTestProject() {
@@ -140,7 +156,7 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 					«ENDIF»
 				}
 				
-				«FOR p : config.enabledProjects»
+				«FOR p : config.enabledProjects.filter[it.sourceFolders.contains(Outlet.MAIN_SRC_GEN.sourceFolder)]»
 					component = DirectoryCleaner {
 						directory = "${projectPath}«p.nameQualifier»/«Outlet.MAIN_SRC_GEN.sourceFolder»"
 					}
@@ -196,7 +212,7 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 						fragment = adapter.FragmentAdapter { 
 							fragment = ecore.EMFGeneratorFragment auto-inject {
 								javaModelDirectory = "/${projectName}/«Outlet.MAIN_SRC_GEN.sourceFolder»"
-								updateBuildProperties = «config.buildSystem.isPluginBuild»
+								updateBuildProperties = «isEclipsePluginProject»
 							}
 						}
 			
@@ -353,7 +369,7 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 					outputs.dir "«Outlet.MAIN_SRC_GEN.sourceFolder»"
 					args += "«Outlet.MAIN_RESOURCES.sourceFolder»/«workflowFilePath»"
 					args += "-p"
-					args += "runtimeProject=/${projectDir}"
+					args += "projectPath=/${projectDir}"
 				}
 				
 				compileXtend.dependsOn(generateXtextLanguage)

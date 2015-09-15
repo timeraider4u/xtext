@@ -551,6 +551,518 @@ class XtendFindUsagesTest extends LightXtendTest {
 		''')
 	}
 
+	def void testHighlightUsagesOfSetterWithSourceElement_01() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+				def void setName(String name) {}
+
+				def static void usageOfSetName(MyClass foo, String name) {
+					foo.name = name
+				}
+
+				def static void usageOfSetName2(MyClass foo, String name) {
+					foo.setName(name)
+				}
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('setName') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(219,226)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_0_0_0_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(136,140)
+					}
+				}
+			}
+		''')
+	}
+
+	def void testHighlightUsagesOfSetterWithSourceElement_02() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+				def static void setName(MyClass foo, String name) {}
+
+				def static void usageOfSetName(MyClass foo, String name) {
+					foo.name = name
+				}
+
+				def static void usageOfSetName2(MyClass foo, String name) {
+					foo.setName(name)
+				}
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('setName') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(239,246)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_0_0_0_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(156,160)
+					}
+				}
+			}
+		''')
+	}
+
+	def void testHighlightUsagesOfGetterWithSourceElement_01() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+				def String getName() {}
+
+				def static String usageOfGetName(MyClass foo) {
+					foo.name
+				}
+
+				def static String usageOfGetName2(MyClass foo) {
+					foo.getName()
+				}
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('getName') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(181,188)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(116,120)
+					}
+				}
+			}
+		''')
+	}
+
+	def void testHighlightUsagesOfGetterWithSourceElement_02() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+				def static String getName(MyClass foo) {}
+
+				def static String usageOfGetName(MyClass foo) {
+					foo.name
+				}
+
+				def static String usageOfGetName2(MyClass foo) {
+					foo.getName()
+				}
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('getName') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(199,206)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(134,138)
+					}
+				}
+			}
+		''')
+	}
+
+	def void testHighlightUsagesOfGetterWithSourceElement_03() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+				def boolean isName() {}
+
+				def static boolean usageOfGetName(MyClass foo) {
+					foo.name
+				}
+
+				def static boolean usageOfGetName2(MyClass foo) {
+					foo.isName()
+				}
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('isName') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(183,189)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(117,121)
+					}
+				}
+			}
+		''')
+	}
+
+	def void testHighlightUsagesOfGetterWithSourceElement_04() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+				def static boolean isName(MyClass foo) {}
+
+				def static boolean usageOfGetName(MyClass foo) {
+					foo.name
+				}
+
+				def static boolean usageOfGetName2(MyClass foo) {
+					foo.isName()
+				}
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('isName') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(201,207)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(135,139)
+					}
+				}
+			}
+		''')
+	}
+	
+	def void testHighlightUsagesOfOperator_01() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+
+				def operator_multiply(String value, int x) { value }
+
+				def usageOfOperatorMultiply(String value) {
+					value * 1
+				}
+
+				def usageOfOperatorMultipl2(String value) {
+					value.operator_multiply(1)
+				}
+
+				def usageOfOperatorMultiply3() {
+					var value = 'lalala'
+					value *= 1
+				}
+
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('operator_multiply') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(205,222)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XAssignment_FeatureJvmIdentifiableElementCrossReference_1_1_0_0_1_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(295,297)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMultiplicativeExpression_FeatureJvmIdentifiableElementCrossReference_1_0_0_1_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(144,145)
+					}
+				}
+			}
+		''')
+	}
+	
+	def void testHighlightUsagesOfOperator_02() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+
+				def operator_multiply(String value, int x) { value }
+
+				def operator_multiplyAssign(String value, int x) { value }
+
+				def usageOfOperatorMultiply(String value) {
+					value * 1
+				}
+
+				def usageOfOperatorMultipl2(String value) {
+					value.operator_multiply(1)
+				}
+
+				def usageOfOperatorMultiply3() {
+					var value = 'lalala'
+					value *= 1
+				}
+
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('operator_multiply') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMemberFeatureCall_FeatureJvmIdentifiableElementCrossReference_1_1_2_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(266,283)
+					}
+				}
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XMultiplicativeExpression_FeatureJvmIdentifiableElementCrossReference_1_0_0_1_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(205,206)
+					}
+				}
+			}
+		''')
+	}
+	
+	def void testHighlightUsagesOfOperator_03() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+
+				def operator_multiply(String value, int x) { value }
+
+				def operator_multiplyAssign(String value, int x) { value }
+
+				def usageOfOperatorMultiply(String value) {
+					value * 1
+				}
+
+				def usageOfOperatorMultipl2(String value) {
+					value.operator_multiply(1)
+				}
+
+				def usageOfOperatorMultiply3() {
+					var value = 'lalala'
+					value *= 1
+				}
+
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('operator_multiplyAssign') 
+		namedElement.testHighlightUsages('''
+			references {
+				XtextPsiReferenceImpl {
+					element : org.eclipse.xtext.psi.impl.PsiEObjectReference(XAssignment_FeatureJvmIdentifiableElementCrossReference_1_1_0_0_1_0_ELEMENT_TYPE)
+					rangesToHighlight {
+						(356,358)
+					}
+				}
+			}
+		''')
+	}
+	
+	def void testFindUsagesOfOperator_01() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+
+				def operator_multiply(String value, int x) { value }
+
+				def usageOfOperatorMultiply(String value) {
+					value * 1
+				}
+
+				def usageOfOperatorMultipl2(String value) {
+					value.operator_multiply(1)
+				}
+
+				def usageOfOperatorMultiply3() {
+					var value = 'lalala'
+					value *= 1
+				}
+
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('operator_multiply') 
+		namedElement.testFindUsages('''
+			primaryElements {
+				org.eclipse.xtext.psi.impl.PsiNamedEObjectImpl(Member_XtendFunctionAnnotationInfoAction_2_1_0_ELEMENT_TYPE) {
+					* (class org.eclipse.xtext.psi.impl.XtextPsiReferenceImpl) {
+						virtualFile : temp:///src/mypackage/MyClass.xtend
+						navigationOffset : 144
+					}
+					*= (class org.eclipse.xtext.psi.impl.XtextPsiReferenceImpl) {
+						virtualFile : temp:///src/mypackage/MyClass.xtend
+						navigationOffset : 295
+					}
+					operator_multiply (class org.eclipse.xtext.psi.impl.XtextPsiReferenceImpl) {
+						virtualFile : temp:///src/mypackage/MyClass.xtend
+						navigationOffset : 205
+					}
+				}
+			}
+			secondaryElements {
+				PsiMethod:operator_multiply {
+					this.operator_multiply (class com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl) {
+						virtualFile : temp:///src/xtend-gen/mypackage/MyClass.java
+						navigationOffset : 240
+					}
+					this.operator_multiply (class com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl) {
+						virtualFile : temp:///src/xtend-gen/mypackage/MyClass.java
+						navigationOffset : 354
+					}
+					this.operator_multiply (class com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl) {
+						virtualFile : temp:///src/xtend-gen/mypackage/MyClass.java
+						navigationOffset : 577
+					}
+				}
+			}
+		''')
+	}
+	
+	def void testFindUsagesOfOperator_02() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+
+				def operator_multiply(String value, int x) { value }
+
+				def operator_multiplyAssign(String value, int x) { value }
+
+				def usageOfOperatorMultiply(String value) {
+					value * 1
+				}
+
+				def usageOfOperatorMultipl2(String value) {
+					value.operator_multiply(1)
+				}
+
+				def usageOfOperatorMultiply3() {
+					var value = 'lalala'
+					value *= 1
+				}
+
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('operator_multiply') 
+		namedElement.testFindUsages('''
+			primaryElements {
+				org.eclipse.xtext.psi.impl.PsiNamedEObjectImpl(Member_XtendFunctionAnnotationInfoAction_2_1_0_ELEMENT_TYPE) {
+					* (class org.eclipse.xtext.psi.impl.XtextPsiReferenceImpl) {
+						virtualFile : temp:///src/mypackage/MyClass.xtend
+						navigationOffset : 205
+					}
+					operator_multiply (class org.eclipse.xtext.psi.impl.XtextPsiReferenceImpl) {
+						virtualFile : temp:///src/mypackage/MyClass.xtend
+						navigationOffset : 266
+					}
+				}
+			}
+			secondaryElements {
+				PsiMethod:operator_multiply {
+					this.operator_multiply (class com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl) {
+						virtualFile : temp:///src/xtend-gen/mypackage/MyClass.java
+						navigationOffset : 340
+					}
+					this.operator_multiply (class com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl) {
+						virtualFile : temp:///src/xtend-gen/mypackage/MyClass.java
+						navigationOffset : 454
+					}
+				}
+			}
+		''')
+	}
+	
+	def void testFindUsagesOfOperator_03() {
+		val sourceFile = myFixture.addFileToProject('mypackage/MyClass.xtend', '''
+			package mypackage
+			
+			class MyClass {
+
+				def operator_multiply(String value, int x) { value }
+
+				def operator_multiplyAssign(String value, int x) { value }
+
+				def usageOfOperatorMultiply(String value) {
+					value * 1
+				}
+
+				def usageOfOperatorMultipl2(String value) {
+					value.operator_multiply(1)
+				}
+
+				def usageOfOperatorMultiply3() {
+					var value = 'lalala'
+					value *= 1
+				}
+
+			}
+		''')
+
+		val namedElement = sourceFile.getNamedElementAt('operator_multiplyAssign') 
+		namedElement.testFindUsages('''
+			primaryElements {
+				org.eclipse.xtext.psi.impl.PsiNamedEObjectImpl(Member_XtendFunctionAnnotationInfoAction_2_1_0_ELEMENT_TYPE) {
+					*= (class org.eclipse.xtext.psi.impl.XtextPsiReferenceImpl) {
+						virtualFile : temp:///src/mypackage/MyClass.xtend
+						navigationOffset : 356
+					}
+				}
+			}
+			secondaryElements {
+				PsiMethod:operator_multiplyAssign {
+					this.operator_multiplyAssign (class com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl) {
+						virtualFile : temp:///src/xtend-gen/mypackage/MyClass.java
+						navigationOffset : 640
+					}
+				}
+			}
+		''')
+	}
+
 	protected def getNamedElementAt(PsiFile file, String substring) {
 		val offset = file.text.indexOf(substring)
 		file.findElementAt(offset).getParentOfType(PsiNamedElement, false)

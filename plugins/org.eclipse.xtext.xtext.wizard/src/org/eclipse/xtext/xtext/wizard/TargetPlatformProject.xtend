@@ -12,12 +12,24 @@ class TargetPlatformProject extends ProjectDescriptor {
 	override isEclipsePluginProject() {
 		false
 	}
+	
+	override isPartOfGradleBuild() {
+		false
+	}
+	
+	override isPartOfMavenBuild() {
+		true
+	}
 
 	override getFiles() {
 		val files = newArrayList
 		files += super.files
 		files += file(Outlet.ROOT, name + ".target", target)
 		files
+	}
+	
+	override getSourceFolders() {
+		#{}
 	}
 
 	def target() '''

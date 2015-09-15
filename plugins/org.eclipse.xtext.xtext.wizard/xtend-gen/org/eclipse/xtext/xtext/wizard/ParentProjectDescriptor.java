@@ -13,7 +13,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
-import org.eclipse.xtext.xtext.wizard.BuildSystem;
+import org.eclipse.xtext.xtext.generator.XtextVersion;
 import org.eclipse.xtext.xtext.wizard.GeneratedFile;
 import org.eclipse.xtext.xtext.wizard.GradleBuildFile;
 import org.eclipse.xtext.xtext.wizard.Outlet;
@@ -24,7 +24,6 @@ import org.eclipse.xtext.xtext.wizard.ProjectLayout;
 import org.eclipse.xtext.xtext.wizard.SourceLayout;
 import org.eclipse.xtext.xtext.wizard.TargetPlatformProject;
 import org.eclipse.xtext.xtext.wizard.WizardConfiguration;
-import org.eclipse.xtext.xtext.wizard.XtextVersion;
 
 @FinalFieldsConstructor
 @SuppressWarnings("all")
@@ -35,26 +34,32 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
   }
   
   @Override
-  public String getLocation() {
-    String _xifexpression = null;
+  public boolean isEnabled() {
+    boolean _or = false;
     WizardConfiguration _config = this.getConfig();
-    ProjectLayout _projectLayout = _config.getProjectLayout();
-    boolean _equals = Objects.equal(_projectLayout, ProjectLayout.FLAT);
-    if (_equals) {
-      WizardConfiguration _config_1 = this.getConfig();
-      String _rootLocation = _config_1.getRootLocation();
-      String _plus = (_rootLocation + "/");
-      String _name = this.getName();
-      _xifexpression = (_plus + _name);
+    boolean _needsGradleBuild = _config.needsGradleBuild();
+    if (_needsGradleBuild) {
+      _or = true;
     } else {
-      WizardConfiguration _config_2 = this.getConfig();
-      String _rootLocation_1 = _config_2.getRootLocation();
-      String _plus_1 = (_rootLocation_1 + "/");
-      WizardConfiguration _config_3 = this.getConfig();
-      String _baseName = _config_3.getBaseName();
-      _xifexpression = (_plus_1 + _baseName);
+      WizardConfiguration _config_1 = this.getConfig();
+      boolean _needsMavenBuild = _config_1.needsMavenBuild();
+      _or = _needsMavenBuild;
     }
-    return _xifexpression;
+    return _or;
+  }
+  
+  @Override
+  public void setEnabled(final boolean enabled) {
+    throw new UnsupportedOperationException("The parent project is automatically enabled depending on the build system");
+  }
+  
+  @Override
+  public String getLocation() {
+    WizardConfiguration _config = this.getConfig();
+    String _rootLocation = _config.getRootLocation();
+    String _plus = (_rootLocation + "/");
+    String _name = this.getName();
+    return (_plus + _name);
   }
   
   @Override
@@ -63,14 +68,23 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
   }
   
   @Override
+  public boolean isPartOfGradleBuild() {
+    return true;
+  }
+  
+  @Override
+  public boolean isPartOfMavenBuild() {
+    return true;
+  }
+  
+  @Override
   public Iterable<? extends GeneratedFile> getFiles() {
     final ArrayList<GeneratedFile> files = CollectionLiterals.<GeneratedFile>newArrayList();
     Iterable<? extends GeneratedFile> _files = super.getFiles();
     Iterables.<GeneratedFile>addAll(files, _files);
     WizardConfiguration _config = this.getConfig();
-    BuildSystem _buildSystem = _config.getBuildSystem();
-    boolean _isGradleBuild = _buildSystem.isGradleBuild();
-    if (_isGradleBuild) {
+    boolean _needsGradleBuild = _config.needsGradleBuild();
+    if (_needsGradleBuild) {
       CharSequence _settingsGradle = this.settingsGradle();
       PlainTextFile _file = this.file(Outlet.ROOT, "settings.gradle", _settingsGradle);
       files.add(_file);
@@ -182,7 +196,15 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
       final Function1<ProjectDescriptor, Boolean> _function = new Function1<ProjectDescriptor, Boolean>() {
         @Override
         public Boolean apply(final ProjectDescriptor it) {
-          return Boolean.valueOf((!Objects.equal(it, ParentProjectDescriptor.this)));
+          boolean _and = false;
+          boolean _notEquals = (!Objects.equal(it, ParentProjectDescriptor.this));
+          if (!_notEquals) {
+            _and = false;
+          } else {
+            boolean _isPartOfGradleBuild = it.isPartOfGradleBuild();
+            _and = _isPartOfGradleBuild;
+          }
+          return Boolean.valueOf(_and);
         }
       };
       Iterable<ProjectDescriptor> _filter = IterableExtensions.<ProjectDescriptor>filter(_enabledProjects, _function);
@@ -267,9 +289,8 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
         _builder.newLine();
         {
           WizardConfiguration _config = ParentProjectDescriptor.this.getConfig();
-          BuildSystem _buildSystem = _config.getBuildSystem();
-          boolean _equals = Objects.equal(_buildSystem, BuildSystem.TYCHO);
-          if (_equals) {
+          boolean _needsTychoBuild = _config.needsTychoBuild();
+          if (_needsTychoBuild) {
             _builder.append("\t");
             _builder.append("<tycho-version>0.23.1</tycho-version>");
             _builder.newLine();
@@ -305,7 +326,15 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
           final Function1<ProjectDescriptor, Boolean> _function = new Function1<ProjectDescriptor, Boolean>() {
             @Override
             public Boolean apply(final ProjectDescriptor it) {
-              return Boolean.valueOf((!Objects.equal(it, ParentProjectDescriptor.this)));
+              boolean _and = false;
+              boolean _notEquals = (!Objects.equal(it, ParentProjectDescriptor.this));
+              if (!_notEquals) {
+                _and = false;
+              } else {
+                boolean _isPartOfMavenBuild = it.isPartOfMavenBuild();
+                _and = _isPartOfMavenBuild;
+              }
+              return Boolean.valueOf(_and);
             }
           };
           Iterable<ProjectDescriptor> _filter = IterableExtensions.<ProjectDescriptor>filter(_enabledProjects, _function);
@@ -315,8 +344,8 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
             {
               WizardConfiguration _config_4 = ParentProjectDescriptor.this.getConfig();
               ProjectLayout _projectLayout = _config_4.getProjectLayout();
-              boolean _equals_1 = Objects.equal(_projectLayout, ProjectLayout.FLAT);
-              if (_equals_1) {
+              boolean _equals = Objects.equal(_projectLayout, ProjectLayout.FLAT);
+              if (_equals) {
                 _builder.append("../");
               }
             }
@@ -332,9 +361,8 @@ public class ParentProjectDescriptor extends ProjectDescriptor {
         _builder.newLine();
         {
           WizardConfiguration _config_5 = ParentProjectDescriptor.this.getConfig();
-          BuildSystem _buildSystem_1 = _config_5.getBuildSystem();
-          boolean _equals_2 = Objects.equal(_buildSystem_1, BuildSystem.TYCHO);
-          if (_equals_2) {
+          boolean _needsTychoBuild_1 = _config_5.needsTychoBuild();
+          if (_needsTychoBuild_1) {
             _builder.append("\t");
             _builder.append("<plugins>");
             _builder.newLine();
