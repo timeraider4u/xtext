@@ -122,5 +122,6 @@ public class AntlrOptions {
 
   public void setForceHoisting(final boolean forceHoisting) {
     this.forceHoisting = forceHoisting;
+  }
   
 }
