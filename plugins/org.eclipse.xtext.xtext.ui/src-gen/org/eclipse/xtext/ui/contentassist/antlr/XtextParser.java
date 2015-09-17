@@ -17,6 +17,9 @@ import com.google.inject.Inject;
 
 import org.eclipse.xtext.services.XtextGrammarAccess;
 
+/**
+ * @since 2.9
+ */
 public class XtextParser extends AbstractContentAssistParser {
 	
 	@Inject

@@ -86,6 +86,9 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.inject.Inject;
 
+/**
+ * @since 2.9 
+ */
 public class XtextProposalProvider extends AbstractXtextProposalProvider {
 
 	@Inject
