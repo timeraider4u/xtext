@@ -6,6 +6,7 @@ grammar InternalXtext;
 options {
 	superClass=AbstractInternalAntlrParser;
 	
+	
 }
 
 @lexer::header {
@@ -790,8 +791,72 @@ ruleRuleNameAndParams [EObject in_current] returns [EObject current=in_current]
     {
     	newLeafNode(otherlv_5, grammarAccess.getRuleNameAndParamsAccess().getGreaterThanSignKeyword_1_2());
     }
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getRuleNameAndParamsAccess().getInitAfterActionsMyInitAfterActionsParserRuleCall_2_0()); 
+	    }
+		lv_initAfterActions_6_0=ruleMyInitAfterActions		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getRuleNameAndParamsRule());
+	        }
+       		set(
+       			$current, 
+       			"initAfterActions",
+        		lv_initAfterActions_6_0, 
+        		"org.eclipse.xtext.Xtext.MyInitAfterActions");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 )?)
 ;
+
+
+
+
+
+// Entry rule entryRuleMyInitAfterActions
+entryRuleMyInitAfterActions returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMyInitAfterActionsRule()); } 
+	 iv_ruleMyInitAfterActions=ruleMyInitAfterActions 
+	 { $current=$iv_ruleMyInitAfterActions.current.getText(); }  
+	 EOF 
+;
+
+// Rule MyInitAfterActions
+ruleMyInitAfterActions returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+	kw='@init' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getInitKeyword_0_0()); 
+    }
+
+    |
+	kw='@after' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getAfterKeyword_0_1()); 
+    }
+)
+	kw='{' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getLeftCurlyBracketKeyword_1()); 
+    }
+
+	kw='}' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getRightCurlyBracketKeyword_2()); 
+    }
+)
+    ;
 
 
 

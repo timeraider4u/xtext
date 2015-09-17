@@ -41,6 +41,7 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAbstractMetamodelDeclarationAccess().getAlternatives(), "rule__AbstractMetamodelDeclaration__Alternatives");
 					put(grammarAccess.getParserRuleAccess().getAlternatives_0(), "rule__ParserRule__Alternatives_0");
 					put(grammarAccess.getParserRuleAccess().getAlternatives_0_0_2(), "rule__ParserRule__Alternatives_0_0_2");
+					put(grammarAccess.getMyInitAfterActionsAccess().getAlternatives_0(), "rule__MyInitAfterActions__Alternatives_0");
 					put(grammarAccess.getConditionalBranchAccess().getAlternatives(), "rule__ConditionalBranch__Alternatives");
 					put(grammarAccess.getAbstractTokenAccess().getAlternatives(), "rule__AbstractToken__Alternatives");
 					put(grammarAccess.getAbstractTokenWithCardinalityAccess().getAlternatives_0(), "rule__AbstractTokenWithCardinality__Alternatives_0");
@@ -86,6 +87,7 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1(), "rule__RuleNameAndParams__Group_1__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1_1(), "rule__RuleNameAndParams__Group_1_1__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1_1_1(), "rule__RuleNameAndParams__Group_1_1_1__0");
+					put(grammarAccess.getMyInitAfterActionsAccess().getGroup(), "rule__MyInitAfterActions__Group__0");
 					put(grammarAccess.getTypeRefAccess().getGroup(), "rule__TypeRef__Group__0");
 					put(grammarAccess.getTypeRefAccess().getGroup_0(), "rule__TypeRef__Group_0__0");
 					put(grammarAccess.getAlternativesAccess().getGroup(), "rule__Alternatives__Group__0");
@@ -175,6 +177,7 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRuleNameAndParamsAccess().getNameAssignment_0(), "rule__RuleNameAndParams__NameAssignment_0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_0(), "rule__RuleNameAndParams__ParametersAssignment_1_1_0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_1_1(), "rule__RuleNameAndParams__ParametersAssignment_1_1_1_1");
+					put(grammarAccess.getRuleNameAndParamsAccess().getInitAfterActionsAssignment_2(), "rule__RuleNameAndParams__InitAfterActionsAssignment_2");
 					put(grammarAccess.getParameterAccess().getNameAssignment(), "rule__Parameter__NameAssignment");
 					put(grammarAccess.getTypeRefAccess().getMetamodelAssignment_0_0(), "rule__TypeRef__MetamodelAssignment_0_0");
 					put(grammarAccess.getTypeRefAccess().getClassifierAssignment_1(), "rule__TypeRef__ClassifierAssignment_1");

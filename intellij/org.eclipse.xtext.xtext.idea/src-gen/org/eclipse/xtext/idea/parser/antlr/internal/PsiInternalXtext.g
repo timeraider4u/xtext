@@ -655,6 +655,60 @@ ruleRuleNameAndParams:
 				doneLeaf(otherlv_5);
 			}
 		)?
+		(
+			(
+				{
+					markComposite(elementTypeProvider.getRuleNameAndParams_InitAfterActionsMyInitAfterActionsParserRuleCall_2_0ElementType());
+				}
+				lv_initAfterActions_6_0=ruleMyInitAfterActions
+				{
+					doneComposite();
+				}
+			)
+		)?
+	)
+;
+
+//Entry rule entryRuleMyInitAfterActions
+entryRuleMyInitAfterActions:
+	{ markComposite(elementTypeProvider.getMyInitAfterActionsElementType()); }
+	ruleMyInitAfterActions
+	EOF;
+
+// Rule MyInitAfterActions
+ruleMyInitAfterActions:
+	(
+		(
+			{
+				markLeaf(elementTypeProvider.getMyInitAfterActions_InitKeyword_0_0ElementType());
+			}
+			kw='@init'
+			{
+				doneLeaf(kw);
+			}
+			    |
+			{
+				markLeaf(elementTypeProvider.getMyInitAfterActions_AfterKeyword_0_1ElementType());
+			}
+			kw='@after'
+			{
+				doneLeaf(kw);
+			}
+		)
+		{
+			markLeaf(elementTypeProvider.getMyInitAfterActions_LeftCurlyBracketKeyword_1ElementType());
+		}
+		kw='{'
+		{
+			doneLeaf(kw);
+		}
+		{
+			markLeaf(elementTypeProvider.getMyInitAfterActions_RightCurlyBracketKeyword_2ElementType());
+		}
+		kw='}'
+		{
+			doneLeaf(kw);
+		}
 	)
 ;
 
