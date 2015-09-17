@@ -13,7 +13,7 @@ import org.eclipse.xtext.parser.antlr.SyntaxErrorMessageProvider;
 
 /**
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public class CardinalityAwareSyntaxErrorMessageProvider extends SyntaxErrorMessageProvider {
 

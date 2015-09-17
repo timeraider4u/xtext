@@ -32,6 +32,7 @@ public class AntlrOptions {
   private int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS;
   
   private boolean skipUnusedRules = false;
+  
   private boolean forceHoisting = false;
   
   @Pure
@@ -119,9 +120,8 @@ public class AntlrOptions {
   public boolean isForceHoisting() {
     return this.forceHoisting;
   }
-
+  
   public void setForceHoisting(final boolean forceHoisting) {
     this.forceHoisting = forceHoisting;
   }
-  
 }

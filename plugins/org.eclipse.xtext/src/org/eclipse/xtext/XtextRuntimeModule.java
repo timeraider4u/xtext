@@ -166,21 +166,21 @@ public class XtextRuntimeModule extends AbstractXtextRuntimeModule {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public Class<? extends DefaultEcoreElementFactory> bindCardinalityAwareFactory() {
 		return CardinalityAwareEcoreFactory.class;
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public Class<? extends SyntaxErrorMessageProvider> bindSyntaxErrorMessageProvider() {
 		return CardinalityAwareSyntaxErrorMessageProvider.class;
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@Override
 	public Class<? extends ISerializer> bindISerializer() {

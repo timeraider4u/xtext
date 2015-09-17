@@ -19,7 +19,7 @@ import org.eclipse.xtext.resource.impl.ResourceDescriptionsData
 /**
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 2.9
+ * @since 3.0
  */
 @Beta
 class ProjectDescriptionBasedContainerManager implements IContainer.Manager {

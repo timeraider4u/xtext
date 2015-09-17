@@ -20,8 +20,6 @@ import org.eclipse.emf.common.util.EList;
  * @see org.eclipse.xtext.XtextPackage#getGroup()
  * @model
  * @generated
- * @noextend This interface is not intended to be extended by clients.
- * @noimplement This interface is not intended to be implemented by clients.
  */
 public interface Group extends CompoundElement {
 	/**
@@ -31,7 +29,7 @@ public interface Group extends CompoundElement {
 	 * If the meaning of the '<em>Guard Condition</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Guard Condition</em>' containment reference.
 	 * @see #setGuardCondition(Condition)
@@ -44,7 +42,7 @@ public interface Group extends CompoundElement {
 	/**
 	 * Sets the value of the '{@link org.eclipse.xtext.Group#getGuardCondition <em>Guard Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Guard Condition</em>' containment reference.
 	 * @see #getGuardCondition()

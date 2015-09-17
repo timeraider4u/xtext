@@ -15,7 +15,7 @@ import com.google.common.annotations.Beta
 /**
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 2.9
+ * @since 3.0
  */
 @Beta
 @EmfAdaptable class ProjectDescription {

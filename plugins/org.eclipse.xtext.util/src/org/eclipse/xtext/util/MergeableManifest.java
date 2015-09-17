@@ -219,14 +219,14 @@ public class MergeableManifest extends Manifest {
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public String getBREE() {
 		return (String) getMainAttributes().get(BUNDLE_REQUIRED_EXECUTION_ENV);
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void setBREE(String bree) {
 		String oldValue = getBREE();
@@ -288,7 +288,7 @@ public class MergeableManifest extends Manifest {
 	 *
 	 * @param packages - packages to add
 	 *
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void addExportedPackages(String... packages) {
 		addExportedPackages(newHashSet(packages));

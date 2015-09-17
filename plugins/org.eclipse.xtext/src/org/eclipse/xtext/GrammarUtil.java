@@ -68,7 +68,7 @@ public class GrammarUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getSimpleName(Grammar g) {
 		String fullName = g.getName();
@@ -234,7 +234,7 @@ public class GrammarUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static boolean isEObjectFragmentRuleCall(EObject ele) {
 		if (ele instanceof RuleCall) {
@@ -245,7 +245,7 @@ public class GrammarUtil {
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static boolean isEObjectFragmentRule(AbstractRule rule) {
 		return rule instanceof ParserRule && ((ParserRule) rule).isFragment();

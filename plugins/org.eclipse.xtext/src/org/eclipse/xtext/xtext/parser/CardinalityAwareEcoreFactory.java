@@ -20,7 +20,7 @@ import org.eclipse.xtext.parser.DefaultEcoreElementFactory;
  * about the '+' is completely lost. This factory will flag such patterns with a warning. 
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public class CardinalityAwareEcoreFactory extends DefaultEcoreElementFactory {
 

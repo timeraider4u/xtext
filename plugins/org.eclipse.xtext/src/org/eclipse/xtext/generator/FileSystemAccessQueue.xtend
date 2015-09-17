@@ -23,7 +23,7 @@ class FileSystemAccessQueue extends AdapterImpl {
 	new() {}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	def void sendAsync(URI uri, Runnable runMe) {
 		send(new FileSystemAccessRequest(uri, runMe))
@@ -52,7 +52,7 @@ class FileSystemAccessRequest implements Runnable {
 	val Runnable runMe
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@FinalFieldsConstructor
 	new() {}
@@ -66,7 +66,7 @@ class FileSystemAccessRequest implements Runnable {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	override run() {
 		runMe.run

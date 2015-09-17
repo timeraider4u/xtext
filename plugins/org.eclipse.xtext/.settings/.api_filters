@@ -24,6 +24,14 @@
             </message_arguments>
         </filter>
     </resource>
+    <resource path="emf-gen/org/eclipse/xtext/Group.java" type="org.eclipse.xtext.Group">
+        <filter id="403804204">
+            <message_arguments>
+                <message_argument value="org.eclipse.xtext.Group"/>
+                <message_argument value="getGuardCondition()"/>
+            </message_arguments>
+        </filter>
+    </resource>
     <resource path="emf-gen/org/eclipse/xtext/XtextPackage.java" type="org.eclipse.xtext.XtextPackage">
         <filter id="388194388">
             <message_arguments>

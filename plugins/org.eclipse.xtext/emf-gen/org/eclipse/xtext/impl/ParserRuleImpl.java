@@ -36,9 +36,11 @@ import org.eclipse.xtext.XtextPackage;
  *   <li>{@link org.eclipse.xtext.impl.ParserRuleImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.impl.ParserRuleImpl#isFragment <em>Fragment</em>}</li>
  *   <li>{@link org.eclipse.xtext.impl.ParserRuleImpl#isWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.eclipse.xtext.impl.ParserRuleImpl#getInitAfterActions <em>Init After Actions</em>}</li>
  * </ul>
  *
  * @generated
+ * @since 3.0
  */
 public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	/**
@@ -74,7 +76,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #getParameters()
 	 * @generated
@@ -85,7 +87,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	/**
 	 * The default value of the '{@link #isFragment() <em>Fragment</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #isFragment()
 	 * @generated
@@ -96,7 +98,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	/**
 	 * The cached value of the '{@link #isFragment() <em>Fragment</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #isFragment()
 	 * @generated
@@ -107,7 +109,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	/**
 	 * The default value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #isWildcard()
 	 * @generated
@@ -118,13 +120,35 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	/**
 	 * The cached value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #isWildcard()
 	 * @generated
 	 * @ordered
 	 */
 	protected boolean wildcard = WILDCARD_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInitAfterActions() <em>Init After Actions</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitAfterActions()
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	protected static final String INIT_AFTER_ACTIONS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInitAfterActions() <em>Init After Actions</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitAfterActions()
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	protected String initAfterActions = INIT_AFTER_ACTIONS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,7 +204,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -193,7 +217,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -203,7 +227,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -216,7 +240,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -226,7 +250,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -235,6 +259,29 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 		wildcard = newWildcard;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.PARSER_RULE__WILDCARD, oldWildcard, wildcard));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public String getInitAfterActions() {
+		return initAfterActions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public void setInitAfterActions(String newInitAfterActions) {
+		String oldInitAfterActions = initAfterActions;
+		initAfterActions = newInitAfterActions;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS, oldInitAfterActions, initAfterActions));
 	}
 
 	/**
@@ -269,6 +316,8 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 				return isFragment();
 			case XtextPackage.PARSER_RULE__WILDCARD:
 				return isWildcard();
+			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
+				return getInitAfterActions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,6 +348,9 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 			case XtextPackage.PARSER_RULE__WILDCARD:
 				setWildcard((Boolean)newValue);
 				return;
+			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
+				setInitAfterActions((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -326,6 +378,9 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 			case XtextPackage.PARSER_RULE__WILDCARD:
 				setWildcard(WILDCARD_EDEFAULT);
 				return;
+			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
+				setInitAfterActions(INIT_AFTER_ACTIONS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,6 +403,8 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 				return fragment != FRAGMENT_EDEFAULT;
 			case XtextPackage.PARSER_RULE__WILDCARD:
 				return wildcard != WILDCARD_EDEFAULT;
+			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
+				return INIT_AFTER_ACTIONS_EDEFAULT == null ? initAfterActions != null : !INIT_AFTER_ACTIONS_EDEFAULT.equals(initAfterActions);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -368,6 +425,8 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 		result.append(fragment);
 		result.append(", wildcard: ");
 		result.append(wildcard);
+		result.append(", initAfterActions: ");
+		result.append(initAfterActions);
 		result.append(')');
 		return result.toString();
 	}

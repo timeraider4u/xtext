@@ -228,7 +228,7 @@ public class XtextResource extends ResourceImpl {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void relink() {
 		if (!isLoaded()) {

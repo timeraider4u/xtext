@@ -52,9 +52,7 @@ import org.eclipse.xtext.XtextPackage;
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
- * @noextend This class is not intended to be subclassed by clients.
- * @noinstantiate This class is not intended to be instantiated by clients.
- * @noreference This class is not intended to be referenced by clients.
+ * @since 3.0
  */
 public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	/**
@@ -548,7 +546,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -558,7 +556,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -568,12 +566,22 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getParserRule_Wildcard() {
 		return (EAttribute)parserRuleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public EAttribute getParserRule_InitAfterActions() {
+		return (EAttribute)parserRuleEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -714,7 +722,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -724,7 +732,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -925,6 +933,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getGroup_GuardCondition() {
 		return (EReference)groupEClass.getEStructuralFeatures().get(0);
@@ -986,7 +995,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -996,7 +1005,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1006,7 +1015,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1016,7 +1025,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1026,7 +1035,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1038,6 +1047,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getNamedArgument_CalledByName() {
 		return (EAttribute)namedArgumentEClass.getEStructuralFeatures().get(2);
@@ -1047,6 +1057,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getCondition() {
 		return conditionEClass;
@@ -1056,6 +1067,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getConjunction() {
 		return conjunctionEClass;
@@ -1065,6 +1077,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getNegation() {
 		return negationEClass;
@@ -1074,6 +1087,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getNegation_Value() {
 		return (EReference)negationEClass.getEStructuralFeatures().get(0);
@@ -1083,6 +1097,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getDisjunction() {
 		return disjunctionEClass;
@@ -1092,6 +1107,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getCompositeCondition() {
 		return compositeConditionEClass;
@@ -1101,6 +1117,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getCompositeCondition_Left() {
 		return (EReference)compositeConditionEClass.getEStructuralFeatures().get(0);
@@ -1110,6 +1127,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getCompositeCondition_Right() {
 		return (EReference)compositeConditionEClass.getEStructuralFeatures().get(1);
@@ -1119,6 +1137,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getParameterReference() {
 		return parameterReferenceEClass;
@@ -1128,6 +1147,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getParameterReference_Parameter() {
 		return (EReference)parameterReferenceEClass.getEStructuralFeatures().get(0);
@@ -1137,6 +1157,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getLiteralCondition() {
 		return literalConditionEClass;
@@ -1146,6 +1167,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getLiteralCondition_True() {
 		return (EAttribute)literalConditionEClass.getEStructuralFeatures().get(0);
@@ -1207,6 +1229,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		createEReference(parserRuleEClass, PARSER_RULE__PARAMETERS);
 		createEAttribute(parserRuleEClass, PARSER_RULE__FRAGMENT);
 		createEAttribute(parserRuleEClass, PARSER_RULE__WILDCARD);
+		createEAttribute(parserRuleEClass, PARSER_RULE__INIT_AFTER_ACTIONS);
 
 		typeRefEClass = createEClass(TYPE_REF);
 		createEReference(typeRefEClass, TYPE_REF__METAMODEL);
@@ -1389,6 +1412,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		initEReference(getParserRule_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParserRule_Fragment(), theEcorePackage.getEBoolean(), "fragment", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParserRule_Wildcard(), theEcorePackage.getEBoolean(), "wildcard", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParserRule_InitAfterActions(), ecorePackage.getEString(), "initAfterActions", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeRefEClass, TypeRef.class, "TypeRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeRef_Metamodel(), this.getAbstractMetamodelDeclaration(), null, "metamodel", null, 0, 1, TypeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

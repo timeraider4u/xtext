@@ -30,7 +30,7 @@ public class FileSystemAccessQueue extends AdapterImpl {
   }
   
   /**
-   * @since 2.9
+   * @since 3.0
    */
   public void sendAsync(final URI uri, final Runnable runMe) {
     FileSystemAccessRequest _fileSystemAccessRequest = new FileSystemAccessRequest(uri, runMe);

@@ -39,7 +39,7 @@ public class Wrapper<T> {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public boolean isEmpty() {
 		return value == null;

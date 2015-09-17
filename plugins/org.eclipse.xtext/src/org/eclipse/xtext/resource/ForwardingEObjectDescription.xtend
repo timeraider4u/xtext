@@ -17,7 +17,7 @@ import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
  * behavior.
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 @FinalFieldsConstructor
 abstract class ForwardingEObjectDescription extends ForwardingObject implements IEObjectDescription {

@@ -71,7 +71,7 @@ import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 @Log
 @SuppressWarnings("all")

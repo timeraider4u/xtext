@@ -69,7 +69,7 @@ public class GrammarResource extends DerivedStateAwareResource {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@Override
 	protected void addSyntaxDiagnostic(List<Diagnostic> diagnostics, INode node) {

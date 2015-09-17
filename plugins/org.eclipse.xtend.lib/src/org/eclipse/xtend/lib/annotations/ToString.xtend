@@ -59,7 +59,7 @@ annotation ToString {
 	/**
 	 * By default, Iterables, Arrays and multiline Strings are pretty-printed.
 	 * Switching to their normal representation makes the toString method significantly faster.
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	val verbatimValues = false
 }

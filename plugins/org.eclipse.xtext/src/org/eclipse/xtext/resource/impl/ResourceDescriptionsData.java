@@ -235,7 +235,7 @@ import com.google.common.collect.Sets;
 	 * 
 	 * @param delta
 	 *            The resource change.
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void register(Delta delta) {
 		final IResourceDescription newDesc = delta.getNew();

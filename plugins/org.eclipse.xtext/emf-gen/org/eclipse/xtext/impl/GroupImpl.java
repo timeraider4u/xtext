@@ -31,9 +31,6 @@ import org.eclipse.xtext.XtextPackage;
  * </ul>
  *
  * @generated
- * @noinstantiate This class is not intended to be instantiated by clients.
- * @noextend This class is not intended to be subclassed by clients.
- * @noreference This class is not intended to be referenced by clients.
  */
 public class GroupImpl extends CompoundElementImpl implements Group {
 	/**
@@ -43,6 +40,7 @@ public class GroupImpl extends CompoundElementImpl implements Group {
 	 * @see #getGuardCondition()
 	 * @generated
 	 * @ordered
+	 * @since 3.0
 	 */
 	protected Condition guardCondition;
 	/**
@@ -68,6 +66,7 @@ public class GroupImpl extends CompoundElementImpl implements Group {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public Condition getGuardCondition() {
 		return guardCondition;
@@ -77,6 +76,7 @@ public class GroupImpl extends CompoundElementImpl implements Group {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public NotificationChain basicSetGuardCondition(Condition newGuardCondition, NotificationChain msgs) {
 		Condition oldGuardCondition = guardCondition;
@@ -92,6 +92,7 @@ public class GroupImpl extends CompoundElementImpl implements Group {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public void setGuardCondition(Condition newGuardCondition) {
 		if (newGuardCondition != guardCondition) {

@@ -32,7 +32,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
  * A file system access implementation that is based on EMF URIs and URIConverter
- * @since 2.9
+ * @since 3.0
  */
 @SuppressWarnings("all")
 public class URIBasedFileSystemAccess extends AbstractFileSystemAccess2 {

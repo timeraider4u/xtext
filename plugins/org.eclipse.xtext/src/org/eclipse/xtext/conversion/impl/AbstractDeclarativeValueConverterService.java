@@ -116,7 +116,7 @@ public abstract class AbstractDeclarativeValueConverterService extends AbstractV
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected void recursiveRegisterForClass(Class<?> clazz, Map<String, IValueConverter<Object>> converters) {
 		Method[] methods = clazz.getDeclaredMethods();

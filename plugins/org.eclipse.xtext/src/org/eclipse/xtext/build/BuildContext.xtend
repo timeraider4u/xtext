@@ -18,7 +18,7 @@ import org.eclipse.xtext.util.CancelIndicator
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 @FinalFieldsConstructor
 class BuildContext {

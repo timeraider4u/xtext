@@ -752,7 +752,7 @@ public class EcoreUtil2 extends EcoreUtil {
 	 * Returns an Iterable that iterates over all containers of this EObject, from leaf to root. The <code>obj</code>
 	 * itself is not included.
 	 * 
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static Iterable<EObject> getAllContainers(final EObject obj) {
 		return new Iterable<EObject>() {

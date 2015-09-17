@@ -35,7 +35,7 @@ public abstract class XtextRuleInspector<Result, RuleType extends AbstractRule> 
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected String getIssueCode() {
 		return null;

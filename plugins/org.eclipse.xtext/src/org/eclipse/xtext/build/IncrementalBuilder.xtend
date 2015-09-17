@@ -37,7 +37,7 @@ import org.eclipse.xtext.service.OperationCanceledManager
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
- * @since 2.9 
+ * @since 3.0 
  */
 @Log class IncrementalBuilder {
 	
