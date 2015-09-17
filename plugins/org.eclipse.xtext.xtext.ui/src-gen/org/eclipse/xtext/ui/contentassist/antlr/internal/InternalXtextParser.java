@@ -19,6 +19,9 @@ import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+ * @since 2.9
+ */
 public class InternalXtextParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@init'", "'@after'", "'?'", "'*'", "'+'", "'='", "'+='", "'false'", "'true'", "'?='", "'grammar'", "'with'", "','", "'('", "')'", "'.'", "'generate'", "'as'", "'import'", "':'", "';'", "'returns'", "'<'", "'>'", "'{'", "'}'", "'::'", "'|'", "'&'", "'current'", "'!'", "'['", "']'", "'terminal'", "'->'", "'EOF'", "'..'", "'enum'", "'hidden'", "'fragment'", "'=>'"
@@ -86,8 +89,10 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
         }
         
 
-    public String[] getTokenNames() { return InternalXtextParser.tokenNames; }
-    public String getGrammarFileName() { return "InternalXtext.g"; }
+    @Override
+	public String[] getTokenNames() { return InternalXtextParser.tokenNames; }
+    @Override
+	public String getGrammarFileName() { return "InternalXtext.g"; }
 
 
      
@@ -29993,7 +29998,8 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             this.special = DFA9_special;
             this.transition = DFA9_transition;
         }
-        public String getDescription() {
+        @Override
+		public String getDescription() {
             return "1812:1: rule__AbstractTokenWithCardinality__Alternatives_0 : ( ( ruleAssignment ) | ( ruleAbstractTerminal ) );";
         }
     }

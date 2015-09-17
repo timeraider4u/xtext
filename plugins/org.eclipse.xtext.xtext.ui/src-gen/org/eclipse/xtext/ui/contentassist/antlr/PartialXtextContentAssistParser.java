@@ -15,6 +15,9 @@ import org.eclipse.xtext.util.PolymorphicDispatcher;
 /*
  * Template CodetemplatesGeneratorFragment.xpt
  */
+/**
+ * @since 2.9
+ */
 public class PartialXtextContentAssistParser extends XtextParser implements IPartialContentAssistParser {
 
 	private AbstractRule rule;
