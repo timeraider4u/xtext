@@ -3,7 +3,7 @@ package org.eclipse.xtext.xtext.wizard;
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -20,6 +20,7 @@ import org.eclipse.xtext.xtext.wizard.PomFile;
 import org.eclipse.xtext.xtext.wizard.ProjectDescriptor;
 import org.eclipse.xtext.xtext.wizard.RuntimeProjectDescriptor;
 import org.eclipse.xtext.xtext.wizard.Scope;
+import org.eclipse.xtext.xtext.wizard.SourceLayout;
 import org.eclipse.xtext.xtext.wizard.WizardConfiguration;
 
 @FinalFieldsConstructor
@@ -70,7 +71,7 @@ public class WebProjectDescriptor extends ProjectDescriptor {
   
   @Override
   public Set<ExternalDependency> getExternalDependencies() {
-    final HashSet<ExternalDependency> deps = CollectionLiterals.<ExternalDependency>newHashSet();
+    final LinkedHashSet<ExternalDependency> deps = CollectionLiterals.<ExternalDependency>newLinkedHashSet();
     Set<ExternalDependency> _externalDependencies = super.getExternalDependencies();
     Iterables.<ExternalDependency>addAll(deps, _externalDependencies);
     ExternalDependency _createXtextDependency = ExternalDependency.createXtextDependency("org.eclipse.xtext.web.servlet");
@@ -93,7 +94,7 @@ public class WebProjectDescriptor extends ProjectDescriptor {
     };
     ExternalDependency _doubleArrow = ObjectExtensions.<ExternalDependency>operator_doubleArrow(_createMavenDependency_4, _function);
     deps.add(_doubleArrow);
-    ExternalDependency _createMavenDependency_5 = ExternalDependency.createMavenDependency(("org.slf4j:slf4j-api:" + WebProjectDescriptor.SLF4J_VERSION));
+    ExternalDependency _createMavenDependency_5 = ExternalDependency.createMavenDependency(("org.slf4j:slf4j-simple:" + WebProjectDescriptor.SLF4J_VERSION));
     final Procedure1<ExternalDependency> _function_1 = new Procedure1<ExternalDependency>() {
       @Override
       public void apply(final ExternalDependency it) {
@@ -103,16 +104,6 @@ public class WebProjectDescriptor extends ProjectDescriptor {
     };
     ExternalDependency _doubleArrow_1 = ObjectExtensions.<ExternalDependency>operator_doubleArrow(_createMavenDependency_5, _function_1);
     deps.add(_doubleArrow_1);
-    ExternalDependency _createMavenDependency_6 = ExternalDependency.createMavenDependency(("org.slf4j:slf4j-log4j12:" + WebProjectDescriptor.SLF4J_VERSION));
-    final Procedure1<ExternalDependency> _function_2 = new Procedure1<ExternalDependency>() {
-      @Override
-      public void apply(final ExternalDependency it) {
-        ExternalDependency.MavenCoordinates _maven = it.getMaven();
-        _maven.setScope(Scope.PROVIDED);
-      }
-    };
-    ExternalDependency _doubleArrow_2 = ObjectExtensions.<ExternalDependency>operator_doubleArrow(_createMavenDependency_6, _function_2);
-    deps.add(_doubleArrow_2);
     return deps;
   }
   
@@ -169,6 +160,40 @@ public class WebProjectDescriptor extends ProjectDescriptor {
         StringConcatenation _builder = new StringConcatenation();
         _builder.append("<build>");
         _builder.newLine();
+        {
+          WizardConfiguration _config = WebProjectDescriptor.this.getConfig();
+          SourceLayout _sourceLayout = _config.getSourceLayout();
+          boolean _equals = Objects.equal(_sourceLayout, SourceLayout.PLAIN);
+          if (_equals) {
+            _builder.append("\t");
+            _builder.append("<sourceDirectory>");
+            String _sourceFolder = WebProjectDescriptor.this.sourceFolder(Outlet.MAIN_JAVA);
+            _builder.append(_sourceFolder, "\t");
+            _builder.append("</sourceDirectory>");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("<resources>");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("<resource>");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t\t");
+            _builder.append("<directory>");
+            String _sourceFolder_1 = WebProjectDescriptor.this.sourceFolder(Outlet.MAIN_RESOURCES);
+            _builder.append(_sourceFolder_1, "\t\t\t");
+            _builder.append("</directory>");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("</resource>");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("</resources>");
+            _builder.newLine();
+          }
+        }
         _builder.append("\t");
         _builder.append("<plugins>");
         _builder.newLine();
@@ -198,12 +223,123 @@ public class WebProjectDescriptor extends ProjectDescriptor {
         _builder.newLine();
         _builder.append("\t\t\t\t");
         _builder.append("<warSourceDirectory>");
-        String _sourceFolder = WebProjectDescriptor.this.sourceFolder(Outlet.WEBAPP);
-        _builder.append(_sourceFolder, "\t\t\t\t");
+        String _sourceFolder_2 = WebProjectDescriptor.this.sourceFolder(Outlet.WEBAPP);
+        _builder.append(_sourceFolder_2, "\t\t\t\t");
         _builder.append("</warSourceDirectory>");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t\t");
+        _builder.append("<failOnMissingWebXml>false</failOnMissingWebXml>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("</configuration>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("</plugin>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("<plugin>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<groupId>org.eclipse.jetty</groupId>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<artifactId>jetty-maven-plugin</artifactId>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<version>9.2.13.v20150730</version>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<configuration>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t");
+        _builder.append("<webAppSourceDirectory>");
+        String _sourceFolder_3 = WebProjectDescriptor.this.sourceFolder(Outlet.WEBAPP);
+        _builder.append(_sourceFolder_3, "\t\t\t\t");
+        _builder.append("</webAppSourceDirectory>");
         _builder.newLineIfNotEmpty();
         _builder.append("\t\t\t");
         _builder.append("</configuration>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("</plugin>");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("<plugin>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<groupId>org.codehaus.mojo</groupId>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<artifactId>build-helper-maven-plugin</artifactId>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<version>1.9.1</version>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("<executions>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t");
+        _builder.append("<execution>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t");
+        _builder.append("<id>add-source</id>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t");
+        _builder.append("<phase>initialize</phase>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t");
+        _builder.append("<goals>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t");
+        _builder.append("<goal>add-source</goal>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t");
+        _builder.append("<goal>add-resource</goal>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t");
+        _builder.append("</goals>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t");
+        _builder.append("<configuration>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t");
+        _builder.append("<sources>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t\t");
+        _builder.append("<source>");
+        String _sourceFolder_4 = WebProjectDescriptor.this.sourceFolder(Outlet.MAIN_SRC_GEN);
+        _builder.append(_sourceFolder_4, "\t\t\t\t\t\t\t");
+        _builder.append("</source>");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t\t\t\t");
+        _builder.append("</sources>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t");
+        _builder.append("<resources>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t\t");
+        _builder.append("<resource>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t\t\t");
+        _builder.append("<directory>");
+        String _sourceFolder_5 = WebProjectDescriptor.this.sourceFolder(Outlet.MAIN_SRC_GEN);
+        _builder.append(_sourceFolder_5, "\t\t\t\t\t\t\t\t");
+        _builder.append("</directory>");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t\t\t\t\t\t");
+        _builder.append("</resource>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t\t");
+        _builder.append("</resources>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t\t");
+        _builder.append("</configuration>");
+        _builder.newLine();
+        _builder.append("\t\t\t\t");
+        _builder.append("</execution>");
+        _builder.newLine();
+        _builder.append("\t\t\t");
+        _builder.append("</executions>");
         _builder.newLine();
         _builder.append("\t\t");
         _builder.append("</plugin>");

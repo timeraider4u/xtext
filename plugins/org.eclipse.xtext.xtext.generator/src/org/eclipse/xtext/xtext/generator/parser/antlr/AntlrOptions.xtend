@@ -21,5 +21,7 @@ class AntlrOptions {
 	boolean classSplitting = false
 	int fieldsPerClass = AntlrParserSplitter.FIELDS_PER_CLASS
 	int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS
+	boolean skipUnusedRules = false
 	boolean forceHoisting = false
+	
 }

@@ -7,7 +7,7 @@ import static org.eclipse.xtext.xtext.wizard.ExternalDependency.*
 class RuntimeTestProjectDescriptor extends TestProjectDescriptor {
 
 	override getExternalDependencies() {
-		val deps = newHashSet
+		val deps = newLinkedHashSet
 		deps += super.externalDependencies
 		deps += createXtextDependency("org.eclipse.xtext.junit4") => [maven.scope = Scope.TESTCOMPILE]
 		deps += createXtextDependency("org.eclipse.xtext.xbase.junit") => [maven.scope = Scope.TESTCOMPILE]
@@ -21,5 +21,4 @@ class RuntimeTestProjectDescriptor extends TestProjectDescriptor {
 	override isPartOfMavenBuild() {
 		config.preferredBuildSystem == BuildSystem.MAVEN
 	}
-		
 }

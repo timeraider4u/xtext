@@ -40,7 +40,7 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 	}
 	
 	override getExternalDependencies() {
-		val deps = newHashSet
+		val deps = newLinkedHashSet
 		deps += super.externalDependencies
 		deps += createXtextDependency("org.eclipse.xtext")
 		deps += createXtextDependency("org.eclipse.xtext.xbase")
@@ -170,8 +170,8 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 					configuration = {
 						project = WizardConfig {
 							runtimeRoot = projectPath
-							«IF config.uiProject.enabled»
-								eclipseEditor = true
+							«IF !config.uiProject.enabled»
+								eclipseEditor = false
 							«ENDIF»
 							«IF config.intellijProject.enabled»
 								ideaEditor = true
@@ -259,10 +259,8 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 							fragment = formatting.Formatter2Fragment2 {}
 						«ENDIF»
 						
-						«IF testProject.enabled»
-							fragment = adapter.FragmentAdapter {
-								fragment = junit.Junit4Fragment auto-inject {}
-							}
+						«IF config.enabledProjects.filter(TestedProjectDescriptor).exists[testProject.enabled]»
+							fragment = junit.Junit4Fragment2 auto-inject {}
 						«ENDIF»
 						
 						«IF config.uiProject.enabled»
@@ -384,6 +382,14 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 			packaging = if (isEclipsePluginProject) "eclipse-plugin" else "jar"
 			buildSection = '''
 				<build>
+					«IF !isEclipsePluginProject && config.sourceLayout == SourceLayout.PLAIN»
+						<sourceDirectory>«Outlet.MAIN_JAVA.sourceFolder»</sourceDirectory>
+						<resources>
+							<resource>
+								<directory>«Outlet.MAIN_RESOURCES.sourceFolder»</directory>
+							</resource>
+						</resources>
+					«ENDIF»
 					<plugins>
 						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
@@ -403,7 +409,7 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 								<arguments>
 									<argument>/${project.basedir}/«Outlet.MAIN_RESOURCES.sourceFolder»/«workflowFilePath»</argument>
 									<argument>-p</argument>
-									<argument>runtimeProject=/${project.basedir}</argument>
+									<argument>projectPath=/${project.basedir}</argument>
 								</arguments>
 								<includePluginDependencies>true</includePluginDependencies>
 							</configuration>
@@ -460,6 +466,53 @@ class RuntimeProjectDescriptor extends TestedProjectDescriptor {
 								</filesets>
 							</configuration>
 						</plugin>
+						«IF !isEclipsePluginProject»
+							<plugin>
+								<groupId>org.codehaus.mojo</groupId>
+								<artifactId>build-helper-maven-plugin</artifactId>
+								<version>1.9.1</version>
+								<executions>
+									<execution>
+										<id>add-source</id>
+										<phase>initialize</phase>
+										<goals>
+											<goal>add-source</goal>
+											<goal>add-resource</goal>
+										</goals>
+										<configuration>
+											<sources>
+												<source>«Outlet.MAIN_SRC_GEN.sourceFolder»</source>
+											</sources>
+											<resources>
+												<resource>
+													<directory>«Outlet.MAIN_SRC_GEN.sourceFolder»</directory>
+												</resource>
+											</resources>
+										</configuration>
+									</execution>
+									«IF testProject.isInlined»
+										<execution>
+											<id>add-test-source</id>
+											<phase>initialize</phase>
+											<goals>
+												<goal>add-test-source</goal>
+												<goal>add-test-resource</goal>
+											</goals>
+											<configuration>
+												<sources>
+													<source>«Outlet.TEST_SRC_GEN.sourceFolder»</source>
+												</sources>
+												<resources>
+													<resource>
+														<directory>«Outlet.TEST_SRC_GEN.sourceFolder»</directory>
+													</resource>
+												</resources>
+											</configuration>
+										</execution>
+									«ENDIF»	
+								</executions>
+							</plugin>
+						«ENDIF»
 					</plugins>
 				</build>
 			'''

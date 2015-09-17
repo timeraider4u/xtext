@@ -35,7 +35,7 @@ class WebProjectDescriptor extends ProjectDescriptor {
 	}
 	
 	override getExternalDependencies() {
-		val deps = newHashSet
+		val deps = newLinkedHashSet
 		deps += super.externalDependencies
 		deps += createXtextDependency("org.eclipse.xtext.web.servlet")
 		deps += createMavenDependency("org.eclipse.xtend:org.eclipse.xtend.lib:${xtextVersion}")
@@ -45,8 +45,7 @@ class WebProjectDescriptor extends ProjectDescriptor {
 		deps += createMavenDependency("org.webjars:jquery:" + JQUERY_VERSION)
 		deps += createMavenDependency("org.webjars:ace:" + ACE_VERSION)
 		deps += createMavenDependency("org.eclipse.jetty:jetty-annotations:" + JETTY_VERSION) => [maven.scope = Scope.PROVIDED]
-		deps += createMavenDependency("org.slf4j:slf4j-api:" + SLF4J_VERSION) => [maven.scope = Scope.PROVIDED]
-		deps += createMavenDependency("org.slf4j:slf4j-log4j12:" + SLF4J_VERSION) => [maven.scope = Scope.PROVIDED]
+		deps += createMavenDependency("org.slf4j:slf4j-simple:" + SLF4J_VERSION) => [maven.scope = Scope.PROVIDED]
 		return deps
 	}
 	
@@ -73,6 +72,14 @@ class WebProjectDescriptor extends ProjectDescriptor {
 			packaging = "war"
 			buildSection = '''
 				<build>
+					«IF config.sourceLayout == SourceLayout.PLAIN»
+						<sourceDirectory>«Outlet.MAIN_JAVA.sourceFolder»</sourceDirectory>
+						<resources>
+							<resource>
+								<directory>«Outlet.MAIN_RESOURCES.sourceFolder»</directory>
+							</resource>
+						</resources>
+					«ENDIF»
 					<plugins>
 						<plugin>
 							<groupId>org.eclipse.xtend</groupId>
@@ -83,7 +90,41 @@ class WebProjectDescriptor extends ProjectDescriptor {
 							<version>2.6</version>
 							<configuration>
 								<warSourceDirectory>«Outlet.WEBAPP.sourceFolder»</warSourceDirectory>
+								<failOnMissingWebXml>false</failOnMissingWebXml>
 							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.eclipse.jetty</groupId>
+							<artifactId>jetty-maven-plugin</artifactId>
+							<version>9.2.13.v20150730</version>
+							<configuration>
+								<webAppSourceDirectory>«Outlet.WEBAPP.sourceFolder»</webAppSourceDirectory>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>build-helper-maven-plugin</artifactId>
+							<version>1.9.1</version>
+							<executions>
+								<execution>
+									<id>add-source</id>
+									<phase>initialize</phase>
+									<goals>
+										<goal>add-source</goal>
+										<goal>add-resource</goal>
+									</goals>
+									<configuration>
+										<sources>
+											<source>«Outlet.MAIN_SRC_GEN.sourceFolder»</source>
+										</sources>
+										<resources>
+											<resource>
+												<directory>«Outlet.MAIN_SRC_GEN.sourceFolder»</directory>
+											</resource>
+										</resources>
+									</configuration>
+								</execution>
+							</executions>
 						</plugin>
 					</plugins>
 				</build>

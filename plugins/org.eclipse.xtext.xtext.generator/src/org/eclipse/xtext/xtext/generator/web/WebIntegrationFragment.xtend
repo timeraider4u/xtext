@@ -14,10 +14,13 @@ import com.google.inject.Provider
 import com.google.inject.name.Names
 import java.util.ArrayList
 import java.util.Collection
+import java.util.Collections
 import java.util.HashSet
 import java.util.List
+import java.util.Set
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import java.util.regex.Pattern
 import org.eclipse.emf.mwe2.runtime.Mandatory
 import org.eclipse.xtend2.lib.StringConcatenationClient
 import org.eclipse.xtext.Grammar
@@ -29,14 +32,13 @@ import org.eclipse.xtext.xtext.generator.XtextGeneratorNaming
 import org.eclipse.xtext.xtext.generator.model.FileAccessFactory
 import org.eclipse.xtext.xtext.generator.model.GuiceModuleAccess
 import org.eclipse.xtext.xtext.generator.model.TypeReference
-import org.eclipse.xtext.xtext.generator.model.annotations.WebServletAnnotation
 import org.eclipse.xtext.xtext.generator.parser.antlr.GrammarNaming
 import org.eclipse.xtext.xtext.generator.xbase.XbaseUsageDetector
 
 import static extension org.eclipse.xtext.GrammarUtil.*
-import static extension org.eclipse.xtext.util.Strings.*
 import static extension org.eclipse.xtext.xtext.generator.model.TypeReference.*
 import static extension org.eclipse.xtext.xtext.generator.util.GrammarUtil2.*
+import static extension org.eclipse.xtext.xtext.generator.web.RegexpExtensions.*
 
 /**
  * Main generator fragment for web integration.
@@ -66,8 +68,9 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 	boolean generateJsHighlighting = true
 	String highlightingModuleName
 	String highlightingPath
-	String keywordsFilter = '\\w*'
+	String keywordsFilter = '\\w+'
 	boolean generateServlet = false
+	boolean generateWebXml = false
 	boolean useServlet3Api = true
 	boolean generateJettyLauncher = false
 	boolean generateHtmlExample = false
@@ -104,7 +107,7 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 	
 	/**
 	 * Regular expression for filtering those language keywords that should be highlighted. The default
-	 * is {@code \w*}, i.e. keywords consisting only of letters and digits.
+	 * is {@code \w+}, i.e. keywords consisting only of letters and digits.
 	 */
 	def void setKeywordsFilter(String keywordsFilter) {
 		this.keywordsFilter = keywordsFilter
@@ -115,6 +118,13 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 	 */
 	def void setGenerateServlet(boolean generateServlet) {
 		this.generateServlet = generateServlet
+	}
+	
+	/**
+	 * Whether a web.xml file should be generated. The default is {@code false} (not necessary for Servlet 3 compatible containers).
+	 */
+	def void setGenerateWebXml(boolean generateWebXml) {
+		this.generateWebXml = generateWebXml
 	}
 	
 	/**
@@ -195,7 +205,7 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 			if (highlightingPath.nullOrEmpty)
 				highlightingPath = highlightingModuleName + '.js'
 			
-			generateJavaScript(langId)
+			generateJsHighlighting(langId)
 		}
 		
 		if (generateServlet && projectConfig.webSrc !== null) {
@@ -208,6 +218,9 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 			generateIndexDoc()
 			generateStyleSheet()
 		}
+		if (generateWebXml && projectConfig.webApp !== null) {
+			generateWebXml()
+		}
 		
 		// TODO move this configuration to an IDE module?
 		val StringConcatenationClient lexerStatement =
@@ -219,18 +232,40 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 			.contributeTo(language.webGenModule)
 	}
 	
-	protected def void generateJavaScript(String langId) {
-		val keywords = grammar.allKeywords
-		val filteredKeywords = keywords.filter[matches(keywordsFilter)].map[convertToJavaString].toList
+	static val DELIMITERS_PATTERN = '''[\\s.:;,!?+\\-*/&|<>()[\\]{}]'''
+	
+	protected def void generateJsHighlighting(String langId) {
+		val allKeywords = grammar.allKeywords
+		val wordKeywords = newArrayList
+		val nonWordKeywords = newArrayList
+		val keywordsFilterPattern = Pattern.compile(keywordsFilter)
+		val wordKeywordPattern = Pattern.compile('\\w(.*\\w)?')
+		allKeywords.filter[keywordsFilterPattern.matcher(it).matches].forEach[
+			if (wordKeywordPattern.matcher(it).matches)
+				wordKeywords += it
+			else
+				nonWordKeywords += it
+		]
+		Collections.sort(wordKeywords)
+		Collections.sort(nonWordKeywords)
 		val jsFile = fileAccessFactory.createTextFile()
 		jsFile.path = highlightingPath
 		switch framework {
 			
 			case ORION: {
-				val patterns = createOrionPatterns(langId, keywords, filteredKeywords)
+				val patterns = createOrionPatterns(langId, allKeywords)
+				if (!wordKeywords.empty)
+					patterns += '''{name: "keyword.«langId»", match: "\\b(?:" + keywords + ")\\b"}'''
+				if (!nonWordKeywords.empty)
+					patterns += '''{name: "keyword.extra.«langId»", match: "(?:^|\\s)(?:" + extraKeywords + ")(?=«DELIMITERS_PATTERN»|$)"}'''
 				jsFile.content = '''
 					define("«highlightingModuleName»", function() {
-						var keywords = "«FOR keyword : filteredKeywords.sort SEPARATOR '|'»«keyword»«ENDFOR»";
+						«IF !wordKeywords.empty»
+							var keywords = "«FOR kw : wordKeywords SEPARATOR '|'»«kw.toRegexpString»«ENDFOR»";
+						«ENDIF»
+						«IF !nonWordKeywords.empty»
+							var extraKeywords = "«FOR kw : nonWordKeywords SEPARATOR '|'»«kw.toRegexpString»«ENDFOR»";
+						«ENDIF»
 						return {
 							id: "xtext.«langId»",
 							contentTypes: ["xtext/«langId»"],
@@ -243,12 +278,19 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 			}
 			
 			case ACE: {
-				val patterns = createCodeMirrorPatterns(langId, keywords, filteredKeywords)
+				val patterns = createCodeMirrorPatterns(langId, allKeywords)
+				if (!wordKeywords.empty)
+					patterns.put('start', '''{token: "keyword", regex: "\\b(?:" + keywords + ")\\b"}''')
+				if (!nonWordKeywords.empty)
+					patterns.put('start', '''{token: "keyword", regex: "(?:^|\\s)(?:" + extraKeywords + ")(?=«DELIMITERS_PATTERN»|$)"}''')
 				jsFile.content = '''
 					define("«highlightingModuleName»", ["ace/lib/oop", "ace/mode/text", "ace/mode/text_highlight_rules"], function(oop, mText, mTextHighlightRules) {
 						var HighlightRules = function() {
-							«IF !filteredKeywords.empty»
-								var keywords = "«FOR keyword : filteredKeywords.sort SEPARATOR '|'»«keyword»«ENDFOR»";
+							«IF !wordKeywords.empty»
+								var keywords = "«FOR kw : wordKeywords SEPARATOR '|'»«kw.toRegexpString»«ENDFOR»";
+							«ENDIF»
+							«IF !nonWordKeywords.empty»
+								var extraKeywords = "«FOR kw : nonWordKeywords SEPARATOR '|'»«kw.toRegexpString»«ENDFOR»";
 							«ENDIF»
 							this.$rules = {
 								«FOR state : patterns.keySet SEPARATOR ','»
@@ -277,11 +319,18 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 			}
 			
 			case CODEMIRROR: {
-				val patterns = createCodeMirrorPatterns(langId, keywords, filteredKeywords)
+				val patterns = createCodeMirrorPatterns(langId, allKeywords)
+				if (!wordKeywords.empty)
+					patterns.put('start', '''{token: "keyword", regex: "\\b(?:" + keywords + ")\\b"}''')
+				if (!nonWordKeywords.empty)
+					patterns.put('start', '''{token: "keyword", regex: "(?:^|\\s)(?:" + extraKeywords + ")(?=«DELIMITERS_PATTERN»|$)"}''')
 				jsFile.content = '''
 					define("«highlightingModuleName»", ["codemirror", "codemirror/addon/mode/simple"], function(CodeMirror, SimpleMode) {
-						«IF !filteredKeywords.empty»
-							var keywords = "«FOR keyword : filteredKeywords.sort SEPARATOR '|'»«keyword»«ENDFOR»";
+						«IF !wordKeywords.empty»
+							var keywords = "«FOR kw : wordKeywords SEPARATOR '|'»«kw.toRegexpString»«ENDFOR»";
+						«ENDIF»
+						«IF !nonWordKeywords.empty»
+							var extraKeywords = "«FOR kw : nonWordKeywords SEPARATOR '|'»«kw.toRegexpString»«ENDFOR»";
 						«ENDIF»
 						CodeMirror.defineSimpleMode("xtext/«langId»", {
 							«FOR state : patterns.keySet SEPARATOR ','»
@@ -298,8 +347,7 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 		jsFile.writeTo(projectConfig.webApp)
 	}
 	
-	protected def Collection<String> createOrionPatterns(String langId, Collection<String> keywords,
-			Collection<String> filteredKeywords) {
+	protected def Collection<String> createOrionPatterns(String langId, Set<String> keywords) {
 		val inheritsTerminals = grammar.inherits(TERMINALS)
 		val inheritsXbase = grammar.inheritsXbase
 		val patterns = new ArrayList<String>
@@ -355,14 +403,10 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 		if (enabledPatterns.contains('doc_block'))
 			patterns += '{include: "orion.lib#doc_block"}'
 		
-		if (!filteredKeywords.empty)
-			patterns += '''{match: "\\b(?:" + keywords + ")\\b", name: "keyword.«langId»"}'''
-		
 		return patterns
 	}
 	
-	protected def Multimap<String, String> createCodeMirrorPatterns(String langId, Collection<String> keywords,
-			Collection<String> filteredKeywords) {
+	protected def Multimap<String, String> createCodeMirrorPatterns(String langId, Set<String> keywords) {
 		val inheritsTerminals = grammar.inherits(TERMINALS)
 		val inheritsXbase = grammar.inheritsXbase
 		val patterns = LinkedHashMultimap.<String, String>create
@@ -407,9 +451,6 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 		if (bracketClose || parenClose || braceClose)
 			patterns.put('start', '''{token: "rparen", regex: "[«IF bracketClose»\\]«ENDIF»«IF parenClose»)«ENDIF»«IF braceClose»}«ENDIF»]"}''')
 		
-		if (!filteredKeywords.empty)
-			patterns.put('start', '''{token: "keyword", regex: "\\b(?:" + keywords + ")\\b"}''')
-		
 		if (framework == Framework.CODEMIRROR && patterns.containsKey('comment'))
 			patterns.put('meta', '''dontIndentStates: ["comment"]''')
 		if (framework == Framework.CODEMIRROR && hasSingleLineComment)
@@ -419,11 +460,14 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 	}
 	
 	protected def void generateIndexDoc() {
+		if (projectConfig.webApp.isFile('index.html')) {
+			// Don't overwrite an existing index document
+			return
+		}
 		val indexFile = fileAccessFactory.createTextFile
 		indexFile.path = 'index.html'
 		
 		indexFile.content = '''
-			<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
 			<html>
 			<head>
 				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -442,8 +486,13 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 				<link rel="stylesheet" type="text/css" href="style.css"/>
 				<script src="webjars/requirejs/«REQUIREJS_VERSION»/require.min.js"></script>
 				<script type="text/javascript">
+					var baseUrl = window.location.pathname;
+					var fileIndex = baseUrl.indexOf("index.html");
+					if (fileIndex > 0)
+						baseUrl = baseUrl.slice(0, fileIndex);
 					«IF framework == Framework.ORION»
 						require.config({
+							baseUrl: baseUrl,
 							paths: {
 								"text": "webjars/requirejs-text/«REQUIREJS_TEXT_VERSION»/text",
 								"jquery": "webjars/jquery/«JQUERY_VERSION»/jquery.min",
@@ -452,11 +501,15 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 						});
 						require(["orion/code_edit/built-codeEdit-amd"], function() {
 							require(["xtext/xtext-orion"], function(xtext) {
-								xtext.createEditor({syntaxDefinition: "«if (generateJsHighlighting) highlightingModuleName else 'none'»"});
+								xtext.createEditor({
+									baseUrl: baseUrl,
+									syntaxDefinition: "«if (generateJsHighlighting) highlightingModuleName else 'none'»"
+								});
 							});
 						});
 					«ELSEIF framework == Framework.ACE»
 						require.config({
+							baseUrl: baseUrl,
 							paths: {
 								"jquery": "webjars/jquery/«JQUERY_VERSION»/jquery.min",
 								"ace/ext/language_tools": "webjars/ace/«ACE_VERSION»/src/ext-language_tools",
@@ -465,11 +518,15 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 						});
 						require(["webjars/ace/«ACE_VERSION»/src/ace"], function() {
 							require(["xtext/xtext-ace"], function(xtext) {
-								xtext.createEditor({syntaxDefinition: "«if (generateJsHighlighting) highlightingModuleName else 'none'»"});
+								xtext.createEditor({
+									baseUrl: baseUrl,
+									syntaxDefinition: "«if (generateJsHighlighting) highlightingModuleName else 'none'»"
+								});
 							});
 						});
 					«ELSEIF framework == Framework.CODEMIRROR»
 						require.config({
+							baseUrl: baseUrl,
 							paths: {
 								"jquery": "webjars/jquery/«JQUERY_VERSION»/jquery.min",
 								"xtext/xtext-codemirror": "xtext/«codeConfig.xtextVersion»/xtext-codemirror"
@@ -481,7 +538,11 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 							}]
 						});
 						require([«IF generateJsHighlighting»"«highlightingModuleName»", «ENDIF»"xtext/xtext-codemirror"], function(«IF generateJsHighlighting»mode, «ENDIF»xtext) {
-							xtext.createEditor(«IF !generateJsHighlighting»{syntaxDefinition: "none"}«ENDIF»);
+							xtext.createEditor({
+								baseUrl: baseUrl«IF !generateJsHighlighting»,
+								syntaxDefinition: "none"
+								«ENDIF»
+							});
 						});
 					«ENDIF»
 				</script>
@@ -504,6 +565,10 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 	}
 	
 	protected def void generateStyleSheet() {
+		if (projectConfig.webApp.isFile('style.css')) {
+			// Don't overwrite an existing style sheet
+			return
+		}
 		val styleFile = fileAccessFactory.createTextFile
 		styleFile.path = 'style.css'
 		
@@ -587,14 +652,11 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 	}
 	
 	protected def void generateServerLauncher() {
-		val xtendFile = fileAccessFactory.createXtendFile(grammar.serverLauncherClass)
-		xtendFile.typeComment = '''
+		fileAccessFactory.createXtendFile(grammar.serverLauncherClass, '''
 			/**
 			 * This program starts an HTTP server for testing the web integration of your DSL.
 			 * Just execute it and point a web browser to http://localhost:8080/
 			 */
-		'''
-		xtendFile.javaContent = '''
 			class «grammar.serverLauncherClass.simpleName» {
 				def static void main(String[] args) {
 					val server = new «'org.eclipse.jetty.server.Server'.typeRef»(new «'java.net.InetSocketAddress'.typeRef»('localhost', 8080))
@@ -608,7 +670,7 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 							new «'org.eclipse.jetty.webapp.WebInfConfiguration'.typeRef»,
 							new «'org.eclipse.jetty.webapp.MetaInfConfiguration'.typeRef»
 						]
-						setAttribute(«'org.eclipse.jetty.webapp.WebInfConfiguration'.typeRef».CONTAINER_JAR_PATTERN, '.*')
+						setAttribute(«'org.eclipse.jetty.webapp.WebInfConfiguration'.typeRef».CONTAINER_JAR_PATTERN, '.*/«grammar.webBasePackage.replace('.', '\\.')».*,.*/org\\.eclipse\\.xtext\\.web.*,.*/org\\.webjars.*')
 					]
 					val log = new «'org.eclipse.jetty.util.log.Slf4jLog'.typeRef»(«grammar.serverLauncherClass.simpleName».name)
 					try {
@@ -627,24 +689,17 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 					}
 				}
 			}
-		'''
-		xtendFile.writeTo(projectConfig.webSrc)
+		''').writeTo(projectConfig.webSrc)
 	}
 	
 	protected def void generateServlet() {
-		val xtendFile = fileAccessFactory.createXtendFile(grammar.servletClass)
-		if (useServlet3Api) {
-			xtendFile.annotations += new WebServletAnnotation => [
-				name = 'XtextServices'
-				urlPatterns = '/xtext-service/*'
-			]
-		}
-		xtendFile.typeComment = '''
-		/**
-		 * Deploy this class into a servlet container to enable DSL-specific services.
-		 */
-		'''
-		xtendFile.javaContent = '''
+		fileAccessFactory.createXtendFile(grammar.servletClass, '''
+			/**
+			 * Deploy this class into a servlet container to enable DSL-specific services.
+			 */
+			«IF useServlet3Api»
+				@«new TypeReference("javax.servlet.annotation.WebServlet")»(name = 'XtextServices', urlPatterns = '/xtext-service/*')
+			«ENDIF»
 			class «grammar.servletClass.simpleName» extends «'org.eclipse.xtext.web.servlet.XtextServlet'.typeRef» {
 				
 				val «List»<«ExecutorService»> executorServices = newArrayList
@@ -662,8 +717,74 @@ class WebIntegrationFragment extends AbstractGeneratorFragment2 {
 				}
 				
 			}
+		''').writeTo(projectConfig.webSrc)
+	}
+	
+	protected def void generateWebXml() {
+		if (projectConfig.webApp.isFile('WEB-INF/web.xml')) {
+			// Don't overwrite an existing web.xml
+			return
+		}
+		val xmlFile = fileAccessFactory.createTextFile
+		xmlFile.path = 'WEB-INF/web.xml'
+		
+		xmlFile.content = '''
+			<?xml version="1.0" encoding="ISO-8859-1"?>
+			<web-app version="«IF useServlet3Api»3.0«ELSE»2.3«ENDIF»">
+				<display-name>Xtext Example Application</display-name>
+				<description>
+					This Example demonstrates the usage of Xtext with a servlet container.
+				</description>
+				«IF generateServlet»
+					
+					<servlet>
+						<servlet-name>XtextServices</servlet-name>
+						<description>
+							Back-end for the DSL-specific services of Xtext.
+						</description>
+						<servlet-class>«grammar.servletClass»</servlet-class>
+					</servlet>
+					
+					<servlet-mapping>
+						<servlet-name>XtextServices</servlet-name>
+						<url-pattern>/xtext-service/*</url-pattern>
+					</servlet-mapping>
+				«ENDIF»
+				«IF !useServlet3Api»
+					
+					<servlet>
+						<servlet-name>StaticContentServlet</servlet-name>
+						<servlet-class>org.eclipse.xtext.web.servlet.StaticContentServlet</servlet-class>
+					</servlet>
+					
+					<servlet-mapping>
+						<servlet-name>StaticContentServlet</servlet-name>
+						<url-pattern>/xtext/*</url-pattern>
+					</servlet-mapping>
+					
+					<servlet>
+						<servlet-name>WebjarsServlet</servlet-name>
+						<servlet-class>org.webjars.servlet.WebjarsServlet</servlet-class>
+					</servlet>
+					
+					<servlet-mapping>
+						<servlet-name>WebjarsServlet</servlet-name>
+						<url-pattern>/webjars/*</url-pattern>
+					</servlet-mapping>
+				«ENDIF»
+				«IF generateHtmlExample»
+					
+					<welcome-file-list>
+						<welcome-file>index.html</welcome-file>
+					</welcome-file-list>
+				«ENDIF»
+				
+				<session-config>
+					<session-timeout>30</session-timeout>
+				</session-config>
+			</web-app>
 		'''
-		xtendFile.writeTo(projectConfig.webSrc)
+		xmlFile.writeTo(projectConfig.webApp)
 	}
 	
 }

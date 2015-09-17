@@ -38,9 +38,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 		files += super.files
 		if (config.needsGradleBuild) {
 			files += file(Outlet.ROOT, 'settings.gradle', settingsGradle)
-			if (config.sourceLayout == SourceLayout.PLAIN) {
-				files += file(Outlet.ROOT, 'gradle/plain-layout.gradle', plainLayout)
-			}
+			files += file(Outlet.ROOT, 'gradle/source-layout.gradle', sourceLayoutGradle)
 		}
 		return files
 	}
@@ -68,9 +66,7 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 					}
 					apply plugin: 'java'
 					apply plugin: 'org.xtend.xtend'
-					«IF config.sourceLayout == SourceLayout.PLAIN»
-						apply from: "${rootDir}/gradle/plain-layout.gradle"
-					«ENDIF»
+					apply from: "${rootDir}/gradle/source-layout.gradle"
 				}
 			'''
 		]
@@ -82,22 +78,54 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 		«ENDFOR»
 	'''
 	
-	def plainLayout() '''
-		if (name.endsWith(".tests")) {
-			sourceSets.test.java.srcDirs = ['src', 'src-gen']
-			sourceSets.test.resources.srcDirs = ['src', 'src-gen']
-			sourceSets.test.xtendOutputDir = 'xtend-gen'
-			sourceSets.main.java.srcDirs = []
-			sourceSets.main.resources.srcDirs = []
-		} else {
-			sourceSets.main.java.srcDirs = ['src', 'src-gen']
-			sourceSets.main.resources.srcDirs = ['src', 'src-gen']
-			sourceSets.main.xtendOutputDir = 'xtend-gen'
-			sourceSets.test.java.srcDirs = []
-			sourceSets.test.resources.srcDirs = []
-		}
+	def sourceLayoutGradle() '''
+		«IF config.sourceLayout == SourceLayout.PLAIN»
+			if (name.endsWith(".tests")) {
+				sourceSets {
+					main {
+						java.srcDirs = []
+						resources.srcDirs = []
+					}
+					test {
+						java.srcDirs = ['«Outlet.TEST_JAVA.sourceFolder»', '«Outlet.TEST_SRC_GEN.sourceFolder»']
+						resources.srcDirs = ['«Outlet.TEST_RESOURCES.sourceFolder»', '«Outlet.TEST_SRC_GEN.sourceFolder»']
+						xtendOutputDir = '«Outlet.TEST_XTEND_GEN.sourceFolder»'
+					}
+				}
+			} else {
+				sourceSets {
+					main {
+						java.srcDirs = ['«Outlet.MAIN_JAVA.sourceFolder»', '«Outlet.MAIN_SRC_GEN.sourceFolder»']
+						resources.srcDirs = ['«Outlet.MAIN_RESOURCES.sourceFolder»', '«Outlet.MAIN_SRC_GEN.sourceFolder»']
+						xtendOutputDir = '«Outlet.MAIN_XTEND_GEN.sourceFolder»'
+					}
+					test {
+						java.srcDirs = []
+						resources.srcDirs = []
+					}
+				}
+			}
+		«ELSE»
+			sourceSets {
+				main {
+					java.srcDirs = ['«Outlet.MAIN_JAVA.sourceFolder»', '«Outlet.MAIN_SRC_GEN.sourceFolder»']
+					resources.srcDirs = ['«Outlet.MAIN_RESOURCES.sourceFolder»', '«Outlet.MAIN_SRC_GEN.sourceFolder»']
+					xtendOutputDir = '«Outlet.MAIN_XTEND_GEN.sourceFolder»'
+				}
+				test {
+					java.srcDirs = ['«Outlet.TEST_JAVA.sourceFolder»', '«Outlet.TEST_SRC_GEN.sourceFolder»']
+					resources.srcDirs = ['«Outlet.TEST_RESOURCES.sourceFolder»', '«Outlet.TEST_SRC_GEN.sourceFolder»']
+					xtendOutputDir = '«Outlet.TEST_XTEND_GEN.sourceFolder»'
+				}
+			}
+		«ENDIF»
+		
 		plugins.withId('war') {
-			webAppDirName = "WebRoot"
+			webAppDirName = "«Outlet.WEBAPP.sourceFolder»"
+		}
+		
+		plugins.withId('org.xtext.idea-plugin') {
+			assembleSandbox.metaInf.from('«Outlet.META_INF.sourceFolder»')
 		}
 	'''
 
@@ -169,14 +197,15 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 								<version>${xtextVersion}</version>
 								<executions>
 									<execution>
-										<phase>generate-sources</phase>
 										<goals>
 											<goal>compile</goal>
+											<goal>testCompile</goal>
 										</goals>
 									</execution>
 								</executions>
 								<configuration>
 									<outputDirectory>${basedir}/«Outlet.MAIN_XTEND_GEN.sourceFolder»</outputDirectory>
+									<testOutputDirectory>${basedir}/«Outlet.TEST_XTEND_GEN.sourceFolder»</testOutputDirectory>
 								</configuration>
 							</plugin>
 							<plugin>
@@ -186,7 +215,9 @@ class ParentProjectDescriptor extends ProjectDescriptor {
 								<configuration>
 									<filesets>
 										<fileset>
-											<directory>${basedir}/«Outlet.MAIN_XTEND_GEN.sourceFolder»</directory>
+											«FOR dir : #[Outlet.MAIN_XTEND_GEN, Outlet.TEST_XTEND_GEN].toSet.map[sourceFolder]»
+												<directory>${basedir}/«dir»</directory>
+											«ENDFOR»
 										</fileset>
 									</filesets>
 								</configuration>

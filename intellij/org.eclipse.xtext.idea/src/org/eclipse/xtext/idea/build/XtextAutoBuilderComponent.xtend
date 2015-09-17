@@ -28,6 +28,9 @@ import com.intellij.openapi.editor.event.DocumentEvent
 import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.module.Module
 import com.intellij.openapi.module.ModuleManager
+import com.intellij.openapi.progress.ProgressIndicator
+import com.intellij.openapi.progress.ProgressManager
+import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.DumbService
 import com.intellij.openapi.project.ModuleAdapter
 import com.intellij.openapi.project.Project
@@ -36,6 +39,7 @@ import com.intellij.openapi.roots.ModuleRootEvent
 import com.intellij.openapi.roots.ModuleRootManager
 import com.intellij.openapi.roots.ProjectFileIndex
 import com.intellij.openapi.util.Disposer
+import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.openapi.vfs.VirtualFileAdapter
 import com.intellij.openapi.vfs.VirtualFileEvent
@@ -56,6 +60,7 @@ import java.util.Set
 import java.util.concurrent.LinkedBlockingQueue
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
+import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
 import org.eclipse.xtext.build.BuildRequest
 import org.eclipse.xtext.build.IncrementalBuilder
 import org.eclipse.xtext.build.IndexState
@@ -80,6 +85,7 @@ import static org.eclipse.xtext.idea.build.BuildEvent.Type.*
 
 import static extension com.intellij.openapi.vfs.VfsUtilCore.*
 import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
+import java.io.IOException
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
@@ -139,7 +145,9 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 		IdeaSharedInjectorProvider.injector.injectMembers(this)
 		this.chunkedResourceDescriptions = chunkedResourceDescriptionsProvider.get
 		this.project = project
-		alarm = new Alarm(Alarm.ThreadToUse.OWN_THREAD, this)
+		// We need the swing thread here to access the ProgressManager.
+		// No worries: The actual work is performed in a background thread.
+		alarm = new Alarm(Alarm.ThreadToUse.SWING_THREAD, this)
 		disposed = false
 		Disposer.register(project, this)
 	
@@ -201,7 +209,8 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
          connection.subscribe(ProjectTopics.MODULES, new ModuleAdapter() {
 			
 			override moduleAdded(Project project, Module module) {
-				doCleanBuild(module)
+				if(project.initialized)
+					doCleanBuild(module)
 			}
 			
 			override moduleRemoved(Project project, Module module) {
@@ -222,7 +231,7 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 		ProjectWideFacetListenersRegistry.getInstance(project).registerListener(new ProjectWideFacetAdapter<Facet>() {
 			
 			override facetAdded(Facet facet) {
-				if (!isXtextFacet(facet)) 
+				if (!isXtextFacet(facet) || !project.initialized) 
 					return;
 				doCleanBuild(facet.module)
 			}
@@ -449,8 +458,17 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 			alarm.addRequest([build], 500)
 		} else {
 			val allEvents = newArrayList
-			queue.drainTo(allEvents)
-			internalBuild(allEvents)
+			if(TEST_MODE) {
+					queue.drainTo(allEvents)
+					internalBuild(allEvents, null)
+			} else {
+				ProgressManager.instance.run(new Task.Backgroundable(project, 'Auto-building Xtext resources') {
+					override run(ProgressIndicator indicator) {
+						queue.drainTo(allEvents)
+						internalBuild(allEvents, indicator)
+					}
+				})
+			}
 		}
 	}
 	
@@ -458,18 +476,17 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 		return TEST_MODE || (project.isInitialized && !DumbService.getInstance(project).isDumb)
 	}
 	
-	protected def void internalBuild(List<BuildEvent> allEvents) {
+	protected def void internalBuild(List<BuildEvent> allEvents, ProgressIndicator indicator) {
 		val unProcessedEvents = newArrayList
 		unProcessedEvents += allEvents
 		val app = ApplicationManager.application
-		val cancelIndicator = new MutableCancelIndicator
+		val cancelIndicator = new MutableCancelIndicator(indicator)
 		cancelIndicators.add(cancelIndicator)
 		val moduleManager = ModuleManager.getInstance(getProject)
 		val buildProgressReporter = buildProgressReporterProvider.get
 		buildProgressReporter.project = project
 		buildProgressReporter.events = allEvents
 		try {
-			val fileIndex = ProjectFileIndex.SERVICE.getInstance(project)
 			val moduleGraph = app.<Graph<Module>>runReadAction[moduleManager.moduleGraph]
 			// deltas are added over the whole build
 			val deltas = <IResourceDescription.Delta>newArrayList
@@ -481,8 +498,8 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 				val changedUris = newHashSet
 				val deletedUris = newHashSet
 				val contentRoots = ModuleRootManager.getInstance(module).contentRoots
-				val events = allEvents.filter[event| event.findModule(fileIndex) == module].toSet
-				if (contentRoots.empty 
+				val events = unProcessedEvents.getEventsForModule(module)
+				if (contentRoots.empty
 					|| events.isEmpty && deltas.isEmpty) {
 					LOG.info("Skipping module '"+module.name+"'. Nothing to do here.")		
 				} else {
@@ -533,6 +550,29 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 			buildProgressReporter.clearProgress
 			cancelIndicators.remove(cancelIndicator)
 		}
+	}
+	
+	protected def getEventsForModule(List<BuildEvent> events, Module module) {
+		val moduleRootManager = ModuleRootManager.getInstance(module)
+		val excludeRootUrls = moduleRootManager.excludeRootUrls
+		val sourceRootUrls = moduleRootManager.sourceRootUrls
+		events.filter [ event |
+			val url = event.filesByURI.keySet.head.toString
+			for (excludeRootUrl : excludeRootUrls)
+				if (url.isUrlUnderRoot(excludeRootUrl))
+					return false
+			for (sourceRootUrl : sourceRootUrls)
+				if (url.isUrlUnderRoot(sourceRootUrl))
+					return true
+			return false
+		].toSet
+	}
+	
+	static val char SEGMENT_SEPARATOR = '/'
+
+	protected def isUrlUnderRoot(String url, String rootUrl) {
+		url.length > rootUrl.length && url.charAt(rootUrl.length) == SEGMENT_SEPARATOR &&
+			FileUtil.startsWith(url, rootUrl)
 	}
 	
 	def getServiceProviderProvider(Module module) {
@@ -652,10 +692,15 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 		return chunkedResourceDescriptions
 	}
 	
+	@FinalFieldsConstructor
 	static class MutableCancelIndicator implements CancelIndicator {
+		
+		val ProgressIndicator indicator
+
 		volatile boolean canceled
+		
 		override isCanceled() {
-			canceled
+			canceled || indicator?.canceled
 		}
 		
 		def setCanceled(boolean canceled) {
@@ -670,8 +715,15 @@ import static extension org.eclipse.xtext.idea.resource.VirtualFileURIUtil.*
 	}
 	
 	override loadState(XtextAutoBuilderComponentState state) {
-		chunkedResourceDescriptions = codec.decodeIndex(state)
-		moduleName2GeneratedMapping = codec.decodeModuleToGenerated(state) 
+		try {
+			chunkedResourceDescriptions = codec.decodeIndex(state)
+			moduleName2GeneratedMapping = codec.decodeModuleToGenerated(state) 
+		} catch(IOException exc) {
+			LOG.error('Error loading XtextAutoBuildComponentState ', exc)
+			chunkedResourceDescriptions = chunkedResourceDescriptionsProvider.get
+			moduleName2GeneratedMapping.clear
+			doCleanBuild
+		}
 	}
 	
 }

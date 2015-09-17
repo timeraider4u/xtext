@@ -31,6 +31,7 @@ public class AntlrOptions {
   
   private int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS;
   
+  private boolean skipUnusedRules = false;
   private boolean forceHoisting = false;
   
   @Pure
@@ -106,11 +107,20 @@ public class AntlrOptions {
   }
   
   @Pure
+  public boolean isSkipUnusedRules() {
+    return this.skipUnusedRules;
+  }
+  
+  public void setSkipUnusedRules(final boolean skipUnusedRules) {
+    this.skipUnusedRules = skipUnusedRules;
+  }
+  
+  @Pure
   public boolean isForceHoisting() {
     return this.forceHoisting;
   }
-  
+
   public void setForceHoisting(final boolean forceHoisting) {
     this.forceHoisting = forceHoisting;
-  }
+  
 }

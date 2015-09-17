@@ -174,9 +174,9 @@ class GrammarAccessFragment2 extends AbstractGeneratorFragment2 {
 	}
 	
 	protected def doGenerateGrammarAccess() {
-		val javaFile = fileAccessFactory.createJavaFile(grammar.grammarAccess)
+		val javaFile = fileAccessFactory.createGeneratedJavaFile(grammar.grammarAccess)
 		javaFile.annotations += new SingletonClassAnnotation
-		javaFile.javaContent = '''
+		javaFile.content = '''
 			public class «language.grammar.grammarAccess.simpleName» extends «AbstractGrammarElementFinder» {
 				
 				«FOR r : language.grammar.rules.filter(ParserRule)»
