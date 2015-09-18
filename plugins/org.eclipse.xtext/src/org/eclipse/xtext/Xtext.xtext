@@ -46,7 +46,7 @@ ParserRule :
 	)
 	('my')?
 	(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
-	initAfterActions=MyInitAfterActions?
+	(initAfterActions=MyInitAfterActions)?
 	(':' | '#')
     	alternatives=Alternatives   
     ';'
