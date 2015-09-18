@@ -355,22 +355,22 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_0_1_1_1 = (Assignment)cGroup_0_1_1.eContents().get(1);
 		private final RuleCall cTypeTypeRefParserRuleCall_0_1_1_1_0 = (RuleCall)cTypeAssignment_0_1_1_1.eContents().get(0);
 		private final Keyword cMyKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cDefinesHiddenTokensAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final Keyword cDefinesHiddenTokensHiddenKeyword_2_0_0 = (Keyword)cDefinesHiddenTokensAssignment_2_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Group cGroup_2_2 = (Group)cGroup_2.eContents().get(2);
-		private final Assignment cHiddenTokensAssignment_2_2_0 = (Assignment)cGroup_2_2.eContents().get(0);
-		private final CrossReference cHiddenTokensAbstractRuleCrossReference_2_2_0_0 = (CrossReference)cHiddenTokensAssignment_2_2_0.eContents().get(0);
-		private final RuleCall cHiddenTokensAbstractRuleRuleIDParserRuleCall_2_2_0_0_1 = (RuleCall)cHiddenTokensAbstractRuleCrossReference_2_2_0_0.eContents().get(1);
-		private final Group cGroup_2_2_1 = (Group)cGroup_2_2.eContents().get(1);
-		private final Keyword cCommaKeyword_2_2_1_0 = (Keyword)cGroup_2_2_1.eContents().get(0);
-		private final Assignment cHiddenTokensAssignment_2_2_1_1 = (Assignment)cGroup_2_2_1.eContents().get(1);
-		private final CrossReference cHiddenTokensAbstractRuleCrossReference_2_2_1_1_0 = (CrossReference)cHiddenTokensAssignment_2_2_1_1.eContents().get(0);
-		private final RuleCall cHiddenTokensAbstractRuleRuleIDParserRuleCall_2_2_1_1_0_1 = (RuleCall)cHiddenTokensAbstractRuleCrossReference_2_2_1_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
-		private final Assignment cInitAfterActionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cInitAfterActionsMyInitAfterActionsParserRuleCall_3_0 = (RuleCall)cInitAfterActionsAssignment_3.eContents().get(0);
+		private final Assignment cInitAfterActionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cInitAfterActionsMyInitAfterActionsParserRuleCall_2_0 = (RuleCall)cInitAfterActionsAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Assignment cDefinesHiddenTokensAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final Keyword cDefinesHiddenTokensHiddenKeyword_3_0_0 = (Keyword)cDefinesHiddenTokensAssignment_3_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Assignment cHiddenTokensAssignment_3_2_0 = (Assignment)cGroup_3_2.eContents().get(0);
+		private final CrossReference cHiddenTokensAbstractRuleCrossReference_3_2_0_0 = (CrossReference)cHiddenTokensAssignment_3_2_0.eContents().get(0);
+		private final RuleCall cHiddenTokensAbstractRuleRuleIDParserRuleCall_3_2_0_0_1 = (RuleCall)cHiddenTokensAbstractRuleCrossReference_3_2_0_0.eContents().get(1);
+		private final Group cGroup_3_2_1 = (Group)cGroup_3_2.eContents().get(1);
+		private final Keyword cCommaKeyword_3_2_1_0 = (Keyword)cGroup_3_2_1.eContents().get(0);
+		private final Assignment cHiddenTokensAssignment_3_2_1_1 = (Assignment)cGroup_3_2_1.eContents().get(1);
+		private final CrossReference cHiddenTokensAbstractRuleCrossReference_3_2_1_1_0 = (CrossReference)cHiddenTokensAssignment_3_2_1_1.eContents().get(0);
+		private final RuleCall cHiddenTokensAbstractRuleRuleIDParserRuleCall_3_2_1_1_0_1 = (RuleCall)cHiddenTokensAbstractRuleCrossReference_3_2_1_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
 		private final Keyword cColonKeyword_4_0 = (Keyword)cAlternatives_4.eContents().get(0);
 		private final Keyword cNumberSignKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
@@ -383,15 +383,15 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		////;
 		//ParserRule:
 		//	(^fragment?='fragment' RuleNameAndParams (wildcard?='*' | 'returns' type=TypeRef?) | RuleNameAndParams ('returns'
-		//	type=TypeRef)?) 'my'? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
-		//	hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
-		//	initAfterActions=MyInitAfterActions? (':' | '#') alternatives=Alternatives
+		//	type=TypeRef)?) 'my'?
+		//	initAfterActions=MyInitAfterActions? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
+		//	hiddenTokens+=[AbstractRule|RuleID])*)? ')')? (':' | '#') alternatives=Alternatives
 		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//(^fragment?='fragment' RuleNameAndParams (wildcard?='*' | 'returns' type=TypeRef?) | RuleNameAndParams ('returns'
-		//type=TypeRef)?) 'my'? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
-		//hiddenTokens+=[AbstractRule|RuleID])*)? ')')? initAfterActions=MyInitAfterActions? (':' | '#')
+		//type=TypeRef)?) 'my'? initAfterActions=MyInitAfterActions? (definesHiddenTokens?='hidden' '('
+		//(hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')? (':' | '#')
 		//alternatives=Alternatives ';'
 		public Group getGroup() { return cGroup; }
 
@@ -453,54 +453,54 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//'my'?
 		public Keyword getMyKeyword_1() { return cMyKeyword_1; }
 
-		//(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)?
-		//')')?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//definesHiddenTokens?='hidden'
-		public Assignment getDefinesHiddenTokensAssignment_2_0() { return cDefinesHiddenTokensAssignment_2_0; }
-
-		//'hidden'
-		public Keyword getDefinesHiddenTokensHiddenKeyword_2_0_0() { return cDefinesHiddenTokensHiddenKeyword_2_0_0; }
-
-		//'('
-		public Keyword getLeftParenthesisKeyword_2_1() { return cLeftParenthesisKeyword_2_1; }
-
-		//(hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)?
-		public Group getGroup_2_2() { return cGroup_2_2; }
-
-		//hiddenTokens+=[AbstractRule|RuleID]
-		public Assignment getHiddenTokensAssignment_2_2_0() { return cHiddenTokensAssignment_2_2_0; }
-
-		//[AbstractRule|RuleID]
-		public CrossReference getHiddenTokensAbstractRuleCrossReference_2_2_0_0() { return cHiddenTokensAbstractRuleCrossReference_2_2_0_0; }
-
-		//RuleID
-		public RuleCall getHiddenTokensAbstractRuleRuleIDParserRuleCall_2_2_0_0_1() { return cHiddenTokensAbstractRuleRuleIDParserRuleCall_2_2_0_0_1; }
-
-		//(',' hiddenTokens+=[AbstractRule|RuleID])*
-		public Group getGroup_2_2_1() { return cGroup_2_2_1; }
-
-		//','
-		public Keyword getCommaKeyword_2_2_1_0() { return cCommaKeyword_2_2_1_0; }
-
-		//hiddenTokens+=[AbstractRule|RuleID]
-		public Assignment getHiddenTokensAssignment_2_2_1_1() { return cHiddenTokensAssignment_2_2_1_1; }
-
-		//[AbstractRule|RuleID]
-		public CrossReference getHiddenTokensAbstractRuleCrossReference_2_2_1_1_0() { return cHiddenTokensAbstractRuleCrossReference_2_2_1_1_0; }
-
-		//RuleID
-		public RuleCall getHiddenTokensAbstractRuleRuleIDParserRuleCall_2_2_1_1_0_1() { return cHiddenTokensAbstractRuleRuleIDParserRuleCall_2_2_1_1_0_1; }
-
-		//')'
-		public Keyword getRightParenthesisKeyword_2_3() { return cRightParenthesisKeyword_2_3; }
-
 		//initAfterActions=MyInitAfterActions?
-		public Assignment getInitAfterActionsAssignment_3() { return cInitAfterActionsAssignment_3; }
+		public Assignment getInitAfterActionsAssignment_2() { return cInitAfterActionsAssignment_2; }
 
 		//MyInitAfterActions
-		public RuleCall getInitAfterActionsMyInitAfterActionsParserRuleCall_3_0() { return cInitAfterActionsMyInitAfterActionsParserRuleCall_3_0; }
+		public RuleCall getInitAfterActionsMyInitAfterActionsParserRuleCall_2_0() { return cInitAfterActionsMyInitAfterActionsParserRuleCall_2_0; }
+
+		//(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)?
+		//')')?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//definesHiddenTokens?='hidden'
+		public Assignment getDefinesHiddenTokensAssignment_3_0() { return cDefinesHiddenTokensAssignment_3_0; }
+
+		//'hidden'
+		public Keyword getDefinesHiddenTokensHiddenKeyword_3_0_0() { return cDefinesHiddenTokensHiddenKeyword_3_0_0; }
+
+		//'('
+		public Keyword getLeftParenthesisKeyword_3_1() { return cLeftParenthesisKeyword_3_1; }
+
+		//(hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)?
+		public Group getGroup_3_2() { return cGroup_3_2; }
+
+		//hiddenTokens+=[AbstractRule|RuleID]
+		public Assignment getHiddenTokensAssignment_3_2_0() { return cHiddenTokensAssignment_3_2_0; }
+
+		//[AbstractRule|RuleID]
+		public CrossReference getHiddenTokensAbstractRuleCrossReference_3_2_0_0() { return cHiddenTokensAbstractRuleCrossReference_3_2_0_0; }
+
+		//RuleID
+		public RuleCall getHiddenTokensAbstractRuleRuleIDParserRuleCall_3_2_0_0_1() { return cHiddenTokensAbstractRuleRuleIDParserRuleCall_3_2_0_0_1; }
+
+		//(',' hiddenTokens+=[AbstractRule|RuleID])*
+		public Group getGroup_3_2_1() { return cGroup_3_2_1; }
+
+		//','
+		public Keyword getCommaKeyword_3_2_1_0() { return cCommaKeyword_3_2_1_0; }
+
+		//hiddenTokens+=[AbstractRule|RuleID]
+		public Assignment getHiddenTokensAssignment_3_2_1_1() { return cHiddenTokensAssignment_3_2_1_1; }
+
+		//[AbstractRule|RuleID]
+		public CrossReference getHiddenTokensAbstractRuleCrossReference_3_2_1_1_0() { return cHiddenTokensAbstractRuleCrossReference_3_2_1_1_0; }
+
+		//RuleID
+		public RuleCall getHiddenTokensAbstractRuleRuleIDParserRuleCall_3_2_1_1_0_1() { return cHiddenTokensAbstractRuleRuleIDParserRuleCall_3_2_1_1_0_1; }
+
+		//')'
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
 
 		//(':' | '#')
 		public Alternatives getAlternatives_4() { return cAlternatives_4; }
@@ -2588,9 +2588,9 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	////;
 	//ParserRule:
 	//	(^fragment?='fragment' RuleNameAndParams (wildcard?='*' | 'returns' type=TypeRef?) | RuleNameAndParams ('returns'
-	//	type=TypeRef)?) 'my'? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
-	//	hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
-	//	initAfterActions=MyInitAfterActions? (':' | '#') alternatives=Alternatives
+	//	type=TypeRef)?) 'my'?
+	//	initAfterActions=MyInitAfterActions? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
+	//	hiddenTokens+=[AbstractRule|RuleID])*)? ')')? (':' | '#') alternatives=Alternatives
 	//	';';
 	public ParserRuleElements getParserRuleAccess() {
 		return pParserRule;

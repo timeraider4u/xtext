@@ -77,8 +77,7 @@ public class InternalXtextLexer extends Lexer {
         super(input,state);
 
     }
-    @Override
-	public String getGrammarFileName() { return "InternalXtext.g"; }
+    public String getGrammarFileName() { return "InternalXtext.g"; }
 
     // $ANTLR start "T__11"
     public final void mT__11() throws RecognitionException {
@@ -1461,8 +1460,7 @@ public class InternalXtextLexer extends Lexer {
     }
     // $ANTLR end "RULE_ANY_OTHER"
 
-    @Override
-	public void mTokens() throws RecognitionException {
+    public void mTokens() throws RecognitionException {
         // InternalXtext.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt12=50;
         alt12 = dfa12.predict(input);
@@ -2026,12 +2024,10 @@ public class InternalXtextLexer extends Lexer {
             this.special = DFA12_special;
             this.transition = DFA12_transition;
         }
-        @Override
-		public String getDescription() {
+        public String getDescription() {
             return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
-        @Override
-		public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {

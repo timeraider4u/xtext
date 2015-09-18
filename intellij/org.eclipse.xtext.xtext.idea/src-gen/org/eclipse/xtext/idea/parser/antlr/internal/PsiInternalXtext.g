@@ -514,28 +514,39 @@ ruleParserRule:
 		)?
 		(
 			(
+				{
+					markComposite(elementTypeProvider.getParserRule_InitAfterActionsMyInitAfterActionsParserRuleCall_2_0ElementType());
+				}
+				lv_initAfterActions_9_0=ruleMyInitAfterActions
+				{
+					doneComposite();
+				}
+			)
+		)?
+		(
+			(
 				(
 					{
-						markLeaf(elementTypeProvider.getParserRule_DefinesHiddenTokensHiddenKeyword_2_0_0ElementType());
+						markLeaf(elementTypeProvider.getParserRule_DefinesHiddenTokensHiddenKeyword_3_0_0ElementType());
 					}
-					lv_definesHiddenTokens_9_0='hidden'
+					lv_definesHiddenTokens_10_0='hidden'
 					{
-						doneLeaf(lv_definesHiddenTokens_9_0);
+						doneLeaf(lv_definesHiddenTokens_10_0);
 					}
 				)
 			)
 			{
-				markLeaf(elementTypeProvider.getParserRule_LeftParenthesisKeyword_2_1ElementType());
+				markLeaf(elementTypeProvider.getParserRule_LeftParenthesisKeyword_3_1ElementType());
 			}
-			otherlv_10='('
+			otherlv_11='('
 			{
-				doneLeaf(otherlv_10);
+				doneLeaf(otherlv_11);
 			}
 			(
 				(
 					(
 						{
-							markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_2_2_0_0ElementType());
+							markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_3_2_0_0ElementType());
 						}
 						ruleRuleID
 						{
@@ -545,16 +556,16 @@ ruleParserRule:
 				)
 				(
 					{
-						markLeaf(elementTypeProvider.getParserRule_CommaKeyword_2_2_1_0ElementType());
+						markLeaf(elementTypeProvider.getParserRule_CommaKeyword_3_2_1_0ElementType());
 					}
-					otherlv_12=','
+					otherlv_13=','
 					{
-						doneLeaf(otherlv_12);
+						doneLeaf(otherlv_13);
 					}
 					(
 						(
 							{
-								markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_2_2_1_1_0ElementType());
+								markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_3_2_1_1_0ElementType());
 							}
 							ruleRuleID
 							{
@@ -565,23 +576,12 @@ ruleParserRule:
 				)*
 			)?
 			{
-				markLeaf(elementTypeProvider.getParserRule_RightParenthesisKeyword_2_3ElementType());
+				markLeaf(elementTypeProvider.getParserRule_RightParenthesisKeyword_3_3ElementType());
 			}
-			otherlv_14=')'
+			otherlv_15=')'
 			{
-				doneLeaf(otherlv_14);
+				doneLeaf(otherlv_15);
 			}
-		)?
-		(
-			(
-				{
-					markComposite(elementTypeProvider.getParserRule_InitAfterActionsMyInitAfterActionsParserRuleCall_3_0ElementType());
-				}
-				lv_initAfterActions_15_0=ruleMyInitAfterActions
-				{
-					doneComposite();
-				}
-			)
 		)?
 		(
 			{

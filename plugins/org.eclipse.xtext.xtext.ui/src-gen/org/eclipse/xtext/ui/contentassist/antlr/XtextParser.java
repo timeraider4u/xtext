@@ -84,9 +84,9 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParserRuleAccess().getGroup_0_0_2_1(), "rule__ParserRule__Group_0_0_2_1__0");
 					put(grammarAccess.getParserRuleAccess().getGroup_0_1(), "rule__ParserRule__Group_0_1__0");
 					put(grammarAccess.getParserRuleAccess().getGroup_0_1_1(), "rule__ParserRule__Group_0_1_1__0");
-					put(grammarAccess.getParserRuleAccess().getGroup_2(), "rule__ParserRule__Group_2__0");
-					put(grammarAccess.getParserRuleAccess().getGroup_2_2(), "rule__ParserRule__Group_2_2__0");
-					put(grammarAccess.getParserRuleAccess().getGroup_2_2_1(), "rule__ParserRule__Group_2_2_1__0");
+					put(grammarAccess.getParserRuleAccess().getGroup_3(), "rule__ParserRule__Group_3__0");
+					put(grammarAccess.getParserRuleAccess().getGroup_3_2(), "rule__ParserRule__Group_3_2__0");
+					put(grammarAccess.getParserRuleAccess().getGroup_3_2_1(), "rule__ParserRule__Group_3_2_1__0");
 					put(grammarAccess.getMyInitAfterActionsAccess().getGroup(), "rule__MyInitAfterActions__Group__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup(), "rule__RuleNameAndParams__Group__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1(), "rule__RuleNameAndParams__Group_1__0");
@@ -174,10 +174,10 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParserRuleAccess().getWildcardAssignment_0_0_2_0(), "rule__ParserRule__WildcardAssignment_0_0_2_0");
 					put(grammarAccess.getParserRuleAccess().getTypeAssignment_0_0_2_1_1(), "rule__ParserRule__TypeAssignment_0_0_2_1_1");
 					put(grammarAccess.getParserRuleAccess().getTypeAssignment_0_1_1_1(), "rule__ParserRule__TypeAssignment_0_1_1_1");
-					put(grammarAccess.getParserRuleAccess().getDefinesHiddenTokensAssignment_2_0(), "rule__ParserRule__DefinesHiddenTokensAssignment_2_0");
-					put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_2_2_0(), "rule__ParserRule__HiddenTokensAssignment_2_2_0");
-					put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_2_2_1_1(), "rule__ParserRule__HiddenTokensAssignment_2_2_1_1");
-					put(grammarAccess.getParserRuleAccess().getInitAfterActionsAssignment_3(), "rule__ParserRule__InitAfterActionsAssignment_3");
+					put(grammarAccess.getParserRuleAccess().getInitAfterActionsAssignment_2(), "rule__ParserRule__InitAfterActionsAssignment_2");
+					put(grammarAccess.getParserRuleAccess().getDefinesHiddenTokensAssignment_3_0(), "rule__ParserRule__DefinesHiddenTokensAssignment_3_0");
+					put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_3_2_0(), "rule__ParserRule__HiddenTokensAssignment_3_2_0");
+					put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_3_2_1_1(), "rule__ParserRule__HiddenTokensAssignment_3_2_1_1");
 					put(grammarAccess.getParserRuleAccess().getAlternativesAssignment_5(), "rule__ParserRule__AlternativesAssignment_5");
 					put(grammarAccess.getRuleNameAndParamsAccess().getNameAssignment_0(), "rule__RuleNameAndParams__NameAssignment_0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_0(), "rule__RuleNameAndParams__ParametersAssignment_1_1_0");

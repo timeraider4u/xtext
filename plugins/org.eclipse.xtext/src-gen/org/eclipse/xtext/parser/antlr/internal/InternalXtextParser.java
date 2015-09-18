@@ -90,10 +90,8 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
         }
         
 
-    @Override
-	public String[] getTokenNames() { return InternalXtextParser.tokenNames; }
-    @Override
-	public String getGrammarFileName() { return "InternalXtext.g"; }
+    public String[] getTokenNames() { return InternalXtextParser.tokenNames; }
+    public String getGrammarFileName() { return "InternalXtext.g"; }
 
 
 
@@ -1383,7 +1381,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleParserRule"
-    // InternalXtext.g:528:1: ruleParserRule returns [EObject current=null] : ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')' )? ( (lv_initAfterActions_15_0= ruleMyInitAfterActions ) )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' ) ;
+    // InternalXtext.g:528:1: ruleParserRule returns [EObject current=null] : ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( (lv_initAfterActions_9_0= ruleMyInitAfterActions ) )? ( ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')' )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' ) ;
     public final EObject ruleParserRule() throws RecognitionException {
         EObject current = null;
 
@@ -1392,10 +1390,10 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_6=null;
         Token otherlv_8=null;
-        Token lv_definesHiddenTokens_9_0=null;
-        Token otherlv_10=null;
-        Token otherlv_12=null;
-        Token otherlv_14=null;
+        Token lv_definesHiddenTokens_10_0=null;
+        Token otherlv_11=null;
+        Token otherlv_13=null;
+        Token otherlv_15=null;
         Token otherlv_16=null;
         Token otherlv_17=null;
         Token otherlv_19=null;
@@ -1407,7 +1405,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
 
         EObject lv_type_7_0 = null;
 
-        AntlrDatatypeRuleToken lv_initAfterActions_15_0 = null;
+        AntlrDatatypeRuleToken lv_initAfterActions_9_0 = null;
 
         EObject lv_alternatives_18_0 = null;
 
@@ -1415,11 +1413,11 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // InternalXtext.g:531:28: ( ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')' )? ( (lv_initAfterActions_15_0= ruleMyInitAfterActions ) )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' ) )
-            // InternalXtext.g:532:1: ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')' )? ( (lv_initAfterActions_15_0= ruleMyInitAfterActions ) )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' )
+            // InternalXtext.g:531:28: ( ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( (lv_initAfterActions_9_0= ruleMyInitAfterActions ) )? ( ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')' )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' ) )
+            // InternalXtext.g:532:1: ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( (lv_initAfterActions_9_0= ruleMyInitAfterActions ) )? ( ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')' )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' )
             {
-            // InternalXtext.g:532:1: ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')' )? ( (lv_initAfterActions_15_0= ruleMyInitAfterActions ) )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' )
-            // InternalXtext.g:532:2: ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')' )? ( (lv_initAfterActions_15_0= ruleMyInitAfterActions ) )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';'
+            // InternalXtext.g:532:1: ( ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( (lv_initAfterActions_9_0= ruleMyInitAfterActions ) )? ( ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')' )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';' )
+            // InternalXtext.g:532:2: ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) ) (otherlv_8= 'my' )? ( (lv_initAfterActions_9_0= ruleMyInitAfterActions ) )? ( ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')' )? (otherlv_16= ':' | otherlv_17= '#' ) ( (lv_alternatives_18_0= ruleAlternatives ) ) otherlv_19= ';'
             {
             // InternalXtext.g:532:2: ( ( ( (lv_fragment_0_0= 'fragment' ) ) this_RuleNameAndParams_1= ruleRuleNameAndParams[$current] ( ( (lv_wildcard_2_0= '*' ) ) | (otherlv_3= 'returns' ( (lv_type_4_0= ruleTypeRef ) ) )? ) ) | (this_RuleNameAndParams_5= ruleRuleNameAndParams[$current] (otherlv_6= 'returns' ( (lv_type_7_0= ruleTypeRef ) ) )? ) )
             int alt16=2;
@@ -1696,26 +1694,68 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalXtext.g:636:3: ( ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')' )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // InternalXtext.g:636:3: ( (lv_initAfterActions_9_0= ruleMyInitAfterActions ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA20_0==14) ) {
-                alt20=1;
+            if ( ((LA18_0>=28 && LA18_0<=29)) ) {
+                alt18=1;
             }
-            switch (alt20) {
+            switch (alt18) {
                 case 1 :
-                    // InternalXtext.g:636:4: ( (lv_definesHiddenTokens_9_0= 'hidden' ) ) otherlv_10= '(' ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )? otherlv_14= ')'
+                    // InternalXtext.g:637:1: (lv_initAfterActions_9_0= ruleMyInitAfterActions )
                     {
-                    // InternalXtext.g:636:4: ( (lv_definesHiddenTokens_9_0= 'hidden' ) )
-                    // InternalXtext.g:637:1: (lv_definesHiddenTokens_9_0= 'hidden' )
+                    // InternalXtext.g:637:1: (lv_initAfterActions_9_0= ruleMyInitAfterActions )
+                    // InternalXtext.g:638:3: lv_initAfterActions_9_0= ruleMyInitAfterActions
                     {
-                    // InternalXtext.g:637:1: (lv_definesHiddenTokens_9_0= 'hidden' )
-                    // InternalXtext.g:638:3: lv_definesHiddenTokens_9_0= 'hidden'
-                    {
-                    lv_definesHiddenTokens_9_0=(Token)match(input,14,FollowSets000.FOLLOW_6); 
+                     
+                    	        newCompositeNode(grammarAccess.getParserRuleAccess().getInitAfterActionsMyInitAfterActionsParserRuleCall_2_0()); 
+                    	    
+                    pushFollow(FollowSets000.FOLLOW_19);
+                    lv_initAfterActions_9_0=ruleMyInitAfterActions();
 
-                            newLeafNode(lv_definesHiddenTokens_9_0, grammarAccess.getParserRuleAccess().getDefinesHiddenTokensHiddenKeyword_2_0_0());
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getParserRuleRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"initAfterActions",
+                            		lv_initAfterActions_9_0, 
+                            		"org.eclipse.xtext.Xtext.MyInitAfterActions");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalXtext.g:654:3: ( ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')' )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
+
+            if ( (LA21_0==14) ) {
+                alt21=1;
+            }
+            switch (alt21) {
+                case 1 :
+                    // InternalXtext.g:654:4: ( (lv_definesHiddenTokens_10_0= 'hidden' ) ) otherlv_11= '(' ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )? otherlv_15= ')'
+                    {
+                    // InternalXtext.g:654:4: ( (lv_definesHiddenTokens_10_0= 'hidden' ) )
+                    // InternalXtext.g:655:1: (lv_definesHiddenTokens_10_0= 'hidden' )
+                    {
+                    // InternalXtext.g:655:1: (lv_definesHiddenTokens_10_0= 'hidden' )
+                    // InternalXtext.g:656:3: lv_definesHiddenTokens_10_0= 'hidden'
+                    {
+                    lv_definesHiddenTokens_10_0=(Token)match(input,14,FollowSets000.FOLLOW_6); 
+
+                            newLeafNode(lv_definesHiddenTokens_10_0, grammarAccess.getParserRuleAccess().getDefinesHiddenTokensHiddenKeyword_3_0_0());
                         
 
                     	        if (current==null) {
@@ -1729,26 +1769,26 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,15,FollowSets000.FOLLOW_7); 
+                    otherlv_11=(Token)match(input,15,FollowSets000.FOLLOW_7); 
 
-                        	newLeafNode(otherlv_10, grammarAccess.getParserRuleAccess().getLeftParenthesisKeyword_2_1());
+                        	newLeafNode(otherlv_11, grammarAccess.getParserRuleAccess().getLeftParenthesisKeyword_3_1());
                         
-                    // InternalXtext.g:655:1: ( ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )* )?
-                    int alt19=2;
-                    int LA19_0 = input.LA(1);
+                    // InternalXtext.g:673:1: ( ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )* )?
+                    int alt20=2;
+                    int LA20_0 = input.LA(1);
 
-                    if ( (LA19_0==RULE_ID||(LA19_0>=42 && LA19_0<=43)) ) {
-                        alt19=1;
+                    if ( (LA20_0==RULE_ID||(LA20_0>=42 && LA20_0<=43)) ) {
+                        alt20=1;
                     }
-                    switch (alt19) {
+                    switch (alt20) {
                         case 1 :
-                            // InternalXtext.g:655:2: ( ( ruleRuleID ) ) (otherlv_12= ',' ( ( ruleRuleID ) ) )*
+                            // InternalXtext.g:673:2: ( ( ruleRuleID ) ) (otherlv_13= ',' ( ( ruleRuleID ) ) )*
                             {
-                            // InternalXtext.g:655:2: ( ( ruleRuleID ) )
-                            // InternalXtext.g:656:1: ( ruleRuleID )
+                            // InternalXtext.g:673:2: ( ( ruleRuleID ) )
+                            // InternalXtext.g:674:1: ( ruleRuleID )
                             {
-                            // InternalXtext.g:656:1: ( ruleRuleID )
-                            // InternalXtext.g:657:3: ruleRuleID
+                            // InternalXtext.g:674:1: ( ruleRuleID )
+                            // InternalXtext.g:675:3: ruleRuleID
                             {
 
                             			if (current==null) {
@@ -1756,7 +1796,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
                             	        }
                                     
                              
-                            	        newCompositeNode(grammarAccess.getParserRuleAccess().getHiddenTokensAbstractRuleCrossReference_2_2_0_0()); 
+                            	        newCompositeNode(grammarAccess.getParserRuleAccess().getHiddenTokensAbstractRuleCrossReference_3_2_0_0()); 
                             	    
                             pushFollow(FollowSets000.FOLLOW_8);
                             ruleRuleID();
@@ -1772,30 +1812,30 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            // InternalXtext.g:670:2: (otherlv_12= ',' ( ( ruleRuleID ) ) )*
-                            loop18:
+                            // InternalXtext.g:688:2: (otherlv_13= ',' ( ( ruleRuleID ) ) )*
+                            loop19:
                             do {
-                                int alt18=2;
-                                int LA18_0 = input.LA(1);
+                                int alt19=2;
+                                int LA19_0 = input.LA(1);
 
-                                if ( (LA18_0==13) ) {
-                                    alt18=1;
+                                if ( (LA19_0==13) ) {
+                                    alt19=1;
                                 }
 
 
-                                switch (alt18) {
+                                switch (alt19) {
                             	case 1 :
-                            	    // InternalXtext.g:670:4: otherlv_12= ',' ( ( ruleRuleID ) )
+                            	    // InternalXtext.g:688:4: otherlv_13= ',' ( ( ruleRuleID ) )
                             	    {
-                            	    otherlv_12=(Token)match(input,13,FollowSets000.FOLLOW_3); 
+                            	    otherlv_13=(Token)match(input,13,FollowSets000.FOLLOW_3); 
 
-                            	        	newLeafNode(otherlv_12, grammarAccess.getParserRuleAccess().getCommaKeyword_2_2_1_0());
+                            	        	newLeafNode(otherlv_13, grammarAccess.getParserRuleAccess().getCommaKeyword_3_2_1_0());
                             	        
-                            	    // InternalXtext.g:674:1: ( ( ruleRuleID ) )
-                            	    // InternalXtext.g:675:1: ( ruleRuleID )
+                            	    // InternalXtext.g:692:1: ( ( ruleRuleID ) )
+                            	    // InternalXtext.g:693:1: ( ruleRuleID )
                             	    {
-                            	    // InternalXtext.g:675:1: ( ruleRuleID )
-                            	    // InternalXtext.g:676:3: ruleRuleID
+                            	    // InternalXtext.g:693:1: ( ruleRuleID )
+                            	    // InternalXtext.g:694:3: ruleRuleID
                             	    {
 
                             	    			if (current==null) {
@@ -1803,7 +1843,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
                             	    	        }
                             	            
                             	     
-                            	    	        newCompositeNode(grammarAccess.getParserRuleAccess().getHiddenTokensAbstractRuleCrossReference_2_2_1_1_0()); 
+                            	    	        newCompositeNode(grammarAccess.getParserRuleAccess().getHiddenTokensAbstractRuleCrossReference_3_2_1_1_0()); 
                             	    	    
                             	    pushFollow(FollowSets000.FOLLOW_8);
                             	    ruleRuleID();
@@ -1824,7 +1864,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
                             	    break;
 
                             	default :
-                            	    break loop18;
+                            	    break loop19;
                                 }
                             } while (true);
 
@@ -1834,52 +1874,10 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_14=(Token)match(input,16,FollowSets000.FOLLOW_19); 
+                    otherlv_15=(Token)match(input,16,FollowSets000.FOLLOW_20); 
 
-                        	newLeafNode(otherlv_14, grammarAccess.getParserRuleAccess().getRightParenthesisKeyword_2_3());
+                        	newLeafNode(otherlv_15, grammarAccess.getParserRuleAccess().getRightParenthesisKeyword_3_3());
                         
-
-                    }
-                    break;
-
-            }
-
-            // InternalXtext.g:693:3: ( (lv_initAfterActions_15_0= ruleMyInitAfterActions ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
-
-            if ( ((LA21_0>=28 && LA21_0<=29)) ) {
-                alt21=1;
-            }
-            switch (alt21) {
-                case 1 :
-                    // InternalXtext.g:694:1: (lv_initAfterActions_15_0= ruleMyInitAfterActions )
-                    {
-                    // InternalXtext.g:694:1: (lv_initAfterActions_15_0= ruleMyInitAfterActions )
-                    // InternalXtext.g:695:3: lv_initAfterActions_15_0= ruleMyInitAfterActions
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getParserRuleAccess().getInitAfterActionsMyInitAfterActionsParserRuleCall_3_0()); 
-                    	    
-                    pushFollow(FollowSets000.FOLLOW_20);
-                    lv_initAfterActions_15_0=ruleMyInitAfterActions();
-
-                    state._fsp--;
-
-
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getParserRuleRule());
-                    	        }
-                           		set(
-                           			current, 
-                           			"initAfterActions",
-                            		lv_initAfterActions_15_0, 
-                            		"org.eclipse.xtext.Xtext.MyInitAfterActions");
-                    	        afterParserOrEnumRuleCall();
-                    	    
-
-                    }
-
 
                     }
                     break;
@@ -10206,8 +10204,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
             this.special = DFA37_special;
             this.transition = DFA37_transition;
         }
-        @Override
-		public String getDescription() {
+        public String getDescription() {
             return "1269:2: (this_Assignment_0= ruleAssignment | this_AbstractTerminal_1= ruleAbstractTerminal )";
         }
     }
@@ -10233,7 +10230,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000020L});
         public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000037804000L});
         public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000036004000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000036000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000006004000L});
         public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000006000000L});
         public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00006C0140008030L});
         public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008000000L});

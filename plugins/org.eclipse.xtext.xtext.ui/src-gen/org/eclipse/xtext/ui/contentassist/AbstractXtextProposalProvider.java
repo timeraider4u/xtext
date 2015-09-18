@@ -59,14 +59,14 @@ public class AbstractXtextProposalProvider extends org.eclipse.xtext.common.ui.c
 	public void completeParserRule_Type(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
+	public void completeParserRule_InitAfterActions(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
+	}
 	public void completeParserRule_DefinesHiddenTokens(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
 	public void completeParserRule_HiddenTokens(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		lookupCrossReference(((CrossReference)assignment.getTerminal()), context, acceptor);
-	}
-	public void completeParserRule_InitAfterActions(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
-		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
 	public void completeParserRule_Alternatives(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);

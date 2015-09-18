@@ -45,8 +45,9 @@ ParserRule :
 	| RuleNameAndParams ('returns' type=TypeRef)?
 	)
 	('my')?
-	(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
 	(initAfterActions=MyInitAfterActions)?
+	(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
+	// (initAfterActions=MyInitAfterActions)?
 	(':' | '#')
     	alternatives=Alternatives   
     ';'
