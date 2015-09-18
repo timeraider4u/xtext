@@ -348,6 +348,16 @@ public interface XtextFactory extends EFactory {
 	LiteralCondition createLiteralCondition();
 
 	/**
+	 * Returns a new object of class '<em>Init After Actions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Init After Actions</em>'.
+	 * @generated
+	 * @since 3.0
+	 */
+	InitAfterActions createInitAfterActions();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

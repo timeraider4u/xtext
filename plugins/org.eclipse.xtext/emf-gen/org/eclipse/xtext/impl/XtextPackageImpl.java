@@ -29,6 +29,7 @@ import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.GeneratedMetamodel;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.Group;
+import org.eclipse.xtext.InitAfterActions;
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.LiteralCondition;
 import org.eclipse.xtext.NamedArgument;
@@ -301,6 +302,14 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * @generated
 	 */
 	private EClass literalConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	private EClass initAfterActionsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -579,11 +588,11 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @since 3.0
 	 * @generated
+	 * @since 3.0
 	 */
-	public EAttribute getParserRule_InitAfterActions() {
-		return (EAttribute)parserRuleEClass.getEStructuralFeatures().get(5);
+	public EReference getParserRule_InitAfterActions() {
+		return (EReference)parserRuleEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1165,6 +1174,36 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
+	 */
+	public EClass getInitAfterActions() {
+		return initAfterActionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public EAttribute getInitAfterActions_InitAction() {
+		return (EAttribute)initAfterActionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public EAttribute getInitAfterActions_AfterAction() {
+		return (EAttribute)initAfterActionsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public XtextFactory getXtextFactory() {
 		return (XtextFactory)getEFactoryInstance();
@@ -1217,7 +1256,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		createEReference(parserRuleEClass, PARSER_RULE__PARAMETERS);
 		createEAttribute(parserRuleEClass, PARSER_RULE__FRAGMENT);
 		createEAttribute(parserRuleEClass, PARSER_RULE__WILDCARD);
-		createEAttribute(parserRuleEClass, PARSER_RULE__INIT_AFTER_ACTIONS);
+		createEReference(parserRuleEClass, PARSER_RULE__INIT_AFTER_ACTIONS);
 
 		typeRefEClass = createEClass(TYPE_REF);
 		createEReference(typeRefEClass, TYPE_REF__METAMODEL);
@@ -1310,6 +1349,10 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 		literalConditionEClass = createEClass(LITERAL_CONDITION);
 		createEAttribute(literalConditionEClass, LITERAL_CONDITION__TRUE);
+
+		initAfterActionsEClass = createEClass(INIT_AFTER_ACTIONS);
+		createEAttribute(initAfterActionsEClass, INIT_AFTER_ACTIONS__INIT_ACTION);
+		createEAttribute(initAfterActionsEClass, INIT_AFTER_ACTIONS__AFTER_ACTION);
 	}
 
 	/**
@@ -1400,7 +1443,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		initEReference(getParserRule_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParserRule_Fragment(), theEcorePackage.getEBoolean(), "fragment", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParserRule_Wildcard(), theEcorePackage.getEBoolean(), "wildcard", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getParserRule_InitAfterActions(), ecorePackage.getEString(), "initAfterActions", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getParserRule_InitAfterActions(), this.getInitAfterActions(), null, "initAfterActions", null, 0, 1, ParserRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeRefEClass, TypeRef.class, "TypeRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTypeRef_Metamodel(), this.getAbstractMetamodelDeclaration(), null, "metamodel", null, 0, 1, TypeRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1493,6 +1536,10 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 		initEClass(literalConditionEClass, LiteralCondition.class, "LiteralCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLiteralCondition_True(), theEcorePackage.getEBoolean(), "true", null, 0, 1, LiteralCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(initAfterActionsEClass, InitAfterActions.class, "InitAfterActions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInitAfterActions_InitAction(), theEcorePackage.getEString(), "initAction", null, 0, 1, InitAfterActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInitAfterActions_AfterAction(), theEcorePackage.getEString(), "afterAction", null, 0, 1, InitAfterActions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

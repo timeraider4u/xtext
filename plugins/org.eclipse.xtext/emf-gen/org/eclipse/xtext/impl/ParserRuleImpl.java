@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.xtext.AbstractRule;
+import org.eclipse.xtext.InitAfterActions;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.XtextPackage;
@@ -128,7 +129,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	protected boolean wildcard = WILDCARD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getInitAfterActions() <em>Init After Actions</em>}' attribute.
+	 * The cached value of the '{@link #getInitAfterActions() <em>Init After Actions</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInitAfterActions()
@@ -136,18 +137,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	 * @ordered
 	 * @since 3.0
 	 */
-	protected static final String INIT_AFTER_ACTIONS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getInitAfterActions() <em>Init After Actions</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitAfterActions()
-	 * @generated
-	 * @ordered
-	 * @since 3.0
-	 */
-	protected String initAfterActions = INIT_AFTER_ACTIONS_EDEFAULT;
+	protected InitAfterActions initAfterActions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -266,7 +256,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	 * @generated
 	 * @since 3.0
 	 */
-	public String getInitAfterActions() {
+	public InitAfterActions getInitAfterActions() {
 		return initAfterActions;
 	}
 
@@ -276,11 +266,34 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	 * @generated
 	 * @since 3.0
 	 */
-	public void setInitAfterActions(String newInitAfterActions) {
-		String oldInitAfterActions = initAfterActions;
+	public NotificationChain basicSetInitAfterActions(InitAfterActions newInitAfterActions, NotificationChain msgs) {
+		InitAfterActions oldInitAfterActions = initAfterActions;
 		initAfterActions = newInitAfterActions;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS, oldInitAfterActions, initAfterActions));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS, oldInitAfterActions, newInitAfterActions);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public void setInitAfterActions(InitAfterActions newInitAfterActions) {
+		if (newInitAfterActions != initAfterActions) {
+			NotificationChain msgs = null;
+			if (initAfterActions != null)
+				msgs = ((InternalEObject)initAfterActions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS, null, msgs);
+			if (newInitAfterActions != null)
+				msgs = ((InternalEObject)newInitAfterActions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS, null, msgs);
+			msgs = basicSetInitAfterActions(newInitAfterActions, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS, newInitAfterActions, newInitAfterActions));
 	}
 
 	/**
@@ -293,6 +306,8 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 		switch (featureID) {
 			case XtextPackage.PARSER_RULE__PARAMETERS:
 				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
+				return basicSetInitAfterActions(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -348,7 +363,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 				setWildcard((Boolean)newValue);
 				return;
 			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
-				setInitAfterActions((String)newValue);
+				setInitAfterActions((InitAfterActions)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -378,7 +393,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 				setWildcard(WILDCARD_EDEFAULT);
 				return;
 			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
-				setInitAfterActions(INIT_AFTER_ACTIONS_EDEFAULT);
+				setInitAfterActions((InitAfterActions)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -403,7 +418,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 			case XtextPackage.PARSER_RULE__WILDCARD:
 				return wildcard != WILDCARD_EDEFAULT;
 			case XtextPackage.PARSER_RULE__INIT_AFTER_ACTIONS:
-				return INIT_AFTER_ACTIONS_EDEFAULT == null ? initAfterActions != null : !INIT_AFTER_ACTIONS_EDEFAULT.equals(initAfterActions);
+				return initAfterActions != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -424,8 +439,6 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 		result.append(fragment);
 		result.append(", wildcard: ");
 		result.append(wildcard);
-		result.append(", initAfterActions: ");
-		result.append(initAfterActions);
 		result.append(')');
 		return result.toString();
 	}

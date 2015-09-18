@@ -1,0 +1,218 @@
+/**
+ */
+package org.eclipse.xtext.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.xtext.InitAfterActions;
+import org.eclipse.xtext.XtextPackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Init After Actions</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.xtext.impl.InitAfterActionsImpl#getInitAction <em>Init Action</em>}</li>
+ *   <li>{@link org.eclipse.xtext.impl.InitAfterActionsImpl#getAfterAction <em>After Action</em>}</li>
+ * </ul>
+ *
+ * @generated
+ * @since 3.0
+ */
+public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implements InitAfterActions {
+	/**
+	 * The default value of the '{@link #getInitAction() <em>Init Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INIT_ACTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInitAction() <em>Init Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected String initAction = INIT_ACTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAfterAction() <em>After Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAfterAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AFTER_ACTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAfterAction() <em>After Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAfterAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected String afterAction = AFTER_ACTION_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InitAfterActionsImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return XtextPackage.Literals.INIT_AFTER_ACTIONS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getInitAction() {
+		return initAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitAction(String newInitAction) {
+		String oldInitAction = initAction;
+		initAction = newInitAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.INIT_AFTER_ACTIONS__INIT_ACTION, oldInitAction, initAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAfterAction() {
+		return afterAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAfterAction(String newAfterAction) {
+		String oldAfterAction = afterAction;
+		afterAction = newAfterAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.INIT_AFTER_ACTIONS__AFTER_ACTION, oldAfterAction, afterAction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case XtextPackage.INIT_AFTER_ACTIONS__INIT_ACTION:
+				return getInitAction();
+			case XtextPackage.INIT_AFTER_ACTIONS__AFTER_ACTION:
+				return getAfterAction();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case XtextPackage.INIT_AFTER_ACTIONS__INIT_ACTION:
+				setInitAction((String)newValue);
+				return;
+			case XtextPackage.INIT_AFTER_ACTIONS__AFTER_ACTION:
+				setAfterAction((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case XtextPackage.INIT_AFTER_ACTIONS__INIT_ACTION:
+				setInitAction(INIT_ACTION_EDEFAULT);
+				return;
+			case XtextPackage.INIT_AFTER_ACTIONS__AFTER_ACTION:
+				setAfterAction(AFTER_ACTION_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case XtextPackage.INIT_AFTER_ACTIONS__INIT_ACTION:
+				return INIT_ACTION_EDEFAULT == null ? initAction != null : !INIT_ACTION_EDEFAULT.equals(initAction);
+			case XtextPackage.INIT_AFTER_ACTIONS__AFTER_ACTION:
+				return AFTER_ACTION_EDEFAULT == null ? afterAction != null : !AFTER_ACTION_EDEFAULT.equals(afterAction);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (initAction: ");
+		result.append(initAction);
+		result.append(", afterAction: ");
+		result.append(afterAction);
+		result.append(')');
+		return result.toString();
+	}
+
+} //InitAfterActionsImpl

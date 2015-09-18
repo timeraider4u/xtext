@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.xtext.XtextFactory
  * @model kind="package"
  * @generated
+ * @since 3.0
  */
 public interface XtextPackage extends EPackage {
 	/**
@@ -382,7 +383,7 @@ public interface XtextPackage extends EPackage {
 	int PARSER_RULE__WILDCARD = ABSTRACT_RULE_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Init After Actions</b></em>' attribute.
+	 * The feature id for the '<em><b>Init After Actions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1880,6 +1881,47 @@ public interface XtextPackage extends EPackage {
 	int LITERAL_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.xtext.impl.InitAfterActionsImpl <em>Init After Actions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.xtext.impl.InitAfterActionsImpl
+	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getInitAfterActions()
+	 * @generated
+	 * @since 3.0
+	 */
+	int INIT_AFTER_ACTIONS = 35;
+
+	/**
+	 * The feature id for the '<em><b>Init Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int INIT_AFTER_ACTIONS__INIT_ACTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>After Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int INIT_AFTER_ACTIONS__AFTER_ACTION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Init After Actions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int INIT_AFTER_ACTIONS_FEATURE_COUNT = 2;
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Grammar <em>Grammar</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2130,16 +2172,16 @@ public interface XtextPackage extends EPackage {
 	EAttribute getParserRule_Wildcard();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Init After Actions</em>'.
+	 * @return the meta object for the containment reference '<em>Init After Actions</em>'.
 	 * @see org.eclipse.xtext.ParserRule#getInitAfterActions()
 	 * @see #getParserRule()
 	 * @generated
 	 * @since 3.0
 	 */
-	EAttribute getParserRule_InitAfterActions();
+	EReference getParserRule_InitAfterActions();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.TypeRef <em>Type Ref</em>}'.
@@ -2828,6 +2870,41 @@ public interface XtextPackage extends EPackage {
 	EAttribute getLiteralCondition_True();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.xtext.InitAfterActions <em>Init After Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Init After Actions</em>'.
+	 * @see org.eclipse.xtext.InitAfterActions
+	 * @generated
+	 * @since 3.0
+	 */
+	EClass getInitAfterActions();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.InitAfterActions#getInitAction <em>Init Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Init Action</em>'.
+	 * @see org.eclipse.xtext.InitAfterActions#getInitAction()
+	 * @see #getInitAfterActions()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getInitAfterActions_InitAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.InitAfterActions#getAfterAction <em>After Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>After Action</em>'.
+	 * @see org.eclipse.xtext.InitAfterActions#getAfterAction()
+	 * @see #getInitAfterActions()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getInitAfterActions_AfterAction();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3051,13 +3128,13 @@ public interface XtextPackage extends EPackage {
 		EAttribute PARSER_RULE__WILDCARD = eINSTANCE.getParserRule_Wildcard();
 
 		/**
-		 * The meta object literal for the '<em><b>Init After Actions</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Init After Actions</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 * @since 3.0
 		 */
-		EAttribute PARSER_RULE__INIT_AFTER_ACTIONS = eINSTANCE.getParserRule_InitAfterActions();
+		EReference PARSER_RULE__INIT_AFTER_ACTIONS = eINSTANCE.getParserRule_InitAfterActions();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.TypeRefImpl <em>Type Ref</em>}' class.
@@ -3642,6 +3719,35 @@ public interface XtextPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LITERAL_CONDITION__TRUE = eINSTANCE.getLiteralCondition_True();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.xtext.impl.InitAfterActionsImpl <em>Init After Actions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.xtext.impl.InitAfterActionsImpl
+		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getInitAfterActions()
+		 * @generated
+		 * @since 3.0
+		 */
+		EClass INIT_AFTER_ACTIONS = eINSTANCE.getInitAfterActions();
+
+		/**
+		 * The meta object literal for the '<em><b>Init Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute INIT_AFTER_ACTIONS__INIT_ACTION = eINSTANCE.getInitAfterActions_InitAction();
+
+		/**
+		 * The meta object literal for the '<em><b>After Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute INIT_AFTER_ACTIONS__AFTER_ACTION = eINSTANCE.getInitAfterActions_AfterAction();
 
 	}
 

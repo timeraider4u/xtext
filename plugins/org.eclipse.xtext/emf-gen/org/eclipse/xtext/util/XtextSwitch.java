@@ -311,6 +311,12 @@ public class XtextSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case XtextPackage.INIT_AFTER_ACTIONS: {
+				InitAfterActions initAfterActions = (InitAfterActions)theEObject;
+				T result = caseInitAfterActions(initAfterActions);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -846,6 +852,22 @@ public class XtextSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLiteralCondition(LiteralCondition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Init After Actions</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Init After Actions</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 3.0
+	 */
+	public T caseInitAfterActions(InitAfterActions object) {
 		return null;
 	}
 

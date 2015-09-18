@@ -45,7 +45,7 @@ ParserRule :
 	| RuleNameAndParams ('returns' type=TypeRef)?
 	)
 	('my')?
-	(initAfterActions=MyInitAfterActions)?
+	(initAfterActions=InitAfterActions)
 	(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
 	// (initAfterActions=MyInitAfterActions)?
 	(':' | '#')
@@ -53,8 +53,10 @@ ParserRule :
     ';'
 ;
 
-MyInitAfterActions:
-	('@init' | '@after') '{' '}'
+InitAfterActions returns InitAfterActions:
+	{InitAfterActions}
+	(('@init' initAction='init') '{' '}')?
+	(('@after' afterAction='after') '{' '}')?
 ;
 
 fragment RuleNameAndParams returns ParserRule:

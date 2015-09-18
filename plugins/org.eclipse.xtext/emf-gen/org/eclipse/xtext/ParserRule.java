@@ -21,11 +21,11 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}</li>
  * </ul>
  *
- * @noimplement This interface is not intended to be implemented by clients.
- * @noextend This interface is not intended to be extended by clients.
  * @see org.eclipse.xtext.XtextPackage#getParserRule()
  * @model
  * @generated
+ * @noimplement This interface is not intended to be implemented by clients.
+ * @noextend This interface is not intended to be extended by clients.
  */
 public interface ParserRule extends AbstractRule {
 	/**
@@ -146,31 +146,31 @@ public interface ParserRule extends AbstractRule {
 	void setWildcard(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Init After Actions</b></em>' attribute.
+	 * Returns the value of the '<em><b>Init After Actions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Init After Actions</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Init After Actions</em>' attribute.
-	 * @see #setInitAfterActions(String)
+	 * @return the value of the '<em>Init After Actions</em>' containment reference.
+	 * @see #setInitAfterActions(InitAfterActions)
 	 * @see org.eclipse.xtext.XtextPackage#getParserRule_InitAfterActions()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 * @since 3.0
 	 */
-	String getInitAfterActions();
+	InitAfterActions getInitAfterActions();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Init After Actions</em>' attribute.
+	 * @param value the new value of the '<em>Init After Actions</em>' containment reference.
 	 * @see #getInitAfterActions()
 	 * @generated
 	 * @since 3.0
 	 */
-	void setInitAfterActions(String value);
+	void setInitAfterActions(InitAfterActions value);
 
 } // ParserRule
