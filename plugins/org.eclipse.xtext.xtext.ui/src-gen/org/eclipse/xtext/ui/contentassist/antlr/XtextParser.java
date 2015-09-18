@@ -16,8 +16,7 @@ import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.AbstractInternal
 import com.google.inject.Inject;
 
 import org.eclipse.xtext.services.XtextGrammarAccess;
-
-/***
+/**
  * @since 2.9
  */
 public class XtextParser extends AbstractContentAssistParser {
@@ -45,7 +44,6 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParserRuleAccess().getAlternatives_0(), "rule__ParserRule__Alternatives_0");
 					put(grammarAccess.getParserRuleAccess().getAlternatives_0_0_2(), "rule__ParserRule__Alternatives_0_0_2");
 					put(grammarAccess.getParserRuleAccess().getAlternatives_4(), "rule__ParserRule__Alternatives_4");
-					put(grammarAccess.getMyInitAfterActionsAccess().getAlternatives_0(), "rule__MyInitAfterActions__Alternatives_0");
 					put(grammarAccess.getConditionalBranchAccess().getAlternatives(), "rule__ConditionalBranch__Alternatives");
 					put(grammarAccess.getAbstractTokenAccess().getAlternatives(), "rule__AbstractToken__Alternatives");
 					put(grammarAccess.getAbstractTokenWithCardinalityAccess().getAlternatives_0(), "rule__AbstractTokenWithCardinality__Alternatives_0");
@@ -87,7 +85,11 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParserRuleAccess().getGroup_3(), "rule__ParserRule__Group_3__0");
 					put(grammarAccess.getParserRuleAccess().getGroup_3_2(), "rule__ParserRule__Group_3_2__0");
 					put(grammarAccess.getParserRuleAccess().getGroup_3_2_1(), "rule__ParserRule__Group_3_2_1__0");
-					put(grammarAccess.getMyInitAfterActionsAccess().getGroup(), "rule__MyInitAfterActions__Group__0");
+					put(grammarAccess.getInitAfterActionsAccess().getGroup(), "rule__InitAfterActions__Group__0");
+					put(grammarAccess.getInitAfterActionsAccess().getGroup_1(), "rule__InitAfterActions__Group_1__0");
+					put(grammarAccess.getInitAfterActionsAccess().getGroup_1_0(), "rule__InitAfterActions__Group_1_0__0");
+					put(grammarAccess.getInitAfterActionsAccess().getGroup_2(), "rule__InitAfterActions__Group_2__0");
+					put(grammarAccess.getInitAfterActionsAccess().getGroup_2_0(), "rule__InitAfterActions__Group_2_0__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup(), "rule__RuleNameAndParams__Group__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1(), "rule__RuleNameAndParams__Group_1__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1_1(), "rule__RuleNameAndParams__Group_1_1__0");
@@ -179,6 +181,8 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_3_2_0(), "rule__ParserRule__HiddenTokensAssignment_3_2_0");
 					put(grammarAccess.getParserRuleAccess().getHiddenTokensAssignment_3_2_1_1(), "rule__ParserRule__HiddenTokensAssignment_3_2_1_1");
 					put(grammarAccess.getParserRuleAccess().getAlternativesAssignment_5(), "rule__ParserRule__AlternativesAssignment_5");
+					put(grammarAccess.getInitAfterActionsAccess().getInitActionAssignment_1_0_1(), "rule__InitAfterActions__InitActionAssignment_1_0_1");
+					put(grammarAccess.getInitAfterActionsAccess().getAfterActionAssignment_2_0_1(), "rule__InitAfterActions__AfterActionAssignment_2_0_1");
 					put(grammarAccess.getRuleNameAndParamsAccess().getNameAssignment_0(), "rule__RuleNameAndParams__NameAssignment_0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_0(), "rule__RuleNameAndParams__ParametersAssignment_1_1_0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getParametersAssignment_1_1_1_1(), "rule__RuleNameAndParams__ParametersAssignment_1_1_1_1");

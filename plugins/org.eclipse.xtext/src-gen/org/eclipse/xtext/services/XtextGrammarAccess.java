@@ -356,7 +356,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeTypeRefParserRuleCall_0_1_1_1_0 = (RuleCall)cTypeAssignment_0_1_1_1.eContents().get(0);
 		private final Keyword cMyKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cInitAfterActionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cInitAfterActionsMyInitAfterActionsParserRuleCall_2_0 = (RuleCall)cInitAfterActionsAssignment_2.eContents().get(0);
+		private final RuleCall cInitAfterActionsInitAfterActionsParserRuleCall_2_0 = (RuleCall)cInitAfterActionsAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cDefinesHiddenTokensAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final Keyword cDefinesHiddenTokensHiddenKeyword_3_0_0 = (Keyword)cDefinesHiddenTokensAssignment_3_0.eContents().get(0);
@@ -384,13 +384,13 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//ParserRule:
 		//	(^fragment?='fragment' RuleNameAndParams (wildcard?='*' | 'returns' type=TypeRef?) | RuleNameAndParams ('returns'
 		//	type=TypeRef)?) 'my'?
-		//	initAfterActions=MyInitAfterActions? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
+		//	initAfterActions=InitAfterActions (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
 		//	hiddenTokens+=[AbstractRule|RuleID])*)? ')')? (':' | '#') alternatives=Alternatives
 		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
 		//(^fragment?='fragment' RuleNameAndParams (wildcard?='*' | 'returns' type=TypeRef?) | RuleNameAndParams ('returns'
-		//type=TypeRef)?) 'my'? initAfterActions=MyInitAfterActions? (definesHiddenTokens?='hidden' '('
+		//type=TypeRef)?) 'my'? initAfterActions=InitAfterActions (definesHiddenTokens?='hidden' '('
 		//(hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')? (':' | '#')
 		//alternatives=Alternatives ';'
 		public Group getGroup() { return cGroup; }
@@ -453,11 +453,11 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//'my'?
 		public Keyword getMyKeyword_1() { return cMyKeyword_1; }
 
-		//initAfterActions=MyInitAfterActions?
+		//initAfterActions=InitAfterActions
 		public Assignment getInitAfterActionsAssignment_2() { return cInitAfterActionsAssignment_2; }
 
-		//MyInitAfterActions
-		public RuleCall getInitAfterActionsMyInitAfterActionsParserRuleCall_2_0() { return cInitAfterActionsMyInitAfterActionsParserRuleCall_2_0; }
+		//InitAfterActions
+		public RuleCall getInitAfterActionsInitAfterActionsParserRuleCall_2_0() { return cInitAfterActionsInitAfterActionsParserRuleCall_2_0; }
 
 		//(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)?
 		//')')?
@@ -521,36 +521,76 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
-	public class MyInitAfterActionsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.MyInitAfterActions");
+	public class InitAfterActionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.InitAfterActions");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cInitKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cAfterKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Action cInitAfterActionsAction_0 = (Action)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
+		private final Keyword cInitKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final Assignment cInitActionAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
+		private final Keyword cInitActionInitKeyword_1_0_1_0 = (Keyword)cInitActionAssignment_1_0_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cGroup_2.eContents().get(0);
+		private final Keyword cAfterKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
+		private final Assignment cAfterActionAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
+		private final Keyword cAfterActionAfterKeyword_2_0_1_0 = (Keyword)cAfterActionAssignment_2_0_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		
-		//MyInitAfterActions:
-		//	('@init' | '@after') '{' '}';
+		//InitAfterActions:
+		//	{InitAfterActions} (('@init' initAction='init') '{' '}')? (('@after' afterAction='after') '{' '}')?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//('@init' | '@after') '{' '}'
+		//{InitAfterActions} (('@init' initAction='init') '{' '}')? (('@after' afterAction='after') '{' '}')?
 		public Group getGroup() { return cGroup; }
 
-		//('@init' | '@after')
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		//{InitAfterActions}
+		public Action getInitAfterActionsAction_0() { return cInitAfterActionsAction_0; }
+
+		//(('@init' initAction='init') '{' '}')?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//('@init' initAction='init')
+		public Group getGroup_1_0() { return cGroup_1_0; }
 
 		//'@init'
-		public Keyword getInitKeyword_0_0() { return cInitKeyword_0_0; }
+		public Keyword getInitKeyword_1_0_0() { return cInitKeyword_1_0_0; }
 
-		//'@after'
-		public Keyword getAfterKeyword_0_1() { return cAfterKeyword_0_1; }
+		//initAction='init'
+		public Assignment getInitActionAssignment_1_0_1() { return cInitActionAssignment_1_0_1; }
+
+		//'init'
+		public Keyword getInitActionInitKeyword_1_0_1_0() { return cInitActionInitKeyword_1_0_1_0; }
 
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
+		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
+
+		//(('@after' afterAction='after') '{' '}')?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//('@after' afterAction='after')
+		public Group getGroup_2_0() { return cGroup_2_0; }
+
+		//'@after'
+		public Keyword getAfterKeyword_2_0_0() { return cAfterKeyword_2_0_0; }
+
+		//afterAction='after'
+		public Assignment getAfterActionAssignment_2_0_1() { return cAfterActionAssignment_2_0_1; }
+
+		//'after'
+		public Keyword getAfterActionAfterKeyword_2_0_1_0() { return cAfterActionAfterKeyword_2_0_1_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2_1() { return cLeftCurlyBracketKeyword_2_1; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_2_2() { return cRightCurlyBracketKeyword_2_2; }
 	}
 
 	public class RuleNameAndParamsElements extends AbstractParserRuleElementFinder {
@@ -2369,7 +2409,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	private final GeneratedMetamodelElements pGeneratedMetamodel;
 	private final ReferencedMetamodelElements pReferencedMetamodel;
 	private final ParserRuleElements pParserRule;
-	private final MyInitAfterActionsElements pMyInitAfterActions;
+	private final InitAfterActionsElements pInitAfterActions;
 	private final RuleNameAndParamsElements pRuleNameAndParams;
 	private final ParameterElements pParameter;
 	private final TypeRefElements pTypeRef;
@@ -2436,7 +2476,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		this.pGeneratedMetamodel = new GeneratedMetamodelElements();
 		this.pReferencedMetamodel = new ReferencedMetamodelElements();
 		this.pParserRule = new ParserRuleElements();
-		this.pMyInitAfterActions = new MyInitAfterActionsElements();
+		this.pInitAfterActions = new InitAfterActionsElements();
 		this.pRuleNameAndParams = new RuleNameAndParamsElements();
 		this.pParameter = new ParameterElements();
 		this.pTypeRef = new TypeRefElements();
@@ -2589,7 +2629,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	//ParserRule:
 	//	(^fragment?='fragment' RuleNameAndParams (wildcard?='*' | 'returns' type=TypeRef?) | RuleNameAndParams ('returns'
 	//	type=TypeRef)?) 'my'?
-	//	initAfterActions=MyInitAfterActions? (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
+	//	initAfterActions=InitAfterActions (definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (','
 	//	hiddenTokens+=[AbstractRule|RuleID])*)? ')')? (':' | '#') alternatives=Alternatives
 	//	';';
 	public ParserRuleElements getParserRuleAccess() {
@@ -2600,14 +2640,14 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		return getParserRuleAccess().getRule();
 	}
 
-	//MyInitAfterActions:
-	//	('@init' | '@after') '{' '}';
-	public MyInitAfterActionsElements getMyInitAfterActionsAccess() {
-		return pMyInitAfterActions;
+	//InitAfterActions:
+	//	{InitAfterActions} (('@init' initAction='init') '{' '}')? (('@after' afterAction='after') '{' '}')?;
+	public InitAfterActionsElements getInitAfterActionsAccess() {
+		return pInitAfterActions;
 	}
 	
-	public ParserRule getMyInitAfterActionsRule() {
-		return getMyInitAfterActionsAccess().getRule();
+	public ParserRule getInitAfterActionsRule() {
+		return getInitAfterActionsAccess().getRule();
 	}
 
 	//fragment RuleNameAndParams returns ParserRule:

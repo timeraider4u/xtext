@@ -636,9 +636,9 @@ ruleParserRule returns [EObject current=null]
 )?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getParserRuleAccess().getInitAfterActionsMyInitAfterActionsParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getParserRuleAccess().getInitAfterActionsInitAfterActionsParserRuleCall_2_0()); 
 	    }
-		lv_initAfterActions_9_0=ruleMyInitAfterActions		{
+		lv_initAfterActions_9_0=ruleInitAfterActions		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getParserRuleRule());
 	        }
@@ -646,12 +646,12 @@ ruleParserRule returns [EObject current=null]
        			$current, 
        			"initAfterActions",
         		lv_initAfterActions_9_0, 
-        		"org.eclipse.xtext.Xtext.MyInitAfterActions");
+        		"org.eclipse.xtext.Xtext.InitAfterActions");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?((
+)((
 (
 		lv_definesHiddenTokens_10_0=	'hidden' 
     {
@@ -746,47 +746,82 @@ ruleParserRule returns [EObject current=null]
 
 
 
-// Entry rule entryRuleMyInitAfterActions
-entryRuleMyInitAfterActions returns [String current=null] 
+// Entry rule entryRuleInitAfterActions
+entryRuleInitAfterActions returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getMyInitAfterActionsRule()); } 
-	 iv_ruleMyInitAfterActions=ruleMyInitAfterActions 
-	 { $current=$iv_ruleMyInitAfterActions.current.getText(); }  
+	{ newCompositeNode(grammarAccess.getInitAfterActionsRule()); }
+	 iv_ruleInitAfterActions=ruleInitAfterActions 
+	 { $current=$iv_ruleInitAfterActions.current; } 
 	 EOF 
 ;
 
-// Rule MyInitAfterActions
-ruleMyInitAfterActions returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+// Rule InitAfterActions
+ruleInitAfterActions returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 ((
-	kw='@init' 
     {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getInitKeyword_0_0()); 
+        $current = forceCreateModelElement(
+            grammarAccess.getInitAfterActionsAccess().getInitAfterActionsAction_0(),
+            $current);
     }
+)((	otherlv_1='@init' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getInitAfterActionsAccess().getInitKeyword_1_0_0());
+    }
+(
+(
+		lv_initAction_2_0=	'init' 
+    {
+        newLeafNode(lv_initAction_2_0, grammarAccess.getInitAfterActionsAccess().getInitActionInitKeyword_1_0_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getInitAfterActionsRule());
+	        }
+       		setWithLastConsumed($current, "initAction", lv_initAction_2_0, "init");
+	    }
 
-    |
-	kw='@after' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getAfterKeyword_0_1()); 
-    }
 )
-	kw='{' 
+))	otherlv_3='{' 
     {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getLeftCurlyBracketKeyword_1()); 
+    	newLeafNode(otherlv_3, grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1());
     }
+	otherlv_4='}' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getInitAfterActionsAccess().getRightCurlyBracketKeyword_1_2());
+    }
+)?((	otherlv_5='@after' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getInitAfterActionsAccess().getAfterKeyword_2_0_0());
+    }
+(
+(
+		lv_afterAction_6_0=	'after' 
+    {
+        newLeafNode(lv_afterAction_6_0, grammarAccess.getInitAfterActionsAccess().getAfterActionAfterKeyword_2_0_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getInitAfterActionsRule());
+	        }
+       		setWithLastConsumed($current, "afterAction", lv_afterAction_6_0, "after");
+	    }
 
-	kw='}' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getMyInitAfterActionsAccess().getRightCurlyBracketKeyword_2()); 
-    }
 )
-    ;
+))	otherlv_7='{' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_2_1());
+    }
+	otherlv_8='}' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getInitAfterActionsAccess().getRightCurlyBracketKeyword_2_2());
+    }
+)?)
+;
 
 
 

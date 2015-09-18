@@ -515,14 +515,14 @@ ruleParserRule:
 		(
 			(
 				{
-					markComposite(elementTypeProvider.getParserRule_InitAfterActionsMyInitAfterActionsParserRuleCall_2_0ElementType());
+					markComposite(elementTypeProvider.getParserRule_InitAfterActionsInitAfterActionsParserRuleCall_2_0ElementType());
 				}
-				lv_initAfterActions_9_0=ruleMyInitAfterActions
+				lv_initAfterActions_9_0=ruleInitAfterActions
 				{
 					doneComposite();
 				}
 			)
-		)?
+		)
 		(
 			(
 				(
@@ -621,46 +621,93 @@ ruleParserRule:
 	)
 ;
 
-//Entry rule entryRuleMyInitAfterActions
-entryRuleMyInitAfterActions:
-	{ markComposite(elementTypeProvider.getMyInitAfterActionsElementType()); }
-	ruleMyInitAfterActions
+//Entry rule entryRuleInitAfterActions
+entryRuleInitAfterActions:
+	{ markComposite(elementTypeProvider.getInitAfterActionsElementType()); }
+	ruleInitAfterActions
 	EOF;
 
-// Rule MyInitAfterActions
-ruleMyInitAfterActions:
+// Rule InitAfterActions
+ruleInitAfterActions:
 	(
 		(
 			{
-				markLeaf(elementTypeProvider.getMyInitAfterActions_InitKeyword_0_0ElementType());
-			}
-			kw='@init'
-			{
-				doneLeaf(kw);
-			}
-			    |
-			{
-				markLeaf(elementTypeProvider.getMyInitAfterActions_AfterKeyword_0_1ElementType());
-			}
-			kw='@after'
-			{
-				doneLeaf(kw);
+				precedeComposite(elementTypeProvider.getInitAfterActions_InitAfterActionsAction_0ElementType());
+				doneComposite();
 			}
 		)
-		{
-			markLeaf(elementTypeProvider.getMyInitAfterActions_LeftCurlyBracketKeyword_1ElementType());
-		}
-		kw='{'
-		{
-			doneLeaf(kw);
-		}
-		{
-			markLeaf(elementTypeProvider.getMyInitAfterActions_RightCurlyBracketKeyword_2ElementType());
-		}
-		kw='}'
-		{
-			doneLeaf(kw);
-		}
+		(
+			(
+				{
+					markLeaf(elementTypeProvider.getInitAfterActions_InitKeyword_1_0_0ElementType());
+				}
+				otherlv_1='@init'
+				{
+					doneLeaf(otherlv_1);
+				}
+				(
+					(
+						{
+							markLeaf(elementTypeProvider.getInitAfterActions_InitActionInitKeyword_1_0_1_0ElementType());
+						}
+						lv_initAction_2_0='init'
+						{
+							doneLeaf(lv_initAction_2_0);
+						}
+					)
+				)
+			)
+			{
+				markLeaf(elementTypeProvider.getInitAfterActions_LeftCurlyBracketKeyword_1_1ElementType());
+			}
+			otherlv_3='{'
+			{
+				doneLeaf(otherlv_3);
+			}
+			{
+				markLeaf(elementTypeProvider.getInitAfterActions_RightCurlyBracketKeyword_1_2ElementType());
+			}
+			otherlv_4='}'
+			{
+				doneLeaf(otherlv_4);
+			}
+		)?
+		(
+			(
+				{
+					markLeaf(elementTypeProvider.getInitAfterActions_AfterKeyword_2_0_0ElementType());
+				}
+				otherlv_5='@after'
+				{
+					doneLeaf(otherlv_5);
+				}
+				(
+					(
+						{
+							markLeaf(elementTypeProvider.getInitAfterActions_AfterActionAfterKeyword_2_0_1_0ElementType());
+						}
+						lv_afterAction_6_0='after'
+						{
+							doneLeaf(lv_afterAction_6_0);
+						}
+					)
+				)
+			)
+			{
+				markLeaf(elementTypeProvider.getInitAfterActions_LeftCurlyBracketKeyword_2_1ElementType());
+			}
+			otherlv_7='{'
+			{
+				doneLeaf(otherlv_7);
+			}
+			{
+				markLeaf(elementTypeProvider.getInitAfterActions_RightCurlyBracketKeyword_2_2ElementType());
+			}
+			otherlv_8='}'
+			{
+				doneLeaf(otherlv_8);
+			}
+		)?
 	)
 ;
 
