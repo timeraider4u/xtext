@@ -361,7 +361,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -372,7 +372,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */

@@ -22,7 +22,7 @@ import com.google.common.collect.Lists;
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public class TextRegions {
 

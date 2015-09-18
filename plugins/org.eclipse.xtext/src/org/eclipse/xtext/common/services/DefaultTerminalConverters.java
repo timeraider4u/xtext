@@ -35,7 +35,7 @@ public class DefaultTerminalConverters extends AbstractDeclarativeValueConverter
 	private AbstractIDValueConverter terminalsIdValueConverter;
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@ValueConverter(rule = "org.eclipse.xtext.common.Terminals.ID")
 	public IValueConverter<String> TerminalsID() {
@@ -54,7 +54,7 @@ public class DefaultTerminalConverters extends AbstractDeclarativeValueConverter
 	private INTValueConverter terminalsIntValueConverter;
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@ValueConverter(rule = "org.eclipse.xtext.common.Terminals.INT")
 	public IValueConverter<Integer> TerminalsINT() {
@@ -73,7 +73,7 @@ public class DefaultTerminalConverters extends AbstractDeclarativeValueConverter
 	private STRINGValueConverter terminalsStringValueConverter;
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@ValueConverter(rule = "org.eclipse.xtext.common.Terminals.STRING")
 	public IValueConverter<String> TerminalsSTRING() {

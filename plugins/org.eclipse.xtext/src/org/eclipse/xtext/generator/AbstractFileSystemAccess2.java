@@ -59,7 +59,7 @@ public abstract class AbstractFileSystemAccess2 extends AbstractFileSystemAccess
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@Override
 	public boolean isFile(String path) throws RuntimeIOException {
@@ -67,7 +67,7 @@ public abstract class AbstractFileSystemAccess2 extends AbstractFileSystemAccess
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@Override
 	public boolean isFile(String path, String outputConfigurationName) throws RuntimeIOException {

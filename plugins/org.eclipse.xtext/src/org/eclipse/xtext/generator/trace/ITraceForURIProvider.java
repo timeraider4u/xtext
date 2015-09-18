@@ -16,7 +16,7 @@ import org.eclipse.xtext.workspace.IWorkspaceConfig;
  * @author Sebastian Zarnekow - Initial contribution and API
  * @noimplement This interface is not intended to be implemented by clients.
  * @noextend This interface is not intended to be extended by clients.
- * @since 2.9
+ * @since 3.0
  */
 public interface ITraceForURIProvider {
 

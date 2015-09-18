@@ -31,7 +31,7 @@ import com.google.inject.Singleton;
  * Different kinds of name mapping for rules in a grammar.
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 @Singleton
 public class RuleNames {

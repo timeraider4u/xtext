@@ -59,7 +59,7 @@ public interface RuleCall extends AbstractElement {
 	 * If the meaning of the '<em>Arguments</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments</em>' containment reference list.
 	 * @see org.eclipse.xtext.XtextPackage#getRuleCall_Arguments()
@@ -75,7 +75,7 @@ public interface RuleCall extends AbstractElement {
 	 * If the meaning of the '<em>Explicitly Called</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Explicitly Called</em>' attribute.
 	 * @see #setExplicitlyCalled(boolean)
@@ -88,7 +88,7 @@ public interface RuleCall extends AbstractElement {
 	/**
 	 * Sets the value of the '{@link org.eclipse.xtext.RuleCall#isExplicitlyCalled <em>Explicitly Called</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Explicitly Called</em>' attribute.
 	 * @see #isExplicitlyCalled()

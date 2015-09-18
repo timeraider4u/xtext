@@ -13,7 +13,7 @@ import org.eclipse.xtext.formatting2.IHiddenRegionFormatting;
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public class SingleHiddenRegionFormatter extends AbstractHiddenRegionFormatter {
 

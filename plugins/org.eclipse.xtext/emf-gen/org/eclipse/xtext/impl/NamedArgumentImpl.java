@@ -30,7 +30,7 @@ import org.eclipse.xtext.XtextPackage;
  * </ul>
  *
  * @generated
- * @since 2.9
+ * @since 3.0
  */
 public class NamedArgumentImpl extends MinimalEObjectImpl.Container implements NamedArgument {
 	/**

@@ -12,7 +12,7 @@ import org.eclipse.xtext.nodemodel.INode;
 
 /**
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public class MoreThanOneCardinalityException extends ValueConverterException {
 

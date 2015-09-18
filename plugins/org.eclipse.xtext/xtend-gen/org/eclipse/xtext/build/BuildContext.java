@@ -24,7 +24,7 @@ import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
  * @author Jan Koehnlein - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 @FinalFieldsConstructor
 @SuppressWarnings("all")

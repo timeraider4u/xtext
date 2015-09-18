@@ -78,7 +78,7 @@ public class DefaultResourceServiceProvider implements IResourceServiceProvider,
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@Override
 	public boolean isSource(URI uri) {

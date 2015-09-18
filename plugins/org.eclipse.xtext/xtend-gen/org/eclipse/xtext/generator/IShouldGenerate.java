@@ -20,7 +20,7 @@ import org.eclipse.xtext.validation.Issue;
 /**
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 2.9
+ * @since 3.0
  */
 @Beta
 @ImplementedBy(IShouldGenerate.OnlyWithoutErrors.class)

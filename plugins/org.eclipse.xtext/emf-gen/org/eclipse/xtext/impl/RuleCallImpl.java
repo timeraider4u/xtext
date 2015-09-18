@@ -51,7 +51,7 @@ public class RuleCallImpl extends AbstractElementImpl implements RuleCall {
 	/**
 	 * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #getArguments()
 	 * @generated
@@ -62,7 +62,7 @@ public class RuleCallImpl extends AbstractElementImpl implements RuleCall {
 	/**
 	 * The default value of the '{@link #isExplicitlyCalled() <em>Explicitly Called</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #isExplicitlyCalled()
 	 * @generated
@@ -73,7 +73,7 @@ public class RuleCallImpl extends AbstractElementImpl implements RuleCall {
 	/**
 	 * The cached value of the '{@link #isExplicitlyCalled() <em>Explicitly Called</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see #isExplicitlyCalled()
 	 * @generated
@@ -140,7 +140,7 @@ public class RuleCallImpl extends AbstractElementImpl implements RuleCall {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -153,7 +153,7 @@ public class RuleCallImpl extends AbstractElementImpl implements RuleCall {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -163,7 +163,7 @@ public class RuleCallImpl extends AbstractElementImpl implements RuleCall {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */

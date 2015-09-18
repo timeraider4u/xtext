@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.resource.Resource;
  * guaranteed to be synchronous in the before and after hook.
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public interface IGenerator2 {
 

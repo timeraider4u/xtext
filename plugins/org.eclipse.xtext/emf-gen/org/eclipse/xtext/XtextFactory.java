@@ -260,7 +260,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Parameter</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Parameter</em>'.
 	 * @generated
@@ -270,7 +270,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Named Argument</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Named Argument</em>'.
 	 * @generated
@@ -280,7 +280,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Condition</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Condition</em>'.
 	 * @generated
@@ -290,7 +290,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Conjunction</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Conjunction</em>'.
 	 * @generated
@@ -300,7 +300,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Negation</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Negation</em>'.
 	 * @generated
@@ -310,7 +310,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Disjunction</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Disjunction</em>'.
 	 * @generated
@@ -320,7 +320,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Composite Condition</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Composite Condition</em>'.
 	 * @generated
@@ -330,7 +330,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Parameter Reference</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Parameter Reference</em>'.
 	 * @generated
@@ -340,7 +340,7 @@ public interface XtextFactory extends EFactory {
 	/**
 	 * Returns a new object of class '<em>Literal Condition</em>'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return a new object of class '<em>Literal Condition</em>'.
 	 * @generated

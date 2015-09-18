@@ -354,7 +354,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -364,7 +364,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Fragment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -374,7 +374,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Wildcard</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -382,14 +382,24 @@ public interface XtextPackage extends EPackage {
 	int PARSER_RULE__WILDCARD = ABSTRACT_RULE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Init After Actions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int PARSER_RULE__INIT_AFTER_ACTIONS = ABSTRACT_RULE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Parser Rule</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARSER_RULE_FEATURE_COUNT = ABSTRACT_RULE_FEATURE_COUNT + 5;
+	int PARSER_RULE_FEATURE_COUNT = ABSTRACT_RULE_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.TypeRefImpl <em>Type Ref</em>}' class.
@@ -655,7 +665,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -665,7 +675,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Explicitly Called</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -675,7 +685,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Rule Call</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1420,7 +1430,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Guard Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1430,7 +1440,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1552,7 +1562,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.ParameterImpl <em>Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.ParameterImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getParameter()
@@ -1563,7 +1573,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1573,7 +1583,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Parameter</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1583,7 +1593,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.NamedArgumentImpl <em>Named Argument</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.NamedArgumentImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getNamedArgument()
@@ -1594,7 +1604,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1604,7 +1614,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1614,7 +1624,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Called By Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1624,7 +1634,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Named Argument</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1635,7 +1645,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.ConditionImpl <em>Condition</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.ConditionImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getCondition()
@@ -1646,7 +1656,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1656,7 +1666,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.CompositeConditionImpl <em>Composite Condition</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.CompositeConditionImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getCompositeCondition()
@@ -1667,7 +1677,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1677,7 +1687,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1687,7 +1697,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Composite Condition</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1697,7 +1707,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.ConjunctionImpl <em>Conjunction</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.ConjunctionImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getConjunction()
@@ -1708,7 +1718,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1718,7 +1728,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1728,7 +1738,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Conjunction</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1738,7 +1748,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.NegationImpl <em>Negation</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.NegationImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getNegation()
@@ -1749,7 +1759,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1759,7 +1769,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Negation</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1769,7 +1779,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.DisjunctionImpl <em>Disjunction</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.DisjunctionImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getDisjunction()
@@ -1780,7 +1790,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1790,7 +1800,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1800,7 +1810,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Disjunction</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1810,7 +1820,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.ParameterReferenceImpl <em>Parameter Reference</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.ParameterReferenceImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getParameterReference()
@@ -1821,7 +1831,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1831,7 +1841,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Parameter Reference</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1841,7 +1851,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.LiteralConditionImpl <em>Literal Condition</em>}' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.xtext.impl.LiteralConditionImpl
 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getLiteralCondition()
@@ -1852,7 +1862,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The feature id for the '<em><b>True</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -1862,7 +1872,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * The number of structural features of the '<em>Literal Condition</em>' class.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
@@ -2086,7 +2096,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.ParserRule#getParameters <em>Parameters</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
 	 * @see org.eclipse.xtext.ParserRule#getParameters()
@@ -2098,7 +2108,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.ParserRule#isFragment <em>Fragment</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Fragment</em>'.
 	 * @see org.eclipse.xtext.ParserRule#isFragment()
@@ -2110,7 +2120,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.ParserRule#isWildcard <em>Wildcard</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Wildcard</em>'.
 	 * @see org.eclipse.xtext.ParserRule#isWildcard()
@@ -2118,6 +2128,18 @@ public interface XtextPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getParserRule_Wildcard();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Init After Actions</em>'.
+	 * @see org.eclipse.xtext.ParserRule#getInitAfterActions()
+	 * @see #getParserRule()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getParserRule_InitAfterActions();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.TypeRef <em>Type Ref</em>}'.
@@ -2283,7 +2305,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.RuleCall#getArguments <em>Arguments</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
 	 * @see org.eclipse.xtext.RuleCall#getArguments()
@@ -2295,7 +2317,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.RuleCall#isExplicitlyCalled <em>Explicitly Called</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Explicitly Called</em>'.
 	 * @see org.eclipse.xtext.RuleCall#isExplicitlyCalled()
@@ -2526,7 +2548,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.Group#getGuardCondition <em>Guard Condition</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Guard Condition</em>'.
 	 * @see org.eclipse.xtext.Group#getGuardCondition()
@@ -2601,7 +2623,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Parameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parameter</em>'.
 	 * @see org.eclipse.xtext.Parameter
@@ -2612,7 +2634,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.Parameter#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
 	 * @see org.eclipse.xtext.Parameter#getName()
@@ -2624,7 +2646,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.NamedArgument <em>Named Argument</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Named Argument</em>'.
 	 * @see org.eclipse.xtext.NamedArgument
@@ -2635,7 +2657,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.xtext.NamedArgument#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Parameter</em>'.
 	 * @see org.eclipse.xtext.NamedArgument#getParameter()
@@ -2647,7 +2669,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.NamedArgument#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see org.eclipse.xtext.NamedArgument#getValue()
@@ -2659,7 +2681,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.NamedArgument#isCalledByName <em>Called By Name</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Called By Name</em>'.
 	 * @see org.eclipse.xtext.NamedArgument#isCalledByName()
@@ -2671,7 +2693,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Condition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Condition</em>'.
 	 * @see org.eclipse.xtext.Condition
@@ -2682,7 +2704,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Conjunction <em>Conjunction</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Conjunction</em>'.
 	 * @see org.eclipse.xtext.Conjunction
@@ -2693,7 +2715,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Negation <em>Negation</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Negation</em>'.
 	 * @see org.eclipse.xtext.Negation
@@ -2704,7 +2726,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.Negation#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Value</em>'.
 	 * @see org.eclipse.xtext.Negation#getValue()
@@ -2716,7 +2738,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Disjunction <em>Disjunction</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Disjunction</em>'.
 	 * @see org.eclipse.xtext.Disjunction
@@ -2727,7 +2749,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.CompositeCondition <em>Composite Condition</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Composite Condition</em>'.
 	 * @see org.eclipse.xtext.CompositeCondition
@@ -2738,7 +2760,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.CompositeCondition#getLeft <em>Left</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Left</em>'.
 	 * @see org.eclipse.xtext.CompositeCondition#getLeft()
@@ -2750,7 +2772,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.CompositeCondition#getRight <em>Right</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Right</em>'.
 	 * @see org.eclipse.xtext.CompositeCondition#getRight()
@@ -2762,7 +2784,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.ParameterReference <em>Parameter Reference</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parameter Reference</em>'.
 	 * @see org.eclipse.xtext.ParameterReference
@@ -2773,7 +2795,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.xtext.ParameterReference#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Parameter</em>'.
 	 * @see org.eclipse.xtext.ParameterReference#getParameter()
@@ -2785,7 +2807,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.LiteralCondition <em>Literal Condition</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Literal Condition</em>'.
 	 * @see org.eclipse.xtext.LiteralCondition
@@ -2796,7 +2818,7 @@ public interface XtextPackage extends EPackage {
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.LiteralCondition#isTrue <em>True</em>}'.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>True</em>'.
 	 * @see org.eclipse.xtext.LiteralCondition#isTrue()
@@ -3004,7 +3026,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3013,7 +3035,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Fragment</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3022,11 +3044,20 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute PARSER_RULE__WILDCARD = eINSTANCE.getParserRule_Wildcard();
+
+		/**
+		 * The meta object literal for the '<em><b>Init After Actions</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute PARSER_RULE__INIT_AFTER_ACTIONS = eINSTANCE.getParserRule_InitAfterActions();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.TypeRefImpl <em>Type Ref</em>}' class.
@@ -3162,7 +3193,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3171,7 +3202,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Explicitly Called</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3372,7 +3403,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Guard Condition</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3435,7 +3466,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.ParameterImpl <em>Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.ParameterImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getParameter()
@@ -3446,7 +3477,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3455,7 +3486,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.NamedArgumentImpl <em>Named Argument</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.NamedArgumentImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getNamedArgument()
@@ -3466,7 +3497,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3475,7 +3506,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3484,7 +3515,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Called By Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3493,7 +3524,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.ConditionImpl <em>Condition</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.ConditionImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getCondition()
@@ -3504,7 +3535,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.ConjunctionImpl <em>Conjunction</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.ConjunctionImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getConjunction()
@@ -3515,7 +3546,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.NegationImpl <em>Negation</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.NegationImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getNegation()
@@ -3526,7 +3557,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3535,7 +3566,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.DisjunctionImpl <em>Disjunction</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.DisjunctionImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getDisjunction()
@@ -3546,7 +3577,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.CompositeConditionImpl <em>Composite Condition</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.CompositeConditionImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getCompositeCondition()
@@ -3557,7 +3588,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3566,7 +3597,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3575,7 +3606,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.ParameterReferenceImpl <em>Parameter Reference</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.ParameterReferenceImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getParameterReference()
@@ -3586,7 +3617,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
@@ -3595,7 +3626,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.LiteralConditionImpl <em>Literal Condition</em>}' class.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @see org.eclipse.xtext.impl.LiteralConditionImpl
 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getLiteralCondition()
@@ -3606,7 +3637,7 @@ public interface XtextPackage extends EPackage {
 		/**
 		 * The meta object literal for the '<em><b>True</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-		 * @since 2.9
+		 * @since 3.0
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */

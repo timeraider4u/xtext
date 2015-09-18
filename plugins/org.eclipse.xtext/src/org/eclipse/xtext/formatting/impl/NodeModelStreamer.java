@@ -158,7 +158,7 @@ public class NodeModelStreamer implements INodeModelStreamer {
 	/**
 	 * Create a canonical represenation of the data type value. Defaults to the value converter.
 	 * 
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected String getFormattedDatatypeValue(ICompositeNode node, AbstractRule rule, String text) throws ValueConverterException {
 		Object value = valueConverter.toValue(text, rule.getName(), node);

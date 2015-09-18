@@ -138,14 +138,14 @@ public class GeneratorComponent implements IWorkflowComponent {
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected GeneratorDelegate getCompiler() {
 		return injector.getInstance(GeneratorDelegate.class);
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected IFileSystemAccess2 getConfiguredFileSystemAccess() {
 		final JavaIoFileSystemAccess configuredFileSystemAccess = injector.getInstance(JavaIoFileSystemAccess.class);

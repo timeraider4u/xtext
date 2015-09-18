@@ -11,7 +11,7 @@ import org.eclipse.xtext.formatting2.IHiddenRegionFormatter;
 
 /**
  * @author Moritz Eysholdt - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public abstract class AbstractHiddenRegionFormatter implements IHiddenRegionFormatter {
 

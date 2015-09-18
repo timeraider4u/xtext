@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.xtext.ParserRule#getParameters <em>Parameters</em>}</li>
  *   <li>{@link org.eclipse.xtext.ParserRule#isFragment <em>Fragment</em>}</li>
  *   <li>{@link org.eclipse.xtext.ParserRule#isWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}</li>
  * </ul>
  *
  * @noimplement This interface is not intended to be implemented by clients.
@@ -77,7 +78,7 @@ public interface ParserRule extends AbstractRule {
 	 * If the meaning of the '<em>Parameters</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parameters</em>' containment reference list.
 	 * @see org.eclipse.xtext.XtextPackage#getParserRule_Parameters()
@@ -93,7 +94,7 @@ public interface ParserRule extends AbstractRule {
 	 * If the meaning of the '<em>Fragment</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fragment</em>' attribute.
 	 * @see #setFragment(boolean)
@@ -106,7 +107,7 @@ public interface ParserRule extends AbstractRule {
 	/**
 	 * Sets the value of the '{@link org.eclipse.xtext.ParserRule#isFragment <em>Fragment</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fragment</em>' attribute.
 	 * @see #isFragment()
@@ -122,7 +123,7 @@ public interface ParserRule extends AbstractRule {
 	 * EClassifier is derived from that fragment. Basically any kind of current may be passed into
 	 * this rule fragment.
 	 * 
-	 * @since 2.9
+	 * @since 3.0
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Wildcard</em>' attribute.
@@ -136,12 +137,40 @@ public interface ParserRule extends AbstractRule {
 	/**
 	 * Sets the value of the '{@link org.eclipse.xtext.ParserRule#isWildcard <em>Wildcard</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * @since 2.9
+	 * @since 3.0
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Wildcard</em>' attribute.
 	 * @see #isWildcard()
 	 * @generated
 	 */
 	void setWildcard(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Init After Actions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Init After Actions</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Init After Actions</em>' attribute.
+	 * @see #setInitAfterActions(String)
+	 * @see org.eclipse.xtext.XtextPackage#getParserRule_InitAfterActions()
+	 * @model
+	 * @generated
+	 * @since 3.0
+	 */
+	String getInitAfterActions();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.xtext.ParserRule#getInitAfterActions <em>Init After Actions</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Init After Actions</em>' attribute.
+	 * @see #getInitAfterActions()
+	 * @generated
+	 * @since 3.0
+	 */
+	void setInitAfterActions(String value);
 
 } // ParserRule

@@ -18,7 +18,7 @@ import org.eclipse.xtext.util.RuntimeIOException;
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
  * @noimplement This interface is not intended to be implemented by clients.
- * @since 2.9
+ * @since 3.0
  */
 public interface IFileSystemAccess2 extends IFileSystemAccess, IFileSystemAccessExtension, IFileSystemAccessExtension2, IFileSystemAccessExtension3 {
 

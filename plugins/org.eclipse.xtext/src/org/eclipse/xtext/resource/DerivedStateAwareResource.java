@@ -267,7 +267,7 @@ public class DerivedStateAwareResource extends StorageAwareResource {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected void doDiscardDerivedState() {
 		if (derivedStateComputer == null)

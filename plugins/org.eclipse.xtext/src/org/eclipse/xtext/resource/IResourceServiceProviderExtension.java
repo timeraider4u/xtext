@@ -22,7 +22,7 @@ public interface IResourceServiceProviderExtension {
 
 	/**
 	 * Returns true if the given uri is from a source that is to-be-processed.
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	boolean isSource(URI uri);
 }
