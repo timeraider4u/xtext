@@ -44,20 +44,23 @@ ParserRule :
 	  ^fragment?='fragment' RuleNameAndParams (wildcard?='*' | ('returns' type=TypeRef)?) 
 	| RuleNameAndParams ('returns' type=TypeRef)?
 	)
+	('my')?
 	(definesHiddenTokens?='hidden' '(' (hiddenTokens+=[AbstractRule|RuleID] (',' hiddenTokens+=[AbstractRule|RuleID])*)? ')')?
-	':'
+	initAfterActions=MyInitAfterActions?
+	(':' | '#')
     	alternatives=Alternatives   
     ';'
-;
-
-fragment RuleNameAndParams returns ParserRule:
-	name=ValidID ('<' (parameters+=Parameter (',' parameters+=Parameter)*)? '>')?
-	initAfterActions=MyInitAfterActions?
 ;
 
 MyInitAfterActions:
 	('@init' | '@after') '{' '}'
 ;
+
+fragment RuleNameAndParams returns ParserRule:
+	name=ValidID ('<' (parameters+=Parameter (',' parameters+=Parameter)*)? '>')?
+;
+
+
 
 Parameter:
 	name=ID

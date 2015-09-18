@@ -504,29 +504,38 @@ ruleParserRule:
 			)
 		)
 		(
+			{
+				markLeaf(elementTypeProvider.getParserRule_MyKeyword_1ElementType());
+			}
+			otherlv_8='my'
+			{
+				doneLeaf(otherlv_8);
+			}
+		)?
+		(
 			(
 				(
 					{
-						markLeaf(elementTypeProvider.getParserRule_DefinesHiddenTokensHiddenKeyword_1_0_0ElementType());
+						markLeaf(elementTypeProvider.getParserRule_DefinesHiddenTokensHiddenKeyword_2_0_0ElementType());
 					}
-					lv_definesHiddenTokens_8_0='hidden'
+					lv_definesHiddenTokens_9_0='hidden'
 					{
-						doneLeaf(lv_definesHiddenTokens_8_0);
+						doneLeaf(lv_definesHiddenTokens_9_0);
 					}
 				)
 			)
 			{
-				markLeaf(elementTypeProvider.getParserRule_LeftParenthesisKeyword_1_1ElementType());
+				markLeaf(elementTypeProvider.getParserRule_LeftParenthesisKeyword_2_1ElementType());
 			}
-			otherlv_9='('
+			otherlv_10='('
 			{
-				doneLeaf(otherlv_9);
+				doneLeaf(otherlv_10);
 			}
 			(
 				(
 					(
 						{
-							markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_1_2_0_0ElementType());
+							markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_2_2_0_0ElementType());
 						}
 						ruleRuleID
 						{
@@ -536,16 +545,16 @@ ruleParserRule:
 				)
 				(
 					{
-						markLeaf(elementTypeProvider.getParserRule_CommaKeyword_1_2_1_0ElementType());
+						markLeaf(elementTypeProvider.getParserRule_CommaKeyword_2_2_1_0ElementType());
 					}
-					otherlv_11=','
+					otherlv_12=','
 					{
-						doneLeaf(otherlv_11);
+						doneLeaf(otherlv_12);
 					}
 					(
 						(
 							{
-								markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_1_2_1_1_0ElementType());
+								markComposite(elementTypeProvider.getParserRule_HiddenTokensAbstractRuleCrossReference_2_2_1_1_0ElementType());
 							}
 							ruleRuleID
 							{
@@ -556,37 +565,101 @@ ruleParserRule:
 				)*
 			)?
 			{
-				markLeaf(elementTypeProvider.getParserRule_RightParenthesisKeyword_1_3ElementType());
+				markLeaf(elementTypeProvider.getParserRule_RightParenthesisKeyword_2_3ElementType());
 			}
-			otherlv_13=')'
+			otherlv_14=')'
 			{
-				doneLeaf(otherlv_13);
+				doneLeaf(otherlv_14);
 			}
 		)?
-		{
-			markLeaf(elementTypeProvider.getParserRule_ColonKeyword_2ElementType());
-		}
-		otherlv_14=':'
-		{
-			doneLeaf(otherlv_14);
-		}
 		(
 			(
 				{
-					markComposite(elementTypeProvider.getParserRule_AlternativesAlternativesParserRuleCall_3_0ElementType());
+					markComposite(elementTypeProvider.getParserRule_InitAfterActionsMyInitAfterActionsParserRuleCall_3_0ElementType());
 				}
-				lv_alternatives_15_0=ruleAlternatives
+				lv_initAfterActions_15_0=ruleMyInitAfterActions
+				{
+					doneComposite();
+				}
+			)
+		)?
+		(
+			{
+				markLeaf(elementTypeProvider.getParserRule_ColonKeyword_4_0ElementType());
+			}
+			otherlv_16=':'
+			{
+				doneLeaf(otherlv_16);
+			}
+			    |
+			{
+				markLeaf(elementTypeProvider.getParserRule_NumberSignKeyword_4_1ElementType());
+			}
+			otherlv_17='#'
+			{
+				doneLeaf(otherlv_17);
+			}
+		)
+		(
+			(
+				{
+					markComposite(elementTypeProvider.getParserRule_AlternativesAlternativesParserRuleCall_5_0ElementType());
+				}
+				lv_alternatives_18_0=ruleAlternatives
 				{
 					doneComposite();
 				}
 			)
 		)
 		{
-			markLeaf(elementTypeProvider.getParserRule_SemicolonKeyword_4ElementType());
+			markLeaf(elementTypeProvider.getParserRule_SemicolonKeyword_6ElementType());
 		}
-		otherlv_16=';'
+		otherlv_19=';'
 		{
-			doneLeaf(otherlv_16);
+			doneLeaf(otherlv_19);
+		}
+	)
+;
+
+//Entry rule entryRuleMyInitAfterActions
+entryRuleMyInitAfterActions:
+	{ markComposite(elementTypeProvider.getMyInitAfterActionsElementType()); }
+	ruleMyInitAfterActions
+	EOF;
+
+// Rule MyInitAfterActions
+ruleMyInitAfterActions:
+	(
+		(
+			{
+				markLeaf(elementTypeProvider.getMyInitAfterActions_InitKeyword_0_0ElementType());
+			}
+			kw='@init'
+			{
+				doneLeaf(kw);
+			}
+			    |
+			{
+				markLeaf(elementTypeProvider.getMyInitAfterActions_AfterKeyword_0_1ElementType());
+			}
+			kw='@after'
+			{
+				doneLeaf(kw);
+			}
+		)
+		{
+			markLeaf(elementTypeProvider.getMyInitAfterActions_LeftCurlyBracketKeyword_1ElementType());
+		}
+		kw='{'
+		{
+			doneLeaf(kw);
+		}
+		{
+			markLeaf(elementTypeProvider.getMyInitAfterActions_RightCurlyBracketKeyword_2ElementType());
+		}
+		kw='}'
+		{
+			doneLeaf(kw);
 		}
 	)
 ;
