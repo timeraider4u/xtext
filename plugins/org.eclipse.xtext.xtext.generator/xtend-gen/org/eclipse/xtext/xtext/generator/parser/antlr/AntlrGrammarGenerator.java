@@ -23,6 +23,7 @@ import org.eclipse.xtext.EnumLiteralDeclaration;
 import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
+import org.eclipse.xtext.InitAfterActions;
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
@@ -431,6 +432,16 @@ public class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenera
     CharSequence _compileInitUnorderedGroups = this.compileInitUnorderedGroups(it, options);
     _builder.append(_compileInitUnorderedGroups, "\t");
     _builder.newLineIfNotEmpty();
+    {
+      if ((it instanceof ParserRule)) {
+        _builder.append("\t");
+        InitAfterActions _initAfterActions = ((ParserRule)it).getInitAfterActions();
+        String _initAction = _initAfterActions.getInitAction();
+        String _string = _initAction.toString();
+        _builder.append(_string, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("}");
     _builder.newLine();
     _builder.append("@after {");
@@ -438,6 +449,16 @@ public class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenera
     _builder.append("\t");
     _builder.append("leaveRule();");
     _builder.newLine();
+    {
+      if ((it instanceof ParserRule)) {
+        _builder.append("\t");
+        InitAfterActions _initAfterActions_1 = ((ParserRule)it).getInitAfterActions();
+        String _afterAction = _initAfterActions_1.getAfterAction();
+        String _string_1 = _afterAction.toString();
+        _builder.append(_string_1, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("}");
     return _builder.toString();
   }

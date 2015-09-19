@@ -96,14 +96,14 @@ public abstract class AbstractAntlrGeneratorFragment extends AbstractGeneratorFr
 	private AntlrCodeQualityHelper codeQualityHelper = new AntlrCodeQualityHelper();
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void setCodeQualityHelper(AntlrCodeQualityHelper codeQualityHelper) {
 		this.codeQualityHelper = codeQualityHelper;
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public AntlrCodeQualityHelper getCodeQualityHelper() {
 		return codeQualityHelper;
@@ -199,7 +199,7 @@ public abstract class AbstractAntlrGeneratorFragment extends AbstractGeneratorFr
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected boolean hasParameterizedRules(Grammar grammar) {
 		for(ParserRule rule : GrammarUtil.allParserRules(grammar)) {

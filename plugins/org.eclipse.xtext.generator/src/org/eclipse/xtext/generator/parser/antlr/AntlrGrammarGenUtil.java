@@ -51,7 +51,7 @@ public class AntlrGrammarGenUtil {
 	 * Returns the effective rule name for the generated Antlr grammar.
 	 * Inherited rules may be prefixed by {@code super[0..9]*}. Otherwise the
 	 * prefix {@code rule or RULE_} is used.
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getRuleName(AbstractRule rule) {
 		RuleWithParameterValues parameterValues = RuleWithParameterValues.findInEmfObject(rule);
@@ -63,7 +63,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getEntryRuleName(ParserRule rule) {
 		RuleWithParameterValues parameterValues = RuleWithParameterValues.findInEmfObject(rule);
@@ -81,7 +81,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static boolean isValidEntryRule(ParserRule rule) {
 		if (rule.isFragment()) {
@@ -95,7 +95,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T extends EObject> T getOriginalElement(T obj) {
@@ -117,14 +117,14 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static int getParameterConfig(ParserRule rule) {
 		return RuleWithParameterValues.getParamConfig(rule);
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getParameterList(ParserRule rule, Boolean skipCurrent) {
 		boolean currentAsParam = rule.isFragment() && !GrammarUtil.isDatatypeRule(getOriginalElement(rule));
@@ -152,7 +152,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getArgumentList(final RuleCall ruleCall, final Boolean skipCurrent) {
 		final List<NamedArgument> arguments = ruleCall.getArguments();
@@ -186,7 +186,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String conditionToAntlr(Condition condition, final boolean includeRuleName) {
 		final StringBuilder result = new StringBuilder();
@@ -239,7 +239,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getDefaultArgumentList(ParserRule rule) {
 		String result = IterableExtensions.join(rule.getParameters(), "[", ", ", "]", new Functions.Function1<Parameter, String>() {
@@ -252,7 +252,7 @@ public class AntlrGrammarGenUtil {
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String guardConditionToAntlr(Group group) {
 		Condition condition = group.getGuardCondition();
@@ -263,7 +263,7 @@ public class AntlrGrammarGenUtil {
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static AbstractElement getPredicatedElement(AbstractElement element) {
 		if (element.isPredicated()) {
@@ -310,7 +310,7 @@ public class AntlrGrammarGenUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getQualifiedNameAsString(RuleCall ruleCall) {
 		AbstractRule rule = getOriginalElement(ruleCall).getRule();
@@ -360,4 +360,29 @@ public class AntlrGrammarGenUtil {
 		String fragment = EcoreUtil.getURI(object).fragment();
 		return "classpath:/" + grammar.getName().replace('.', '/') + ".xmi#" + fragment;
 	}
+	
+	/**
+	 * @since 3.0
+	 */
+	public static String getInitAfterAction_Init(ParserRule rule) {
+		System.out.println("in getInitAfterAction_Init");
+		System.out.println("rule='" + rule + "'");
+		if (rule == null || rule.getInitAfterActions() == null) {
+			return "";
+		}
+		return rule.getInitAfterActions().getInitAction();
+	}
+	
+	/**
+	 * @since 3.0
+	 */
+	public static String getInitAfterAction_After(ParserRule rule) {
+		System.out.println("in getInitAfterAction_After");
+		System.out.println("rule='" + rule + "'");
+		if (rule == null || rule.getInitAfterActions() == null) {
+			return "";
+		}
+		return rule.getInitAfterActions().getAfterAction();
+	}
+	
 }

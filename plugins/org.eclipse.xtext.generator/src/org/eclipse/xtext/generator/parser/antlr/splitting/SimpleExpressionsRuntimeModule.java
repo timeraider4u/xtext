@@ -19,7 +19,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider;
 public class SimpleExpressionsRuntimeModule extends org.eclipse.xtext.generator.parser.antlr.splitting.AbstractSimpleExpressionsRuntimeModule {
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	@Override
 	public Class<? extends ISerializer> bindISerializer() {
@@ -27,7 +27,7 @@ public class SimpleExpressionsRuntimeModule extends org.eclipse.xtext.generator.
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public Class<? extends ISemanticNodeProvider> bindNodeProvider() {
 		return NullProvider.class;

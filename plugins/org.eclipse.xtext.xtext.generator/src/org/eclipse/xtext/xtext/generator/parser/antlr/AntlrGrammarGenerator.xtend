@@ -27,6 +27,7 @@ import org.eclipse.xtext.xtext.generator.parser.antlr.AntlrOptions
 import static extension org.eclipse.xtext.EcoreUtil2.*
 import static extension org.eclipse.xtext.GrammarUtil.*
 import static extension org.eclipse.xtext.xtext.generator.parser.antlr.AntlrGrammarGenUtil.*
+import org.eclipse.xtext.InitAfterActions
 
 @Singleton
 class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
@@ -158,9 +159,15 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 			enterRule();
 			«compileInitHiddenTokens(options)»
 			«compileInitUnorderedGroups(options)»
+			«IF it instanceof ParserRule» 
+				«it.initAfterActions.initAction.toString()»
+			«ENDIF»
 		}
 		@after {
 			leaveRule();
+			«IF it instanceof ParserRule» 
+				«it.initAfterActions.afterAction.toString()»
+			«ENDIF»
 		}'''
 	
 	

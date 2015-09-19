@@ -94,28 +94,28 @@ public class AntlrOptions {
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void setSkipUnusedRules(boolean skipUnusedRules) {
 		this.skipUnusedRules = skipUnusedRules;
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public boolean isSkipUnusedRules() {
 		return skipUnusedRules;
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public boolean isForceHoisting() {
 		return forceHoisting;
 	}
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public void setForceHoisting(boolean forceHoisting) {
 		this.forceHoisting = forceHoisting;

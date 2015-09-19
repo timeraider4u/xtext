@@ -16,7 +16,7 @@ import com.google.common.collect.Sets;
 
 /**
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 2.9
+ * @since 3.0
  */
 public class SyntacticPredicateFixup {
 	//	ruleIdOrKeyword($ruleScenario3.p_AllowKeyword, $ruleScenario3.p_Xyz && $ruleScenario3.p_AllowKeyword);

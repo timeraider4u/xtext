@@ -44,7 +44,7 @@ import com.google.inject.Module;
 public class GrammarAccessUtil {
 
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected static class LineSeparatorModule extends XtextRuntimeModule {
 		private final ILineSeparatorInformation lineSeparatorInformation;
@@ -173,7 +173,7 @@ public class GrammarAccessUtil {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public static String getUniqueRuleName(AbstractRule rule) {
 		String plainName = RuleNames.getRuleNames(rule).getUniqueRuleName(rule);

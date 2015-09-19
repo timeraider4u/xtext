@@ -156,4 +156,9 @@ List[String] initialHiddenTokens(Grammar this):
   else if (usedGrammars.size == 1) then 
   	initialHiddenTokens(usedGrammars.first()) 
   else {};
-  
+
+String initAfterActionInit(ParserRule this):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_Init(org.eclipse.xtext.ParserRule);
+
+String initAfterActionAfter(ParserRule rule):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_After(org.eclipse.xtext.ParserRule);
