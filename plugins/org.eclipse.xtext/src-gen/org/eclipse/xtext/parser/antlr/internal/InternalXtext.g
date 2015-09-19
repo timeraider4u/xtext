@@ -872,20 +872,26 @@ ruleActionCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getActionCallAccess().getLeftParenthesisKeyword_2_0()); 
     }
-    this_STRING_4=RULE_STRING    {
+(    this_STRING_4=RULE_STRING    {
 		$current.merge(this_STRING_4);
     }
 
     { 
     newLeafNode(this_STRING_4, grammarAccess.getActionCallAccess().getSTRINGTerminalRuleCall_2_1()); 
     }
-
+)?
 	kw=')' 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getActionCallAccess().getRightParenthesisKeyword_2_2()); 
     }
-)?)
+)?
+	kw=';' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getActionCallAccess().getSemicolonKeyword_3()); 
+    }
+)
     ;
 
 

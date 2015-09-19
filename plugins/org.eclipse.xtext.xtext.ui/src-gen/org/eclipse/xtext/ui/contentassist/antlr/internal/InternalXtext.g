@@ -4555,6 +4555,7 @@ rule__ActionCall__Group__2
     }
 :
 	rule__ActionCall__Group__2__Impl
+	rule__ActionCall__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4575,6 +4576,38 @@ rule__ActionCall__Group__2__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__ActionCall__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ActionCall__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ActionCall__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getActionCallAccess().getSemicolonKeyword_3()); }
+
+	';' 
+
+{ after(grammarAccess.getActionCallAccess().getSemicolonKeyword_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -4696,7 +4729,7 @@ rule__ActionCall__Group_2__1__Impl
 :
 (
 { before(grammarAccess.getActionCallAccess().getSTRINGTerminalRuleCall_2_1()); }
-	RULE_STRING
+(	RULE_STRING)?
 { after(grammarAccess.getActionCallAccess().getSTRINGTerminalRuleCall_2_1()); }
 )
 

@@ -706,6 +706,9 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		public static IGrammarAwareElementType createActionCall_RightParenthesisKeyword_2_2ElementType() {
 			return new IGrammarAwareElementType("ActionCall_RightParenthesisKeyword_2_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getActionCallAccess().getRightParenthesisKeyword_2_2());
 		}
+		public static IGrammarAwareElementType createActionCall_SemicolonKeyword_3ElementType() {
+			return new IGrammarAwareElementType("ActionCall_SemicolonKeyword_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getActionCallAccess().getSemicolonKeyword_3());
+		}
 	}
 
 	public static final IGrammarAwareElementType ActionCall_ELEMENT_TYPE = associate(ActionCallFactory.createActionCallElementType());
@@ -727,6 +730,8 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 	public static final IGrammarAwareElementType ActionCall_STRINGTerminalRuleCall_2_1_ELEMENT_TYPE = associate(ActionCallFactory.createActionCall_STRINGTerminalRuleCall_2_1ElementType());
 
 	public static final IGrammarAwareElementType ActionCall_RightParenthesisKeyword_2_2_ELEMENT_TYPE = associate(ActionCallFactory.createActionCall_RightParenthesisKeyword_2_2ElementType());
+
+	public static final IGrammarAwareElementType ActionCall_SemicolonKeyword_3_ELEMENT_TYPE = associate(ActionCallFactory.createActionCall_SemicolonKeyword_3ElementType());
 
 	private static class RuleNameAndParamsFactory {
 		public static IGrammarAwareElementType createRuleNameAndParamsElementType() {
@@ -3418,6 +3423,10 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 
 	public IGrammarAwareElementType getActionCall_RightParenthesisKeyword_2_2ElementType() {
 		return ActionCall_RightParenthesisKeyword_2_2_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getActionCall_SemicolonKeyword_3ElementType() {
+		return ActionCall_SemicolonKeyword_3_ELEMENT_TYPE;
 	}
 
 	public IGrammarAwareElementType getRuleNameAndParamsElementType() {

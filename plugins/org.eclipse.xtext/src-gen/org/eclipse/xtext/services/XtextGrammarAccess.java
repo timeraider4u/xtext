@@ -591,12 +591,13 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final RuleCall cSTRINGTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ActionCall:
-		//	ValidID ('.' ValidID)* ('(' STRING ')')?;
+		//	ValidID ('.' ValidID)* ('(' STRING? ')')? ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//ValidID ('.' ValidID)* ('(' STRING ')')?
+		//ValidID ('.' ValidID)* ('(' STRING? ')')? ';'
 		public Group getGroup() { return cGroup; }
 
 		//ValidID
@@ -611,17 +612,20 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//ValidID
 		public RuleCall getValidIDParserRuleCall_1_1() { return cValidIDParserRuleCall_1_1; }
 
-		//('(' STRING ')')?
+		//('(' STRING? ')')?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//'('
 		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 
-		//STRING
+		//STRING?
 		public RuleCall getSTRINGTerminalRuleCall_2_1() { return cSTRINGTerminalRuleCall_2_1; }
 
 		//')'
 		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class RuleNameAndParamsElements extends AbstractParserRuleElementFinder {
@@ -2687,7 +2691,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ActionCall:
-	//	ValidID ('.' ValidID)* ('(' STRING ')')?;
+	//	ValidID ('.' ValidID)* ('(' STRING? ')')? ';';
 	public ActionCallElements getActionCallAccess() {
 		return pActionCall;
 	}

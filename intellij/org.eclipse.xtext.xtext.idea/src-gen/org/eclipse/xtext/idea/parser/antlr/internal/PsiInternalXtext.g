@@ -728,13 +728,15 @@ ruleActionCall:
 			{
 				doneLeaf(kw);
 			}
-			{
-				markLeaf(elementTypeProvider.getActionCall_STRINGTerminalRuleCall_2_1ElementType());
-			}
-			this_STRING_4=RULE_STRING
-			{
-				doneLeaf(this_STRING_4);
-			}
+			(
+				{
+					markLeaf(elementTypeProvider.getActionCall_STRINGTerminalRuleCall_2_1ElementType());
+				}
+				this_STRING_4=RULE_STRING
+				{
+					doneLeaf(this_STRING_4);
+				}
+			)?
 			{
 				markLeaf(elementTypeProvider.getActionCall_RightParenthesisKeyword_2_2ElementType());
 			}
@@ -743,6 +745,13 @@ ruleActionCall:
 				doneLeaf(kw);
 			}
 		)?
+		{
+			markLeaf(elementTypeProvider.getActionCall_SemicolonKeyword_3ElementType());
+		}
+		kw=';'
+		{
+			doneLeaf(kw);
+		}
 	)
 ;
 
