@@ -160,5 +160,5 @@ List[String] initialHiddenTokens(Grammar this):
 String initAfterActionInit(ParserRule this):
 	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_Init(org.eclipse.xtext.ParserRule);
 
-String initAfterActionAfter(ParserRule rule):
+String initAfterActionAfter(ParserRule this):
 	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_After(org.eclipse.xtext.ParserRule);

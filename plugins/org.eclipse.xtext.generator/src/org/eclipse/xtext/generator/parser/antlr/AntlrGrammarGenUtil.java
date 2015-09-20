@@ -365,24 +365,28 @@ public class AntlrGrammarGenUtil {
 	 * @since 3.0
 	 */
 	public static String getInitAfterAction_Init(ParserRule rule) {
-		System.out.println("in getInitAfterAction_Init");
+		ParserRule myRule = getOriginalElement(rule);
+		System.out.println("AntlrGrammarGenUtils.getInitAfterAction_Init");
 		System.out.println("rule='" + rule + "'");
-		if (rule == null || rule.getInitAfterActions() == null) {
-			return "";
+		System.out.println("myRule='" + myRule + "'");
+		if (myRule == null || myRule.getInitAfterActions() == null) {
+			return "//no init found";
 		}
-		return rule.getInitAfterActions().getInitAction();
+		return myRule.getInitAfterActions().getInitAction();
 	}
 	
 	/**
 	 * @since 3.0
 	 */
 	public static String getInitAfterAction_After(ParserRule rule) {
-		System.out.println("in getInitAfterAction_After");
+		ParserRule myRule = getOriginalElement(rule);
+		System.out.println("AntlrGrammarGenUtils.getInitAfterAction_After");
 		System.out.println("rule='" + rule + "'");
-		if (rule == null || rule.getInitAfterActions() == null) {
-			return "";
+		System.out.println("myRule='" + myRule + "'");		
+		if (myRule == null || myRule.getInitAfterActions() == null) {
+			return "//no after found";
 		}
-		return rule.getInitAfterActions().getAfterAction();
+		return myRule.getInitAfterActions().getAfterAction();
 	}
 	
 }

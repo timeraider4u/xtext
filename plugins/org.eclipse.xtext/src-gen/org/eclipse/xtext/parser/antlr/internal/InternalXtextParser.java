@@ -88,8 +88,10 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
         }
         
 
-    public String[] getTokenNames() { return InternalXtextParser.tokenNames; }
-    public String getGrammarFileName() { return "InternalXtext.g"; }
+    @Override
+	public String[] getTokenNames() { return InternalXtextParser.tokenNames; }
+    @Override
+	public String getGrammarFileName() { return "InternalXtext.g"; }
 
 
 
@@ -1946,6 +1948,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
     // $ANTLR start "ruleInitAfterActions"
     // InternalXtext.g:750:1: ruleInitAfterActions returns [EObject current=null] : ( () (otherlv_1= 'initAction' otherlv_2= '{' ( (lv_initAction_3_0= ruleActionCall ) ) otherlv_4= '}' )? (otherlv_5= 'afterAction' otherlv_6= '{' ( (lv_afterAction_7_0= ruleActionCall ) ) otherlv_8= '}' )? ) ;
     public final EObject ruleInitAfterActions() throws RecognitionException {
+    	System.out.println("InternalXtextParser.ruleInitAfterActions()");
         EObject current = null;
 
         Token otherlv_1=null;
@@ -1975,7 +1978,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
                     current = forceCreateModelElement(
                         grammarAccess.getInitAfterActionsAccess().getInitAfterActionsAction_0(),
                         current);
-                
+                    System.out.println("InternalXtextParser.ruleInitAfterActions() current='" + current + "'");
 
             }
 
@@ -2114,6 +2117,7 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
             } 
         finally {
         }
+        System.out.println("InternalXtextParser.ruleInitAfterActions() - return current='" + current + "'");
         return current;
     }
     // $ANTLR end "ruleInitAfterActions"
@@ -10410,7 +10414,8 @@ public class InternalXtextParser extends AbstractInternalAntlrParser {
             this.special = DFA38_special;
             this.transition = DFA38_transition;
         }
-        public String getDescription() {
+        @Override
+		public String getDescription() {
             return "1375:2: (this_Assignment_0= ruleAssignment | this_AbstractTerminal_1= ruleAbstractTerminal )";
         }
     }

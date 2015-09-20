@@ -257,6 +257,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	 * @since 3.0
 	 */
 	public InitAfterActions getInitAfterActions() {
+		System.out.println("'" + this + "'.getInitAfterActions='" + initAfterActions + "'");
 		return initAfterActions;
 	}
 
@@ -283,6 +284,7 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	 * @since 3.0
 	 */
 	public void setInitAfterActions(InitAfterActions newInitAfterActions) {
+		System.out.println("'" + this + "'.setInitAfterActions='" + newInitAfterActions + "'");
 		if (newInitAfterActions != initAfterActions) {
 			NotificationChain msgs = null;
 			if (initAfterActions != null)
