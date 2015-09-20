@@ -307,9 +307,13 @@ public class Xtext2EcoreTransformer {
 
 	private boolean checkDatatypeRules() {
 		boolean result = true;
+		System.out.println("checkDatatypeRules!");
 		for (AbstractRule rule : grammar.getRules()) {
 			try {
 				if (rule instanceof ParserRule && GrammarUtil.isDatatypeRule((ParserRule) rule) && !DatatypeRuleUtil.isValidDatatypeRule((ParserRule) rule)) {
+					System.err.println("rule='" + rule + "'");
+					System.err.println(GrammarUtil.isDatatypeRule((ParserRule)rule));
+					System.err.println(DatatypeRuleUtil.isValidDatatypeRule((ParserRule) rule));
 					throw new TransformationException(TransformationErrorCode.InvalidDatatypeRule,
 							"Datatype rules may only use other datatype rules, lexer rules and keywords.", rule);
 				}
