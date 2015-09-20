@@ -35,6 +35,7 @@ import static extension org.eclipse.xtext.xtext.generator.parser.antlr.TerminalR
 import org.eclipse.xtext.xtext.generator.normalization.RuleFilter
 import org.eclipse.xtext.RuleNames
 import org.eclipse.xtext.xtext.generator.normalization.FlattenedGrammarAccess
+import org.eclipse.xtext.AbstractTokenAntlrAction
 
 abstract class AbstractAntlrGrammarGenerator {
 	
@@ -218,6 +219,10 @@ abstract class AbstractAntlrGrammarGenerator {
 	
 	protected dispatch def String ebnf2(UnorderedGroup it, AntlrOptions options, boolean supportActions) '''
 		(«FOR element:elements SEPARATOR '\n    |'»«element.ebnf(options, supportActions)»«ENDFOR»)*
+	'''
+	
+	protected dispatch def String ebnf2(AbstractTokenAntlrAction it, AntlrOptions options, boolean supportActions) '''
+		«it.element.ebnf(options, supportActions)»
 	'''
 	
 	protected dispatch def String ebnf2(Assignment it, AntlrOptions options, boolean supportActions) '''

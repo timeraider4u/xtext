@@ -94,6 +94,7 @@ Group returns AbstractElement:
 
 AbstractToken returns AbstractElement:
 	AbstractTokenWithCardinality |
+	// AbstractTokenAntlrAction |
 	Action
 ;
 
@@ -101,7 +102,6 @@ AbstractTokenAntlrAction returns AbstractElement:
 	{AbstractTokenAntlrAction}
 	element=AbstractTokenWithCardinality
 ;
-
 
 /* SuppressWarnings[potentialOverride]: Handled in CardinalityAwareEcoreFactory */
 AbstractTokenWithCardinality returns AbstractElement:

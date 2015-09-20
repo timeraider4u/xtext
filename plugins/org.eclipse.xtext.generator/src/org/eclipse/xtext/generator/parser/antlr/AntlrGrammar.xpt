@@ -398,6 +398,10 @@ finally {
 «ELSE-»«EXPAND ebnf(options, debugGrammar) FOREACH elements»«ENDIF-»
 «ENDDEFINE»
 
+«DEFINE ebnf2(AntlrOptions options, boolean debugGrammar) FOR AbstractTokenAntlrAction-»
+«EXPAND ebnf2(options, debugGrammar) FOR element»
+«ENDDEFINE»
+
 «DEFINE ebnf2(AntlrOptions options, boolean debugGrammar) FOR UnorderedGroup»
 «IF debugGrammar-»
 («EXPAND ebnf(options, debugGrammar) FOREACH elements SEPARATOR '\n    |'»)*

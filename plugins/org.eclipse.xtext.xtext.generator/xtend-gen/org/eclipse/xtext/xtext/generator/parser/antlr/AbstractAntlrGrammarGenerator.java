@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.AbstractElement;
 import org.eclipse.xtext.AbstractRule;
+import org.eclipse.xtext.AbstractTokenAntlrAction;
 import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
@@ -592,6 +593,15 @@ public abstract class AbstractAntlrGrammarGenerator {
     return _builder.toString();
   }
   
+  protected String _ebnf2(final AbstractTokenAntlrAction it, final AntlrOptions options, final boolean supportActions) {
+    StringConcatenation _builder = new StringConcatenation();
+    AbstractElement _element = it.getElement();
+    String _ebnf = this.ebnf(_element, options, supportActions);
+    _builder.append(_ebnf, "");
+    _builder.newLineIfNotEmpty();
+    return _builder.toString();
+  }
+  
   protected String _ebnf2(final Assignment it, final AntlrOptions options, final boolean supportActions) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("(");
@@ -797,6 +807,8 @@ public abstract class AbstractAntlrGrammarGenerator {
       return _ebnf2((Group)it, options, supportActions);
     } else if (it instanceof UnorderedGroup) {
       return _ebnf2((UnorderedGroup)it, options, supportActions);
+    } else if (it instanceof AbstractTokenAntlrAction) {
+      return _ebnf2((AbstractTokenAntlrAction)it, options, supportActions);
     } else if (it instanceof Action) {
       return _ebnf2((Action)it, options, supportActions);
     } else if (it instanceof Assignment) {

@@ -926,6 +926,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//AbstractTokenWithCardinality
 		public RuleCall getAbstractTokenWithCardinalityParserRuleCall_0() { return cAbstractTokenWithCardinalityParserRuleCall_0; }
 
+		//// AbstractTokenAntlrAction |
 		//Action
 		public RuleCall getActionParserRuleCall_1() { return cActionParserRuleCall_1; }
 	}
