@@ -14,7 +14,7 @@ package org.eclipse.xtext;
  * <ul>
  *   <li>{@link org.eclipse.xtext.AbstractTokenAntlrAction#getPreAction <em>Pre Action</em>}</li>
  *   <li>{@link org.eclipse.xtext.AbstractTokenAntlrAction#getPostAction <em>Post Action</em>}</li>
- *   <li>{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate <em>Is Semantic Predicate</em>}</li>
+ *   <li>{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate2 <em>Is Semantic Predicate2</em>}</li>
  *   <li>{@link org.eclipse.xtext.AbstractTokenAntlrAction#getElement <em>Element</em>}</li>
  * </ul>
  *
@@ -77,30 +77,30 @@ public interface AbstractTokenAntlrAction extends AbstractElement {
 	void setPostAction(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * Returns the value of the '<em><b>Is Semantic Predicate2</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Semantic Predicate</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Is Semantic Predicate2</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Semantic Predicate</em>' attribute.
-	 * @see #setIsSemanticPredicate(boolean)
-	 * @see org.eclipse.xtext.XtextPackage#getAbstractTokenAntlrAction_IsSemanticPredicate()
+	 * @return the value of the '<em>Is Semantic Predicate2</em>' attribute.
+	 * @see #setIsSemanticPredicate2(boolean)
+	 * @see org.eclipse.xtext.XtextPackage#getAbstractTokenAntlrAction_IsSemanticPredicate2()
 	 * @model
 	 * @generated
 	 */
-	boolean isIsSemanticPredicate();
+	boolean isIsSemanticPredicate2();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate <em>Is Semantic Predicate</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate2 <em>Is Semantic Predicate2</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Semantic Predicate</em>' attribute.
-	 * @see #isIsSemanticPredicate()
+	 * @param value the new value of the '<em>Is Semantic Predicate2</em>' attribute.
+	 * @see #isIsSemanticPredicate2()
 	 * @generated
 	 */
-	void setIsSemanticPredicate(boolean value);
+	void setIsSemanticPredicate2(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Element</b></em>' containment reference.

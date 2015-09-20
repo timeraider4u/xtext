@@ -24,7 +24,7 @@ import org.eclipse.xtext.XtextPackage;
  * <ul>
  *   <li>{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl#getPreAction <em>Pre Action</em>}</li>
  *   <li>{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl#getPostAction <em>Post Action</em>}</li>
- *   <li>{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl#isIsSemanticPredicate <em>Is Semantic Predicate</em>}</li>
+ *   <li>{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl#isIsSemanticPredicate2 <em>Is Semantic Predicate2</em>}</li>
  *   <li>{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl#getElement <em>Element</em>}</li>
  * </ul>
  *
@@ -73,24 +73,24 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 	protected String postAction = POST_ACTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isIsSemanticPredicate() <em>Is Semantic Predicate</em>}' attribute.
+	 * The default value of the '{@link #isIsSemanticPredicate2() <em>Is Semantic Predicate2</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsSemanticPredicate()
+	 * @see #isIsSemanticPredicate2()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_SEMANTIC_PREDICATE_EDEFAULT = false;
+	protected static final boolean IS_SEMANTIC_PREDICATE2_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isIsSemanticPredicate() <em>Is Semantic Predicate</em>}' attribute.
+	 * The cached value of the '{@link #isIsSemanticPredicate2() <em>Is Semantic Predicate2</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsSemanticPredicate()
+	 * @see #isIsSemanticPredicate2()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isSemanticPredicate = IS_SEMANTIC_PREDICATE_EDEFAULT;
+	protected boolean isSemanticPredicate2 = IS_SEMANTIC_PREDICATE2_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
@@ -168,8 +168,8 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsSemanticPredicate() {
-		return isSemanticPredicate;
+	public boolean isIsSemanticPredicate2() {
+		return isSemanticPredicate2;
 	}
 
 	/**
@@ -177,11 +177,11 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsSemanticPredicate(boolean newIsSemanticPredicate) {
-		boolean oldIsSemanticPredicate = isSemanticPredicate;
-		isSemanticPredicate = newIsSemanticPredicate;
+	public void setIsSemanticPredicate2(boolean newIsSemanticPredicate2) {
+		boolean oldIsSemanticPredicate2 = isSemanticPredicate2;
+		isSemanticPredicate2 = newIsSemanticPredicate2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE, oldIsSemanticPredicate, isSemanticPredicate));
+			eNotify(new ENotificationImpl(this, Notification.SET, XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2, oldIsSemanticPredicate2, isSemanticPredicate2));
 	}
 
 	/**
@@ -253,8 +253,8 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 				return getPreAction();
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION:
 				return getPostAction();
-			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE:
-				return isIsSemanticPredicate();
+			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2:
+				return isIsSemanticPredicate2();
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT:
 				return getElement();
 		}
@@ -275,8 +275,8 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION:
 				setPostAction((String)newValue);
 				return;
-			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE:
-				setIsSemanticPredicate((Boolean)newValue);
+			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2:
+				setIsSemanticPredicate2((Boolean)newValue);
 				return;
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT:
 				setElement((AbstractElement)newValue);
@@ -299,8 +299,8 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION:
 				setPostAction(POST_ACTION_EDEFAULT);
 				return;
-			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE:
-				setIsSemanticPredicate(IS_SEMANTIC_PREDICATE_EDEFAULT);
+			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2:
+				setIsSemanticPredicate2(IS_SEMANTIC_PREDICATE2_EDEFAULT);
 				return;
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT:
 				setElement((AbstractElement)null);
@@ -321,8 +321,8 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 				return PRE_ACTION_EDEFAULT == null ? preAction != null : !PRE_ACTION_EDEFAULT.equals(preAction);
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION:
 				return POST_ACTION_EDEFAULT == null ? postAction != null : !POST_ACTION_EDEFAULT.equals(postAction);
-			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE:
-				return isSemanticPredicate != IS_SEMANTIC_PREDICATE_EDEFAULT;
+			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2:
+				return isSemanticPredicate2 != IS_SEMANTIC_PREDICATE2_EDEFAULT;
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT:
 				return element != null;
 		}
@@ -343,8 +343,8 @@ public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements
 		result.append(preAction);
 		result.append(", postAction: ");
 		result.append(postAction);
-		result.append(", isSemanticPredicate: ");
-		result.append(isSemanticPredicate);
+		result.append(", isSemanticPredicate2: ");
+		result.append(isSemanticPredicate2);
 		result.append(')');
 		return result.toString();
 	}

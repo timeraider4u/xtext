@@ -316,6 +316,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	private EClass abstractTokenAntlrActionEClass = null;
 
@@ -597,6 +598,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getParserRule_InitAfterActions() {
 		return (EReference)parserRuleEClass.getEStructuralFeatures().get(5);
@@ -664,6 +666,33 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 */
 	public EAttribute getAbstractElement_FirstSetPredicated() {
 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractElement_PreAntlrAction() {
+		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractElement_PostAntlrAction() {
+		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractElement_IsSemanticPredicate() {
+		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1211,6 +1240,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getAbstractTokenAntlrAction() {
 		return abstractTokenAntlrActionEClass;
@@ -1220,6 +1250,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getAbstractTokenAntlrAction_PreAction() {
 		return (EAttribute)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(0);
@@ -1229,6 +1260,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getAbstractTokenAntlrAction_PostAction() {
 		return (EAttribute)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(1);
@@ -1238,8 +1270,9 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
-	public EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate() {
+	public EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate2() {
 		return (EAttribute)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1247,6 +1280,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getAbstractTokenAntlrAction_Element() {
 		return (EReference)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(3);
@@ -1318,6 +1352,9 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__CARDINALITY);
 		createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__PREDICATED);
 		createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__FIRST_SET_PREDICATED);
+		createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__PRE_ANTLR_ACTION);
+		createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__POST_ANTLR_ACTION);
+		createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE);
 
 		actionEClass = createEClass(ACTION);
 		createEReference(actionEClass, ACTION__TYPE);
@@ -1409,7 +1446,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		abstractTokenAntlrActionEClass = createEClass(ABSTRACT_TOKEN_ANTLR_ACTION);
 		createEAttribute(abstractTokenAntlrActionEClass, ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ACTION);
 		createEAttribute(abstractTokenAntlrActionEClass, ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION);
-		createEAttribute(abstractTokenAntlrActionEClass, ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE);
+		createEAttribute(abstractTokenAntlrActionEClass, ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2);
 		createEReference(abstractTokenAntlrActionEClass, ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT);
 	}
 
@@ -1512,6 +1549,9 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		initEAttribute(getAbstractElement_Cardinality(), theEcorePackage.getEString(), "cardinality", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractElement_Predicated(), theEcorePackage.getEBoolean(), "predicated", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractElement_FirstSetPredicated(), theEcorePackage.getEBoolean(), "firstSetPredicated", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractElement_PreAntlrAction(), theEcorePackage.getEString(), "preAntlrAction", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractElement_PostAntlrAction(), theEcorePackage.getEString(), "postAntlrAction", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractElement_IsSemanticPredicate(), theEcorePackage.getEBoolean(), "isSemanticPredicate", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAction_Type(), this.getTypeRef(), null, "type", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1603,7 +1643,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		initEClass(abstractTokenAntlrActionEClass, AbstractTokenAntlrAction.class, "AbstractTokenAntlrAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractTokenAntlrAction_PreAction(), theEcorePackage.getEString(), "preAction", null, 0, 1, AbstractTokenAntlrAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractTokenAntlrAction_PostAction(), theEcorePackage.getEString(), "postAction", null, 0, 1, AbstractTokenAntlrAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAbstractTokenAntlrAction_IsSemanticPredicate(), theEcorePackage.getEBoolean(), "isSemanticPredicate", null, 0, 1, AbstractTokenAntlrAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTokenAntlrAction_IsSemanticPredicate2(), theEcorePackage.getEBoolean(), "isSemanticPredicate2", null, 0, 1, AbstractTokenAntlrAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractTokenAntlrAction_Element(), this.getAbstractElement(), null, "element", null, 0, 1, AbstractTokenAntlrAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

@@ -478,13 +478,43 @@ public interface XtextPackage extends EPackage {
 	int ABSTRACT_ELEMENT__FIRST_SET_PREDICATED = 2;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_ELEMENT__PRE_ANTLR_ACTION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_ELEMENT__POST_ANTLR_ACTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ELEMENT_FEATURE_COUNT = 3;
+	int ABSTRACT_ELEMENT_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.ActionImpl <em>Action</em>}' class.
@@ -523,6 +553,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTION__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ACTION__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ACTION__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ACTION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -599,6 +659,36 @@ public interface XtextPackage extends EPackage {
 	int KEYWORD__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int KEYWORD__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int KEYWORD__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int KEYWORD__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -653,6 +743,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int RULE_CALL__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int RULE_CALL__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int RULE_CALL__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int RULE_CALL__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The feature id for the '<em><b>Rule</b></em>' reference.
@@ -732,6 +852,36 @@ public interface XtextPackage extends EPackage {
 	int ASSIGNMENT__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ASSIGNMENT__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ASSIGNMENT__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ASSIGNMENT__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Feature</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -804,6 +954,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int CROSS_REFERENCE__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int CROSS_REFERENCE__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int CROSS_REFERENCE__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int CROSS_REFERENCE__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -926,6 +1106,36 @@ public interface XtextPackage extends EPackage {
 	int ABSTRACT_NEGATED_TOKEN__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_NEGATED_TOKEN__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_NEGATED_TOKEN__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_NEGATED_TOKEN__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Terminal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -980,6 +1190,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int NEGATED_TOKEN__FIRST_SET_PREDICATED = ABSTRACT_NEGATED_TOKEN__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int NEGATED_TOKEN__PRE_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int NEGATED_TOKEN__POST_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int NEGATED_TOKEN__IS_SEMANTIC_PREDICATE = ABSTRACT_NEGATED_TOKEN__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The feature id for the '<em><b>Terminal</b></em>' containment reference.
@@ -1038,6 +1278,36 @@ public interface XtextPackage extends EPackage {
 	int UNTIL_TOKEN__FIRST_SET_PREDICATED = ABSTRACT_NEGATED_TOKEN__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int UNTIL_TOKEN__PRE_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int UNTIL_TOKEN__POST_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int UNTIL_TOKEN__IS_SEMANTIC_PREDICATE = ABSTRACT_NEGATED_TOKEN__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Terminal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1092,6 +1362,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int WILDCARD__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int WILDCARD__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int WILDCARD__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int WILDCARD__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The number of structural features of the '<em>Wildcard</em>' class.
@@ -1187,6 +1487,36 @@ public interface XtextPackage extends EPackage {
 	int ENUM_LITERAL_DECLARATION__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ENUM_LITERAL_DECLARATION__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ENUM_LITERAL_DECLARATION__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ENUM_LITERAL_DECLARATION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Enum Literal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1252,6 +1582,36 @@ public interface XtextPackage extends EPackage {
 	int COMPOUND_ELEMENT__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int COMPOUND_ELEMENT__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int COMPOUND_ELEMENT__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1306,6 +1666,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALTERNATIVES__FIRST_SET_PREDICATED = COMPOUND_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ALTERNATIVES__PRE_ANTLR_ACTION = COMPOUND_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ALTERNATIVES__POST_ANTLR_ACTION = COMPOUND_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ALTERNATIVES__IS_SEMANTIC_PREDICATE = COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -1364,6 +1754,36 @@ public interface XtextPackage extends EPackage {
 	int UNORDERED_GROUP__FIRST_SET_PREDICATED = COMPOUND_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int UNORDERED_GROUP__PRE_ANTLR_ACTION = COMPOUND_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int UNORDERED_GROUP__POST_ANTLR_ACTION = COMPOUND_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int UNORDERED_GROUP__IS_SEMANTIC_PREDICATE = COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1418,6 +1838,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int GROUP__FIRST_SET_PREDICATED = COMPOUND_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int GROUP__PRE_ANTLR_ACTION = COMPOUND_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int GROUP__POST_ANTLR_ACTION = COMPOUND_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int GROUP__IS_SEMANTIC_PREDICATE = COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -1487,6 +1937,36 @@ public interface XtextPackage extends EPackage {
 	int CHARACTER_RANGE__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int CHARACTER_RANGE__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int CHARACTER_RANGE__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int CHARACTER_RANGE__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1550,6 +2030,36 @@ public interface XtextPackage extends EPackage {
 	 * @ordered
 	 */
 	int EOF__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int EOF__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int EOF__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int EOF__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
 
 	/**
 	 * The number of structural features of the '<em>EOF</em>' class.
@@ -1963,6 +2473,36 @@ public interface XtextPackage extends EPackage {
 	int ABSTRACT_TOKEN_ANTLR_ACTION__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+
+	/**
 	 * The feature id for the '<em><b>Pre Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1983,14 +2523,14 @@ public interface XtextPackage extends EPackage {
 	int ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Semantic Predicate2</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 * @since 3.0
 	 */
-	int ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
+	int ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2 = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' containment reference.
@@ -2349,6 +2889,42 @@ public interface XtextPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAbstractElement_FirstSetPredicated();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractElement#getPreAntlrAction <em>Pre Antlr Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pre Antlr Action</em>'.
+	 * @see org.eclipse.xtext.AbstractElement#getPreAntlrAction()
+	 * @see #getAbstractElement()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getAbstractElement_PreAntlrAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractElement#getPostAntlrAction <em>Post Antlr Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Post Antlr Action</em>'.
+	 * @see org.eclipse.xtext.AbstractElement#getPostAntlrAction()
+	 * @see #getAbstractElement()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getAbstractElement_PostAntlrAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractElement#isIsSemanticPredicate <em>Is Semantic Predicate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Semantic Predicate</em>'.
+	 * @see org.eclipse.xtext.AbstractElement#isIsSemanticPredicate()
+	 * @see #getAbstractElement()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getAbstractElement_IsSemanticPredicate();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Action <em>Action</em>}'.
@@ -3031,16 +3607,16 @@ public interface XtextPackage extends EPackage {
 	EAttribute getAbstractTokenAntlrAction_PostAction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate <em>Is Semantic Predicate</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate2 <em>Is Semantic Predicate2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Semantic Predicate</em>'.
-	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate()
+	 * @return the meta object for the attribute '<em>Is Semantic Predicate2</em>'.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate2()
 	 * @see #getAbstractTokenAntlrAction()
 	 * @generated
 	 * @since 3.0
 	 */
-	EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate();
+	EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate2();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.AbstractTokenAntlrAction#getElement <em>Element</em>}'.
@@ -3344,6 +3920,33 @@ public interface XtextPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ABSTRACT_ELEMENT__FIRST_SET_PREDICATED = eINSTANCE.getAbstractElement_FirstSetPredicated();
+
+		/**
+		 * The meta object literal for the '<em><b>Pre Antlr Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute ABSTRACT_ELEMENT__PRE_ANTLR_ACTION = eINSTANCE.getAbstractElement_PreAntlrAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Post Antlr Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute ABSTRACT_ELEMENT__POST_ANTLR_ACTION = eINSTANCE.getAbstractElement_PostAntlrAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Semantic Predicate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE = eINSTANCE.getAbstractElement_IsSemanticPredicate();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.ActionImpl <em>Action</em>}' class.
@@ -3927,13 +4530,13 @@ public interface XtextPackage extends EPackage {
 		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION = eINSTANCE.getAbstractTokenAntlrAction_PostAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Semantic Predicate</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Is Semantic Predicate2</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 * @since 3.0
 		 */
-		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE = eINSTANCE.getAbstractTokenAntlrAction_IsSemanticPredicate();
+		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2 = eINSTANCE.getAbstractTokenAntlrAction_IsSemanticPredicate2();
 
 		/**
 		 * The meta object literal for the '<em><b>Element</b></em>' containment reference feature.

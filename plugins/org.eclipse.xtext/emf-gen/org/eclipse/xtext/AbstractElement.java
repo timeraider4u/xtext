@@ -16,6 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.xtext.AbstractElement#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link org.eclipse.xtext.AbstractElement#isPredicated <em>Predicated</em>}</li>
  *   <li>{@link org.eclipse.xtext.AbstractElement#isFirstSetPredicated <em>First Set Predicated</em>}</li>
+ *   <li>{@link org.eclipse.xtext.AbstractElement#getPreAntlrAction <em>Pre Antlr Action</em>}</li>
+ *   <li>{@link org.eclipse.xtext.AbstractElement#getPostAntlrAction <em>Post Antlr Action</em>}</li>
+ *   <li>{@link org.eclipse.xtext.AbstractElement#isIsSemanticPredicate <em>Is Semantic Predicate</em>}</li>
  * </ul>
  *
  * @see org.eclipse.xtext.XtextPackage#getAbstractElement()
@@ -102,5 +105,89 @@ public interface AbstractElement extends EObject {
 	 * @generated
 	 */
 	void setFirstSetPredicated(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pre Antlr Action</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pre Antlr Action</em>' attribute.
+	 * @see #setPreAntlrAction(String)
+	 * @see org.eclipse.xtext.XtextPackage#getAbstractElement_PreAntlrAction()
+	 * @model
+	 * @generated
+	 * @since 3.0
+	 */
+	String getPreAntlrAction();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.xtext.AbstractElement#getPreAntlrAction <em>Pre Antlr Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pre Antlr Action</em>' attribute.
+	 * @see #getPreAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	void setPreAntlrAction(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Post Antlr Action</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Post Antlr Action</em>' attribute.
+	 * @see #setPostAntlrAction(String)
+	 * @see org.eclipse.xtext.XtextPackage#getAbstractElement_PostAntlrAction()
+	 * @model
+	 * @generated
+	 * @since 3.0
+	 */
+	String getPostAntlrAction();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.xtext.AbstractElement#getPostAntlrAction <em>Post Antlr Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Post Antlr Action</em>' attribute.
+	 * @see #getPostAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	void setPostAntlrAction(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Semantic Predicate</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Semantic Predicate</em>' attribute.
+	 * @see #setIsSemanticPredicate(boolean)
+	 * @see org.eclipse.xtext.XtextPackage#getAbstractElement_IsSemanticPredicate()
+	 * @model
+	 * @generated
+	 * @since 3.0
+	 */
+	boolean isIsSemanticPredicate();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.xtext.AbstractElement#isIsSemanticPredicate <em>Is Semantic Predicate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Semantic Predicate</em>' attribute.
+	 * @see #isIsSemanticPredicate()
+	 * @generated
+	 * @since 3.0
+	 */
+	void setIsSemanticPredicate(boolean value);
 
 } // AbstractElement
