@@ -97,6 +97,12 @@ AbstractToken returns AbstractElement:
 	Action
 ;
 
+AbstractTokenAntlrAction returns AbstractElement:
+	{AbstractTokenAntlrAction}
+	element=AbstractTokenWithCardinality
+;
+
+
 /* SuppressWarnings[potentialOverride]: Handled in CardinalityAwareEcoreFactory */
 AbstractTokenWithCardinality returns AbstractElement:
 	(Assignment | AbstractTerminal) cardinality=('?'|'*'|'+')?

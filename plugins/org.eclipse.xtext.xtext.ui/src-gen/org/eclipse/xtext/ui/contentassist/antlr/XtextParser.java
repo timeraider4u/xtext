@@ -105,6 +105,7 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getUnorderedGroupAccess().getGroup_1_1(), "rule__UnorderedGroup__Group_1_1__0");
 					put(grammarAccess.getGroupAccess().getGroup(), "rule__Group__Group__0");
 					put(grammarAccess.getGroupAccess().getGroup_1(), "rule__Group__Group_1__0");
+					put(grammarAccess.getAbstractTokenAntlrActionAccess().getGroup(), "rule__AbstractTokenAntlrAction__Group__0");
 					put(grammarAccess.getAbstractTokenWithCardinalityAccess().getGroup(), "rule__AbstractTokenWithCardinality__Group__0");
 					put(grammarAccess.getActionAccess().getGroup(), "rule__Action__Group__0");
 					put(grammarAccess.getActionAccess().getGroup_2(), "rule__Action__Group_2__0");
@@ -194,6 +195,7 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getConditionalBranchAccess().getElementsAssignment_1_4(), "rule__ConditionalBranch__ElementsAssignment_1_4");
 					put(grammarAccess.getUnorderedGroupAccess().getElementsAssignment_1_1_1(), "rule__UnorderedGroup__ElementsAssignment_1_1_1");
 					put(grammarAccess.getGroupAccess().getElementsAssignment_1_1(), "rule__Group__ElementsAssignment_1_1");
+					put(grammarAccess.getAbstractTokenAntlrActionAccess().getElementAssignment_1(), "rule__AbstractTokenAntlrAction__ElementAssignment_1");
 					put(grammarAccess.getAbstractTokenWithCardinalityAccess().getCardinalityAssignment_1(), "rule__AbstractTokenWithCardinality__CardinalityAssignment_1");
 					put(grammarAccess.getActionAccess().getTypeAssignment_1(), "rule__Action__TypeAssignment_1");
 					put(grammarAccess.getActionAccess().getFeatureAssignment_2_1(), "rule__Action__FeatureAssignment_2_1");

@@ -930,6 +930,30 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getActionParserRuleCall_1() { return cActionParserRuleCall_1; }
 	}
 
+	public class AbstractTokenAntlrActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.AbstractTokenAntlrAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAbstractTokenAntlrActionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cElementAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cElementAbstractTokenWithCardinalityParserRuleCall_1_0 = (RuleCall)cElementAssignment_1.eContents().get(0);
+		
+		//AbstractTokenAntlrAction AbstractElement:
+		//	{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+		@Override public ParserRule getRule() { return rule; }
+
+		//{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+		public Group getGroup() { return cGroup; }
+
+		//{AbstractTokenAntlrAction}
+		public Action getAbstractTokenAntlrActionAction_0() { return cAbstractTokenAntlrActionAction_0; }
+
+		//element=AbstractTokenWithCardinality
+		public Assignment getElementAssignment_1() { return cElementAssignment_1; }
+
+		//AbstractTokenWithCardinality
+		public RuleCall getElementAbstractTokenWithCardinalityParserRuleCall_1_0() { return cElementAbstractTokenWithCardinalityParserRuleCall_1_0; }
+	}
+
 	public class AbstractTokenWithCardinalityElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.AbstractTokenWithCardinality");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -2455,6 +2479,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	private final UnorderedGroupElements pUnorderedGroup;
 	private final GroupElements pGroup;
 	private final AbstractTokenElements pAbstractToken;
+	private final AbstractTokenAntlrActionElements pAbstractTokenAntlrAction;
 	private final AbstractTokenWithCardinalityElements pAbstractTokenWithCardinality;
 	private final ActionElements pAction;
 	private final AbstractTerminalElements pAbstractTerminal;
@@ -2523,6 +2548,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		this.pUnorderedGroup = new UnorderedGroupElements();
 		this.pGroup = new GroupElements();
 		this.pAbstractToken = new AbstractTokenElements();
+		this.pAbstractTokenAntlrAction = new AbstractTokenAntlrActionElements();
 		this.pAbstractTokenWithCardinality = new AbstractTokenWithCardinalityElements();
 		this.pAction = new ActionElements();
 		this.pAbstractTerminal = new AbstractTerminalElements();
@@ -2781,6 +2807,16 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAbstractTokenRule() {
 		return getAbstractTokenAccess().getRule();
+	}
+
+	//AbstractTokenAntlrAction AbstractElement:
+	//	{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+	public AbstractTokenAntlrActionElements getAbstractTokenAntlrActionAccess() {
+		return pAbstractTokenAntlrAction;
+	}
+	
+	public ParserRule getAbstractTokenAntlrActionRule() {
+		return getAbstractTokenAntlrActionAccess().getRule();
 	}
 
 	/// * SuppressWarnings[potentialOverride]: Handled in CardinalityAwareEcoreFactory * / AbstractTokenWithCardinality

@@ -257,7 +257,6 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 	 * @since 3.0
 	 */
 	public InitAfterActions getInitAfterActions() {
-		System.out.println("'" + this + "'.getInitAfterActions='" + initAfterActions + "'");
 		return initAfterActions;
 	}
 

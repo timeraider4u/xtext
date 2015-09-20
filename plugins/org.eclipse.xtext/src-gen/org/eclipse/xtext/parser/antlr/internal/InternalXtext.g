@@ -1403,6 +1403,8 @@ ruleAbstractToken returns [EObject current=null]
 
 
 
+
+
 // Entry rule entryRuleAbstractTokenWithCardinality
 entryRuleAbstractTokenWithCardinality returns [EObject current=null] 
 	:

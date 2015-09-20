@@ -524,6 +524,8 @@ finally {
 
 
 
+
+
 // Entry rule entryRuleAbstractTokenWithCardinality
 entryRuleAbstractTokenWithCardinality 
 :
@@ -5866,6 +5868,7 @@ finally {
 
 
 
+
 rule__AbstractTokenWithCardinality__Group__0
     @init {
 		int stackSize = keepStackSize();
@@ -10825,6 +10828,7 @@ rule__Group__ElementsAssignment_1_1
 finally {
 	restoreStackSize(stackSize);
 }
+
 
 rule__AbstractTokenWithCardinality__CardinalityAssignment_1
     @init {
