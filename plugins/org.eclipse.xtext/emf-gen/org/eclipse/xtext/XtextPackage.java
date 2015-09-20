@@ -1922,6 +1922,97 @@ public interface XtextPackage extends EPackage {
 	int INIT_AFTER_ACTIONS_FEATURE_COUNT = 2;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl <em>Abstract Token Antlr Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl
+	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getAbstractTokenAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION = 36;
+
+	/**
+	 * The feature id for the '<em><b>Cardinality</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__CARDINALITY = ABSTRACT_ELEMENT__CARDINALITY;
+
+	/**
+	 * The feature id for the '<em><b>Predicated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__PREDICATED = ABSTRACT_ELEMENT__PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>First Set Predicated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+
+	/**
+	 * The feature id for the '<em><b>Pre Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ACTION = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Post Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Element</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT = ABSTRACT_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Token Antlr Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int ABSTRACT_TOKEN_ANTLR_ACTION_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.Grammar <em>Grammar</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2905,6 +2996,65 @@ public interface XtextPackage extends EPackage {
 	EAttribute getInitAfterActions_AfterAction();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.xtext.AbstractTokenAntlrAction <em>Abstract Token Antlr Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Token Antlr Action</em>'.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction
+	 * @generated
+	 * @since 3.0
+	 */
+	EClass getAbstractTokenAntlrAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractTokenAntlrAction#getPreAction <em>Pre Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pre Action</em>'.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#getPreAction()
+	 * @see #getAbstractTokenAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getAbstractTokenAntlrAction_PreAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractTokenAntlrAction#getPostAction <em>Post Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Post Action</em>'.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#getPostAction()
+	 * @see #getAbstractTokenAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getAbstractTokenAntlrAction_PostAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate <em>Is Semantic Predicate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Semantic Predicate</em>'.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate()
+	 * @see #getAbstractTokenAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.xtext.AbstractTokenAntlrAction#getElement <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Element</em>'.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#getElement()
+	 * @see #getAbstractTokenAntlrAction()
+	 * @generated
+	 * @since 3.0
+	 */
+	EReference getAbstractTokenAntlrAction_Element();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2924,8 +3074,6 @@ public interface XtextPackage extends EPackage {
 	 * </ul>
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @noextend This interface is not intended to be extended by clients.
-	 * @noimplement This interface is not intended to be implemented by clients.
 	 */
 	interface Literals {
 		/**
@@ -3748,6 +3896,53 @@ public interface XtextPackage extends EPackage {
 		 * @since 3.0
 		 */
 		EAttribute INIT_AFTER_ACTIONS__AFTER_ACTION = eINSTANCE.getInitAfterActions_AfterAction();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl <em>Abstract Token Antlr Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl
+		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getAbstractTokenAntlrAction()
+		 * @generated
+		 * @since 3.0
+		 */
+		EClass ABSTRACT_TOKEN_ANTLR_ACTION = eINSTANCE.getAbstractTokenAntlrAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Pre Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ACTION = eINSTANCE.getAbstractTokenAntlrAction_PreAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Post Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION = eINSTANCE.getAbstractTokenAntlrAction_PostAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Semantic Predicate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE = eINSTANCE.getAbstractTokenAntlrAction_IsSemanticPredicate();
+
+		/**
+		 * The meta object literal for the '<em><b>Element</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EReference ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT = eINSTANCE.getAbstractTokenAntlrAction_Element();
 
 	}
 

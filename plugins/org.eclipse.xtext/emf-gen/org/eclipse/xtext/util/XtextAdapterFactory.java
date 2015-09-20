@@ -212,6 +212,10 @@ public class XtextAdapterFactory extends AdapterFactoryImpl {
 				return createInitAfterActionsAdapter();
 			}
 			@Override
+			public Adapter caseAbstractTokenAntlrAction(AbstractTokenAntlrAction object) {
+				return createAbstractTokenAntlrActionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -742,6 +746,21 @@ public class XtextAdapterFactory extends AdapterFactoryImpl {
 	 * @since 3.0
 	 */
 	public Adapter createInitAfterActionsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.xtext.AbstractTokenAntlrAction <em>Abstract Token Antlr Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.xtext.AbstractTokenAntlrAction
+	 * @generated
+	 * @since 3.0
+	 */
+	public Adapter createAbstractTokenAntlrActionAdapter() {
 		return null;
 	}
 

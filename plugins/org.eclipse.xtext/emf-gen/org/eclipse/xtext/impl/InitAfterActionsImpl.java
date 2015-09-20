@@ -75,7 +75,6 @@ public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implement
 	 */
 	protected InitAfterActionsImpl() {
 		super();
-		System.out.println("constructor of InitAfterActionsImpl()");
 	}
 
 	/**
@@ -94,7 +93,6 @@ public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public String getInitAction() {
-		// System.out.println("getInitAction returns='" + initAction + "'");
 		return initAction;
 	}
 
@@ -104,7 +102,6 @@ public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void setInitAction(String newInitAction) {
-		// System.out.println("setInitAction='" + newInitAction + "'");
 		String oldInitAction = initAction;
 		initAction = newInitAction;
 		if (eNotificationRequired())
@@ -117,7 +114,6 @@ public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public String getAfterAction() {
-		// System.out.println("getAfterAction='" + afterAction + "'");
 		return afterAction;
 	}
 
@@ -127,7 +123,6 @@ public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void setAfterAction(String newAfterAction) {
-		// System.out.println("setAfterAction='" + newAfterAction + "'");
 		String oldAfterAction = afterAction;
 		afterAction = newAfterAction;
 		if (eNotificationRequired())

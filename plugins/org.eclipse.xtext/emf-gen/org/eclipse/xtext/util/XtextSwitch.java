@@ -317,6 +317,13 @@ public class XtextSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION: {
+				AbstractTokenAntlrAction abstractTokenAntlrAction = (AbstractTokenAntlrAction)theEObject;
+				T result = caseAbstractTokenAntlrAction(abstractTokenAntlrAction);
+				if (result == null) result = caseAbstractElement(abstractTokenAntlrAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -868,6 +875,22 @@ public class XtextSwitch<T> extends Switch<T> {
 	 * @since 3.0
 	 */
 	public T caseInitAfterActions(InitAfterActions object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Token Antlr Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Token Antlr Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 * @since 3.0
+	 */
+	public T caseAbstractTokenAntlrAction(AbstractTokenAntlrAction object) {
 		return null;
 	}
 

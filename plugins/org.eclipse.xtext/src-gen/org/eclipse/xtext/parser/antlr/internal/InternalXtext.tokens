@@ -21,7 +21,7 @@
 'EOF'=49
 '['=46
 ']'=47
-'afterAction'=29
+'afterRuleAction'=29
 'as'=19
 'current'=39
 'enum'=51
@@ -31,12 +31,12 @@
 'grammar'=11
 'hidden'=14
 'import'=20
-'initAction'=26
+'initRuleAction'=27
 'returns'=23
 'terminal'=48
 'true'=40
 'with'=12
-'{'=27
+'{'=26
 '|'=33
 '}'=28
 RULE_ANY_OTHER=10

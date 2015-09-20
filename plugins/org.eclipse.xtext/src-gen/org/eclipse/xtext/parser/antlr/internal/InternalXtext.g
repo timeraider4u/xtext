@@ -75,9 +75,12 @@ entryRuleGrammar returns [EObject current=null]
 
 // Rule Grammar
 ruleGrammar returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='grammar' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getGrammarAccess().getGrammarKeyword_0());
@@ -298,9 +301,12 @@ entryRuleAbstractRule returns [EObject current=null]
 
 // Rule AbstractRule
 ruleAbstractRule returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAbstractRuleAccess().getParserRuleParserRuleCall_0()); 
@@ -348,9 +354,12 @@ entryRuleAbstractMetamodelDeclaration returns [EObject current=null]
 
 // Rule AbstractMetamodelDeclaration
 ruleAbstractMetamodelDeclaration returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAbstractMetamodelDeclarationAccess().getGeneratedMetamodelParserRuleCall_0()); 
@@ -388,9 +397,12 @@ entryRuleGeneratedMetamodel returns [EObject current=null]
 
 // Rule GeneratedMetamodel
 ruleGeneratedMetamodel returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='generate' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getGeneratedMetamodelAccess().getGenerateKeyword_0());
@@ -466,9 +478,12 @@ entryRuleReferencedMetamodel returns [EObject current=null]
 
 // Rule ReferencedMetamodel
 ruleReferencedMetamodel returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='import' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getReferencedMetamodelAccess().getImportKeyword_0());
@@ -526,9 +541,12 @@ entryRuleParserRule returns [EObject current=null]
 
 // Rule ParserRule
 ruleParserRule returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((((
 (
 		lv_fragment_0_0=	'fragment' 
@@ -748,22 +766,25 @@ entryRuleInitAfterActions returns [EObject current=null]
 
 // Rule InitAfterActions
 ruleInitAfterActions returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
     {
         $current = forceCreateModelElement(
             grammarAccess.getInitAfterActionsAccess().getInitAfterActionsAction_0(),
             $current);
     }
-)(	otherlv_1='initAction' 
+)(	otherlv_1='{' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getInitAfterActionsAccess().getInitActionKeyword_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0());
     }
-	otherlv_2='{' 
+	otherlv_2='initRuleAction' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1());
+    	newLeafNode(otherlv_2, grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1());
     }
 (
 (
@@ -787,9 +808,9 @@ ruleInitAfterActions returns [EObject current=null]
     {
     	newLeafNode(otherlv_4, grammarAccess.getInitAfterActionsAccess().getRightCurlyBracketKeyword_1_3());
     }
-)?(	otherlv_5='afterAction' 
+)?(	otherlv_5='afterRuleAction' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getInitAfterActionsAccess().getAfterActionKeyword_2_0());
+    	newLeafNode(otherlv_5, grammarAccess.getInitAfterActionsAccess().getAfterRuleActionKeyword_2_0());
     }
 	otherlv_6='{' 
     {
@@ -901,9 +922,12 @@ ruleActionCall returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
 
 // Rule RuleNameAndParams
 ruleRuleNameAndParams [EObject in_current] returns [EObject current=in_current] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
 (
 		{ 
@@ -988,9 +1012,12 @@ entryRuleParameter returns [EObject current=null]
 
 // Rule Parameter
 ruleParameter returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
 (
 		lv_name_0_0=RULE_ID
@@ -1027,9 +1054,12 @@ entryRuleTypeRef returns [EObject current=null]
 
 // Rule TypeRef
 ruleTypeRef returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (((
 (
 		{
@@ -1078,9 +1108,12 @@ entryRuleAlternatives returns [EObject current=null]
 
 // Rule Alternatives
 ruleAlternatives returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAlternativesAccess().getConditionalBranchParserRuleCall_0()); 
@@ -1136,9 +1169,12 @@ entryRuleConditionalBranch returns [EObject current=null]
 
 // Rule ConditionalBranch
 ruleConditionalBranch returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getConditionalBranchAccess().getUnorderedGroupParserRuleCall_0()); 
@@ -1217,9 +1253,12 @@ entryRuleUnorderedGroup returns [EObject current=null]
 
 // Rule UnorderedGroup
 ruleUnorderedGroup returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getUnorderedGroupAccess().getGroupParserRuleCall_0()); 
@@ -1275,9 +1314,12 @@ entryRuleGroup returns [EObject current=null]
 
 // Rule Group
 ruleGroup returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getGroupAccess().getAbstractTokenParserRuleCall_0()); 
@@ -1329,9 +1371,12 @@ entryRuleAbstractToken returns [EObject current=null]
 
 // Rule AbstractToken
 ruleAbstractToken returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAbstractTokenAccess().getAbstractTokenWithCardinalityParserRuleCall_0()); 
@@ -1369,9 +1414,12 @@ entryRuleAbstractTokenWithCardinality returns [EObject current=null]
 
 // Rule AbstractTokenWithCardinality
 ruleAbstractTokenWithCardinality returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
     { 
         newCompositeNode(grammarAccess.getAbstractTokenWithCardinalityAccess().getAssignmentParserRuleCall_0_0()); 
@@ -1451,9 +1499,12 @@ entryRuleAction returns [EObject current=null]
 
 // Rule Action
 ruleAction returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='{' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getActionAccess().getLeftCurlyBracketKeyword_0());
@@ -1554,9 +1605,12 @@ entryRuleAbstractTerminal returns [EObject current=null]
 
 // Rule AbstractTerminal
 ruleAbstractTerminal returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAbstractTerminalAccess().getKeywordParserRuleCall_0()); 
@@ -1634,9 +1688,12 @@ entryRuleKeyword returns [EObject current=null]
 
 // Rule Keyword
 ruleKeyword returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
 (
 		lv_value_0_0=RULE_STRING
@@ -1673,9 +1730,12 @@ entryRuleRuleCall returns [EObject current=null]
 
 // Rule RuleCall
 ruleRuleCall returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
 (
 		{
@@ -1757,9 +1817,12 @@ entryRuleNamedArgument returns [EObject current=null]
 
 // Rule NamedArgument
 ruleNamedArgument returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (((
 (
 		{
@@ -1824,9 +1887,12 @@ entryRuleLiteralCondition returns [EObject current=null]
 
 // Rule LiteralCondition
 ruleLiteralCondition returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
     {
         $current = forceCreateModelElement(
@@ -1871,9 +1937,12 @@ entryRuleDisjunction returns [EObject current=null]
 
 // Rule Disjunction
 ruleDisjunction returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getDisjunctionAccess().getConjunctionParserRuleCall_0()); 
@@ -1929,9 +1998,12 @@ entryRuleConjunction returns [EObject current=null]
 
 // Rule Conjunction
 ruleConjunction returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getConjunctionAccess().getNegationParserRuleCall_0()); 
@@ -1987,9 +2059,12 @@ entryRuleNegation returns [EObject current=null]
 
 // Rule Negation
 ruleNegation returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getNegationAccess().getAtomParserRuleCall_0()); 
@@ -2046,9 +2121,12 @@ entryRuleAtom returns [EObject current=null]
 
 // Rule Atom
 ruleAtom returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAtomAccess().getParameterReferenceParserRuleCall_0()); 
@@ -2096,9 +2174,12 @@ entryRuleParenthesizedCondition returns [EObject current=null]
 
 // Rule ParenthesizedCondition
 ruleParenthesizedCondition returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getParenthesizedConditionAccess().getLeftParenthesisKeyword_0());
@@ -2134,9 +2215,12 @@ entryRuleParameterReference returns [EObject current=null]
 
 // Rule ParameterReference
 ruleParameterReference returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
 (
 		{
@@ -2168,9 +2252,12 @@ entryRuleTerminalRuleCall returns [EObject current=null]
 
 // Rule TerminalRuleCall
 ruleTerminalRuleCall returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
 (
 		{
@@ -2295,9 +2382,12 @@ entryRulePredicatedKeyword returns [EObject current=null]
 
 // Rule PredicatedKeyword
 rulePredicatedKeyword returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (((
 (
 		lv_predicated_0_0=	'=>' 
@@ -2365,9 +2455,12 @@ entryRulePredicatedRuleCall returns [EObject current=null]
 
 // Rule PredicatedRuleCall
 rulePredicatedRuleCall returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (((
 (
 		lv_predicated_0_0=	'=>' 
@@ -2480,9 +2573,12 @@ entryRuleAssignment returns [EObject current=null]
 
 // Rule Assignment
 ruleAssignment returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (((
 (
 		lv_predicated_0_0=	'=>' 
@@ -2610,9 +2706,12 @@ entryRuleAssignableTerminal returns [EObject current=null]
 
 // Rule AssignableTerminal
 ruleAssignableTerminal returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAssignableTerminalAccess().getKeywordParserRuleCall_0()); 
@@ -2670,9 +2769,12 @@ entryRuleParenthesizedAssignableElement returns [EObject current=null]
 
 // Rule ParenthesizedAssignableElement
 ruleParenthesizedAssignableElement returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getParenthesizedAssignableElementAccess().getLeftParenthesisKeyword_0());
@@ -2708,9 +2810,12 @@ entryRuleAssignableAlternatives returns [EObject current=null]
 
 // Rule AssignableAlternatives
 ruleAssignableAlternatives returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAssignableAlternativesAccess().getAssignableTerminalParserRuleCall_0()); 
@@ -2766,9 +2871,12 @@ entryRuleCrossReference returns [EObject current=null]
 
 // Rule CrossReference
 ruleCrossReference returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='[' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getCrossReferenceAccess().getLeftSquareBracketKeyword_0());
@@ -2835,9 +2943,12 @@ entryRuleCrossReferenceableTerminal returns [EObject current=null]
 
 // Rule CrossReferenceableTerminal
 ruleCrossReferenceableTerminal returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getCrossReferenceableTerminalAccess().getKeywordParserRuleCall_0()); 
@@ -2875,9 +2986,12 @@ entryRuleParenthesizedElement returns [EObject current=null]
 
 // Rule ParenthesizedElement
 ruleParenthesizedElement returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getParenthesizedElementAccess().getLeftParenthesisKeyword_0());
@@ -2913,9 +3027,12 @@ entryRulePredicatedGroup returns [EObject current=null]
 
 // Rule PredicatedGroup
 rulePredicatedGroup returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (((
 (
 		lv_predicated_0_0=	'=>' 
@@ -2991,9 +3108,12 @@ entryRuleTerminalRule returns [EObject current=null]
 
 // Rule TerminalRule
 ruleTerminalRule returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='terminal' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getTerminalRuleAccess().getTerminalKeyword_0());
@@ -3116,9 +3236,12 @@ entryRuleTerminalAlternatives returns [EObject current=null]
 
 // Rule TerminalAlternatives
 ruleTerminalAlternatives returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getTerminalAlternativesAccess().getTerminalGroupParserRuleCall_0()); 
@@ -3174,9 +3297,12 @@ entryRuleTerminalGroup returns [EObject current=null]
 
 // Rule TerminalGroup
 ruleTerminalGroup returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getTerminalGroupAccess().getTerminalTokenParserRuleCall_0()); 
@@ -3228,9 +3354,12 @@ entryRuleTerminalToken returns [EObject current=null]
 
 // Rule TerminalToken
 ruleTerminalToken returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getTerminalTokenAccess().getTerminalTokenElementParserRuleCall_0()); 
@@ -3300,9 +3429,12 @@ entryRuleTerminalTokenElement returns [EObject current=null]
 
 // Rule TerminalTokenElement
 ruleTerminalTokenElement returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getTerminalTokenElementAccess().getCharacterRangeParserRuleCall_0()); 
@@ -3380,9 +3512,12 @@ entryRuleParenthesizedTerminalElement returns [EObject current=null]
 
 // Rule ParenthesizedTerminalElement
 ruleParenthesizedTerminalElement returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getParenthesizedTerminalElementAccess().getLeftParenthesisKeyword_0());
@@ -3418,9 +3553,12 @@ entryRuleAbstractNegatedToken returns [EObject current=null]
 
 // Rule AbstractNegatedToken
 ruleAbstractNegatedToken returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getAbstractNegatedTokenAccess().getNegatedTokenParserRuleCall_0()); 
@@ -3458,9 +3596,12 @@ entryRuleNegatedToken returns [EObject current=null]
 
 // Rule NegatedToken
 ruleNegatedToken returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='!' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getNegatedTokenAccess().getExclamationMarkKeyword_0());
@@ -3501,9 +3642,12 @@ entryRuleUntilToken returns [EObject current=null]
 
 // Rule UntilToken
 ruleUntilToken returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='->' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getUntilTokenAccess().getHyphenMinusGreaterThanSignKeyword_0());
@@ -3544,9 +3688,12 @@ entryRuleWildcard returns [EObject current=null]
 
 // Rule Wildcard
 ruleWildcard returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
     {
         $current = forceCreateModelElement(
@@ -3575,9 +3722,12 @@ entryRuleEOF returns [EObject current=null]
 
 // Rule EOF
 ruleEOF returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
     {
         $current = forceCreateModelElement(
@@ -3606,9 +3756,12 @@ entryRuleCharacterRange returns [EObject current=null]
 
 // Rule CharacterRange
 ruleCharacterRange returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getCharacterRangeAccess().getKeywordParserRuleCall_0()); 
@@ -3664,9 +3817,12 @@ entryRuleEnumRule returns [EObject current=null]
 
 // Rule EnumRule
 ruleEnumRule returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (	otherlv_0='enum' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getEnumRuleAccess().getEnumKeyword_0());
@@ -3755,9 +3911,12 @@ entryRuleEnumLiterals returns [EObject current=null]
 
 // Rule EnumLiterals
 ruleEnumLiterals returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 (
     { 
         newCompositeNode(grammarAccess.getEnumLiteralsAccess().getEnumLiteralDeclarationParserRuleCall_0()); 
@@ -3813,9 +3972,12 @@ entryRuleEnumLiteralDeclaration returns [EObject current=null]
 
 // Rule EnumLiteralDeclaration
 ruleEnumLiteralDeclaration returns [EObject current=null] 
-    @init { enterRule(); 
+    @init { enterRule();
+   		
     }
-    @after { leaveRule(); }:
+    @after { leaveRule();
+    		
+     }:
 ((
 (
 		{

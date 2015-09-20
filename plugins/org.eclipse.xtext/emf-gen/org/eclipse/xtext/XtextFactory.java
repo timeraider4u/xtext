@@ -358,6 +358,16 @@ public interface XtextFactory extends EFactory {
 	InitAfterActions createInitAfterActions();
 
 	/**
+	 * Returns a new object of class '<em>Abstract Token Antlr Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstract Token Antlr Action</em>'.
+	 * @generated
+	 * @since 3.0
+	 */
+	AbstractTokenAntlrAction createAbstractTokenAntlrAction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

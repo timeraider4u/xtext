@@ -4251,11 +4251,11 @@ rule__InitAfterActions__Group_1__0__Impl
     }
 :
 (
-{ before(grammarAccess.getInitAfterActionsAccess().getInitActionKeyword_1_0()); }
+{ before(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0()); }
 
-	'initAction' 
+	'{' 
 
-{ after(grammarAccess.getInitAfterActionsAccess().getInitActionKeyword_1_0()); }
+{ after(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0()); }
 )
 
 ;
@@ -4282,11 +4282,11 @@ rule__InitAfterActions__Group_1__1__Impl
     }
 :
 (
-{ before(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1()); }
+{ before(grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1()); }
 
-	'{' 
+	'initRuleAction' 
 
-{ after(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1()); }
+{ after(grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1()); }
 )
 
 ;
@@ -4380,11 +4380,11 @@ rule__InitAfterActions__Group_2__0__Impl
     }
 :
 (
-{ before(grammarAccess.getInitAfterActionsAccess().getAfterActionKeyword_2_0()); }
+{ before(grammarAccess.getInitAfterActionsAccess().getAfterRuleActionKeyword_2_0()); }
 
-	'afterAction' 
+	'afterRuleAction' 
 
-{ after(grammarAccess.getInitAfterActionsAccess().getAfterActionKeyword_2_0()); }
+{ after(grammarAccess.getInitAfterActionsAccess().getAfterRuleActionKeyword_2_0()); }
 )
 
 ;

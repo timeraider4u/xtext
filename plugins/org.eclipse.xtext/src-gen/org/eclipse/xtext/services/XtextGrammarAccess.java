@@ -521,36 +521,37 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInitAfterActionsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cInitActionKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cInitRuleActionKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cInitActionAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cInitActionActionCallParserRuleCall_1_2_0 = (RuleCall)cInitActionAssignment_1_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cAfterActionKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cAfterRuleActionKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Assignment cAfterActionAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
 		private final RuleCall cAfterActionActionCallParserRuleCall_2_2_0 = (RuleCall)cAfterActionAssignment_2_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		
 		//InitAfterActions:
-		//	{InitAfterActions} ('initAction' '{' initAction=ActionCall '}')? ('afterAction' '{' afterAction=ActionCall '}')?;
+		//	{InitAfterActions} ('{' 'initRuleAction' initAction=ActionCall '}')? ('afterRuleAction' '{' afterAction=ActionCall
+		//	'}')?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InitAfterActions} ('initAction' '{' initAction=ActionCall '}')? ('afterAction' '{' afterAction=ActionCall '}')?
+		//{InitAfterActions} ('{' 'initRuleAction' initAction=ActionCall '}')? ('afterRuleAction' '{' afterAction=ActionCall '}')?
 		public Group getGroup() { return cGroup; }
 
 		//{InitAfterActions}
 		public Action getInitAfterActionsAction_0() { return cInitAfterActionsAction_0; }
 
-		//('initAction' '{' initAction=ActionCall '}')?
+		//('{' 'initRuleAction' initAction=ActionCall '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//'initAction'
-		public Keyword getInitActionKeyword_1_0() { return cInitActionKeyword_1_0; }
-
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
+		public Keyword getLeftCurlyBracketKeyword_1_0() { return cLeftCurlyBracketKeyword_1_0; }
+
+		//'initRuleAction'
+		public Keyword getInitRuleActionKeyword_1_1() { return cInitRuleActionKeyword_1_1; }
 
 		//initAction=ActionCall
 		public Assignment getInitActionAssignment_1_2() { return cInitActionAssignment_1_2; }
@@ -561,11 +562,11 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 
-		//('afterAction' '{' afterAction=ActionCall '}')?
+		//('afterRuleAction' '{' afterAction=ActionCall '}')?
 		public Group getGroup_2() { return cGroup_2; }
 
-		//'afterAction'
-		public Keyword getAfterActionKeyword_2_0() { return cAfterActionKeyword_2_0; }
+		//'afterRuleAction'
+		public Keyword getAfterRuleActionKeyword_2_0() { return cAfterRuleActionKeyword_2_0; }
 
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_1() { return cLeftCurlyBracketKeyword_2_1; }
@@ -2681,7 +2682,8 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InitAfterActions:
-	//	{InitAfterActions} ('initAction' '{' initAction=ActionCall '}')? ('afterAction' '{' afterAction=ActionCall '}')?;
+	//	{InitAfterActions} ('{' 'initRuleAction' initAction=ActionCall '}')? ('afterRuleAction' '{' afterAction=ActionCall
+	//	'}')?;
 	public InitAfterActionsElements getInitAfterActionsAccess() {
 		return pInitAfterActions;
 	}

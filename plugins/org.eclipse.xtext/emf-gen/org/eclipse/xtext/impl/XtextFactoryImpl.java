@@ -95,6 +95,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 			case XtextPackage.PARAMETER_REFERENCE: return createParameterReference();
 			case XtextPackage.LITERAL_CONDITION: return createLiteralCondition();
 			case XtextPackage.INIT_AFTER_ACTIONS: return createInitAfterActions();
+			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION: return createAbstractTokenAntlrAction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -460,6 +461,16 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	public InitAfterActions createInitAfterActions() {
 		InitAfterActionsImpl initAfterActions = new InitAfterActionsImpl();
 		return initAfterActions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractTokenAntlrAction createAbstractTokenAntlrAction() {
+		AbstractTokenAntlrActionImpl abstractTokenAntlrAction = new AbstractTokenAntlrActionImpl();
+		return abstractTokenAntlrAction;
 	}
 
 	/**
