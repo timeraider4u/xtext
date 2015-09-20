@@ -165,10 +165,7 @@ finally {
 «ruleName()» «parameterList(debugGrammar)-»
 «IF !debugGrammar-»
 returns [EObject current=«IF fragment-»in_current«ELSE»null«ENDIF»] 
-    @init { enterRule(); System.out.println("AntlrGrammar.xpt");
-    	System.out.println("«this»");
-    	System.out.println("«this.initAfterActions»");
-   	 	System.out.println("«initAfterActions»");
+    @init { enterRule();
    		«initAfterActionInit(this)»
 «IF definesHiddenTokens-»
 		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens(«FOREACH hiddenTokens AS hidden SEPARATOR ", "»"«hidden.ruleName()»"«ENDFOREACH-»);
