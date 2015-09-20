@@ -199,6 +199,10 @@ abstract class AbstractAntlrGrammarGenerator {
 		(«FOR e:elements SEPARATOR '\n    |'»«e.dataTypeEbnf2(supportActions)»«ENDFOR»)*
 	'''
 	
+	protected dispatch def String dataTypeEbnf2(AbstractTokenAntlrAction it, boolean supportActions) '''
+		«it.element.dataTypeEbnf2(supportActions)»
+	'''
+	
 	protected dispatch def String dataTypeEbnf2(Keyword it, boolean supportActions) {
 		"'" + value.toAntlrString + "'"
 	}

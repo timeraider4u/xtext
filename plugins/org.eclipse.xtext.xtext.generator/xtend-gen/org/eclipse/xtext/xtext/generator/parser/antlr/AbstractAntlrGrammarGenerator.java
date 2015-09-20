@@ -518,6 +518,15 @@ public abstract class AbstractAntlrGrammarGenerator {
     return _builder.toString();
   }
   
+  protected String _dataTypeEbnf2(final AbstractTokenAntlrAction it, final boolean supportActions) {
+    StringConcatenation _builder = new StringConcatenation();
+    AbstractElement _element = it.getElement();
+    String _dataTypeEbnf2 = this.dataTypeEbnf2(_element, supportActions);
+    _builder.append(_dataTypeEbnf2, "");
+    _builder.newLineIfNotEmpty();
+    return _builder.toString();
+  }
+  
   protected String _dataTypeEbnf2(final Keyword it, final boolean supportActions) {
     String _value = it.getValue();
     String _antlrString = AntlrGrammarGenUtil.toAntlrString(_value);
@@ -788,6 +797,8 @@ public abstract class AbstractAntlrGrammarGenerator {
       return _dataTypeEbnf2((Group)it, supportActions);
     } else if (it instanceof UnorderedGroup) {
       return _dataTypeEbnf2((UnorderedGroup)it, supportActions);
+    } else if (it instanceof AbstractTokenAntlrAction) {
+      return _dataTypeEbnf2((AbstractTokenAntlrAction)it, supportActions);
     } else if (it instanceof Keyword) {
       return _dataTypeEbnf2((Keyword)it, supportActions);
     } else if (it instanceof RuleCall) {
