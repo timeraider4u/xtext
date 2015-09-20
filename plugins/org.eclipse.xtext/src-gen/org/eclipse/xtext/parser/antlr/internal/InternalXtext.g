@@ -778,13 +778,13 @@ ruleInitAfterActions returns [EObject current=null]
             grammarAccess.getInitAfterActionsAccess().getInitAfterActionsAction_0(),
             $current);
     }
-)(	otherlv_1='{' 
+)(	otherlv_1='initRuleAction' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_0());
     }
-	otherlv_2='initRuleAction' 
+	otherlv_2='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1());
+    	newLeafNode(otherlv_2, grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1());
     }
 (
 (

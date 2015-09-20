@@ -492,10 +492,11 @@ public class InternalXtextLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXtext.g:31:7: ( '{' )
-            // InternalXtext.g:31:9: '{'
+            // InternalXtext.g:31:7: ( 'initRuleAction' )
+            // InternalXtext.g:31:9: 'initRuleAction'
             {
-            match('{'); 
+            match("initRuleAction"); 
+
 
             }
 
@@ -512,11 +513,10 @@ public class InternalXtextLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalXtext.g:32:7: ( 'initRuleAction' )
-            // InternalXtext.g:32:9: 'initRuleAction'
+            // InternalXtext.g:32:7: ( '{' )
+            // InternalXtext.g:32:9: '{'
             {
-            match("initRuleAction"); 
-
+            match('{'); 
 
             }
 
@@ -1774,9 +1774,9 @@ public class InternalXtextLexer extends Lexer {
     static final String DFA12_maxS =
         "\1\uffff\1\75\1\uffff\1\75\1\76\3\162\1\151\3\uffff\1\56\1\163\1\156\1\72\1\uffff\1\145\6\uffff\1\165\3\uffff\1\76\1\117\1\156\1\151\1\172\2\uffff\2\uffff\1\57\11\uffff\1\154\1\141\1\uffff\1\165\1\162\1\141\1\156\1\164\5\uffff\1\172\1\164\1\160\1\151\3\uffff\1\164\6\uffff\1\162\4\uffff\1\106\1\165\1\144\5\uffff\1\163\1\147\1\145\2\155\1\145\1\150\1\uffff\1\145\1\157\1\164\1\165\1\162\1\172\1\155\1\144\1\145\1\155\1\172\1\151\1\155\1\162\1\172\2\162\1\122\1\162\1\145\1\uffff\1\172\1\145\1\172\1\145\1\uffff\1\156\2\141\1\uffff\1\122\1\164\1\165\2\156\1\uffff\1\156\1\uffff\1\156\1\141\1\162\1\164\1\165\1\172\1\154\1\163\1\164\1\172\1\164\1\154\1\172\1\145\1\154\1\uffff\1\145\2\172\1\uffff\2\172\1\uffff\1\172\1\145\1\101\5\uffff\1\101\2\143\2\164\2\151\2\157\2\156\2\172\2\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\6\uffff\1\13\1\14\1\15\4\uffff\1\23\1\uffff\1\25\1\27\1\31\1\32\1\34\1\35\1\uffff\1\37\1\40\1\41\5\uffff\1\52\1\53\3\uffff\1\57\1\60\1\10\1\1\1\2\1\5\1\3\1\51\1\4\2\uffff\1\52\5\uffff\1\13\1\14\1\15\1\45\1\16\4\uffff\1\33\1\22\1\23\1\uffff\1\25\1\27\1\31\1\32\1\34\1\35\1\uffff\1\37\1\40\1\41\1\43\3\uffff\1\53\1\54\1\55\1\56\1\57\7\uffff\1\20\24\uffff\1\44\4\uffff\1\7\3\uffff\1\12\5\uffff\1\46\1\uffff\1\6\17\uffff\1\21\3\uffff\1\47\2\uffff\1\11\3\uffff\1\24\1\36\1\50\1\42\1\17\15\uffff\1\26\1\30";
+        "\2\uffff\1\2\6\uffff\1\13\1\14\1\15\4\uffff\1\23\1\uffff\1\26\1\27\1\31\1\32\1\34\1\35\1\uffff\1\37\1\40\1\41\5\uffff\1\52\1\53\3\uffff\1\57\1\60\1\10\1\1\1\2\1\5\1\3\1\51\1\4\2\uffff\1\52\5\uffff\1\13\1\14\1\15\1\45\1\16\4\uffff\1\33\1\22\1\23\1\uffff\1\26\1\27\1\31\1\32\1\34\1\35\1\uffff\1\37\1\40\1\41\1\43\3\uffff\1\53\1\54\1\55\1\56\1\57\7\uffff\1\20\24\uffff\1\44\4\uffff\1\7\3\uffff\1\12\5\uffff\1\46\1\uffff\1\6\17\uffff\1\21\3\uffff\1\47\2\uffff\1\11\3\uffff\1\24\1\36\1\50\1\42\1\17\15\uffff\1\25\1\30";
     static final String DFA12_specialS =
-        "\1\1\42\uffff\1\2\1\0\u008e\uffff}>";
+        "\1\2\42\uffff\1\1\1\0\u008e\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\47\2\46\2\47\1\46\22\47\1\46\1\31\1\43\3\47\1\27\1\44\1\12\1\13\1\2\1\3\1\11\1\34\1\14\1\45\12\42\1\17\1\20\1\24\1\4\1\25\1\1\1\47\4\41\1\35\25\41\1\32\1\47\1\33\1\40\1\41\1\47\1\15\1\41\1\30\1\41\1\36\1\5\1\7\1\37\1\16\10\41\1\21\1\41\1\6\2\41\1\10\3\41\1\22\1\26\1\23\uff82\47",
             "\1\50",
@@ -2006,6 +2006,16 @@ public class InternalXtextLexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
+                        int LA12_35 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_35>='\u0000' && LA12_35<='\uFFFF')) ) {s = 83;}
+
+                        else s = 39;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -2086,16 +2096,6 @@ public class InternalXtextLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 38;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='%')||LA12_0=='@'||LA12_0=='\\'||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 39;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_35 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_35>='\u0000' && LA12_35<='\uFFFF')) ) {s = 83;}
-
-                        else s = 39;
 
                         if ( s>=0 ) return s;
                         break;

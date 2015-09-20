@@ -610,11 +610,11 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		public static IGrammarAwareElementType createInitAfterActions_Group_1ElementType() {
 			return new IGrammarAwareElementType("InitAfterActions_Group_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getInitAfterActionsAccess().getGroup_1());
 		}
-		public static IGrammarAwareElementType createInitAfterActions_LeftCurlyBracketKeyword_1_0ElementType() {
-			return new IGrammarAwareElementType("InitAfterActions_LeftCurlyBracketKeyword_1_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0());
+		public static IGrammarAwareElementType createInitAfterActions_InitRuleActionKeyword_1_0ElementType() {
+			return new IGrammarAwareElementType("InitAfterActions_InitRuleActionKeyword_1_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getInitAfterActionsAccess().getInitRuleActionKeyword_1_0());
 		}
-		public static IGrammarAwareElementType createInitAfterActions_InitRuleActionKeyword_1_1ElementType() {
-			return new IGrammarAwareElementType("InitAfterActions_InitRuleActionKeyword_1_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1());
+		public static IGrammarAwareElementType createInitAfterActions_LeftCurlyBracketKeyword_1_1ElementType() {
+			return new IGrammarAwareElementType("InitAfterActions_LeftCurlyBracketKeyword_1_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1());
 		}
 		public static IGrammarAwareElementType createInitAfterActions_InitActionAssignment_1_2ElementType() {
 			return new IGrammarAwareElementType("InitAfterActions_InitActionAssignment_1_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getInitAfterActionsAccess().getInitActionAssignment_1_2());
@@ -653,9 +653,9 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 
 	public static final IGrammarAwareElementType InitAfterActions_Group_1_ELEMENT_TYPE = associate(InitAfterActionsFactory.createInitAfterActions_Group_1ElementType());
 
-	public static final IGrammarAwareElementType InitAfterActions_LeftCurlyBracketKeyword_1_0_ELEMENT_TYPE = associate(InitAfterActionsFactory.createInitAfterActions_LeftCurlyBracketKeyword_1_0ElementType());
+	public static final IGrammarAwareElementType InitAfterActions_InitRuleActionKeyword_1_0_ELEMENT_TYPE = associate(InitAfterActionsFactory.createInitAfterActions_InitRuleActionKeyword_1_0ElementType());
 
-	public static final IGrammarAwareElementType InitAfterActions_InitRuleActionKeyword_1_1_ELEMENT_TYPE = associate(InitAfterActionsFactory.createInitAfterActions_InitRuleActionKeyword_1_1ElementType());
+	public static final IGrammarAwareElementType InitAfterActions_LeftCurlyBracketKeyword_1_1_ELEMENT_TYPE = associate(InitAfterActionsFactory.createInitAfterActions_LeftCurlyBracketKeyword_1_1ElementType());
 
 	public static final IGrammarAwareElementType InitAfterActions_InitActionAssignment_1_2_ELEMENT_TYPE = associate(InitAfterActionsFactory.createInitAfterActions_InitActionAssignment_1_2ElementType());
 
@@ -3341,12 +3341,12 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		return InitAfterActions_Group_1_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getInitAfterActions_LeftCurlyBracketKeyword_1_0ElementType() {
-		return InitAfterActions_LeftCurlyBracketKeyword_1_0_ELEMENT_TYPE;
+	public IGrammarAwareElementType getInitAfterActions_InitRuleActionKeyword_1_0ElementType() {
+		return InitAfterActions_InitRuleActionKeyword_1_0_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getInitAfterActions_InitRuleActionKeyword_1_1ElementType() {
-		return InitAfterActions_InitRuleActionKeyword_1_1_ELEMENT_TYPE;
+	public IGrammarAwareElementType getInitAfterActions_LeftCurlyBracketKeyword_1_1ElementType() {
+		return InitAfterActions_LeftCurlyBracketKeyword_1_1_ELEMENT_TYPE;
 	}
 
 	public IGrammarAwareElementType getInitAfterActions_InitActionAssignment_1_2ElementType() {

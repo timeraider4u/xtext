@@ -31,12 +31,12 @@
 'grammar'=19
 'hidden'=49
 'import'=27
-'initRuleAction'=32
+'initRuleAction'=31
 'returns'=30
 'terminal'=44
 'true'=17
 'with'=20
-'{'=31
+'{'=32
 '|'=38
 '}'=33
 RULE_ANY_OTHER=10

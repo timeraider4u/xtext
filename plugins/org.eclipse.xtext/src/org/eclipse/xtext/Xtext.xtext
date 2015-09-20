@@ -56,7 +56,7 @@ ParserRule :
 
 InitAfterActions returns InitAfterActions:
 	{InitAfterActions}
-	('{' 'initRuleAction'	initAction=ActionCall	'}')?
+	('initRuleAction'	'{' initAction=ActionCall	'}')?
 	('afterRuleAction'	'{'	afterAction=ActionCall	'}')?
 ;
 

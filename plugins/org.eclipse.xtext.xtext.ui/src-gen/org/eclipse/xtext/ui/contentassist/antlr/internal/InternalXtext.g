@@ -4251,11 +4251,11 @@ rule__InitAfterActions__Group_1__0__Impl
     }
 :
 (
-{ before(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0()); }
+{ before(grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_0()); }
 
-	'{' 
+	'initRuleAction' 
 
-{ after(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_0()); }
+{ after(grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_0()); }
 )
 
 ;
@@ -4282,11 +4282,11 @@ rule__InitAfterActions__Group_1__1__Impl
     }
 :
 (
-{ before(grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1()); }
+{ before(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1()); }
 
-	'initRuleAction' 
+	'{' 
 
-{ after(grammarAccess.getInitAfterActionsAccess().getInitRuleActionKeyword_1_1()); }
+{ after(grammarAccess.getInitAfterActionsAccess().getLeftCurlyBracketKeyword_1_1()); }
 )
 
 ;
