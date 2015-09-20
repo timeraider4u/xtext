@@ -1092,9 +1092,9 @@ entryRuleAbstractToken:
 ruleAbstractToken:
 	(
 		{
-			markComposite(elementTypeProvider.getAbstractToken_AbstractTokenWithCardinalityParserRuleCall_0ElementType());
+			markComposite(elementTypeProvider.getAbstractToken_MyAntlrActionParserRuleCall_0ElementType());
 		}
-		ruleAbstractTokenWithCardinality
+		ruleMyAntlrAction
 		{
 			doneComposite();
 		}
@@ -1103,6 +1103,55 @@ ruleAbstractToken:
 			markComposite(elementTypeProvider.getAbstractToken_ActionParserRuleCall_1ElementType());
 		}
 		ruleAction
+		{
+			doneComposite();
+		}
+	)
+;
+
+//Entry rule entryRuleMyAntlrAction
+entryRuleMyAntlrAction:
+	{ markComposite(elementTypeProvider.getMyAntlrActionElementType()); }
+	ruleMyAntlrAction
+	EOF;
+
+// Rule MyAntlrAction
+ruleMyAntlrAction:
+	(
+		(
+			{
+				markLeaf(elementTypeProvider.getMyAntlrAction_LeftCurlyBracketKeyword_0_0ElementType());
+			}
+			otherlv_0='{'
+			{
+				doneLeaf(otherlv_0);
+			}
+			{
+				markLeaf(elementTypeProvider.getMyAntlrAction_LeftCurlyBracketKeyword_0_1ElementType());
+			}
+			otherlv_1='{'
+			{
+				doneLeaf(otherlv_1);
+			}
+			{
+				markLeaf(elementTypeProvider.getMyAntlrAction_RightCurlyBracketKeyword_0_2ElementType());
+			}
+			otherlv_2='}'
+			{
+				doneLeaf(otherlv_2);
+			}
+			{
+				markLeaf(elementTypeProvider.getMyAntlrAction_RightCurlyBracketKeyword_0_3ElementType());
+			}
+			otherlv_3='}'
+			{
+				doneLeaf(otherlv_3);
+			}
+		)?
+		{
+			markComposite(elementTypeProvider.getMyAntlrAction_AbstractTokenWithCardinalityParserRuleCall_1ElementType());
+		}
+		ruleAbstractTokenWithCardinality
 		{
 			doneComposite();
 		}

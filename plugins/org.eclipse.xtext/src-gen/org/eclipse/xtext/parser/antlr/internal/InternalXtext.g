@@ -1379,11 +1379,11 @@ ruleAbstractToken returns [EObject current=null]
      }:
 (
     { 
-        newCompositeNode(grammarAccess.getAbstractTokenAccess().getAbstractTokenWithCardinalityParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getAbstractTokenAccess().getMyAntlrActionParserRuleCall_0()); 
     }
-    this_AbstractTokenWithCardinality_0=ruleAbstractTokenWithCardinality
+    this_MyAntlrAction_0=ruleMyAntlrAction
     { 
-        $current = $this_AbstractTokenWithCardinality_0.current; 
+        $current = $this_MyAntlrAction_0.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1400,6 +1400,53 @@ ruleAbstractToken returns [EObject current=null]
 ;
 
 
+
+
+
+// Entry rule entryRuleMyAntlrAction
+entryRuleMyAntlrAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMyAntlrActionRule()); }
+	 iv_ruleMyAntlrAction=ruleMyAntlrAction 
+	 { $current=$iv_ruleMyAntlrAction.current; } 
+	 EOF 
+;
+
+// Rule MyAntlrAction
+ruleMyAntlrAction returns [EObject current=null] 
+    @init { enterRule();
+   		
+    }
+    @after { leaveRule();
+    		
+     }:
+((	otherlv_0='{' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getMyAntlrActionAccess().getLeftCurlyBracketKeyword_0_0());
+    }
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getMyAntlrActionAccess().getLeftCurlyBracketKeyword_0_1());
+    }
+	otherlv_2='}' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getMyAntlrActionAccess().getRightCurlyBracketKeyword_0_2());
+    }
+	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getMyAntlrActionAccess().getRightCurlyBracketKeyword_0_3());
+    }
+)?
+    { 
+        newCompositeNode(grammarAccess.getMyAntlrActionAccess().getAbstractTokenWithCardinalityParserRuleCall_1()); 
+    }
+    this_AbstractTokenWithCardinality_4=ruleAbstractTokenWithCardinality
+    { 
+        $current = $this_AbstractTokenWithCardinality_4.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
 
 
 

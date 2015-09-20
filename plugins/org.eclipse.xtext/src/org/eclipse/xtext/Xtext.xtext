@@ -93,14 +93,14 @@ Group returns AbstractElement:
 ;
 
 AbstractToken returns AbstractElement:
-	AbstractTokenWithCardinality |
-	// AbstractTokenAntlrAction |
+	// AbstractTokenWithCardinality |
+	MyAntlrAction |
 	Action
 ;
 
-AbstractTokenAntlrAction returns AbstractElement:
-	{AbstractTokenAntlrAction}
-	element=AbstractTokenWithCardinality
+MyAntlrAction returns AbstractElement:
+	('{' '{' '}' '}')?
+	AbstractTokenWithCardinality
 ;
 
 /* SuppressWarnings[potentialOverride]: Handled in CardinalityAwareEcoreFactory */
