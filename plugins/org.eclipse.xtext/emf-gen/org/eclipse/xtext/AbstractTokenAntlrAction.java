@@ -23,7 +23,7 @@ package org.eclipse.xtext;
  * @generated
  * @since 3.0
  */
-public interface AbstractTokenAntlrAction extends AbstractElement {
+public interface AbstractTokenAntlrAction extends CompoundElement {
 	/**
 	 * Returns the value of the '<em><b>Pre Action</b></em>' attribute.
 	 * <!-- begin-user-doc -->

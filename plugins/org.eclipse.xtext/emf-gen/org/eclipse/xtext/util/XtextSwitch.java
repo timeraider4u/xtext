@@ -320,6 +320,7 @@ public class XtextSwitch<T> extends Switch<T> {
 			case XtextPackage.ABSTRACT_TOKEN_ANTLR_ACTION: {
 				AbstractTokenAntlrAction abstractTokenAntlrAction = (AbstractTokenAntlrAction)theEObject;
 				T result = caseAbstractTokenAntlrAction(abstractTokenAntlrAction);
+				if (result == null) result = caseCompoundElement(abstractTokenAntlrAction);
 				if (result == null) result = caseAbstractElement(abstractTokenAntlrAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;

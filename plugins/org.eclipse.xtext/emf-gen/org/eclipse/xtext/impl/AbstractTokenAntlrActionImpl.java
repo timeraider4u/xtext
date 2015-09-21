@@ -31,7 +31,7 @@ import org.eclipse.xtext.XtextPackage;
  * @generated
  * @since 3.0
  */
-public class AbstractTokenAntlrActionImpl extends AbstractElementImpl implements AbstractTokenAntlrAction {
+public class AbstractTokenAntlrActionImpl extends CompoundElementImpl implements AbstractTokenAntlrAction {
 	/**
 	 * The default value of the '{@link #getPreAction() <em>Pre Action</em>}' attribute.
 	 * <!-- begin-user-doc -->

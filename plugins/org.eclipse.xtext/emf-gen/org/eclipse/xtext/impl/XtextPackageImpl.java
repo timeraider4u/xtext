@@ -1508,7 +1508,8 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 		compositeConditionEClass.getESuperTypes().add(this.getCondition());
 		parameterReferenceEClass.getESuperTypes().add(this.getCondition());
 		literalConditionEClass.getESuperTypes().add(this.getCondition());
-		abstractTokenAntlrActionEClass.getESuperTypes().add(this.getAbstractElement());
+		// abstractTokenAntlrActionEClass.getESuperTypes().add(this.getAbstractElement());
+		abstractTokenAntlrActionEClass.getESuperTypes().add(this.getCompoundElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(grammarEClass, Grammar.class, "Grammar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
