@@ -99,13 +99,14 @@ AbstractToken returns AbstractElement:
 ;
 
 AbstractTokenAntlrAction returns AbstractElement:
-	///*
+	/*
 	('{' '{' '}' '}')?
 	AbstractTokenWithCardinality
 	//*/
-	/*
+	///*
 	{AbstractTokenAntlrAction}
-	element=AbstractTokenWithCardinality
+	('{' '{' '}' '}')
+	elements+=AbstractTokenWithCardinality
 	//*/
 ;
 
