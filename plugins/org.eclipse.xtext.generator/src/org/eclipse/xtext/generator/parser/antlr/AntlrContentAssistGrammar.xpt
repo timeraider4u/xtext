@@ -337,13 +337,13 @@ finally {
 «IF isValidString(preAntlrAction)-»
 {«preAntlrAction»}«IF isSemanticPredicate»?«ENDIF»
 «ENDIF»
-«EXPAND ebnfDoMore()»
+«EXPAND ebnfDoMore»
 «IF isValidString(postAntlrAction)-»
 {«postAntlrAction»}
 «ENDIF»
 «ENDDEFINE»
 
-«DEFINE ebnfMore FOR AbstractElement-»
+«DEFINE ebnfDoMore FOR AbstractElement-»
 «IF !isOptionalCardinality() && isMultipleCardinality()-»
 (
 (
