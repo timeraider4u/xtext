@@ -293,7 +293,12 @@ finally {
 «ENDDEFINE»
 
 «DEFINE ebnf(AntlrOptions options, boolean debugGrammar) FOR AbstractElement-»
-«IF mustBeParenthesized()»(«EXPAND ebnfPredicate(options)»«EXPAND ebnf2(options, debugGrammar)»)«ELSE»«EXPAND ebnf2(options, debugGrammar)»«ENDIF»«cardinality-»
+«IF mustBeParenthesized()»(«EXPAND ebnfPredicate(options)»«EXPAND ebnfAntlrActions(options, debugGrammar)»)«ELSE»«EXPAND ebnfAntlrActions(options, debugGrammar)»«ENDIF»«cardinality-»
+«ENDDEFINE»
+
+«DEFINE ebnfAntlrActions(AntlrOptions options, boolean debugGrammar) FOR AbstractElement-»
+
+«EXPAND ebnf2(options, debugGrammar)»
 «ENDDEFINE»
 
 «DEFINE ebnfPredicate(AntlrOptions options) FOR AbstractElement-»

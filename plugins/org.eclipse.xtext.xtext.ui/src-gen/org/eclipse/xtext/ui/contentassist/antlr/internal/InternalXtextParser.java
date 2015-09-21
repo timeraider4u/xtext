@@ -5436,14 +5436,14 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             case 53:
                 {
                 switch ( input.LA(2) ) {
-                case RULE_STRING:
-                    {
-                    alt11=4;
-                    }
-                    break;
                 case 22:
                     {
                     alt11=6;
+                    }
+                    break;
+                case RULE_STRING:
+                    {
+                    alt11=4;
                     }
                     break;
                 case RULE_ID:
@@ -5465,11 +5465,6 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             case 47:
                 {
                 switch ( input.LA(2) ) {
-                case 22:
-                    {
-                    alt11=6;
-                    }
-                    break;
                 case RULE_ID:
                 case 16:
                 case 17:
@@ -5480,6 +5475,11 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
                 case RULE_STRING:
                     {
                     alt11=4;
+                    }
+                    break;
+                case 22:
+                    {
+                    alt11=6;
                     }
                     break;
                 default:
@@ -17008,7 +17008,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             // InternalXtext.g:6115:1: ( rule__AbstractTokenAntlrAction__Group_1__4__Impl rule__AbstractTokenAntlrAction__Group_1__5 )
             // InternalXtext.g:6116:2: rule__AbstractTokenAntlrAction__Group_1__4__Impl rule__AbstractTokenAntlrAction__Group_1__5
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_39);
             rule__AbstractTokenAntlrAction__Group_1__4__Impl();
 
             state._fsp--;
@@ -17037,27 +17037,38 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AbstractTokenAntlrAction__Group_1__4__Impl"
-    // InternalXtext.g:6123:1: rule__AbstractTokenAntlrAction__Group_1__4__Impl : ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 ) ) ;
+    // InternalXtext.g:6123:1: rule__AbstractTokenAntlrAction__Group_1__4__Impl : ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )? ) ;
     public final void rule__AbstractTokenAntlrAction__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // InternalXtext.g:6127:1: ( ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 ) ) )
-            // InternalXtext.g:6128:1: ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 ) )
+            // InternalXtext.g:6127:1: ( ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )? ) )
+            // InternalXtext.g:6128:1: ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )? )
             {
-            // InternalXtext.g:6128:1: ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 ) )
-            // InternalXtext.g:6129:1: ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )
+            // InternalXtext.g:6128:1: ( ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )? )
+            // InternalXtext.g:6129:1: ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )?
             {
              before(grammarAccess.getAbstractTokenAntlrActionAccess().getIsSemanticPredicateAssignment_1_4()); 
-            // InternalXtext.g:6130:1: ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )
-            // InternalXtext.g:6130:2: rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4();
+            // InternalXtext.g:6130:1: ( rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4 )?
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA59_0==11) ) {
+                alt59=1;
+            }
+            switch (alt59) {
+                case 1 :
+                    // InternalXtext.g:6130:2: rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4
+                    {
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -17666,13 +17677,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getAbstractTokenWithCardinalityAccess().getCardinalityAssignment_1()); 
             // InternalXtext.g:6391:1: ( rule__AbstractTokenWithCardinality__CardinalityAssignment_1 )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( ((LA59_0>=11 && LA59_0<=13)) ) {
-                alt59=1;
+            if ( ((LA60_0>=11 && LA60_0<=13)) ) {
+                alt60=1;
             }
-            switch (alt59) {
+            switch (alt60) {
                 case 1 :
                     // InternalXtext.g:6391:2: rule__AbstractTokenWithCardinality__CardinalityAssignment_1
                     {
@@ -17922,13 +17933,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getActionAccess().getGroup_2()); 
             // InternalXtext.g:6484:1: ( rule__Action__Group_2__0 )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA60_0==24) ) {
-                alt60=1;
+            if ( (LA61_0==24) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
                     // InternalXtext.g:6484:2: rule__Action__Group_2__0
                     {
@@ -18483,13 +18494,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getRuleCallAccess().getGroup_1()); 
             // InternalXtext.g:6706:1: ( rule__RuleCall__Group_1__0 )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==35) ) {
-                alt61=1;
+            if ( (LA62_0==35) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
                     // InternalXtext.g:6706:2: rule__RuleCall__Group_1__0
                     {
@@ -18739,17 +18750,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getRuleCallAccess().getGroup_1_2()); 
             // InternalXtext.g:6799:1: ( rule__RuleCall__Group_1_2__0 )*
-            loop62:
+            loop63:
             do {
-                int alt62=2;
-                int LA62_0 = input.LA(1);
+                int alt63=2;
+                int LA63_0 = input.LA(1);
 
-                if ( (LA62_0==21) ) {
-                    alt62=1;
+                if ( (LA63_0==21) ) {
+                    alt63=1;
                 }
 
 
-                switch (alt62) {
+                switch (alt63) {
             	case 1 :
             	    // InternalXtext.g:6799:2: rule__RuleCall__Group_1_2__0
             	    {
@@ -18763,7 +18774,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop62;
+            	    break loop63;
                 }
             } while (true);
 
@@ -19067,17 +19078,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getNamedArgumentAccess().getGroup_0()); 
             // InternalXtext.g:6929:1: ( rule__NamedArgument__Group_0__0 )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA63_0==RULE_ID) ) {
-                int LA63_1 = input.LA(2);
+            if ( (LA64_0==RULE_ID) ) {
+                int LA64_1 = input.LA(2);
 
-                if ( (LA63_1==14) ) {
-                    alt63=1;
+                if ( (LA64_1==14) ) {
+                    alt64=1;
                 }
             }
-            switch (alt63) {
+            switch (alt64) {
                 case 1 :
                     // InternalXtext.g:6929:2: rule__NamedArgument__Group_0__0
                     {
@@ -19641,17 +19652,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getDisjunctionAccess().getGroup_1()); 
             // InternalXtext.g:7142:1: ( rule__Disjunction__Group_1__0 )*
-            loop64:
+            loop65:
             do {
-                int alt64=2;
-                int LA64_0 = input.LA(1);
+                int alt65=2;
+                int LA65_0 = input.LA(1);
 
-                if ( (LA64_0==38) ) {
-                    alt64=1;
+                if ( (LA65_0==38) ) {
+                    alt65=1;
                 }
 
 
-                switch (alt64) {
+                switch (alt65) {
             	case 1 :
             	    // InternalXtext.g:7142:2: rule__Disjunction__Group_1__0
             	    {
@@ -19665,7 +19676,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop64;
+            	    break loop65;
                 }
             } while (true);
 
@@ -20048,17 +20059,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getConjunctionAccess().getGroup_1()); 
             // InternalXtext.g:7299:1: ( rule__Conjunction__Group_1__0 )*
-            loop65:
+            loop66:
             do {
-                int alt65=2;
-                int LA65_0 = input.LA(1);
+                int alt66=2;
+                int LA66_0 = input.LA(1);
 
-                if ( (LA65_0==39) ) {
-                    alt65=1;
+                if ( (LA66_0==39) ) {
+                    alt66=1;
                 }
 
 
-                switch (alt65) {
+                switch (alt66) {
             	case 1 :
             	    // InternalXtext.g:7299:2: rule__Conjunction__Group_1__0
             	    {
@@ -20072,7 +20083,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop65;
+            	    break loop66;
                 }
             } while (true);
 
@@ -20909,17 +20920,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getRuleIDAccess().getGroup_1()); 
             // InternalXtext.g:7648:1: ( rule__RuleID__Group_1__0 )*
-            loop66:
+            loop67:
             do {
-                int alt66=2;
-                int LA66_0 = input.LA(1);
+                int alt67=2;
+                int LA67_0 = input.LA(1);
 
-                if ( (LA66_0==37) ) {
-                    alt66=1;
+                if ( (LA67_0==37) ) {
+                    alt67=1;
                 }
 
 
-                switch (alt66) {
+                switch (alt67) {
             	case 1 :
             	    // InternalXtext.g:7648:2: rule__RuleID__Group_1__0
             	    {
@@ -20933,7 +20944,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop66;
+            	    break loop67;
                 }
             } while (true);
 
@@ -21491,13 +21502,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getPredicatedRuleCallAccess().getGroup_2()); 
             // InternalXtext.g:7862:1: ( rule__PredicatedRuleCall__Group_2__0 )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA67_0==35) ) {
-                alt67=1;
+            if ( (LA68_0==35) ) {
+                alt68=1;
             }
-            switch (alt67) {
+            switch (alt68) {
                 case 1 :
                     // InternalXtext.g:7862:2: rule__PredicatedRuleCall__Group_2__0
                     {
@@ -21747,17 +21758,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getPredicatedRuleCallAccess().getGroup_2_2()); 
             // InternalXtext.g:7957:1: ( rule__PredicatedRuleCall__Group_2_2__0 )*
-            loop68:
+            loop69:
             do {
-                int alt68=2;
-                int LA68_0 = input.LA(1);
+                int alt69=2;
+                int LA69_0 = input.LA(1);
 
-                if ( (LA68_0==21) ) {
-                    alt68=1;
+                if ( (LA69_0==21) ) {
+                    alt69=1;
                 }
 
 
-                switch (alt68) {
+                switch (alt69) {
             	case 1 :
             	    // InternalXtext.g:7957:2: rule__PredicatedRuleCall__Group_2_2__0
             	    {
@@ -21771,7 +21782,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop68;
+            	    break loop69;
                 }
             } while (true);
 
@@ -22075,13 +22086,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getAssignmentAccess().getAlternatives_0()); 
             // InternalXtext.g:8087:1: ( rule__Assignment__Alternatives_0 )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA69_0==47||LA69_0==53) ) {
-                alt69=1;
+            if ( (LA70_0==47||LA70_0==53) ) {
+                alt70=1;
             }
-            switch (alt69) {
+            switch (alt70) {
                 case 1 :
                     // InternalXtext.g:8087:2: rule__Assignment__Alternatives_0
                     {
@@ -22719,13 +22730,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getAssignableAlternativesAccess().getGroup_1()); 
             // InternalXtext.g:8334:1: ( rule__AssignableAlternatives__Group_1__0 )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( (LA70_0==38) ) {
-                alt70=1;
+            if ( (LA71_0==38) ) {
+                alt71=1;
             }
-            switch (alt70) {
+            switch (alt71) {
                 case 1 :
                     // InternalXtext.g:8334:2: rule__AssignableAlternatives__Group_1__0
                     {
@@ -22907,17 +22918,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getAssignableAlternativesAccess().getGroup_1_1()); 
             // InternalXtext.g:8403:1: ( rule__AssignableAlternatives__Group_1_1__0 )*
-            loop71:
+            loop72:
             do {
-                int alt71=2;
-                int LA71_0 = input.LA(1);
+                int alt72=2;
+                int LA72_0 = input.LA(1);
 
-                if ( (LA71_0==38) ) {
-                    alt71=1;
+                if ( (LA72_0==38) ) {
+                    alt72=1;
                 }
 
 
-                switch (alt71) {
+                switch (alt72) {
             	case 1 :
             	    // InternalXtext.g:8403:2: rule__AssignableAlternatives__Group_1_1__0
             	    {
@@ -22931,7 +22942,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop71;
+            	    break loop72;
                 }
             } while (true);
 
@@ -23328,13 +23339,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getCrossReferenceAccess().getGroup_2()); 
             // InternalXtext.g:8560:1: ( rule__CrossReference__Group_2__0 )?
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA72_0==38) ) {
-                alt72=1;
+            if ( (LA73_0==38) ) {
+                alt73=1;
             }
-            switch (alt72) {
+            switch (alt73) {
                 case 1 :
                     // InternalXtext.g:8560:2: rule__CrossReference__Group_2__0
                     {
@@ -24823,13 +24834,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTerminalRuleAccess().getGroup_1_1_1()); 
             // InternalXtext.g:9162:1: ( rule__TerminalRule__Group_1_1_1__0 )?
-            int alt73=2;
-            int LA73_0 = input.LA(1);
+            int alt74=2;
+            int LA74_0 = input.LA(1);
 
-            if ( (LA73_0==30) ) {
-                alt73=1;
+            if ( (LA74_0==30) ) {
+                alt74=1;
             }
-            switch (alt73) {
+            switch (alt74) {
                 case 1 :
                     // InternalXtext.g:9162:2: rule__TerminalRule__Group_1_1_1__0
                     {
@@ -25148,13 +25159,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTerminalAlternativesAccess().getGroup_1()); 
             // InternalXtext.g:9286:1: ( rule__TerminalAlternatives__Group_1__0 )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA74_0==38) ) {
-                alt74=1;
+            if ( (LA75_0==38) ) {
+                alt75=1;
             }
-            switch (alt74) {
+            switch (alt75) {
                 case 1 :
                     // InternalXtext.g:9286:2: rule__TerminalAlternatives__Group_1__0
                     {
@@ -25336,17 +25347,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTerminalAlternativesAccess().getGroup_1_1()); 
             // InternalXtext.g:9355:1: ( rule__TerminalAlternatives__Group_1_1__0 )*
-            loop75:
+            loop76:
             do {
-                int alt75=2;
-                int LA75_0 = input.LA(1);
+                int alt76=2;
+                int LA76_0 = input.LA(1);
 
-                if ( (LA75_0==38) ) {
-                    alt75=1;
+                if ( (LA76_0==38) ) {
+                    alt76=1;
                 }
 
 
-                switch (alt75) {
+                switch (alt76) {
             	case 1 :
             	    // InternalXtext.g:9355:2: rule__TerminalAlternatives__Group_1_1__0
             	    {
@@ -25360,7 +25371,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop75;
+            	    break loop76;
                 }
             } while (true);
 
@@ -25671,13 +25682,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTerminalGroupAccess().getGroup_1()); 
             // InternalXtext.g:9480:1: ( rule__TerminalGroup__Group_1__0 )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( ((LA76_0>=RULE_ID && LA76_0<=RULE_STRING)||(LA76_0>=16 && LA76_0<=17)||LA76_0==22||LA76_0==24||LA76_0==43||(LA76_0>=47 && LA76_0<=48)) ) {
-                alt76=1;
+            if ( ((LA77_0>=RULE_ID && LA77_0<=RULE_STRING)||(LA77_0>=16 && LA77_0<=17)||LA77_0==22||LA77_0==24||LA77_0==43||(LA77_0>=47 && LA77_0<=48)) ) {
+                alt77=1;
             }
-            switch (alt76) {
+            switch (alt77) {
                 case 1 :
                     // InternalXtext.g:9480:2: rule__TerminalGroup__Group_1__0
                     {
@@ -25859,17 +25870,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTerminalGroupAccess().getElementsAssignment_1_1()); 
             // InternalXtext.g:9549:1: ( rule__TerminalGroup__ElementsAssignment_1_1 )*
-            loop77:
+            loop78:
             do {
-                int alt77=2;
-                int LA77_0 = input.LA(1);
+                int alt78=2;
+                int LA78_0 = input.LA(1);
 
-                if ( ((LA77_0>=RULE_ID && LA77_0<=RULE_STRING)||(LA77_0>=16 && LA77_0<=17)||LA77_0==22||LA77_0==24||LA77_0==43||(LA77_0>=47 && LA77_0<=48)) ) {
-                    alt77=1;
+                if ( ((LA78_0>=RULE_ID && LA78_0<=RULE_STRING)||(LA78_0>=16 && LA78_0<=17)||LA78_0==22||LA78_0==24||LA78_0==43||(LA78_0>=47 && LA78_0<=48)) ) {
+                    alt78=1;
                 }
 
 
-                switch (alt77) {
+                switch (alt78) {
             	case 1 :
             	    // InternalXtext.g:9549:2: rule__TerminalGroup__ElementsAssignment_1_1
             	    {
@@ -25883,7 +25894,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop77;
+            	    break loop78;
                 }
             } while (true);
 
@@ -26039,13 +26050,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getTerminalTokenAccess().getCardinalityAssignment_1()); 
             // InternalXtext.g:9611:1: ( rule__TerminalToken__CardinalityAssignment_1 )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( ((LA78_0>=11 && LA78_0<=13)) ) {
-                alt78=1;
+            if ( ((LA79_0>=11 && LA79_0<=13)) ) {
+                alt79=1;
             }
-            switch (alt78) {
+            switch (alt79) {
                 case 1 :
                     // InternalXtext.g:9611:2: rule__TerminalToken__CardinalityAssignment_1
                     {
@@ -27033,13 +27044,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getCharacterRangeAccess().getGroup_1()); 
             // InternalXtext.g:10024:1: ( rule__CharacterRange__Group_1__0 )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( (LA79_0==49) ) {
-                alt79=1;
+            if ( (LA80_0==49) ) {
+                alt80=1;
             }
-            switch (alt79) {
+            switch (alt80) {
                 case 1 :
                     // InternalXtext.g:10024:2: rule__CharacterRange__Group_1__0
                     {
@@ -27519,13 +27530,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getEnumRuleAccess().getGroup_2()); 
             // InternalXtext.g:10213:1: ( rule__EnumRule__Group_2__0 )?
-            int alt80=2;
-            int LA80_0 = input.LA(1);
+            int alt81=2;
+            int LA81_0 = input.LA(1);
 
-            if ( (LA80_0==30) ) {
-                alt80=1;
+            if ( (LA81_0==30) ) {
+                alt81=1;
             }
-            switch (alt80) {
+            switch (alt81) {
                 case 1 :
                     // InternalXtext.g:10213:2: rule__EnumRule__Group_2__0
                     {
@@ -28074,13 +28085,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getEnumLiteralsAccess().getGroup_1()); 
             // InternalXtext.g:10435:1: ( rule__EnumLiterals__Group_1__0 )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA81_0==38) ) {
-                alt81=1;
+            if ( (LA82_0==38) ) {
+                alt82=1;
             }
-            switch (alt81) {
+            switch (alt82) {
                 case 1 :
                     // InternalXtext.g:10435:2: rule__EnumLiterals__Group_1__0
                     {
@@ -28262,17 +28273,17 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getEnumLiteralsAccess().getGroup_1_1()); 
             // InternalXtext.g:10504:1: ( rule__EnumLiterals__Group_1_1__0 )*
-            loop82:
+            loop83:
             do {
-                int alt82=2;
-                int LA82_0 = input.LA(1);
+                int alt83=2;
+                int LA83_0 = input.LA(1);
 
-                if ( (LA82_0==38) ) {
-                    alt82=1;
+                if ( (LA83_0==38) ) {
+                    alt83=1;
                 }
 
 
-                switch (alt82) {
+                switch (alt83) {
             	case 1 :
             	    // InternalXtext.g:10504:2: rule__EnumLiterals__Group_1_1__0
             	    {
@@ -28286,7 +28297,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop82;
+            	    break loop83;
                 }
             } while (true);
 
@@ -28603,13 +28614,13 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getEnumLiteralDeclarationAccess().getGroup_1()); 
             // InternalXtext.g:10629:1: ( rule__EnumLiteralDeclaration__Group_1__0 )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( (LA83_0==14) ) {
-                alt83=1;
+            if ( (LA84_0==14) ) {
+                alt84=1;
             }
-            switch (alt83) {
+            switch (alt84) {
                 case 1 :
                     // InternalXtext.g:10629:2: rule__EnumLiteralDeclaration__Group_1__0
                     {
@@ -32812,7 +32823,7 @@ public class InternalXtextParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000008000000000L});
         public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000008000000002L});
         public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000030000000000L});
-        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000000000800L});
+        public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000000200000800L});
         public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000000003800L});
         public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000201000000L});
         public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x000000000000C000L});

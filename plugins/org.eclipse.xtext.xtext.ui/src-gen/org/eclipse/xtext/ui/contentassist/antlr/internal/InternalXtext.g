@@ -6127,7 +6127,7 @@ rule__AbstractTokenAntlrAction__Group_1__4__Impl
 :
 (
 { before(grammarAccess.getAbstractTokenAntlrActionAccess().getIsSemanticPredicateAssignment_1_4()); }
-(rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4)
+(rule__AbstractTokenAntlrAction__IsSemanticPredicateAssignment_1_4)?
 { after(grammarAccess.getAbstractTokenAntlrActionAccess().getIsSemanticPredicateAssignment_1_4()); }
 )
 

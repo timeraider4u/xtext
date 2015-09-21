@@ -956,13 +956,13 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		/// * SuppressWarnings[potentialOverride]: Not handled at all but we do not care * / AbstractTokenAntlrAction
 		//AbstractElement:
 		//	AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}'
-		//	isSemanticPredicate?='?'
+		//	isSemanticPredicate?='?'?
 		//	'}')? ('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
 		@Override public ParserRule getRule() { return rule; }
 
 		///// *
 		//// ('{' '{' '}' '}')?
-		//AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?' '}')?
+		//AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?'? '}')?
 		//('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
 		public Group getGroup() { return cGroup; }
 
@@ -971,7 +971,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//AbstractTokenWithCardinality
 		public RuleCall getAbstractTokenWithCardinalityParserRuleCall_0() { return cAbstractTokenWithCardinalityParserRuleCall_0; }
 
-		//('preAction{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?' '}')?
+		//('preAction{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?'? '}')?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//'preAction{'
@@ -989,7 +989,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 
-		//isSemanticPredicate?='?'
+		//isSemanticPredicate?='?'?
 		public Assignment getIsSemanticPredicateAssignment_1_4() { return cIsSemanticPredicateAssignment_1_4; }
 
 		//'?'
@@ -2878,7 +2878,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	/// * SuppressWarnings[potentialOverride]: Not handled at all but we do not care * / AbstractTokenAntlrAction
 	//AbstractElement:
 	//	AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}'
-	//	isSemanticPredicate?='?'
+	//	isSemanticPredicate?='?'?
 	//	'}')? ('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
 	public AbstractTokenAntlrActionElements getAbstractTokenAntlrActionAccess() {
 		return pAbstractTokenAntlrAction;
