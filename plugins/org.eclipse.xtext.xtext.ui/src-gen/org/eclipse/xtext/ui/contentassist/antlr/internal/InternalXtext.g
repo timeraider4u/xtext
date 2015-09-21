@@ -4624,9 +4624,9 @@ rule__ActionCall__Group__3__Impl
 :
 (
 { before(grammarAccess.getActionCallAccess().getSemicolonKeyword_3()); }
-
+(
 	';' 
-
+)?
 { after(grammarAccess.getActionCallAccess().getSemicolonKeyword_3()); }
 )
 

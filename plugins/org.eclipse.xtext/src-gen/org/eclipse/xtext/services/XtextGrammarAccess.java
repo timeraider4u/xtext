@@ -595,10 +595,10 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ActionCall:
-		//	ValidID ('.' ValidID)* ('(' STRING? ')')? ';';
+		//	ValidID ('.' ValidID)* ('(' STRING? ')')? ';'?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ValidID ('.' ValidID)* ('(' STRING? ')')? ';'
+		//ValidID ('.' ValidID)* ('(' STRING? ')')? ';'?
 		public Group getGroup() { return cGroup; }
 
 		//ValidID
@@ -625,7 +625,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//')'
 		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 
-		//';'
+		//';'?
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
@@ -2785,7 +2785,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ActionCall:
-	//	ValidID ('.' ValidID)* ('(' STRING? ')')? ';';
+	//	ValidID ('.' ValidID)* ('(' STRING? ')')? ';'?;
 	public ActionCallElements getActionCallAccess() {
 		return pActionCall;
 	}
