@@ -40,6 +40,7 @@ public class XtextAntlrGeneratorFragment extends AbstractAntlrGeneratorFragment 
 	@Override
 	public void generate(Grammar grammar, XpandExecutionContext ctx) {
 		super.generate(grammar, ctx);
+		System.out.println("org.eclipse.xtext.generatior.parser.antlr.XtextAntlrGeneratorFragment.generate()");
 		String srcGenPath = ctx.getOutput().getOutlet(Generator.SRC_GEN).getPath();
 		final String encoding = getEncoding(ctx, Generator.SRC_GEN);
 		String absoluteGrammarFileName = srcGenPath+"/"+getGrammarFileName(grammar, getNaming()).replace('.', '/')+".g";

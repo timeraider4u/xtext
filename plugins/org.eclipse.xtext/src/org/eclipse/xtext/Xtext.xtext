@@ -93,8 +93,8 @@ Group returns AbstractElement:
 ;
 
 AbstractToken returns AbstractElement:
-	AbstractTokenWithCardinality |
-	// AbstractTokenAntlrAction |
+	// AbstractTokenWithCardinality |
+	AbstractTokenAntlrAction |
 	Action
 ;
 
