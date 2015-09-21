@@ -389,11 +389,12 @@ public class AntlrGrammarGenUtil {
 		return myRule.getInitAfterActions().getAfterAction();
 	}
 
+	/***
+	 * @since 3.0
+	 */
 	public static boolean isValidString(String string) {
 		if (string == null)
 			return false;
-		if (string.isEmpty())
-			return false;
-		return true;
+		return (!(string.isEmpty()));
 	}
 }
