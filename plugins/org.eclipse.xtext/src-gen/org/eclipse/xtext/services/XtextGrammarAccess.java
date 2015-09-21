@@ -913,60 +913,46 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	public class AbstractTokenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.AbstractToken");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cMyAntlrActionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cAbstractTokenWithCardinalityParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//AbstractToken AbstractElement:
-		//	MyAntlrAction | Action
+		//	AbstractTokenWithCardinality | Action
 		@Override public ParserRule getRule() { return rule; }
 
-		//// AbstractTokenWithCardinality |
-		//MyAntlrAction | Action
+		//AbstractTokenWithCardinality | Action
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//// AbstractTokenWithCardinality |
-		//MyAntlrAction
-		public RuleCall getMyAntlrActionParserRuleCall_0() { return cMyAntlrActionParserRuleCall_0; }
+		//AbstractTokenWithCardinality
+		public RuleCall getAbstractTokenWithCardinalityParserRuleCall_0() { return cAbstractTokenWithCardinalityParserRuleCall_0; }
 
+		//// AbstractTokenAntlrAction |
 		//Action
 		public RuleCall getActionParserRuleCall_1() { return cActionParserRuleCall_1; }
 	}
 
-	public class MyAntlrActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.MyAntlrAction");
+	public class AbstractTokenAntlrActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.AbstractTokenAntlrAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
-		private final RuleCall cAbstractTokenWithCardinalityParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Action cAbstractTokenAntlrActionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cElementAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cElementAbstractTokenWithCardinalityParserRuleCall_1_0 = (RuleCall)cElementAssignment_1.eContents().get(0);
 		
-		//MyAntlrAction AbstractElement:
-		//	('{' '{' '}' '}')?
-		//	AbstractTokenWithCardinality
+		//AbstractTokenAntlrAction AbstractElement:
+		//	{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
 		@Override public ParserRule getRule() { return rule; }
 
-		//('{' '{' '}' '}')? AbstractTokenWithCardinality
+		//{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
 		public Group getGroup() { return cGroup; }
 
-		//('{' '{' '}' '}')?
-		public Group getGroup_0() { return cGroup_0; }
+		//{AbstractTokenAntlrAction}
+		public Action getAbstractTokenAntlrActionAction_0() { return cAbstractTokenAntlrActionAction_0; }
 
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_0_0() { return cLeftCurlyBracketKeyword_0_0; }
-
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_0_1() { return cLeftCurlyBracketKeyword_0_1; }
-
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_0_2() { return cRightCurlyBracketKeyword_0_2; }
-
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_0_3() { return cRightCurlyBracketKeyword_0_3; }
+		//element=AbstractTokenWithCardinality
+		public Assignment getElementAssignment_1() { return cElementAssignment_1; }
 
 		//AbstractTokenWithCardinality
-		public RuleCall getAbstractTokenWithCardinalityParserRuleCall_1() { return cAbstractTokenWithCardinalityParserRuleCall_1; }
+		public RuleCall getElementAbstractTokenWithCardinalityParserRuleCall_1_0() { return cElementAbstractTokenWithCardinalityParserRuleCall_1_0; }
 	}
 
 	public class AbstractTokenWithCardinalityElements extends AbstractParserRuleElementFinder {
@@ -2494,7 +2480,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	private final UnorderedGroupElements pUnorderedGroup;
 	private final GroupElements pGroup;
 	private final AbstractTokenElements pAbstractToken;
-	private final MyAntlrActionElements pMyAntlrAction;
+	private final AbstractTokenAntlrActionElements pAbstractTokenAntlrAction;
 	private final AbstractTokenWithCardinalityElements pAbstractTokenWithCardinality;
 	private final ActionElements pAction;
 	private final AbstractTerminalElements pAbstractTerminal;
@@ -2563,7 +2549,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		this.pUnorderedGroup = new UnorderedGroupElements();
 		this.pGroup = new GroupElements();
 		this.pAbstractToken = new AbstractTokenElements();
-		this.pMyAntlrAction = new MyAntlrActionElements();
+		this.pAbstractTokenAntlrAction = new AbstractTokenAntlrActionElements();
 		this.pAbstractTokenWithCardinality = new AbstractTokenWithCardinalityElements();
 		this.pAction = new ActionElements();
 		this.pAbstractTerminal = new AbstractTerminalElements();
@@ -2815,7 +2801,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AbstractToken AbstractElement:
-	//	MyAntlrAction | Action
+	//	AbstractTokenWithCardinality | Action
 	public AbstractTokenElements getAbstractTokenAccess() {
 		return pAbstractToken;
 	}
@@ -2824,15 +2810,14 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		return getAbstractTokenAccess().getRule();
 	}
 
-	//MyAntlrAction AbstractElement:
-	//	('{' '{' '}' '}')?
-	//	AbstractTokenWithCardinality
-	public MyAntlrActionElements getMyAntlrActionAccess() {
-		return pMyAntlrAction;
+	//AbstractTokenAntlrAction AbstractElement:
+	//	{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+	public AbstractTokenAntlrActionElements getAbstractTokenAntlrActionAccess() {
+		return pAbstractTokenAntlrAction;
 	}
 	
-	public ParserRule getMyAntlrActionRule() {
-		return getMyAntlrActionAccess().getRule();
+	public ParserRule getAbstractTokenAntlrActionRule() {
+		return getAbstractTokenAntlrActionAccess().getRule();
 	}
 
 	/// * SuppressWarnings[potentialOverride]: Handled in CardinalityAwareEcoreFactory * / AbstractTokenWithCardinality
