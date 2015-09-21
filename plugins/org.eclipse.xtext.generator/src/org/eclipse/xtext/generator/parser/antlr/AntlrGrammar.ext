@@ -162,3 +162,6 @@ String initAfterActionInit(ParserRule this):
 
 String initAfterActionAfter(ParserRule this):
 	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_After(org.eclipse.xtext.ParserRule);
+
+boolean isValidString(String string):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.isEmptyString(java.lang.String);
