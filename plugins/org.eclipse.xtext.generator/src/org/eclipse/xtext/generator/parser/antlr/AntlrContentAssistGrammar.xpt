@@ -337,7 +337,7 @@ finally {
 «IF isValidString(preAntlrAction)-»
 {«preAntlrAction»}«IF isSemanticPredicate»?«ENDIF»
 «ENDIF»
-«EXPAND ebnfDoMore(options, debugGrammar)»
+«EXPAND ebnfDoMore()»
 «IF isValidString(postAntlrAction)-»
 {«postAntlrAction»}
 «ENDIF»
