@@ -98,10 +98,15 @@ AbstractToken returns AbstractElement:
 	Action
 ;
 
+/* SuppressWarnings[potentialOverride]: Not handled at all but we do not care */
 AbstractTokenAntlrAction returns AbstractElement:
 	///*
-	('{' '{' '}' '}')?
+	// ('{' '{' '}' '}')?
 	AbstractTokenWithCardinality
+	('preAction{' '{' preAntlrAction=ActionCall '}' 
+		isSemanticPredicate?='?'
+		'}'	)?
+	('postAction{' '{' postAntlrAction=ActionCall '}' '}')?	
 	//*/
 	 /*
 	{AbstractTokenAntlrAction}
