@@ -297,8 +297,9 @@ finally {
 «ENDDEFINE»
 
 «DEFINE ebnfAntlrActions(AntlrOptions options, boolean debugGrammar) FOR AbstractElement-»
-
+{«preAntlrAction»}«IF isSemanticPredicate»?«ENDIF»
 «EXPAND ebnf2(options, debugGrammar)»
+{«postAntlrAction»}
 «ENDDEFINE»
 
 «DEFINE ebnfPredicate(AntlrOptions options) FOR AbstractElement-»
