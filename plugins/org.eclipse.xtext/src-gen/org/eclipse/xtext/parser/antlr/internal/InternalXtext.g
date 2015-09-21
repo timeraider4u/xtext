@@ -1379,11 +1379,11 @@ ruleAbstractToken returns [EObject current=null]
      }:
 (
     { 
-        newCompositeNode(grammarAccess.getAbstractTokenAccess().getAbstractTokenWithCardinalityParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getAbstractTokenAccess().getAbstractTokenAntlrActionParserRuleCall_0()); 
     }
-    this_AbstractTokenWithCardinality_0=ruleAbstractTokenWithCardinality
+    this_AbstractTokenAntlrAction_0=ruleAbstractTokenAntlrAction
     { 
-        $current = $this_AbstractTokenWithCardinality_0.current; 
+        $current = $this_AbstractTokenAntlrAction_0.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1400,6 +1400,120 @@ ruleAbstractToken returns [EObject current=null]
 ;
 
 
+
+
+
+// Entry rule entryRuleAbstractTokenAntlrAction
+entryRuleAbstractTokenAntlrAction returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getAbstractTokenAntlrActionRule()); }
+	 iv_ruleAbstractTokenAntlrAction=ruleAbstractTokenAntlrAction 
+	 { $current=$iv_ruleAbstractTokenAntlrAction.current; } 
+	 EOF 
+;
+
+// Rule AbstractTokenAntlrAction
+ruleAbstractTokenAntlrAction returns [EObject current=null] 
+    @init { enterRule();
+   		
+    }
+    @after { leaveRule();
+    		
+     }:
+(
+    { 
+        newCompositeNode(grammarAccess.getAbstractTokenAntlrActionAccess().getAbstractTokenWithCardinalityParserRuleCall_0()); 
+    }
+    this_AbstractTokenWithCardinality_0=ruleAbstractTokenWithCardinality
+    { 
+        $current = $this_AbstractTokenWithCardinality_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+(	otherlv_1='preAction{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getAbstractTokenAntlrActionAccess().getPreActionKeyword_1_0());
+    }
+	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getAbstractTokenAntlrActionAccess().getLeftCurlyBracketKeyword_1_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getAbstractTokenAntlrActionAccess().getPreAntlrActionActionCallParserRuleCall_1_2_0()); 
+	    }
+		lv_preAntlrAction_3_0=ruleActionCall		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getAbstractTokenAntlrActionRule());
+	        }
+       		set(
+       			$current, 
+       			"preAntlrAction",
+        		lv_preAntlrAction_3_0, 
+        		"org.eclipse.xtext.Xtext.ActionCall");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_4='}' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_1_3());
+    }
+(
+(
+		lv_isSemanticPredicate_5_0=	'?' 
+    {
+        newLeafNode(lv_isSemanticPredicate_5_0, grammarAccess.getAbstractTokenAntlrActionAccess().getIsSemanticPredicateQuestionMarkKeyword_1_4_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAbstractTokenAntlrActionRule());
+	        }
+       		setWithLastConsumed($current, "isSemanticPredicate", true, "?");
+	    }
+
+)
+)	otherlv_6='}' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_1_5());
+    }
+)?(	otherlv_7='postAction{' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getAbstractTokenAntlrActionAccess().getPostActionKeyword_2_0());
+    }
+	otherlv_8='{' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getAbstractTokenAntlrActionAccess().getLeftCurlyBracketKeyword_2_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getAbstractTokenAntlrActionAccess().getPostAntlrActionActionCallParserRuleCall_2_2_0()); 
+	    }
+		lv_postAntlrAction_9_0=ruleActionCall		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getAbstractTokenAntlrActionRule());
+	        }
+       		set(
+       			$current, 
+       			"postAntlrAction",
+        		lv_postAntlrAction_9_0, 
+        		"org.eclipse.xtext.Xtext.ActionCall");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_10='}' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_2_3());
+    }
+	otherlv_11='}' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_2_4());
+    }
+)?)
+;
 
 
 

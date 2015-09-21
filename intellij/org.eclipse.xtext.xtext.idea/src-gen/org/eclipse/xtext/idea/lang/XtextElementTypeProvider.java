@@ -1076,8 +1076,8 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		public static IGrammarAwareElementType createAbstractToken_AlternativesElementType() {
 			return new IGrammarAwareElementType("AbstractToken_Alternatives_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAccess().getAlternatives());
 		}
-		public static IGrammarAwareElementType createAbstractToken_AbstractTokenWithCardinalityParserRuleCall_0ElementType() {
-			return new IGrammarAwareElementType("AbstractToken_AbstractTokenWithCardinalityParserRuleCall_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAccess().getAbstractTokenWithCardinalityParserRuleCall_0());
+		public static IGrammarAwareElementType createAbstractToken_AbstractTokenAntlrActionParserRuleCall_0ElementType() {
+			return new IGrammarAwareElementType("AbstractToken_AbstractTokenAntlrActionParserRuleCall_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAccess().getAbstractTokenAntlrActionParserRuleCall_0());
 		}
 		public static IGrammarAwareElementType createAbstractToken_ActionParserRuleCall_1ElementType() {
 			return new IGrammarAwareElementType("AbstractToken_ActionParserRuleCall_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAccess().getActionParserRuleCall_1());
@@ -1088,7 +1088,7 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 
 	public static final IGrammarAwareElementType AbstractToken_Alternatives_ELEMENT_TYPE = associate(AbstractTokenFactory.createAbstractToken_AlternativesElementType());
 
-	public static final IGrammarAwareElementType AbstractToken_AbstractTokenWithCardinalityParserRuleCall_0_ELEMENT_TYPE = associate(AbstractTokenFactory.createAbstractToken_AbstractTokenWithCardinalityParserRuleCall_0ElementType());
+	public static final IGrammarAwareElementType AbstractToken_AbstractTokenAntlrActionParserRuleCall_0_ELEMENT_TYPE = associate(AbstractTokenFactory.createAbstractToken_AbstractTokenAntlrActionParserRuleCall_0ElementType());
 
 	public static final IGrammarAwareElementType AbstractToken_ActionParserRuleCall_1_ELEMENT_TYPE = associate(AbstractTokenFactory.createAbstractToken_ActionParserRuleCall_1ElementType());
 
@@ -1099,14 +1099,56 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		public static IGrammarAwareElementType createAbstractTokenAntlrAction_GroupElementType() {
 			return new IGrammarAwareElementType("AbstractTokenAntlrAction_Group_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getGroup());
 		}
-		public static IGrammarAwareElementType createAbstractTokenAntlrAction_AbstractTokenAntlrActionAction_0ElementType() {
-			return new IGrammarAwareElementType("AbstractTokenAntlrAction_AbstractTokenAntlrActionAction_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getAbstractTokenAntlrActionAction_0());
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_AbstractTokenWithCardinalityParserRuleCall_0ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_AbstractTokenWithCardinalityParserRuleCall_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getAbstractTokenWithCardinalityParserRuleCall_0());
 		}
-		public static IGrammarAwareElementType createAbstractTokenAntlrAction_ElementAssignment_1ElementType() {
-			return new IGrammarAwareElementType("AbstractTokenAntlrAction_ElementAssignment_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getElementAssignment_1());
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_Group_1ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_Group_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getGroup_1());
 		}
-		public static IGrammarAwareElementType createAbstractTokenAntlrAction_ElementAbstractTokenWithCardinalityParserRuleCall_1_0ElementType() {
-			return new IGrammarAwareElementType("AbstractTokenAntlrAction_ElementAbstractTokenWithCardinalityParserRuleCall_1_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getElementAbstractTokenWithCardinalityParserRuleCall_1_0());
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_PreActionKeyword_1_0ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_PreActionKeyword_1_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getPreActionKeyword_1_0());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_LeftCurlyBracketKeyword_1_1ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_LeftCurlyBracketKeyword_1_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getLeftCurlyBracketKeyword_1_1());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_PreAntlrActionAssignment_1_2ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_PreAntlrActionAssignment_1_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getPreAntlrActionAssignment_1_2());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_PreAntlrActionActionCallParserRuleCall_1_2_0ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_PreAntlrActionActionCallParserRuleCall_1_2_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getPreAntlrActionActionCallParserRuleCall_1_2_0());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_RightCurlyBracketKeyword_1_3ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_RightCurlyBracketKeyword_1_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_1_3());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_IsSemanticPredicateAssignment_1_4ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_IsSemanticPredicateAssignment_1_4_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getIsSemanticPredicateAssignment_1_4());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_IsSemanticPredicateQuestionMarkKeyword_1_4_0ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_IsSemanticPredicateQuestionMarkKeyword_1_4_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getIsSemanticPredicateQuestionMarkKeyword_1_4_0());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_RightCurlyBracketKeyword_1_5ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_RightCurlyBracketKeyword_1_5_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_1_5());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_Group_2ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_Group_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getGroup_2());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_PostActionKeyword_2_0ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_PostActionKeyword_2_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getPostActionKeyword_2_0());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_LeftCurlyBracketKeyword_2_1ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_LeftCurlyBracketKeyword_2_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getLeftCurlyBracketKeyword_2_1());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_PostAntlrActionAssignment_2_2ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_PostAntlrActionAssignment_2_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getPostAntlrActionAssignment_2_2());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_PostAntlrActionActionCallParserRuleCall_2_2_0ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_PostAntlrActionActionCallParserRuleCall_2_2_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getPostAntlrActionActionCallParserRuleCall_2_2_0());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_RightCurlyBracketKeyword_2_3ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_RightCurlyBracketKeyword_2_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_2_3());
+		}
+		public static IGrammarAwareElementType createAbstractTokenAntlrAction_RightCurlyBracketKeyword_2_4ElementType() {
+			return new IGrammarAwareElementType("AbstractTokenAntlrAction_RightCurlyBracketKeyword_2_4_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getAbstractTokenAntlrActionAccess().getRightCurlyBracketKeyword_2_4());
 		}
 	}
 
@@ -1114,11 +1156,39 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 
 	public static final IGrammarAwareElementType AbstractTokenAntlrAction_Group_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_GroupElementType());
 
-	public static final IGrammarAwareElementType AbstractTokenAntlrAction_AbstractTokenAntlrActionAction_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_AbstractTokenAntlrActionAction_0ElementType());
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_AbstractTokenWithCardinalityParserRuleCall_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_AbstractTokenWithCardinalityParserRuleCall_0ElementType());
 
-	public static final IGrammarAwareElementType AbstractTokenAntlrAction_ElementAssignment_1_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_ElementAssignment_1ElementType());
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_Group_1_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_Group_1ElementType());
 
-	public static final IGrammarAwareElementType AbstractTokenAntlrAction_ElementAbstractTokenWithCardinalityParserRuleCall_1_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_ElementAbstractTokenWithCardinalityParserRuleCall_1_0ElementType());
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_PreActionKeyword_1_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_PreActionKeyword_1_0ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_LeftCurlyBracketKeyword_1_1_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_LeftCurlyBracketKeyword_1_1ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_PreAntlrActionAssignment_1_2_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_PreAntlrActionAssignment_1_2ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_PreAntlrActionActionCallParserRuleCall_1_2_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_PreAntlrActionActionCallParserRuleCall_1_2_0ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_RightCurlyBracketKeyword_1_3_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_RightCurlyBracketKeyword_1_3ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_IsSemanticPredicateAssignment_1_4_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_IsSemanticPredicateAssignment_1_4ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_IsSemanticPredicateQuestionMarkKeyword_1_4_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_IsSemanticPredicateQuestionMarkKeyword_1_4_0ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_RightCurlyBracketKeyword_1_5_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_RightCurlyBracketKeyword_1_5ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_Group_2_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_Group_2ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_PostActionKeyword_2_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_PostActionKeyword_2_0ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_LeftCurlyBracketKeyword_2_1_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_LeftCurlyBracketKeyword_2_1ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_PostAntlrActionAssignment_2_2_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_PostAntlrActionAssignment_2_2ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_PostAntlrActionActionCallParserRuleCall_2_2_0_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_PostAntlrActionActionCallParserRuleCall_2_2_0ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_RightCurlyBracketKeyword_2_3_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_RightCurlyBracketKeyword_2_3ElementType());
+
+	public static final IGrammarAwareElementType AbstractTokenAntlrAction_RightCurlyBracketKeyword_2_4_ELEMENT_TYPE = associate(AbstractTokenAntlrActionFactory.createAbstractTokenAntlrAction_RightCurlyBracketKeyword_2_4ElementType());
 
 	private static class AbstractTokenWithCardinalityFactory {
 		public static IGrammarAwareElementType createAbstractTokenWithCardinalityElementType() {
@@ -3717,8 +3787,8 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		return AbstractToken_Alternatives_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getAbstractToken_AbstractTokenWithCardinalityParserRuleCall_0ElementType() {
-		return AbstractToken_AbstractTokenWithCardinalityParserRuleCall_0_ELEMENT_TYPE;
+	public IGrammarAwareElementType getAbstractToken_AbstractTokenAntlrActionParserRuleCall_0ElementType() {
+		return AbstractToken_AbstractTokenAntlrActionParserRuleCall_0_ELEMENT_TYPE;
 	}
 
 	public IGrammarAwareElementType getAbstractToken_ActionParserRuleCall_1ElementType() {
@@ -3733,16 +3803,72 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		return AbstractTokenAntlrAction_Group_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getAbstractTokenAntlrAction_AbstractTokenAntlrActionAction_0ElementType() {
-		return AbstractTokenAntlrAction_AbstractTokenAntlrActionAction_0_ELEMENT_TYPE;
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_AbstractTokenWithCardinalityParserRuleCall_0ElementType() {
+		return AbstractTokenAntlrAction_AbstractTokenWithCardinalityParserRuleCall_0_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getAbstractTokenAntlrAction_ElementAssignment_1ElementType() {
-		return AbstractTokenAntlrAction_ElementAssignment_1_ELEMENT_TYPE;
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_Group_1ElementType() {
+		return AbstractTokenAntlrAction_Group_1_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getAbstractTokenAntlrAction_ElementAbstractTokenWithCardinalityParserRuleCall_1_0ElementType() {
-		return AbstractTokenAntlrAction_ElementAbstractTokenWithCardinalityParserRuleCall_1_0_ELEMENT_TYPE;
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_PreActionKeyword_1_0ElementType() {
+		return AbstractTokenAntlrAction_PreActionKeyword_1_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_LeftCurlyBracketKeyword_1_1ElementType() {
+		return AbstractTokenAntlrAction_LeftCurlyBracketKeyword_1_1_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_PreAntlrActionAssignment_1_2ElementType() {
+		return AbstractTokenAntlrAction_PreAntlrActionAssignment_1_2_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_PreAntlrActionActionCallParserRuleCall_1_2_0ElementType() {
+		return AbstractTokenAntlrAction_PreAntlrActionActionCallParserRuleCall_1_2_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_RightCurlyBracketKeyword_1_3ElementType() {
+		return AbstractTokenAntlrAction_RightCurlyBracketKeyword_1_3_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_IsSemanticPredicateAssignment_1_4ElementType() {
+		return AbstractTokenAntlrAction_IsSemanticPredicateAssignment_1_4_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_IsSemanticPredicateQuestionMarkKeyword_1_4_0ElementType() {
+		return AbstractTokenAntlrAction_IsSemanticPredicateQuestionMarkKeyword_1_4_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_RightCurlyBracketKeyword_1_5ElementType() {
+		return AbstractTokenAntlrAction_RightCurlyBracketKeyword_1_5_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_Group_2ElementType() {
+		return AbstractTokenAntlrAction_Group_2_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_PostActionKeyword_2_0ElementType() {
+		return AbstractTokenAntlrAction_PostActionKeyword_2_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_LeftCurlyBracketKeyword_2_1ElementType() {
+		return AbstractTokenAntlrAction_LeftCurlyBracketKeyword_2_1_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_PostAntlrActionAssignment_2_2ElementType() {
+		return AbstractTokenAntlrAction_PostAntlrActionAssignment_2_2_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_PostAntlrActionActionCallParserRuleCall_2_2_0ElementType() {
+		return AbstractTokenAntlrAction_PostAntlrActionActionCallParserRuleCall_2_2_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_RightCurlyBracketKeyword_2_3ElementType() {
+		return AbstractTokenAntlrAction_RightCurlyBracketKeyword_2_3_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getAbstractTokenAntlrAction_RightCurlyBracketKeyword_2_4ElementType() {
+		return AbstractTokenAntlrAction_RightCurlyBracketKeyword_2_4_ELEMENT_TYPE;
 	}
 
 	public IGrammarAwareElementType getAbstractTokenWithCardinalityElementType() {

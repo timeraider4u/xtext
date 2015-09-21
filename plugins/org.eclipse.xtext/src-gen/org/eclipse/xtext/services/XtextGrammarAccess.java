@@ -913,20 +913,21 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	public class AbstractTokenElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.AbstractToken");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAbstractTokenWithCardinalityParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cAbstractTokenAntlrActionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//AbstractToken AbstractElement:
-		//	AbstractTokenWithCardinality | Action
+		//	AbstractTokenAntlrAction | Action
 		@Override public ParserRule getRule() { return rule; }
 
-		//AbstractTokenWithCardinality | Action
+		//// AbstractTokenWithCardinality |
+		//AbstractTokenAntlrAction | Action
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//AbstractTokenWithCardinality
-		public RuleCall getAbstractTokenWithCardinalityParserRuleCall_0() { return cAbstractTokenWithCardinalityParserRuleCall_0; }
+		//// AbstractTokenWithCardinality |
+		//AbstractTokenAntlrAction
+		public RuleCall getAbstractTokenAntlrActionParserRuleCall_0() { return cAbstractTokenAntlrActionParserRuleCall_0; }
 
-		//// AbstractTokenAntlrAction |
 		//Action
 		public RuleCall getActionParserRuleCall_1() { return cActionParserRuleCall_1; }
 	}
@@ -934,25 +935,89 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	public class AbstractTokenAntlrActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.AbstractTokenAntlrAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cAbstractTokenAntlrActionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cElementAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cElementAbstractTokenWithCardinalityParserRuleCall_1_0 = (RuleCall)cElementAssignment_1.eContents().get(0);
+		private final RuleCall cAbstractTokenWithCardinalityParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cPreActionKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cPreAntlrActionAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cPreAntlrActionActionCallParserRuleCall_1_2_0 = (RuleCall)cPreAntlrActionAssignment_1_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		private final Assignment cIsSemanticPredicateAssignment_1_4 = (Assignment)cGroup_1.eContents().get(4);
+		private final Keyword cIsSemanticPredicateQuestionMarkKeyword_1_4_0 = (Keyword)cIsSemanticPredicateAssignment_1_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_5 = (Keyword)cGroup_1.eContents().get(5);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cPostActionKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cPostAntlrActionAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cPostAntlrActionActionCallParserRuleCall_2_2_0 = (RuleCall)cPostAntlrActionAssignment_2_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Keyword cRightCurlyBracketKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
 		
-		//AbstractTokenAntlrAction AbstractElement:
-		//	{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+		/// * SuppressWarnings[potentialOverride]: Not handled at all but we do not care * / AbstractTokenAntlrAction
+		//AbstractElement:
+		//	AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}'
+		//	isSemanticPredicate?='?'
+		//	'}')? ('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
 		@Override public ParserRule getRule() { return rule; }
 
-		//{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+		///// *
+		//// ('{' '{' '}' '}')?
+		//AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?' '}')?
+		//('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
 		public Group getGroup() { return cGroup; }
 
-		//{AbstractTokenAntlrAction}
-		public Action getAbstractTokenAntlrActionAction_0() { return cAbstractTokenAntlrActionAction_0; }
-
-		//element=AbstractTokenWithCardinality
-		public Assignment getElementAssignment_1() { return cElementAssignment_1; }
-
+		///// *
+		//// ('{' '{' '}' '}')?
 		//AbstractTokenWithCardinality
-		public RuleCall getElementAbstractTokenWithCardinalityParserRuleCall_1_0() { return cElementAbstractTokenWithCardinalityParserRuleCall_1_0; }
+		public RuleCall getAbstractTokenWithCardinalityParserRuleCall_0() { return cAbstractTokenWithCardinalityParserRuleCall_0; }
+
+		//('preAction{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?' '}')?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//'preAction{'
+		public Keyword getPreActionKeyword_1_0() { return cPreActionKeyword_1_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
+
+		//preAntlrAction=ActionCall
+		public Assignment getPreAntlrActionAssignment_1_2() { return cPreAntlrActionAssignment_1_2; }
+
+		//ActionCall
+		public RuleCall getPreAntlrActionActionCallParserRuleCall_1_2_0() { return cPreAntlrActionActionCallParserRuleCall_1_2_0; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
+
+		//isSemanticPredicate?='?'
+		public Assignment getIsSemanticPredicateAssignment_1_4() { return cIsSemanticPredicateAssignment_1_4; }
+
+		//'?'
+		public Keyword getIsSemanticPredicateQuestionMarkKeyword_1_4_0() { return cIsSemanticPredicateQuestionMarkKeyword_1_4_0; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_1_5() { return cRightCurlyBracketKeyword_1_5; }
+
+		//('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//'postAction{'
+		public Keyword getPostActionKeyword_2_0() { return cPostActionKeyword_2_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2_1() { return cLeftCurlyBracketKeyword_2_1; }
+
+		//postAntlrAction=ActionCall
+		public Assignment getPostAntlrActionAssignment_2_2() { return cPostAntlrActionAssignment_2_2; }
+
+		//ActionCall
+		public RuleCall getPostAntlrActionActionCallParserRuleCall_2_2_0() { return cPostAntlrActionActionCallParserRuleCall_2_2_0; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_2_4() { return cRightCurlyBracketKeyword_2_4; }
 	}
 
 	public class AbstractTokenWithCardinalityElements extends AbstractParserRuleElementFinder {
@@ -2801,7 +2866,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AbstractToken AbstractElement:
-	//	AbstractTokenWithCardinality | Action
+	//	AbstractTokenAntlrAction | Action
 	public AbstractTokenElements getAbstractTokenAccess() {
 		return pAbstractToken;
 	}
@@ -2810,8 +2875,11 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		return getAbstractTokenAccess().getRule();
 	}
 
-	//AbstractTokenAntlrAction AbstractElement:
-	//	{AbstractTokenAntlrAction} element=AbstractTokenWithCardinality
+	/// * SuppressWarnings[potentialOverride]: Not handled at all but we do not care * / AbstractTokenAntlrAction
+	//AbstractElement:
+	//	AbstractTokenWithCardinality ('preAction{' '{' preAntlrAction=ActionCall '}'
+	//	isSemanticPredicate?='?'
+	//	'}')? ('postAction{' '{' postAntlrAction=ActionCall '}' '}')?
 	public AbstractTokenAntlrActionElements getAbstractTokenAntlrActionAccess() {
 		return pAbstractTokenAntlrAction;
 	}
