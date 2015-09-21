@@ -33,6 +33,9 @@ options {
 	«IF options.k>=0»
 	 k=«options.k»;
 	«ENDIF»
+	«IF options.forceHoisting»
+	 forceHoisting=true;
+	«ENDIF»
 }
 
 @lexer::header {
@@ -133,8 +136,11 @@ finally {
 		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens(«FOREACH hiddenTokens AS hidden SEPARATOR ", "»"«hidden.ruleName()»"«ENDFOREACH-»);
 «ENDIF-»
 		int stackSize = keepStackSize();
+		«initAfterActionInit(this)»
     }
-	:
+	@after { leaveRule();
+    		«initAfterActionAfter(this)»
+     }:
     «EXPAND ebnf FOR this.alternatives»
 ;
 finally {
@@ -328,6 +334,16 @@ finally {
 «ENDDEFINE»
 
 «DEFINE ebnf FOR AbstractElement-»
+«IF isValidString(preAntlrAction)-»
+{«preAntlrAction»}«IF isSemanticPredicate»?«ENDIF»
+«ENDIF»
+«EXPAND ebnfDoMore(options, debugGrammar)»
+«IF isValidString(postAntlrAction)-»
+{«postAntlrAction»}
+«ENDIF»
+«ENDDEFINE»
+
+«DEFINE ebnfMore FOR AbstractElement-»
 «IF !isOptionalCardinality() && isMultipleCardinality()-»
 (
 (

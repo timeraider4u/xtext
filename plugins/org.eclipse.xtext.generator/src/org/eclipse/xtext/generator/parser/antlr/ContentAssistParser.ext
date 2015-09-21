@@ -60,3 +60,12 @@ Collection[Assignment] allAssignments(Grammar grammar):
 	
 Collection[AbstractElement] allPredicatedElements(Grammar grammar):
 	JAVA org.eclipse.xtext.generator.parser.antlr.XtextAntlrUiGeneratorFragment.getAllPredicatedElements(org.eclipse.xtext.Grammar);
+
+String initAfterActionInit(ParserRule this):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_Init(org.eclipse.xtext.ParserRule);
+
+String initAfterActionAfter(ParserRule this):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_After(org.eclipse.xtext.ParserRule);
+
+boolean isValidString(String string):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.isValidString(java.lang.String);
