@@ -73,12 +73,13 @@ Workflow {
     			runtimeProjectPath = runtimeProject
 	        }
 	        
-	        
+	        /*
 	        fragment = org.eclipse.xtext.idea.generator.parser.antlr.XtextAntlrIDEAGeneratorFragment auto-inject {
 				options = {
 					classSplitting = true
 				}
 			}
+			*/
 			
 		}
 	}
