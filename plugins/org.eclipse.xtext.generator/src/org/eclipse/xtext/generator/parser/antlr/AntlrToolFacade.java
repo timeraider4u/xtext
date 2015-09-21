@@ -58,7 +58,7 @@ public class AntlrToolFacade {
 	 */
 	protected String getToolRunnerClassName() {
 		System.err.println("Calling class='" + this.getClass().getCanonicalName() + "'");
-		System.err.println("ClassName='" + className + "'");
+		// System.err.println("ClassName='" + className + "'");
 		return className;
 	}
 
@@ -179,11 +179,11 @@ public class AntlrToolFacade {
 			if (class1 == null)
 				throw getNoClassFoundException();
 			Method method = class1.getMethod("runWithEncodingAndParams", new Class[] { String.class, String.class, String[].class });
-			System.err.println("Method='" + method + "'");
-			System.err.println("Method-toString()='" + method.toString() + "'");
+			// System.err.println("Method='" + method + "'");
+			// System.err.println("Method-toString()='" + method.toString() + "'");
 			
 				for (int i = 0 ; i < furtherArgs.length; i++) {
-					System.err.println("furtherArgs[" + i + "]='" + furtherArgs[i] + "'");
+					// System.err.println("furtherArgs[" + i + "]='" + furtherArgs[i] + "'");
 				}
 			
 			method.invoke(null, grammarFullPath, explicitEncoding, furtherArgs);
