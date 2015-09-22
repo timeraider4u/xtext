@@ -61,7 +61,22 @@ InitAfterActions returns InitAfterActions:
 ;
 
 ActionCall returns ecore::EString:
-  ValidID ('.' ValidID)* ('(' STRING? ')')? ';'?;
+  ValidID ('.' ValidID)+ ('(' ActionCallParameters? ')') ';'?;
+  
+ActionCallParameters returns ecore::EString:
+	ActionCallParameter (',' ActionCallParameter)*
+;
+
+ActionCallParameter returns ecore::EString:
+	STRING
+	|
+	ValidID
+	/*|
+	'true'
+	|
+	'false'
+	*/
+;
 
 fragment RuleNameAndParams returns ParserRule:
 	name=ValidID ('<' (parameters+=Parameter (',' parameters+=Parameter)*)? '>')?
