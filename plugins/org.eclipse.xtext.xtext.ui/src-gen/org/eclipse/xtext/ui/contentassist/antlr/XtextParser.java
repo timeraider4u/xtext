@@ -43,6 +43,7 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAbstractMetamodelDeclarationAccess().getAlternatives(), "rule__AbstractMetamodelDeclaration__Alternatives");
 					put(grammarAccess.getParserRuleAccess().getAlternatives_0(), "rule__ParserRule__Alternatives_0");
 					put(grammarAccess.getParserRuleAccess().getAlternatives_0_0_2(), "rule__ParserRule__Alternatives_0_0_2");
+					put(grammarAccess.getActionCallParameterAccess().getAlternatives(), "rule__ActionCallParameter__Alternatives");
 					put(grammarAccess.getConditionalBranchAccess().getAlternatives(), "rule__ConditionalBranch__Alternatives");
 					put(grammarAccess.getAbstractTokenAccess().getAlternatives(), "rule__AbstractToken__Alternatives");
 					put(grammarAccess.getAbstractTokenWithCardinalityAccess().getAlternatives_0(), "rule__AbstractTokenWithCardinality__Alternatives_0");
@@ -90,6 +91,8 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionCallAccess().getGroup(), "rule__ActionCall__Group__0");
 					put(grammarAccess.getActionCallAccess().getGroup_1(), "rule__ActionCall__Group_1__0");
 					put(grammarAccess.getActionCallAccess().getGroup_2(), "rule__ActionCall__Group_2__0");
+					put(grammarAccess.getActionCallParametersAccess().getGroup(), "rule__ActionCallParameters__Group__0");
+					put(grammarAccess.getActionCallParametersAccess().getGroup_1(), "rule__ActionCallParameters__Group_1__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup(), "rule__RuleNameAndParams__Group__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1(), "rule__RuleNameAndParams__Group_1__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup_1_1(), "rule__RuleNameAndParams__Group_1_1__0");
