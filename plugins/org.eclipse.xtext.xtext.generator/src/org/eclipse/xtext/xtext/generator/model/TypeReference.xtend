@@ -58,7 +58,9 @@ class TypeReference {
 		if (packageName === null || !PACKAGE_MATCHER.matcher(packageName).matches)
 			throw new IllegalArgumentException('Invalid package name: ' + packageName)
 		if (className === null || !CLASS_MATCHER.matcher(className).matches)
-			throw new IllegalArgumentException('Invalid class name: ' + className)
+			throw new IllegalArgumentException('Invalid class name: \'' + className + '\''
+				+ '(packageName=\'' + packageName + '\')'
+			)
 		this.packageName = packageName
 		this.simpleNames = className.split('\\.')
 		this.typeArguments = arguments ?: Collections.emptyList

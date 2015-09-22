@@ -98,7 +98,7 @@ public class TypeReference {
       _or_1 = _not_1;
     }
     if (_or_1) {
-      throw new IllegalArgumentException(("Invalid class name: " + className));
+      throw new IllegalArgumentException(((((("Invalid class name: \'" + className) + "\'") + "(packageName=\'") + packageName) + "\')"));
     }
     this.packageName = packageName;
     String[] _split = className.split("\\.");
