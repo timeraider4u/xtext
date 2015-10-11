@@ -71,11 +71,8 @@ ActionCallParameter returns ecore::EString:
 	STRING
 	|
 	ValidID
-	/*|
-	'true'
 	|
-	'false'
-	*/
+	ActionCall
 ;
 
 fragment RuleNameAndParams returns ParserRule:

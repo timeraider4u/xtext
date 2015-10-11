@@ -1257,6 +1257,18 @@ ruleActionCallParameter returns [AntlrDatatypeRuleToken current=new AntlrDatatyp
     { 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getActionCallParameterAccess().getActionCallParserRuleCall_2()); 
+    }
+    this_ActionCall_2=ruleActionCall    {
+		$current.merge(this_ActionCall_2);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
 )
     ;
 

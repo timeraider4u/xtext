@@ -2268,6 +2268,15 @@ rule__ActionCallParameter__Alternatives
 
 
 
+    |
+(
+{ before(grammarAccess.getActionCallParameterAccess().getActionCallParserRuleCall_2()); }
+	ruleActionCall
+{ after(grammarAccess.getActionCallParameterAccess().getActionCallParserRuleCall_2()); }
+)
+
+
+
 ;
 finally {
 	restoreStackSize(stackSize);

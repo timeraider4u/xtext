@@ -779,6 +779,9 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		public static IGrammarAwareElementType createActionCallParameter_ValidIDParserRuleCall_1ElementType() {
 			return new IGrammarAwareElementType("ActionCallParameter_ValidIDParserRuleCall_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getActionCallParameterAccess().getValidIDParserRuleCall_1());
 		}
+		public static IGrammarAwareElementType createActionCallParameter_ActionCallParserRuleCall_2ElementType() {
+			return new IGrammarAwareElementType("ActionCallParameter_ActionCallParserRuleCall_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getActionCallParameterAccess().getActionCallParserRuleCall_2());
+		}
 	}
 
 	public static final IGrammarAwareElementType ActionCallParameter_ELEMENT_TYPE = associate(ActionCallParameterFactory.createActionCallParameterElementType());
@@ -788,6 +791,8 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 	public static final IGrammarAwareElementType ActionCallParameter_STRINGTerminalRuleCall_0_ELEMENT_TYPE = associate(ActionCallParameterFactory.createActionCallParameter_STRINGTerminalRuleCall_0ElementType());
 
 	public static final IGrammarAwareElementType ActionCallParameter_ValidIDParserRuleCall_1_ELEMENT_TYPE = associate(ActionCallParameterFactory.createActionCallParameter_ValidIDParserRuleCall_1ElementType());
+
+	public static final IGrammarAwareElementType ActionCallParameter_ActionCallParserRuleCall_2_ELEMENT_TYPE = associate(ActionCallParameterFactory.createActionCallParameter_ActionCallParserRuleCall_2ElementType());
 
 	private static class RuleNameAndParamsFactory {
 		public static IGrammarAwareElementType createRuleNameAndParamsElementType() {
@@ -3621,6 +3626,10 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 
 	public IGrammarAwareElementType getActionCallParameter_ValidIDParserRuleCall_1ElementType() {
 		return ActionCallParameter_ValidIDParserRuleCall_1_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getActionCallParameter_ActionCallParserRuleCall_2ElementType() {
+		return ActionCallParameter_ActionCallParserRuleCall_2_ELEMENT_TYPE;
 	}
 
 	public IGrammarAwareElementType getRuleNameAndParamsElementType() {

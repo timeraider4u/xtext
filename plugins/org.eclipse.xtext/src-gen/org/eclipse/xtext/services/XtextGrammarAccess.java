@@ -662,18 +662,15 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cValidIDParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cActionCallParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//ActionCallParameter:
 		//	STRING
 		//	| ValidID
-		//	/ *|
-		//	'true'
-		//	|
-		//	'false'
-		//	* /;
+		//	| ActionCall;
 		@Override public ParserRule getRule() { return rule; }
 
-		//STRING | ValidID
+		//STRING | ValidID | ActionCall
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//STRING
@@ -681,6 +678,9 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ValidID
 		public RuleCall getValidIDParserRuleCall_1() { return cValidIDParserRuleCall_1; }
+
+		//ActionCall
+		public RuleCall getActionCallParserRuleCall_2() { return cActionCallParserRuleCall_2; }
 	}
 
 	public class RuleNameAndParamsElements extends AbstractParserRuleElementFinder {
@@ -2865,11 +2865,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	//ActionCallParameter:
 	//	STRING
 	//	| ValidID
-	//	/ *|
-	//	'true'
-	//	|
-	//	'false'
-	//	* /;
+	//	| ActionCall;
 	public ActionCallParameterElements getActionCallParameterAccess() {
 		return pActionCallParameter;
 	}
