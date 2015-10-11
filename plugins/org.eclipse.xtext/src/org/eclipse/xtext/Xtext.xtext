@@ -61,7 +61,12 @@ InitAfterActions returns InitAfterActions:
 ;
 
 ActionCall returns ecore::EString:
-  ValidID ('.' ValidID)+ ('(' ActionCallParameters? ')') ';'?;
+  ValidID
+  	(
+  		('.' ValidID) ('(' ActionCallParameters? ')')?
+  	)+
+  	';'?
+;
   
 ActionCallParameters returns ecore::EString:
 	ActionCallParameter (',' ActionCallParameter)*
@@ -69,6 +74,8 @@ ActionCallParameters returns ecore::EString:
 
 ActionCallParameter returns ecore::EString:
 	STRING
+	|
+	INT
 	|
 	ValidID
 	|

@@ -586,47 +586,52 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cValidIDParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cValidIDParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cActionCallParametersParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
+		private final Keyword cFullStopKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final RuleCall cValidIDParserRuleCall_1_0_1 = (RuleCall)cGroup_1_0.eContents().get(1);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final RuleCall cActionCallParametersParserRuleCall_1_1_1 = (RuleCall)cGroup_1_1.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_1_2 = (Keyword)cGroup_1_1.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//ActionCall:
-		//	ValidID ('.' ValidID)+ ('(' ActionCallParameters? ')') ';'?;
+		//	ValidID (('.' ValidID) ('(' ActionCallParameters? ')')?)+
+		//	';'?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//ValidID ('.' ValidID)+ ('(' ActionCallParameters? ')') ';'?
+		//ValidID (('.' ValidID) ('(' ActionCallParameters? ')')?)+ ';'?
 		public Group getGroup() { return cGroup; }
 
 		//ValidID
 		public RuleCall getValidIDParserRuleCall_0() { return cValidIDParserRuleCall_0; }
 
-		//('.' ValidID)+
+		//(('.' ValidID) ('(' ActionCallParameters? ')')?)+
 		public Group getGroup_1() { return cGroup_1; }
 
+		//('.' ValidID)
+		public Group getGroup_1_0() { return cGroup_1_0; }
+
 		//'.'
-		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+		public Keyword getFullStopKeyword_1_0_0() { return cFullStopKeyword_1_0_0; }
 
 		//ValidID
-		public RuleCall getValidIDParserRuleCall_1_1() { return cValidIDParserRuleCall_1_1; }
+		public RuleCall getValidIDParserRuleCall_1_0_1() { return cValidIDParserRuleCall_1_0_1; }
 
-		//('(' ActionCallParameters? ')')
-		public Group getGroup_2() { return cGroup_2; }
+		//('(' ActionCallParameters? ')')?
+		public Group getGroup_1_1() { return cGroup_1_1; }
 
 		//'('
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_1_1_0() { return cLeftParenthesisKeyword_1_1_0; }
 
 		//ActionCallParameters?
-		public RuleCall getActionCallParametersParserRuleCall_2_1() { return cActionCallParametersParserRuleCall_2_1; }
+		public RuleCall getActionCallParametersParserRuleCall_1_1_1() { return cActionCallParametersParserRuleCall_1_1_1; }
 
 		//')'
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_1_1_2() { return cRightParenthesisKeyword_1_1_2; }
 
 		//';'?
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class ActionCallParametersElements extends AbstractParserRuleElementFinder {
@@ -661,26 +666,31 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.eclipse.xtext.Xtext.ActionCallParameter");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cValidIDParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cActionCallParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cValidIDParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cActionCallParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//ActionCallParameter:
 		//	STRING
+		//	| INT
 		//	| ValidID
 		//	| ActionCall;
 		@Override public ParserRule getRule() { return rule; }
 
-		//STRING | ValidID | ActionCall
+		//STRING | INT | ValidID | ActionCall
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
 
+		//INT
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+
 		//ValidID
-		public RuleCall getValidIDParserRuleCall_1() { return cValidIDParserRuleCall_1; }
+		public RuleCall getValidIDParserRuleCall_2() { return cValidIDParserRuleCall_2; }
 
 		//ActionCall
-		public RuleCall getActionCallParserRuleCall_2() { return cActionCallParserRuleCall_2; }
+		public RuleCall getActionCallParserRuleCall_3() { return cActionCallParserRuleCall_3; }
 	}
 
 	public class RuleNameAndParamsElements extends AbstractParserRuleElementFinder {
@@ -2843,7 +2853,8 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ActionCall:
-	//	ValidID ('.' ValidID)+ ('(' ActionCallParameters? ')') ';'?;
+	//	ValidID (('.' ValidID) ('(' ActionCallParameters? ')')?)+
+	//	';'?;
 	public ActionCallElements getActionCallAccess() {
 		return pActionCall;
 	}
@@ -2864,6 +2875,7 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ActionCallParameter:
 	//	STRING
+	//	| INT
 	//	| ValidID
 	//	| ActionCall;
 	public ActionCallParameterElements getActionCallParameterAccess() {

@@ -90,7 +90,8 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInitAfterActionsAccess().getGroup_2(), "rule__InitAfterActions__Group_2__0");
 					put(grammarAccess.getActionCallAccess().getGroup(), "rule__ActionCall__Group__0");
 					put(grammarAccess.getActionCallAccess().getGroup_1(), "rule__ActionCall__Group_1__0");
-					put(grammarAccess.getActionCallAccess().getGroup_2(), "rule__ActionCall__Group_2__0");
+					put(grammarAccess.getActionCallAccess().getGroup_1_0(), "rule__ActionCall__Group_1_0__0");
+					put(grammarAccess.getActionCallAccess().getGroup_1_1(), "rule__ActionCall__Group_1_1__0");
 					put(grammarAccess.getActionCallParametersAccess().getGroup(), "rule__ActionCallParameters__Group__0");
 					put(grammarAccess.getActionCallParametersAccess().getGroup_1(), "rule__ActionCallParameters__Group_1__0");
 					put(grammarAccess.getRuleNameAndParamsAccess().getGroup(), "rule__RuleNameAndParams__Group__0");
