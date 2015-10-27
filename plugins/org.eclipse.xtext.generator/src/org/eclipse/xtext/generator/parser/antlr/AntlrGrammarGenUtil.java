@@ -370,9 +370,17 @@ public class AntlrGrammarGenUtil {
 		System.out.println("rule='" + rule + "'");
 		System.out.println("myRule='" + myRule + "'");*/
 		if (myRule == null || myRule.getInitAfterActions() == null) {
-			return "//no init found";
+			return "/*no init found*/";
 		}
-		return myRule.getInitAfterActions().getInitAction();
+		final String action = myRule.getInitAfterActions().getInitAction();
+		if (action == null || action.isEmpty()) {
+			return "/*no init found*/";
+		}
+		final StringBuffer buffer = new StringBuffer();
+		buffer.append("if ( state.backtracking==0 ) {");
+		buffer.append(action);
+		buffer.append("}");
+		return buffer.toString();
 	}
 	
 	/**
@@ -384,9 +392,15 @@ public class AntlrGrammarGenUtil {
 		System.out.println("rule='" + rule + "'");
 		System.out.println("myRule='" + myRule + "'");*/		
 		if (myRule == null || myRule.getInitAfterActions() == null) {
-			return "//no after found";
+			return "/*no after found*/";
 		}
-		return myRule.getInitAfterActions().getAfterAction();
+		final String action = myRule.getInitAfterActions().getAfterAction();
+		if (action == null || action.isEmpty()) {
+			return "/*no after found*/";
+		}
+		final StringBuffer buffer = new StringBuffer();
+		buffer.append(action);
+		return buffer.toString();
 	}
 
 	/***
