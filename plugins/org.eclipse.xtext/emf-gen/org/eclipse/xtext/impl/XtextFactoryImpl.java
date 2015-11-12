@@ -17,9 +17,6 @@ import org.eclipse.xtext.*;
  * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
  * @generated
- * @noextend This class is not intended to be subclassed by clients.
- * @noinstantiate This class is not intended to be instantiated by clients.
- * @noreference This class is not intended to be referenced by clients.
  */
 public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	/**
@@ -387,6 +384,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public Condition createCondition() {
 		ConditionImpl condition = new ConditionImpl();
@@ -397,6 +395,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public Conjunction createConjunction() {
 		ConjunctionImpl conjunction = new ConjunctionImpl();
@@ -407,6 +406,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public Negation createNegation() {
 		NegationImpl negation = new NegationImpl();
@@ -417,6 +417,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public Disjunction createDisjunction() {
 		DisjunctionImpl disjunction = new DisjunctionImpl();
@@ -427,6 +428,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public CompositeCondition createCompositeCondition() {
 		CompositeConditionImpl compositeCondition = new CompositeConditionImpl();
@@ -437,6 +439,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public ParameterReference createParameterReference() {
 		ParameterReferenceImpl parameterReference = new ParameterReferenceImpl();
@@ -447,6 +450,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public LiteralCondition createLiteralCondition() {
 		LiteralConditionImpl literalCondition = new LiteralConditionImpl();
@@ -457,6 +461,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public InitAfterActions createInitAfterActions() {
 		InitAfterActionsImpl initAfterActions = new InitAfterActionsImpl();
@@ -467,6 +472,7 @@ public class XtextFactoryImpl extends EFactoryImpl implements XtextFactory {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public AbstractTokenAntlrAction createAbstractTokenAntlrAction() {
 		AbstractTokenAntlrActionImpl abstractTokenAntlrAction = new AbstractTokenAntlrActionImpl();

@@ -70,10 +70,10 @@ entryRuleGrammar
 ruleGrammar
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -104,10 +104,10 @@ entryRuleGrammarID
 ruleGrammarID
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -138,10 +138,10 @@ entryRuleAbstractRule
 ruleAbstractRule
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -172,10 +172,10 @@ entryRuleAbstractMetamodelDeclaration
 ruleAbstractMetamodelDeclaration
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -206,10 +206,10 @@ entryRuleGeneratedMetamodel
 ruleGeneratedMetamodel
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -240,10 +240,10 @@ entryRuleReferencedMetamodel
 ruleReferencedMetamodel
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -274,10 +274,10 @@ entryRuleParserRule
 ruleParserRule
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -308,10 +308,10 @@ entryRuleInitAfterActions
 ruleInitAfterActions
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -342,10 +342,10 @@ entryRuleActionCall
 ruleActionCall
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -376,10 +376,10 @@ entryRuleActionCallParameters
 ruleActionCallParameters
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -410,10 +410,10 @@ entryRuleActionCallParameter
 ruleActionCallParameter
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -436,10 +436,10 @@ finally {
 ruleRuleNameAndParams
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -470,10 +470,10 @@ entryRuleParameter
 ruleParameter
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -504,10 +504,10 @@ entryRuleTypeRef
 ruleTypeRef
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -538,10 +538,10 @@ entryRuleAlternatives
 ruleAlternatives
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -572,10 +572,10 @@ entryRuleConditionalBranch
 ruleConditionalBranch
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -606,10 +606,10 @@ entryRuleUnorderedGroup
 ruleUnorderedGroup
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -640,10 +640,10 @@ entryRuleGroup
 ruleGroup
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -674,10 +674,10 @@ entryRuleAbstractToken
 ruleAbstractToken
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -708,10 +708,10 @@ entryRuleAbstractTokenAntlrAction
 ruleAbstractTokenAntlrAction
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -742,10 +742,10 @@ entryRuleAbstractTokenWithCardinality
 ruleAbstractTokenWithCardinality
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -776,10 +776,10 @@ entryRuleAction
 ruleAction
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -810,10 +810,10 @@ entryRuleAbstractTerminal
 ruleAbstractTerminal
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -844,10 +844,10 @@ entryRuleKeyword
 ruleKeyword
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -878,10 +878,10 @@ entryRuleRuleCall
 ruleRuleCall
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -912,10 +912,10 @@ entryRuleNamedArgument
 ruleNamedArgument
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -946,10 +946,10 @@ entryRuleLiteralCondition
 ruleLiteralCondition
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -980,10 +980,10 @@ entryRuleDisjunction
 ruleDisjunction
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1014,10 +1014,10 @@ entryRuleConjunction
 ruleConjunction
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1048,10 +1048,10 @@ entryRuleNegation
 ruleNegation
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1082,10 +1082,10 @@ entryRuleAtom
 ruleAtom
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1116,10 +1116,10 @@ entryRuleParenthesizedCondition
 ruleParenthesizedCondition
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1150,10 +1150,10 @@ entryRuleParameterReference
 ruleParameterReference
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1184,10 +1184,10 @@ entryRuleTerminalRuleCall
 ruleTerminalRuleCall
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1218,10 +1218,10 @@ entryRuleRuleID
 ruleRuleID
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1252,10 +1252,10 @@ entryRuleValidID
 ruleValidID
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1286,10 +1286,10 @@ entryRulePredicatedKeyword
 rulePredicatedKeyword
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1320,10 +1320,10 @@ entryRulePredicatedRuleCall
 rulePredicatedRuleCall
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1354,10 +1354,10 @@ entryRuleAssignment
 ruleAssignment
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1388,10 +1388,10 @@ entryRuleAssignableTerminal
 ruleAssignableTerminal
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1422,10 +1422,10 @@ entryRuleParenthesizedAssignableElement
 ruleParenthesizedAssignableElement
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1456,10 +1456,10 @@ entryRuleAssignableAlternatives
 ruleAssignableAlternatives
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1490,10 +1490,10 @@ entryRuleCrossReference
 ruleCrossReference
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1524,10 +1524,10 @@ entryRuleCrossReferenceableTerminal
 ruleCrossReferenceableTerminal
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1558,10 +1558,10 @@ entryRuleParenthesizedElement
 ruleParenthesizedElement
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1592,10 +1592,10 @@ entryRulePredicatedGroup
 rulePredicatedGroup
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1626,10 +1626,10 @@ entryRuleTerminalRule
 ruleTerminalRule
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1660,10 +1660,10 @@ entryRuleTerminalAlternatives
 ruleTerminalAlternatives
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1694,10 +1694,10 @@ entryRuleTerminalGroup
 ruleTerminalGroup
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1728,10 +1728,10 @@ entryRuleTerminalToken
 ruleTerminalToken
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1762,10 +1762,10 @@ entryRuleTerminalTokenElement
 ruleTerminalTokenElement
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1796,10 +1796,10 @@ entryRuleParenthesizedTerminalElement
 ruleParenthesizedTerminalElement
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1830,10 +1830,10 @@ entryRuleAbstractNegatedToken
 ruleAbstractNegatedToken
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1864,10 +1864,10 @@ entryRuleNegatedToken
 ruleNegatedToken
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1898,10 +1898,10 @@ entryRuleUntilToken
 ruleUntilToken
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1932,10 +1932,10 @@ entryRuleWildcard
 ruleWildcard
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1966,10 +1966,10 @@ entryRuleEOF
 ruleEOF
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2000,10 +2000,10 @@ entryRuleCharacterRange
 ruleCharacterRange
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2034,10 +2034,10 @@ entryRuleEnumRule
 ruleEnumRule
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2068,10 +2068,10 @@ entryRuleEnumLiterals
 ruleEnumLiterals
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2102,10 +2102,10 @@ entryRuleEnumLiteralDeclaration
 ruleEnumLiteralDeclaration
     @init {
 		int stackSize = keepStackSize();
-		
+		/*no init found*/
     }
 	@after {
-    		
+    		/*no after found*/
      }:
 
 (
@@ -10471,9 +10471,9 @@ rule__TerminalRule__Group__3__Impl
 :
 
 (
-{ before(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_3()); }
-(rule__TerminalRule__AlternativesAssignment_3)
-{ after(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_3()); }
+{ before(grammarAccess.getTerminalRuleAccess().getGroup_3()); }
+(rule__TerminalRule__Group_3__0)?
+{ after(grammarAccess.getTerminalRuleAccess().getGroup_3()); }
 )
 
 
@@ -10490,6 +10490,7 @@ rule__TerminalRule__Group__4
     }
 :
 	rule__TerminalRule__Group__4__Impl
+	rule__TerminalRule__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -10502,11 +10503,9 @@ rule__TerminalRule__Group__4__Impl
 :
 
 (
-{ before(grammarAccess.getTerminalRuleAccess().getSemicolonKeyword_4()); }
-
-	';' 
-
-{ after(grammarAccess.getTerminalRuleAccess().getSemicolonKeyword_4()); }
+{ before(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_4()); }
+(rule__TerminalRule__AlternativesAssignment_4)
+{ after(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_4()); }
 )
 
 
@@ -10515,6 +10514,75 @@ rule__TerminalRule__Group__4__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__TerminalRule__Group__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group__5__Impl
+	rule__TerminalRule__Group__6
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getGroup_5()); }
+(rule__TerminalRule__Group_5__0)?
+{ after(grammarAccess.getTerminalRuleAccess().getGroup_5()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getSemicolonKeyword_6()); }
+
+	';' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getSemicolonKeyword_6()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
 
 
 
@@ -10724,6 +10792,394 @@ rule__TerminalRule__Group_1_1_1__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+
+
+
+
+rule__TerminalRule__Group_3__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_3__0__Impl
+	rule__TerminalRule__Group_3__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_3__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_0()); }
+
+	'{' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_0()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_3__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_3__1__Impl
+	rule__TerminalRule__Group_3__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_3__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_1()); }
+
+	'{' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_1()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_3__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_3__2__Impl
+	rule__TerminalRule__Group_3__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_3__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getPreAntlrActionAssignment_3_2()); }
+(rule__TerminalRule__PreAntlrActionAssignment_3_2)
+{ after(grammarAccess.getTerminalRuleAccess().getPreAntlrActionAssignment_3_2()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_3__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_3__3__Impl
+	rule__TerminalRule__Group_3__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_3__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_3()); }
+
+	'}' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_3()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_3__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_3__4__Impl
+	rule__TerminalRule__Group_3__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_3__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateAssignment_3_4()); }
+(rule__TerminalRule__IsSemanticPredicateAssignment_3_4)?
+{ after(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateAssignment_3_4()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_3__5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_3__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_3__5__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_5()); }
+
+	'}' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_5()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rule__TerminalRule__Group_5__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_5__0__Impl
+	rule__TerminalRule__Group_5__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_5__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_0()); }
+
+	'{' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_0()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_5__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_5__1__Impl
+	rule__TerminalRule__Group_5__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_5__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_1()); }
+
+	'{' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_1()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_5__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_5__2__Impl
+	rule__TerminalRule__Group_5__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_5__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getPostAntlrActionAssignment_5_2()); }
+(rule__TerminalRule__PostAntlrActionAssignment_5_2)
+{ after(grammarAccess.getTerminalRuleAccess().getPostAntlrActionAssignment_5_2()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_5__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_5__3__Impl
+	rule__TerminalRule__Group_5__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_5__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_3()); }
+
+	'}' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_3()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__TerminalRule__Group_5__4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__TerminalRule__Group_5__4__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__Group_5__4__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_4()); }
+
+	'}' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_4()); }
+)
+
+
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
 
 
 
@@ -13745,14 +14201,70 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TerminalRule__AlternativesAssignment_3
+rule__TerminalRule__PreAntlrActionAssignment_3_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_3_0()); }
-	ruleTerminalAlternatives{ after(grammarAccess.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_3_0()); }
+{ before(grammarAccess.getTerminalRuleAccess().getPreAntlrActionActionCallParserRuleCall_3_2_0()); }
+	ruleActionCall{ after(grammarAccess.getTerminalRuleAccess().getPreAntlrActionActionCallParserRuleCall_3_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__IsSemanticPredicateAssignment_3_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateQuestionMarkKeyword_3_4_0()); }
+
+(
+{ before(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateQuestionMarkKeyword_3_4_0()); }
+
+	'?' 
+
+{ after(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateQuestionMarkKeyword_3_4_0()); }
+)
+
+
+
+{ after(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateQuestionMarkKeyword_3_4_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__AlternativesAssignment_4
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_4_0()); }
+	ruleTerminalAlternatives{ after(grammarAccess.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_4_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TerminalRule__PostAntlrActionAssignment_5_2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTerminalRuleAccess().getPostAntlrActionActionCallParserRuleCall_5_2_0()); }
+	ruleActionCall{ after(grammarAccess.getTerminalRuleAccess().getPostAntlrActionActionCallParserRuleCall_5_2_0()); }
 )
 
 ;

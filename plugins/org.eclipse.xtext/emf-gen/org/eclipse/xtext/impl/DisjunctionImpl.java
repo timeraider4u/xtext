@@ -13,9 +13,6 @@ import org.eclipse.xtext.XtextPackage;
  * <!-- end-user-doc -->
  *
  * @generated
- * @noreference This class is not intended to be referenced by clients.
- * @noextend This class is not intended to be subclassed by clients.
- * @noinstantiate This class is not intended to be instantiated by clients.
  * @since 3.0
  */
 public class DisjunctionImpl extends CompositeConditionImpl implements Disjunction {

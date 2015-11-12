@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/DisjunctionImpl.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/DisjunctionImpl.java	2015-11-12 19:59:39.368740474 +0100
+@@ -13,6 +13,7 @@
+  * <!-- end-user-doc -->
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class DisjunctionImpl extends CompositeConditionImpl implements Disjunction {
+ 	/**

@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/CompositeCondition.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/CompositeCondition.java	2015-11-12 19:58:36.234743114 +0100
+@@ -19,6 +19,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getCompositeCondition()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface CompositeCondition extends Condition {
+ 	/**

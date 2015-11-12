@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/AbstractTokenAntlrAction.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/AbstractTokenAntlrAction.java	2015-11-12 19:58:14.397744028 +0100
+@@ -21,6 +21,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getAbstractTokenAntlrAction()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface AbstractTokenAntlrAction extends AbstractElement {
+ 	/**

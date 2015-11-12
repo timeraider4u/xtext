@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/NamedArgumentImpl.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/NamedArgumentImpl.java	2015-11-12 19:58:57.993742204 +0100
+@@ -30,6 +30,7 @@
+  * </ul>
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class NamedArgumentImpl extends MinimalEObjectImpl.Container implements NamedArgument {
+ 	/**

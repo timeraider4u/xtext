@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/CompositeConditionImpl.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/CompositeConditionImpl.java	2015-11-12 20:00:43.668737785 +0100
+@@ -27,6 +27,7 @@
+  * </ul>
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class CompositeConditionImpl extends ConditionImpl implements CompositeCondition {
+ 	/**

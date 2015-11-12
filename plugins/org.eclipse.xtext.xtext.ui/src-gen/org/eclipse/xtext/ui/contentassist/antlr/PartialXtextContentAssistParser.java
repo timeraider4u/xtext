@@ -12,11 +12,9 @@ import org.eclipse.xtext.ui.editor.contentassist.antlr.FollowElement;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
 import org.eclipse.xtext.util.PolymorphicDispatcher;
 
-/*
- * Template CodetemplatesGeneratorFragment.xpt
- */
 /**
- @since 2.9
+ * Template CodetemplatesGeneratorFragment.xpt
+ * @since 2.9
  */
 public class PartialXtextContentAssistParser extends XtextParser implements IPartialContentAssistParser {
 

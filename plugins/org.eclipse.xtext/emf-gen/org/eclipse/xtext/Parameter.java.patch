@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/Parameter.java.orig	2015-11-12 18:40:02.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/Parameter.java	2015-11-12 19:41:58.935784824 +0100
+@@ -19,6 +19,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getParameter()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface Parameter extends EObject {
+ 	/**

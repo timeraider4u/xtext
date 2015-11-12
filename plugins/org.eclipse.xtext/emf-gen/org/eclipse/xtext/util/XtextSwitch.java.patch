@@ -1,0 +1,18 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/util/XtextSwitch.java.orig	2015-11-12 18:40:01.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/util/XtextSwitch.java	2015-11-12 19:40:29.933788547 +0100
+@@ -872,6 +872,7 @@
+ 	 * @return the result of interpreting the object as an instance of '<em>Init After Actions</em>'.
+ 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public T caseInitAfterActions(InitAfterActions object) {
+ 		return null;
+@@ -887,6 +888,7 @@
+ 	 * @return the result of interpreting the object as an instance of '<em>Abstract Token Antlr Action</em>'.
+ 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public T caseAbstractTokenAntlrAction(AbstractTokenAntlrAction object) {
+ 		return null;

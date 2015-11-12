@@ -439,8 +439,6 @@ public class ParserRuleImpl extends AbstractRuleImpl implements ParserRule {
 		result.append(fragment);
 		result.append(", wildcard: ");
 		result.append(wildcard);
-		result.append(", initAfterActions: ");
-		result.append(initAfterActions);
 		result.append(')');
 		return result.toString();
 	}

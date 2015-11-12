@@ -1,0 +1,50 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/TerminalRule.java.orig	2015-11-12 18:40:02.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/TerminalRule.java	2015-11-12 19:08:12.259869586 +0100
+@@ -62,6 +62,7 @@
+ 	 * @see org.eclipse.xtext.XtextPackage#getTerminalRule_PreAntlrAction()
+ 	 * @model
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	String getPreAntlrAction();
+ 
+@@ -72,6 +73,7 @@
+ 	 * @param value the new value of the '<em>Pre Antlr Action</em>' attribute.
+ 	 * @see #getPreAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	void setPreAntlrAction(String value);
+ 
+@@ -88,6 +90,7 @@
+ 	 * @see org.eclipse.xtext.XtextPackage#getTerminalRule_PostAntlrAction()
+ 	 * @model
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	String getPostAntlrAction();
+ 
+@@ -98,6 +101,7 @@
+ 	 * @param value the new value of the '<em>Post Antlr Action</em>' attribute.
+ 	 * @see #getPostAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	void setPostAntlrAction(String value);
+ 
+@@ -114,6 +118,7 @@
+ 	 * @see org.eclipse.xtext.XtextPackage#getTerminalRule_IsSemanticPredicate()
+ 	 * @model
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	Boolean getIsSemanticPredicate();
+ 
+@@ -124,6 +129,7 @@
+ 	 * @param value the new value of the '<em>Is Semantic Predicate</em>' attribute.
+ 	 * @see #getIsSemanticPredicate()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	void setIsSemanticPredicate(Boolean value);
+ 

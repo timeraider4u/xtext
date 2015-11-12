@@ -1,0 +1,98 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/AbstractElementImpl.java.orig	2015-11-12 18:40:02.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/AbstractElementImpl.java	2015-11-12 19:23:16.526831767 +0100
+@@ -100,6 +100,7 @@
+ 	 * @see #getPreAntlrAction()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected static final String PRE_ANTLR_ACTION_EDEFAULT = null;
+ 
+@@ -110,6 +111,7 @@
+ 	 * @see #getPreAntlrAction()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected String preAntlrAction = PRE_ANTLR_ACTION_EDEFAULT;
+ 
+@@ -120,6 +122,7 @@
+ 	 * @see #getPostAntlrAction()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected static final String POST_ANTLR_ACTION_EDEFAULT = null;
+ 
+@@ -130,6 +133,7 @@
+ 	 * @see #getPostAntlrAction()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected String postAntlrAction = POST_ANTLR_ACTION_EDEFAULT;
+ 
+@@ -140,6 +144,7 @@
+ 	 * @see #isIsSemanticPredicate()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected static final boolean IS_SEMANTIC_PREDICATE_EDEFAULT = false;
+ 
+@@ -150,6 +155,7 @@
+ 	 * @see #isIsSemanticPredicate()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected boolean isSemanticPredicate = IS_SEMANTIC_PREDICATE_EDEFAULT;
+ 
+@@ -241,6 +247,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public String getPreAntlrAction() {
+ 		return preAntlrAction;
+@@ -250,6 +257,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public void setPreAntlrAction(String newPreAntlrAction) {
+ 		String oldPreAntlrAction = preAntlrAction;
+@@ -262,6 +270,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public String getPostAntlrAction() {
+ 		return postAntlrAction;
+@@ -271,6 +280,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public void setPostAntlrAction(String newPostAntlrAction) {
+ 		String oldPostAntlrAction = postAntlrAction;
+@@ -283,6 +293,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public boolean isIsSemanticPredicate() {
+ 		return isSemanticPredicate;
+@@ -292,6 +303,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public void setIsSemanticPredicate(boolean newIsSemanticPredicate) {
+ 		boolean oldIsSemanticPredicate = isSemanticPredicate;

@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/InitAfterActionsImpl.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/InitAfterActionsImpl.java	2015-11-12 19:21:56.766835102 +0100
+@@ -25,6 +25,7 @@
+  * </ul>
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class InitAfterActionsImpl extends MinimalEObjectImpl.Container implements InitAfterActions {
+ 	/**

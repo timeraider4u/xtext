@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/ParameterReferenceImpl.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/ParameterReferenceImpl.java	2015-11-12 20:01:43.559735280 +0100
+@@ -25,6 +25,7 @@
+  * </ul>
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class ParameterReferenceImpl extends ConditionImpl implements ParameterReference {
+ 	/**

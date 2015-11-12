@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/LiteralCondition.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/LiteralCondition.java	2015-11-12 19:57:49.050745088 +0100
+@@ -18,6 +18,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getLiteralCondition()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface LiteralCondition extends Condition {
+ 	/**

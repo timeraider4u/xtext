@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/Condition.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/Condition.java	2015-11-12 19:57:34.668745689 +0100
+@@ -13,6 +13,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getCondition()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface Condition extends EObject {
+ 

@@ -1,0 +1,34 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/ParserRuleImpl.java.orig	2015-11-12 18:40:02.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/ParserRuleImpl.java	2015-11-12 19:55:48.921750112 +0100
+@@ -135,6 +135,7 @@
+ 	 * @see #getInitAfterActions()
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	protected InitAfterActions initAfterActions;
+ 
+@@ -253,6 +254,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public InitAfterActions getInitAfterActions() {
+ 		return initAfterActions;
+@@ -262,6 +264,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public NotificationChain basicSetInitAfterActions(InitAfterActions newInitAfterActions, NotificationChain msgs) {
+ 		InitAfterActions oldInitAfterActions = initAfterActions;
+@@ -277,6 +280,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public void setInitAfterActions(InitAfterActions newInitAfterActions) {
+ 		if (newInitAfterActions != initAfterActions) {

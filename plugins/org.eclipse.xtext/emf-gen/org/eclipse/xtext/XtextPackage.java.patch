@@ -1,0 +1,810 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/XtextPackage.java.orig	2015-11-12 18:40:01.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/XtextPackage.java	2015-11-12 19:35:05.088802132 +0100
+@@ -387,6 +387,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int PARSER_RULE__INIT_AFTER_ACTIONS = ABSTRACT_RULE_FEATURE_COUNT + 5;
+ 
+@@ -481,6 +482,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_ELEMENT__PRE_ANTLR_ACTION = 3;
+ 
+@@ -490,6 +492,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_ELEMENT__POST_ANTLR_ACTION = 4;
+ 
+@@ -499,6 +502,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE = 5;
+ 
+@@ -555,6 +559,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ACTION__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -564,6 +569,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ACTION__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -573,6 +579,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ACTION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -656,6 +663,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int KEYWORD__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -665,6 +673,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int KEYWORD__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -674,6 +683,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int KEYWORD__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -739,6 +749,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int RULE_CALL__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -748,6 +759,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int RULE_CALL__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -757,6 +769,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int RULE_CALL__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -843,6 +856,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ASSIGNMENT__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -852,6 +866,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ASSIGNMENT__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -861,6 +876,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ASSIGNMENT__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -944,6 +960,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int CROSS_REFERENCE__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -953,6 +970,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int CROSS_REFERENCE__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -962,6 +980,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int CROSS_REFERENCE__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1044,6 +1063,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int TERMINAL_RULE__PRE_ANTLR_ACTION = ABSTRACT_RULE_FEATURE_COUNT + 1;
+ 
+@@ -1053,6 +1073,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int TERMINAL_RULE__POST_ANTLR_ACTION = ABSTRACT_RULE_FEATURE_COUNT + 2;
+ 
+@@ -1062,6 +1083,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int TERMINAL_RULE__IS_SEMANTIC_PREDICATE = ABSTRACT_RULE_FEATURE_COUNT + 3;
+ 
+@@ -1118,6 +1140,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_NEGATED_TOKEN__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1127,6 +1150,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_NEGATED_TOKEN__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1136,6 +1160,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_NEGATED_TOKEN__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1201,6 +1226,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int NEGATED_TOKEN__PRE_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__PRE_ANTLR_ACTION;
+ 
+@@ -1210,6 +1236,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int NEGATED_TOKEN__POST_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__POST_ANTLR_ACTION;
+ 
+@@ -1219,6 +1246,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int NEGATED_TOKEN__IS_SEMANTIC_PREDICATE = ABSTRACT_NEGATED_TOKEN__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1284,6 +1312,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int UNTIL_TOKEN__PRE_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__PRE_ANTLR_ACTION;
+ 
+@@ -1293,6 +1322,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int UNTIL_TOKEN__POST_ANTLR_ACTION = ABSTRACT_NEGATED_TOKEN__POST_ANTLR_ACTION;
+ 
+@@ -1302,6 +1332,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int UNTIL_TOKEN__IS_SEMANTIC_PREDICATE = ABSTRACT_NEGATED_TOKEN__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1367,6 +1398,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int WILDCARD__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1376,6 +1408,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int WILDCARD__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1385,6 +1418,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int WILDCARD__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1487,6 +1521,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ENUM_LITERAL_DECLARATION__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1496,6 +1531,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ENUM_LITERAL_DECLARATION__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1505,6 +1541,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ENUM_LITERAL_DECLARATION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1579,6 +1616,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int COMPOUND_ELEMENT__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1588,6 +1626,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int COMPOUND_ELEMENT__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1597,6 +1636,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1662,6 +1702,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ALTERNATIVES__PRE_ANTLR_ACTION = COMPOUND_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1671,6 +1712,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ALTERNATIVES__POST_ANTLR_ACTION = COMPOUND_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1680,6 +1722,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ALTERNATIVES__IS_SEMANTIC_PREDICATE = COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1745,6 +1788,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int UNORDERED_GROUP__PRE_ANTLR_ACTION = COMPOUND_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1754,6 +1798,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int UNORDERED_GROUP__POST_ANTLR_ACTION = COMPOUND_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1763,6 +1808,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int UNORDERED_GROUP__IS_SEMANTIC_PREDICATE = COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1828,6 +1874,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int GROUP__PRE_ANTLR_ACTION = COMPOUND_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1837,6 +1884,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int GROUP__POST_ANTLR_ACTION = COMPOUND_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1846,6 +1894,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int GROUP__IS_SEMANTIC_PREDICATE = COMPOUND_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -1922,6 +1971,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int CHARACTER_RANGE__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -1931,6 +1981,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int CHARACTER_RANGE__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -1940,6 +1991,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int CHARACTER_RANGE__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -2014,6 +2066,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int EOF__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -2023,6 +2076,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int EOF__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -2032,6 +2086,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int EOF__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -2371,6 +2426,7 @@
+ 	 * @see org.eclipse.xtext.impl.InitAfterActionsImpl
+ 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getInitAfterActions()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	int INIT_AFTER_ACTIONS = 35;
+ 
+@@ -2380,6 +2436,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int INIT_AFTER_ACTIONS__INIT_ACTION = 0;
+ 
+@@ -2389,6 +2446,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int INIT_AFTER_ACTIONS__AFTER_ACTION = 1;
+ 
+@@ -2398,6 +2456,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int INIT_AFTER_ACTIONS_FEATURE_COUNT = 2;
+ 
+@@ -2408,6 +2467,7 @@
+ 	 * @see org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl
+ 	 * @see org.eclipse.xtext.impl.XtextPackageImpl#getAbstractTokenAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION = 36;
+ 
+@@ -2417,6 +2477,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__CARDINALITY = ABSTRACT_ELEMENT__CARDINALITY;
+ 
+@@ -2426,6 +2487,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__PREDICATED = ABSTRACT_ELEMENT__PREDICATED;
+ 
+@@ -2435,6 +2497,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__FIRST_SET_PREDICATED = ABSTRACT_ELEMENT__FIRST_SET_PREDICATED;
+ 
+@@ -2444,6 +2507,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ANTLR_ACTION = ABSTRACT_ELEMENT__PRE_ANTLR_ACTION;
+ 
+@@ -2453,6 +2517,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__POST_ANTLR_ACTION = ABSTRACT_ELEMENT__POST_ANTLR_ACTION;
+ 
+@@ -2462,6 +2527,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE = ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE;
+ 
+@@ -2471,6 +2537,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ACTION = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+ 
+@@ -2480,6 +2547,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+ 
+@@ -2489,6 +2557,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2 = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
+ 
+@@ -2498,6 +2567,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT = ABSTRACT_ELEMENT_FEATURE_COUNT + 3;
+ 
+@@ -2507,6 +2577,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
+ 	 * @ordered
++	 * @since 3.0
+ 	 */
+ 	int ABSTRACT_TOKEN_ANTLR_ACTION_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 4;
+ 
+@@ -2768,6 +2839,7 @@
+ 	 * @see org.eclipse.xtext.ParserRule#getInitAfterActions()
+ 	 * @see #getParserRule()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EReference getParserRule_InitAfterActions();
+ 
+@@ -2855,6 +2927,7 @@
+ 	 * @see org.eclipse.xtext.AbstractElement#getPreAntlrAction()
+ 	 * @see #getAbstractElement()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getAbstractElement_PreAntlrAction();
+ 
+@@ -2866,6 +2939,7 @@
+ 	 * @see org.eclipse.xtext.AbstractElement#getPostAntlrAction()
+ 	 * @see #getAbstractElement()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getAbstractElement_PostAntlrAction();
+ 
+@@ -2877,6 +2951,7 @@
+ 	 * @see org.eclipse.xtext.AbstractElement#isIsSemanticPredicate()
+ 	 * @see #getAbstractElement()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getAbstractElement_IsSemanticPredicate();
+ 
+@@ -3093,6 +3168,7 @@
+ 	 * @see org.eclipse.xtext.TerminalRule#getPreAntlrAction()
+ 	 * @see #getTerminalRule()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getTerminalRule_PreAntlrAction();
+ 
+@@ -3104,6 +3180,7 @@
+ 	 * @see org.eclipse.xtext.TerminalRule#getPostAntlrAction()
+ 	 * @see #getTerminalRule()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getTerminalRule_PostAntlrAction();
+ 
+@@ -3115,6 +3192,7 @@
+ 	 * @see org.eclipse.xtext.TerminalRule#getIsSemanticPredicate()
+ 	 * @see #getTerminalRule()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getTerminalRule_IsSemanticPredicate();
+ 
+@@ -3530,6 +3608,7 @@
+ 	 * @return the meta object for class '<em>Init After Actions</em>'.
+ 	 * @see org.eclipse.xtext.InitAfterActions
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EClass getInitAfterActions();
+ 
+@@ -3541,6 +3620,7 @@
+ 	 * @see org.eclipse.xtext.InitAfterActions#getInitAction()
+ 	 * @see #getInitAfterActions()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getInitAfterActions_InitAction();
+ 
+@@ -3552,6 +3632,7 @@
+ 	 * @see org.eclipse.xtext.InitAfterActions#getAfterAction()
+ 	 * @see #getInitAfterActions()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getInitAfterActions_AfterAction();
+ 
+@@ -3562,6 +3643,7 @@
+ 	 * @return the meta object for class '<em>Abstract Token Antlr Action</em>'.
+ 	 * @see org.eclipse.xtext.AbstractTokenAntlrAction
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EClass getAbstractTokenAntlrAction();
+ 
+@@ -3573,6 +3655,7 @@
+ 	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#getPreAction()
+ 	 * @see #getAbstractTokenAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getAbstractTokenAntlrAction_PreAction();
+ 
+@@ -3584,6 +3667,7 @@
+ 	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#getPostAction()
+ 	 * @see #getAbstractTokenAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getAbstractTokenAntlrAction_PostAction();
+ 
+@@ -3595,6 +3679,7 @@
+ 	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#isIsSemanticPredicate2()
+ 	 * @see #getAbstractTokenAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate2();
+ 
+@@ -3606,6 +3691,7 @@
+ 	 * @see org.eclipse.xtext.AbstractTokenAntlrAction#getElement()
+ 	 * @see #getAbstractTokenAntlrAction()
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	EReference getAbstractTokenAntlrAction_Element();
+ 
+@@ -3835,6 +3921,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EReference PARSER_RULE__INIT_AFTER_ACTIONS = eINSTANCE.getParserRule_InitAfterActions();
+ 
+@@ -3904,6 +3991,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute ABSTRACT_ELEMENT__PRE_ANTLR_ACTION = eINSTANCE.getAbstractElement_PreAntlrAction();
+ 
+@@ -3912,6 +4000,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute ABSTRACT_ELEMENT__POST_ANTLR_ACTION = eINSTANCE.getAbstractElement_PostAntlrAction();
+ 
+@@ -3920,6 +4009,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute ABSTRACT_ELEMENT__IS_SEMANTIC_PREDICATE = eINSTANCE.getAbstractElement_IsSemanticPredicate();
+ 
+@@ -4094,6 +4184,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute TERMINAL_RULE__PRE_ANTLR_ACTION = eINSTANCE.getTerminalRule_PreAntlrAction();
+ 
+@@ -4102,6 +4193,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute TERMINAL_RULE__POST_ANTLR_ACTION = eINSTANCE.getTerminalRule_PostAntlrAction();
+ 
+@@ -4110,6 +4202,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute TERMINAL_RULE__IS_SEMANTIC_PREDICATE = eINSTANCE.getTerminalRule_IsSemanticPredicate();
+ 
+@@ -4477,6 +4570,7 @@
+ 		 * @see org.eclipse.xtext.impl.InitAfterActionsImpl
+ 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getInitAfterActions()
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EClass INIT_AFTER_ACTIONS = eINSTANCE.getInitAfterActions();
+ 
+@@ -4485,6 +4579,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute INIT_AFTER_ACTIONS__INIT_ACTION = eINSTANCE.getInitAfterActions_InitAction();
+ 
+@@ -4493,6 +4588,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute INIT_AFTER_ACTIONS__AFTER_ACTION = eINSTANCE.getInitAfterActions_AfterAction();
+ 
+@@ -4503,6 +4599,7 @@
+ 		 * @see org.eclipse.xtext.impl.AbstractTokenAntlrActionImpl
+ 		 * @see org.eclipse.xtext.impl.XtextPackageImpl#getAbstractTokenAntlrAction()
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EClass ABSTRACT_TOKEN_ANTLR_ACTION = eINSTANCE.getAbstractTokenAntlrAction();
+ 
+@@ -4511,6 +4608,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__PRE_ACTION = eINSTANCE.getAbstractTokenAntlrAction_PreAction();
+ 
+@@ -4519,6 +4617,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__POST_ACTION = eINSTANCE.getAbstractTokenAntlrAction_PostAction();
+ 
+@@ -4527,6 +4626,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EAttribute ABSTRACT_TOKEN_ANTLR_ACTION__IS_SEMANTIC_PREDICATE2 = eINSTANCE.getAbstractTokenAntlrAction_IsSemanticPredicate2();
+ 
+@@ -4535,6 +4635,7 @@
+ 		 * <!-- begin-user-doc -->
+ 		 * <!-- end-user-doc -->
+ 		 * @generated
++		 * @since 3.0
+ 		 */
+ 		EReference ABSTRACT_TOKEN_ANTLR_ACTION__ELEMENT = eINSTANCE.getAbstractTokenAntlrAction_Element();
+ 

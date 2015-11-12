@@ -1,0 +1,13 @@
+--- ./plugins/org.eclipse.xtext.xtext.ui/src-gen/org/eclipse/xtext/ui/contentassist/antlr/PartialXtextContentAssistParser.java.orig	2015-11-12 18:40:30.000000000 +0100
++++ ./plugins/org.eclipse.xtext.xtext.ui/src-gen/org/eclipse/xtext/ui/contentassist/antlr/PartialXtextContentAssistParser.java	2015-11-12 20:25:37.704675300 +0100
+@@ -12,8 +12,9 @@
+ import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.AbstractInternalContentAssistParser;
+ import org.eclipse.xtext.util.PolymorphicDispatcher;
+ 
+-/*
++/**
+  * Template CodetemplatesGeneratorFragment.xpt
++ * @since 2.9
+  */
+ public class PartialXtextContentAssistParser extends XtextParser implements IPartialContentAssistParser {
+ 

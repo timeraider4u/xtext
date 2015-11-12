@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/NamedArgument.java.orig	2015-11-12 18:40:02.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/NamedArgument.java	2015-11-12 19:57:02.830747021 +0100
+@@ -21,6 +21,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getNamedArgument()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface NamedArgument extends EObject {
+ 	/**

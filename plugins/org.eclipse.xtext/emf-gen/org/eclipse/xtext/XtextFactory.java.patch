@@ -1,0 +1,18 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/XtextFactory.java.orig	2015-11-12 18:40:01.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/XtextFactory.java	2015-11-12 19:35:21.111801462 +0100
+@@ -351,6 +351,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @return a new object of class '<em>Init After Actions</em>'.
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	InitAfterActions createInitAfterActions();
+ 
+@@ -360,6 +361,7 @@
+ 	 * <!-- end-user-doc -->
+ 	 * @return a new object of class '<em>Abstract Token Antlr Action</em>'.
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	AbstractTokenAntlrAction createAbstractTokenAntlrAction();
+ 

@@ -76,10 +76,10 @@ entryRuleGrammar returns [EObject current=null]
 // Rule Grammar
 ruleGrammar returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -365,10 +365,10 @@ entryRuleAbstractRule returns [EObject current=null]
 // Rule AbstractRule
 ruleAbstractRule returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -430,10 +430,10 @@ entryRuleAbstractMetamodelDeclaration returns [EObject current=null]
 // Rule AbstractMetamodelDeclaration
 ruleAbstractMetamodelDeclaration returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -482,10 +482,10 @@ entryRuleGeneratedMetamodel returns [EObject current=null]
 // Rule GeneratedMetamodel
 ruleGeneratedMetamodel returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -584,10 +584,10 @@ entryRuleReferencedMetamodel returns [EObject current=null]
 // Rule ReferencedMetamodel
 ruleReferencedMetamodel returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -665,10 +665,10 @@ entryRuleParserRule returns [EObject current=null]
 // Rule ParserRule
 ruleParserRule returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -983,10 +983,10 @@ entryRuleInitAfterActions returns [EObject current=null]
 // Rule InitAfterActions
 ruleInitAfterActions returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1288,10 +1288,10 @@ ruleActionCallParameter returns [AntlrDatatypeRuleToken current=new AntlrDatatyp
 // Rule RuleNameAndParams
 ruleRuleNameAndParams [EObject in_current] returns [EObject current=in_current] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1408,10 +1408,10 @@ entryRuleParameter returns [EObject current=null]
 // Rule Parameter
 ruleParameter returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1453,10 +1453,10 @@ entryRuleTypeRef returns [EObject current=null]
 // Rule TypeRef
 ruleTypeRef returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1522,10 +1522,10 @@ entryRuleAlternatives returns [EObject current=null]
 // Rule Alternatives
 ruleAlternatives returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1604,10 +1604,10 @@ entryRuleConditionalBranch returns [EObject current=null]
 // Rule ConditionalBranch
 ruleConditionalBranch returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1712,10 +1712,10 @@ entryRuleUnorderedGroup returns [EObject current=null]
 // Rule UnorderedGroup
 ruleUnorderedGroup returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1794,10 +1794,10 @@ entryRuleGroup returns [EObject current=null]
 // Rule Group
 ruleGroup returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1866,10 +1866,10 @@ entryRuleAbstractToken returns [EObject current=null]
 // Rule AbstractToken
 ruleAbstractToken returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -1918,10 +1918,10 @@ entryRuleAbstractTokenAntlrAction returns [EObject current=null]
 // Rule AbstractTokenAntlrAction
 ruleAbstractTokenAntlrAction returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2082,10 +2082,10 @@ entryRuleAbstractTokenWithCardinality returns [EObject current=null]
 // Rule AbstractTokenWithCardinality
 ruleAbstractTokenWithCardinality returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2191,10 +2191,10 @@ entryRuleAction returns [EObject current=null]
 // Rule Action
 ruleAction returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2330,10 +2330,10 @@ entryRuleAbstractTerminal returns [EObject current=null]
 // Rule AbstractTerminal
 ruleAbstractTerminal returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2434,10 +2434,10 @@ entryRuleKeyword returns [EObject current=null]
 // Rule Keyword
 ruleKeyword returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2479,10 +2479,10 @@ entryRuleRuleCall returns [EObject current=null]
 // Rule RuleCall
 ruleRuleCall returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2593,10 +2593,10 @@ entryRuleNamedArgument returns [EObject current=null]
 // Rule NamedArgument
 ruleNamedArgument returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2681,10 +2681,10 @@ entryRuleLiteralCondition returns [EObject current=null]
 // Rule LiteralCondition
 ruleLiteralCondition returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2749,10 +2749,10 @@ entryRuleDisjunction returns [EObject current=null]
 // Rule Disjunction
 ruleDisjunction returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2828,10 +2828,10 @@ entryRuleConjunction returns [EObject current=null]
 // Rule Conjunction
 ruleConjunction returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2907,10 +2907,10 @@ entryRuleNegation returns [EObject current=null]
 // Rule Negation
 ruleNegation returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -2987,10 +2987,10 @@ entryRuleAtom returns [EObject current=null]
 // Rule Atom
 ruleAtom returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3052,10 +3052,10 @@ entryRuleParenthesizedCondition returns [EObject current=null]
 // Rule ParenthesizedCondition
 ruleParenthesizedCondition returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3105,10 +3105,10 @@ entryRuleParameterReference returns [EObject current=null]
 // Rule ParameterReference
 ruleParameterReference returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3145,10 +3145,10 @@ entryRuleTerminalRuleCall returns [EObject current=null]
 // Rule TerminalRuleCall
 ruleTerminalRuleCall returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3278,10 +3278,10 @@ entryRulePredicatedKeyword returns [EObject current=null]
 // Rule PredicatedKeyword
 rulePredicatedKeyword returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3372,10 +3372,10 @@ entryRulePredicatedRuleCall returns [EObject current=null]
 // Rule PredicatedRuleCall
 rulePredicatedRuleCall returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3532,10 +3532,10 @@ entryRuleAssignment returns [EObject current=null]
 // Rule Assignment
 ruleAssignment returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3701,10 +3701,10 @@ entryRuleAssignableTerminal returns [EObject current=null]
 // Rule AssignableTerminal
 ruleAssignableTerminal returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3779,10 +3779,10 @@ entryRuleParenthesizedAssignableElement returns [EObject current=null]
 // Rule ParenthesizedAssignableElement
 ruleParenthesizedAssignableElement returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3832,10 +3832,10 @@ entryRuleAssignableAlternatives returns [EObject current=null]
 // Rule AssignableAlternatives
 ruleAssignableAlternatives returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -3914,10 +3914,10 @@ entryRuleCrossReference returns [EObject current=null]
 // Rule CrossReference
 ruleCrossReference returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4007,10 +4007,10 @@ entryRuleCrossReferenceableTerminal returns [EObject current=null]
 // Rule CrossReferenceableTerminal
 ruleCrossReferenceableTerminal returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4059,10 +4059,10 @@ entryRuleParenthesizedElement returns [EObject current=null]
 // Rule ParenthesizedElement
 ruleParenthesizedElement returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4112,10 +4112,10 @@ entryRulePredicatedGroup returns [EObject current=null]
 // Rule PredicatedGroup
 rulePredicatedGroup returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4220,10 +4220,10 @@ entryRuleTerminalRule returns [EObject current=null]
 // Rule TerminalRule
 ruleTerminalRule returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4346,18 +4346,91 @@ ruleTerminalRule returns [EObject current=null]
 
 
 (
+	otherlv_7='{' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_0());
+    }
+
+
+
+	otherlv_8='{' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_1());
+    }
+
+
+
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getTerminalRuleAccess().getPreAntlrActionActionCallParserRuleCall_3_2_0()); 
 	    }
-		lv_alternatives_7_0=ruleTerminalAlternatives		{
+		lv_preAntlrAction_9_0=ruleActionCall		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTerminalRuleRule());
+	        }
+       		set(
+       			$current, 
+       			"preAntlrAction",
+        		lv_preAntlrAction_9_0, 
+        		"org.eclipse.xtext.Xtext.ActionCall");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+
+
+	otherlv_10='}' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_3());
+    }
+
+
+
+(
+(
+		lv_isSemanticPredicate_11_0=
+	'?' 
+    {
+        newLeafNode(lv_isSemanticPredicate_11_0, grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateQuestionMarkKeyword_3_4_0());
+    }
+
+
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTerminalRuleRule());
+	        }
+       		setWithLastConsumed($current, "isSemanticPredicate", true, "?");
+	    }
+
+)
+)?
+
+
+	otherlv_12='}' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_5());
+    }
+
+
+)?
+
+
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_4_0()); 
+	    }
+		lv_alternatives_13_0=ruleTerminalAlternatives		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTerminalRuleRule());
 	        }
        		set(
        			$current, 
        			"alternatives",
-        		lv_alternatives_7_0, 
+        		lv_alternatives_13_0, 
         		"org.eclipse.xtext.Xtext.TerminalAlternatives");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -4366,9 +4439,61 @@ ruleTerminalRule returns [EObject current=null]
 )
 
 
-	otherlv_8=';' 
+(
+	otherlv_14='{' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getTerminalRuleAccess().getSemicolonKeyword_4());
+    	newLeafNode(otherlv_14, grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_0());
+    }
+
+
+
+	otherlv_15='{' 
+    {
+    	newLeafNode(otherlv_15, grammarAccess.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_1());
+    }
+
+
+
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTerminalRuleAccess().getPostAntlrActionActionCallParserRuleCall_5_2_0()); 
+	    }
+		lv_postAntlrAction_16_0=ruleActionCall		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getTerminalRuleRule());
+	        }
+       		set(
+       			$current, 
+       			"postAntlrAction",
+        		lv_postAntlrAction_16_0, 
+        		"org.eclipse.xtext.Xtext.ActionCall");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+
+
+	otherlv_17='}' 
+    {
+    	newLeafNode(otherlv_17, grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_3());
+    }
+
+
+
+	otherlv_18='}' 
+    {
+    	newLeafNode(otherlv_18, grammarAccess.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_4());
+    }
+
+
+)?
+
+
+	otherlv_19=';' 
+    {
+    	newLeafNode(otherlv_19, grammarAccess.getTerminalRuleAccess().getSemicolonKeyword_6());
     }
 
 
@@ -4393,10 +4518,10 @@ entryRuleTerminalAlternatives returns [EObject current=null]
 // Rule TerminalAlternatives
 ruleTerminalAlternatives returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4475,10 +4600,10 @@ entryRuleTerminalGroup returns [EObject current=null]
 // Rule TerminalGroup
 ruleTerminalGroup returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4547,10 +4672,10 @@ entryRuleTerminalToken returns [EObject current=null]
 // Rule TerminalToken
 ruleTerminalToken returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4640,10 +4765,10 @@ entryRuleTerminalTokenElement returns [EObject current=null]
 // Rule TerminalTokenElement
 ruleTerminalTokenElement returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4744,10 +4869,10 @@ entryRuleParenthesizedTerminalElement returns [EObject current=null]
 // Rule ParenthesizedTerminalElement
 ruleParenthesizedTerminalElement returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4797,10 +4922,10 @@ entryRuleAbstractNegatedToken returns [EObject current=null]
 // Rule AbstractNegatedToken
 ruleAbstractNegatedToken returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4849,10 +4974,10 @@ entryRuleNegatedToken returns [EObject current=null]
 // Rule NegatedToken
 ruleNegatedToken returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4904,10 +5029,10 @@ entryRuleUntilToken returns [EObject current=null]
 // Rule UntilToken
 ruleUntilToken returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -4959,10 +5084,10 @@ entryRuleWildcard returns [EObject current=null]
 // Rule Wildcard
 ruleWildcard returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -5002,10 +5127,10 @@ entryRuleEOF returns [EObject current=null]
 // Rule EOF
 ruleEOF returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -5045,10 +5170,10 @@ entryRuleCharacterRange returns [EObject current=null]
 // Rule CharacterRange
 ruleCharacterRange returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -5124,10 +5249,10 @@ entryRuleEnumRule returns [EObject current=null]
 // Rule EnumRule
 ruleEnumRule returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -5245,10 +5370,10 @@ entryRuleEnumLiterals returns [EObject current=null]
 // Rule EnumLiterals
 ruleEnumLiterals returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (
@@ -5327,10 +5452,10 @@ entryRuleEnumLiteralDeclaration returns [EObject current=null]
 // Rule EnumLiteralDeclaration
 ruleEnumLiteralDeclaration returns [EObject current=null] 
     @init { enterRule();
-   		
+   		/*no init found*/
     }
     @after { leaveRule();
-    		
+    		/*no after found*/
      }:
 
 (

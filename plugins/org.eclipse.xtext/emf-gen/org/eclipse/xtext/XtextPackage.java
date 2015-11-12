@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.EReference;
  * @see org.eclipse.xtext.XtextFactory
  * @model kind="package"
  * @generated
- * @since 3.0
  */
 public interface XtextPackage extends EPackage {
 	/**
@@ -1059,13 +1058,43 @@ public interface XtextPackage extends EPackage {
 	int TERMINAL_RULE__FRAGMENT = ABSTRACT_RULE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pre Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int TERMINAL_RULE__PRE_ANTLR_ACTION = ABSTRACT_RULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Post Antlr Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int TERMINAL_RULE__POST_ANTLR_ACTION = ABSTRACT_RULE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Semantic Predicate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 * @since 3.0
+	 */
+	int TERMINAL_RULE__IS_SEMANTIC_PREDICATE = ABSTRACT_RULE_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Terminal Rule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TERMINAL_RULE_FEATURE_COUNT = ABSTRACT_RULE_FEATURE_COUNT + 1;
+	int TERMINAL_RULE_FEATURE_COUNT = ABSTRACT_RULE_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.xtext.impl.AbstractNegatedTokenImpl <em>Abstract Negated Token</em>}' class.
@@ -3132,6 +3161,42 @@ public interface XtextPackage extends EPackage {
 	EAttribute getTerminalRule_Fragment();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.TerminalRule#getPreAntlrAction <em>Pre Antlr Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pre Antlr Action</em>'.
+	 * @see org.eclipse.xtext.TerminalRule#getPreAntlrAction()
+	 * @see #getTerminalRule()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getTerminalRule_PreAntlrAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.TerminalRule#getPostAntlrAction <em>Post Antlr Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Post Antlr Action</em>'.
+	 * @see org.eclipse.xtext.TerminalRule#getPostAntlrAction()
+	 * @see #getTerminalRule()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getTerminalRule_PostAntlrAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.xtext.TerminalRule#getIsSemanticPredicate <em>Is Semantic Predicate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Semantic Predicate</em>'.
+	 * @see org.eclipse.xtext.TerminalRule#getIsSemanticPredicate()
+	 * @see #getTerminalRule()
+	 * @generated
+	 * @since 3.0
+	 */
+	EAttribute getTerminalRule_IsSemanticPredicate();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.xtext.AbstractNegatedToken <em>Abstract Negated Token</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4113,6 +4178,33 @@ public interface XtextPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TERMINAL_RULE__FRAGMENT = eINSTANCE.getTerminalRule_Fragment();
+
+		/**
+		 * The meta object literal for the '<em><b>Pre Antlr Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute TERMINAL_RULE__PRE_ANTLR_ACTION = eINSTANCE.getTerminalRule_PreAntlrAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Post Antlr Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute TERMINAL_RULE__POST_ANTLR_ACTION = eINSTANCE.getTerminalRule_PostAntlrAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Semantic Predicate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 * @since 3.0
+		 */
+		EAttribute TERMINAL_RULE__IS_SEMANTIC_PREDICATE = eINSTANCE.getTerminalRule_IsSemanticPredicate();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.xtext.impl.AbstractNegatedTokenImpl <em>Abstract Negated Token</em>}' class.

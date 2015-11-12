@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/ParameterImpl.java.orig	2015-11-12 18:40:02.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/ParameterImpl.java	2015-11-12 20:01:36.456735577 +0100
+@@ -24,6 +24,7 @@
+  * </ul>
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class ParameterImpl extends MinimalEObjectImpl.Container implements Parameter {
+ 	/**

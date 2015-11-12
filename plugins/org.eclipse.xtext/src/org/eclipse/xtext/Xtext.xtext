@@ -252,7 +252,9 @@ PredicatedGroup returns Group:
 
 TerminalRule :
 	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':'
+	('{' '{' preAntlrAction=ActionCall '}' (isSemanticPredicate?='?')? '}')?
 		alternatives=TerminalAlternatives
+	('{' '{' postAntlrAction=ActionCall '}' '}')?
 	';'
 ;
 

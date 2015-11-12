@@ -80,6 +80,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TerminalRule" eSuperTypes="#//AbstractRule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fragment" eType="ecore:EDataType ../../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="preAntlrAction" eType="ecore:EDataType ../../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postAntlrAction" eType="ecore:EDataType ../../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSemanticPredicate" eType="ecore:EDataType ../../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBooleanObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractNegatedToken" eSuperTypes="#//AbstractElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="terminal" eType="#//AbstractElement"

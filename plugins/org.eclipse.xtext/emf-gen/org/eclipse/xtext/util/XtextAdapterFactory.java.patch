@@ -1,0 +1,18 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/util/XtextAdapterFactory.java.orig	2015-11-12 18:40:01.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/util/XtextAdapterFactory.java	2015-11-12 19:40:37.229788241 +0100
+@@ -743,6 +743,7 @@
+ 	 * @return the new adapter.
+ 	 * @see org.eclipse.xtext.InitAfterActions
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public Adapter createInitAfterActionsAdapter() {
+ 		return null;
+@@ -757,6 +758,7 @@
+ 	 * @return the new adapter.
+ 	 * @see org.eclipse.xtext.AbstractTokenAntlrAction
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public Adapter createAbstractTokenAntlrActionAdapter() {
+ 		return null;

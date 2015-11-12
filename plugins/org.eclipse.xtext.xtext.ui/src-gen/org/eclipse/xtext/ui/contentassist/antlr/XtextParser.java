@@ -16,7 +16,8 @@ import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.AbstractInternal
 import com.google.inject.Inject;
 
 import org.eclipse.xtext.services.XtextGrammarAccess;
-/**
+
+/***
  * @since 2.9
  */
 public class XtextParser extends AbstractContentAssistParser {
@@ -146,6 +147,8 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTerminalRuleAccess().getGroup_1_0(), "rule__TerminalRule__Group_1_0__0");
 					put(grammarAccess.getTerminalRuleAccess().getGroup_1_1(), "rule__TerminalRule__Group_1_1__0");
 					put(grammarAccess.getTerminalRuleAccess().getGroup_1_1_1(), "rule__TerminalRule__Group_1_1_1__0");
+					put(grammarAccess.getTerminalRuleAccess().getGroup_3(), "rule__TerminalRule__Group_3__0");
+					put(grammarAccess.getTerminalRuleAccess().getGroup_5(), "rule__TerminalRule__Group_5__0");
 					put(grammarAccess.getTerminalAlternativesAccess().getGroup(), "rule__TerminalAlternatives__Group__0");
 					put(grammarAccess.getTerminalAlternativesAccess().getGroup_1(), "rule__TerminalAlternatives__Group_1__0");
 					put(grammarAccess.getTerminalAlternativesAccess().getGroup_1_1(), "rule__TerminalAlternatives__Group_1_1__0");
@@ -244,7 +247,10 @@ public class XtextParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTerminalRuleAccess().getNameAssignment_1_0_1(), "rule__TerminalRule__NameAssignment_1_0_1");
 					put(grammarAccess.getTerminalRuleAccess().getNameAssignment_1_1_0(), "rule__TerminalRule__NameAssignment_1_1_0");
 					put(grammarAccess.getTerminalRuleAccess().getTypeAssignment_1_1_1_1(), "rule__TerminalRule__TypeAssignment_1_1_1_1");
-					put(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_3(), "rule__TerminalRule__AlternativesAssignment_3");
+					put(grammarAccess.getTerminalRuleAccess().getPreAntlrActionAssignment_3_2(), "rule__TerminalRule__PreAntlrActionAssignment_3_2");
+					put(grammarAccess.getTerminalRuleAccess().getIsSemanticPredicateAssignment_3_4(), "rule__TerminalRule__IsSemanticPredicateAssignment_3_4");
+					put(grammarAccess.getTerminalRuleAccess().getAlternativesAssignment_4(), "rule__TerminalRule__AlternativesAssignment_4");
+					put(grammarAccess.getTerminalRuleAccess().getPostAntlrActionAssignment_5_2(), "rule__TerminalRule__PostAntlrActionAssignment_5_2");
 					put(grammarAccess.getTerminalAlternativesAccess().getElementsAssignment_1_1_1(), "rule__TerminalAlternatives__ElementsAssignment_1_1_1");
 					put(grammarAccess.getTerminalGroupAccess().getElementsAssignment_1_1(), "rule__TerminalGroup__ElementsAssignment_1_1");
 					put(grammarAccess.getTerminalTokenAccess().getCardinalityAssignment_1(), "rule__TerminalToken__CardinalityAssignment_1");

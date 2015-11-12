@@ -2072,18 +2072,36 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_1_1_1_1 = (Assignment)cGroup_1_1_1.eContents().get(1);
 		private final RuleCall cTypeTypeRefParserRuleCall_1_1_1_1_0 = (RuleCall)cTypeAssignment_1_1_1_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cAlternativesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cAlternativesTerminalAlternativesParserRuleCall_3_0 = (RuleCall)cAlternativesAssignment_3.eContents().get(0);
-		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cPreAntlrActionAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cPreAntlrActionActionCallParserRuleCall_3_2_0 = (RuleCall)cPreAntlrActionAssignment_3_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
+		private final Assignment cIsSemanticPredicateAssignment_3_4 = (Assignment)cGroup_3.eContents().get(4);
+		private final Keyword cIsSemanticPredicateQuestionMarkKeyword_3_4_0 = (Keyword)cIsSemanticPredicateAssignment_3_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_5 = (Keyword)cGroup_3.eContents().get(5);
+		private final Assignment cAlternativesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cAlternativesTerminalAlternativesParserRuleCall_4_0 = (RuleCall)cAlternativesAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cLeftCurlyBracketKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cPostAntlrActionAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cPostAntlrActionActionCallParserRuleCall_5_2_0 = (RuleCall)cPostAntlrActionAssignment_5_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5_3 = (Keyword)cGroup_5.eContents().get(3);
+		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//TerminalRule:
-		//	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':'
-		//	alternatives=TerminalAlternatives
+		//	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':' ('{' '{'
+		//	preAntlrAction=ActionCall '}' isSemanticPredicate?='?'? '}')?
+		//	alternatives=TerminalAlternatives ('{' '{' postAntlrAction=ActionCall '}' '}')?
 		//	';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':'
-		//alternatives=TerminalAlternatives ';'
+		//'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':' ('{' '{'
+		//preAntlrAction=ActionCall '}' isSemanticPredicate?='?'? '}')? alternatives=TerminalAlternatives ('{' '{'
+		//postAntlrAction=ActionCall '}' '}')? ';'
 		public Group getGroup() { return cGroup; }
 
 		//'terminal'
@@ -2131,14 +2149,62 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 
+		//('{' '{' preAntlrAction=ActionCall '}' isSemanticPredicate?='?'? '}')?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_0() { return cLeftCurlyBracketKeyword_3_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+
+		//preAntlrAction=ActionCall
+		public Assignment getPreAntlrActionAssignment_3_2() { return cPreAntlrActionAssignment_3_2; }
+
+		//ActionCall
+		public RuleCall getPreAntlrActionActionCallParserRuleCall_3_2_0() { return cPreAntlrActionActionCallParserRuleCall_3_2_0; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_3() { return cRightCurlyBracketKeyword_3_3; }
+
+		//isSemanticPredicate?='?'?
+		public Assignment getIsSemanticPredicateAssignment_3_4() { return cIsSemanticPredicateAssignment_3_4; }
+
+		//'?'
+		public Keyword getIsSemanticPredicateQuestionMarkKeyword_3_4_0() { return cIsSemanticPredicateQuestionMarkKeyword_3_4_0; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_5() { return cRightCurlyBracketKeyword_3_5; }
+
 		//alternatives=TerminalAlternatives
-		public Assignment getAlternativesAssignment_3() { return cAlternativesAssignment_3; }
+		public Assignment getAlternativesAssignment_4() { return cAlternativesAssignment_4; }
 
 		//TerminalAlternatives
-		public RuleCall getAlternativesTerminalAlternativesParserRuleCall_3_0() { return cAlternativesTerminalAlternativesParserRuleCall_3_0; }
+		public RuleCall getAlternativesTerminalAlternativesParserRuleCall_4_0() { return cAlternativesTerminalAlternativesParserRuleCall_4_0; }
+
+		//('{' '{' postAntlrAction=ActionCall '}' '}')?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_5_0() { return cLeftCurlyBracketKeyword_5_0; }
+
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
+
+		//postAntlrAction=ActionCall
+		public Assignment getPostAntlrActionAssignment_5_2() { return cPostAntlrActionAssignment_5_2; }
+
+		//ActionCall
+		public RuleCall getPostAntlrActionActionCallParserRuleCall_5_2_0() { return cPostAntlrActionActionCallParserRuleCall_5_2_0; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5_3() { return cRightCurlyBracketKeyword_5_3; }
+
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
 
 		//';'
-		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 
 	public class TerminalAlternativesElements extends AbstractParserRuleElementFinder {
@@ -3245,8 +3311,9 @@ public class XtextGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TerminalRule:
-	//	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':'
-	//	alternatives=TerminalAlternatives
+	//	'terminal' (^fragment?='fragment' name=ValidID | name=ValidID ('returns' type=TypeRef)?) ':' ('{' '{'
+	//	preAntlrAction=ActionCall '}' isSemanticPredicate?='?'? '}')?
+	//	alternatives=TerminalAlternatives ('{' '{' postAntlrAction=ActionCall '}' '}')?
 	//	';';
 	public TerminalRuleElements getTerminalRuleAccess() {
 		return pTerminalRule;

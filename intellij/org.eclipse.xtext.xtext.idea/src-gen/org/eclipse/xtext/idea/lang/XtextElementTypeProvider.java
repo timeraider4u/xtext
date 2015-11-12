@@ -2461,14 +2461,62 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		public static IGrammarAwareElementType createTerminalRule_ColonKeyword_2ElementType() {
 			return new IGrammarAwareElementType("TerminalRule_ColonKeyword_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getColonKeyword_2());
 		}
-		public static IGrammarAwareElementType createTerminalRule_AlternativesAssignment_3ElementType() {
-			return new IGrammarAwareElementType("TerminalRule_AlternativesAssignment_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getAlternativesAssignment_3());
+		public static IGrammarAwareElementType createTerminalRule_Group_3ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_Group_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getGroup_3());
 		}
-		public static IGrammarAwareElementType createTerminalRule_AlternativesTerminalAlternativesParserRuleCall_3_0ElementType() {
-			return new IGrammarAwareElementType("TerminalRule_AlternativesTerminalAlternativesParserRuleCall_3_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_3_0());
+		public static IGrammarAwareElementType createTerminalRule_LeftCurlyBracketKeyword_3_0ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_LeftCurlyBracketKeyword_3_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_0());
 		}
-		public static IGrammarAwareElementType createTerminalRule_SemicolonKeyword_4ElementType() {
-			return new IGrammarAwareElementType("TerminalRule_SemicolonKeyword_4_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getSemicolonKeyword_4());
+		public static IGrammarAwareElementType createTerminalRule_LeftCurlyBracketKeyword_3_1ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_LeftCurlyBracketKeyword_3_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getLeftCurlyBracketKeyword_3_1());
+		}
+		public static IGrammarAwareElementType createTerminalRule_PreAntlrActionAssignment_3_2ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_PreAntlrActionAssignment_3_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getPreAntlrActionAssignment_3_2());
+		}
+		public static IGrammarAwareElementType createTerminalRule_PreAntlrActionActionCallParserRuleCall_3_2_0ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_PreAntlrActionActionCallParserRuleCall_3_2_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getPreAntlrActionActionCallParserRuleCall_3_2_0());
+		}
+		public static IGrammarAwareElementType createTerminalRule_RightCurlyBracketKeyword_3_3ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_RightCurlyBracketKeyword_3_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_3());
+		}
+		public static IGrammarAwareElementType createTerminalRule_IsSemanticPredicateAssignment_3_4ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_IsSemanticPredicateAssignment_3_4_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getIsSemanticPredicateAssignment_3_4());
+		}
+		public static IGrammarAwareElementType createTerminalRule_IsSemanticPredicateQuestionMarkKeyword_3_4_0ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_IsSemanticPredicateQuestionMarkKeyword_3_4_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getIsSemanticPredicateQuestionMarkKeyword_3_4_0());
+		}
+		public static IGrammarAwareElementType createTerminalRule_RightCurlyBracketKeyword_3_5ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_RightCurlyBracketKeyword_3_5_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getRightCurlyBracketKeyword_3_5());
+		}
+		public static IGrammarAwareElementType createTerminalRule_AlternativesAssignment_4ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_AlternativesAssignment_4_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getAlternativesAssignment_4());
+		}
+		public static IGrammarAwareElementType createTerminalRule_AlternativesTerminalAlternativesParserRuleCall_4_0ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_AlternativesTerminalAlternativesParserRuleCall_4_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getAlternativesTerminalAlternativesParserRuleCall_4_0());
+		}
+		public static IGrammarAwareElementType createTerminalRule_Group_5ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_Group_5_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getGroup_5());
+		}
+		public static IGrammarAwareElementType createTerminalRule_LeftCurlyBracketKeyword_5_0ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_LeftCurlyBracketKeyword_5_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_0());
+		}
+		public static IGrammarAwareElementType createTerminalRule_LeftCurlyBracketKeyword_5_1ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_LeftCurlyBracketKeyword_5_1_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getLeftCurlyBracketKeyword_5_1());
+		}
+		public static IGrammarAwareElementType createTerminalRule_PostAntlrActionAssignment_5_2ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_PostAntlrActionAssignment_5_2_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getPostAntlrActionAssignment_5_2());
+		}
+		public static IGrammarAwareElementType createTerminalRule_PostAntlrActionActionCallParserRuleCall_5_2_0ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_PostAntlrActionActionCallParserRuleCall_5_2_0_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getPostAntlrActionActionCallParserRuleCall_5_2_0());
+		}
+		public static IGrammarAwareElementType createTerminalRule_RightCurlyBracketKeyword_5_3ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_RightCurlyBracketKeyword_5_3_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_3());
+		}
+		public static IGrammarAwareElementType createTerminalRule_RightCurlyBracketKeyword_5_4ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_RightCurlyBracketKeyword_5_4_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getRightCurlyBracketKeyword_5_4());
+		}
+		public static IGrammarAwareElementType createTerminalRule_SemicolonKeyword_6ElementType() {
+			return new IGrammarAwareElementType("TerminalRule_SemicolonKeyword_6_ELEMENT_TYPE", XtextLanguage.INSTANCE, GRAMMAR_ACCESS.getTerminalRuleAccess().getSemicolonKeyword_6());
 		}
 	}
 
@@ -2506,11 +2554,43 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 
 	public static final IGrammarAwareElementType TerminalRule_ColonKeyword_2_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_ColonKeyword_2ElementType());
 
-	public static final IGrammarAwareElementType TerminalRule_AlternativesAssignment_3_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_AlternativesAssignment_3ElementType());
+	public static final IGrammarAwareElementType TerminalRule_Group_3_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_Group_3ElementType());
 
-	public static final IGrammarAwareElementType TerminalRule_AlternativesTerminalAlternativesParserRuleCall_3_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_AlternativesTerminalAlternativesParserRuleCall_3_0ElementType());
+	public static final IGrammarAwareElementType TerminalRule_LeftCurlyBracketKeyword_3_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_LeftCurlyBracketKeyword_3_0ElementType());
 
-	public static final IGrammarAwareElementType TerminalRule_SemicolonKeyword_4_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_SemicolonKeyword_4ElementType());
+	public static final IGrammarAwareElementType TerminalRule_LeftCurlyBracketKeyword_3_1_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_LeftCurlyBracketKeyword_3_1ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_PreAntlrActionAssignment_3_2_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_PreAntlrActionAssignment_3_2ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_PreAntlrActionActionCallParserRuleCall_3_2_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_PreAntlrActionActionCallParserRuleCall_3_2_0ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_RightCurlyBracketKeyword_3_3_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_RightCurlyBracketKeyword_3_3ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_IsSemanticPredicateAssignment_3_4_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_IsSemanticPredicateAssignment_3_4ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_IsSemanticPredicateQuestionMarkKeyword_3_4_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_IsSemanticPredicateQuestionMarkKeyword_3_4_0ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_RightCurlyBracketKeyword_3_5_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_RightCurlyBracketKeyword_3_5ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_AlternativesAssignment_4_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_AlternativesAssignment_4ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_AlternativesTerminalAlternativesParserRuleCall_4_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_AlternativesTerminalAlternativesParserRuleCall_4_0ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_Group_5_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_Group_5ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_LeftCurlyBracketKeyword_5_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_LeftCurlyBracketKeyword_5_0ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_LeftCurlyBracketKeyword_5_1_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_LeftCurlyBracketKeyword_5_1ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_PostAntlrActionAssignment_5_2_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_PostAntlrActionAssignment_5_2ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_PostAntlrActionActionCallParserRuleCall_5_2_0_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_PostAntlrActionActionCallParserRuleCall_5_2_0ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_RightCurlyBracketKeyword_5_3_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_RightCurlyBracketKeyword_5_3ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_RightCurlyBracketKeyword_5_4_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_RightCurlyBracketKeyword_5_4ElementType());
+
+	public static final IGrammarAwareElementType TerminalRule_SemicolonKeyword_6_ELEMENT_TYPE = associate(TerminalRuleFactory.createTerminalRule_SemicolonKeyword_6ElementType());
 
 	private static class TerminalAlternativesFactory {
 		public static IGrammarAwareElementType createTerminalAlternativesElementType() {
@@ -4918,16 +4998,80 @@ public class XtextElementTypeProvider implements IElementTypeProvider {
 		return TerminalRule_ColonKeyword_2_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getTerminalRule_AlternativesAssignment_3ElementType() {
-		return TerminalRule_AlternativesAssignment_3_ELEMENT_TYPE;
+	public IGrammarAwareElementType getTerminalRule_Group_3ElementType() {
+		return TerminalRule_Group_3_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getTerminalRule_AlternativesTerminalAlternativesParserRuleCall_3_0ElementType() {
-		return TerminalRule_AlternativesTerminalAlternativesParserRuleCall_3_0_ELEMENT_TYPE;
+	public IGrammarAwareElementType getTerminalRule_LeftCurlyBracketKeyword_3_0ElementType() {
+		return TerminalRule_LeftCurlyBracketKeyword_3_0_ELEMENT_TYPE;
 	}
 
-	public IGrammarAwareElementType getTerminalRule_SemicolonKeyword_4ElementType() {
-		return TerminalRule_SemicolonKeyword_4_ELEMENT_TYPE;
+	public IGrammarAwareElementType getTerminalRule_LeftCurlyBracketKeyword_3_1ElementType() {
+		return TerminalRule_LeftCurlyBracketKeyword_3_1_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_PreAntlrActionAssignment_3_2ElementType() {
+		return TerminalRule_PreAntlrActionAssignment_3_2_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_PreAntlrActionActionCallParserRuleCall_3_2_0ElementType() {
+		return TerminalRule_PreAntlrActionActionCallParserRuleCall_3_2_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_RightCurlyBracketKeyword_3_3ElementType() {
+		return TerminalRule_RightCurlyBracketKeyword_3_3_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_IsSemanticPredicateAssignment_3_4ElementType() {
+		return TerminalRule_IsSemanticPredicateAssignment_3_4_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_IsSemanticPredicateQuestionMarkKeyword_3_4_0ElementType() {
+		return TerminalRule_IsSemanticPredicateQuestionMarkKeyword_3_4_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_RightCurlyBracketKeyword_3_5ElementType() {
+		return TerminalRule_RightCurlyBracketKeyword_3_5_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_AlternativesAssignment_4ElementType() {
+		return TerminalRule_AlternativesAssignment_4_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_AlternativesTerminalAlternativesParserRuleCall_4_0ElementType() {
+		return TerminalRule_AlternativesTerminalAlternativesParserRuleCall_4_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_Group_5ElementType() {
+		return TerminalRule_Group_5_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_LeftCurlyBracketKeyword_5_0ElementType() {
+		return TerminalRule_LeftCurlyBracketKeyword_5_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_LeftCurlyBracketKeyword_5_1ElementType() {
+		return TerminalRule_LeftCurlyBracketKeyword_5_1_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_PostAntlrActionAssignment_5_2ElementType() {
+		return TerminalRule_PostAntlrActionAssignment_5_2_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_PostAntlrActionActionCallParserRuleCall_5_2_0ElementType() {
+		return TerminalRule_PostAntlrActionActionCallParserRuleCall_5_2_0_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_RightCurlyBracketKeyword_5_3ElementType() {
+		return TerminalRule_RightCurlyBracketKeyword_5_3_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_RightCurlyBracketKeyword_5_4ElementType() {
+		return TerminalRule_RightCurlyBracketKeyword_5_4_ELEMENT_TYPE;
+	}
+
+	public IGrammarAwareElementType getTerminalRule_SemicolonKeyword_6ElementType() {
+		return TerminalRule_SemicolonKeyword_6_ELEMENT_TYPE;
 	}
 
 	public IGrammarAwareElementType getTerminalAlternativesElementType() {

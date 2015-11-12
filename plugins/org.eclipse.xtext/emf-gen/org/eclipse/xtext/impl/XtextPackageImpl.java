@@ -54,9 +54,6 @@ import org.eclipse.xtext.XtextPackage;
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
- * @noextend This class is not intended to be subclassed by clients.
- * @noinstantiate This class is not intended to be instantiated by clients.
- * @noreference This class is not intended to be referenced by clients.
  */
 public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	/**
@@ -308,7 +305,6 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 3.0
 	 */
 	private EClass initAfterActionsEClass = null;
 
@@ -316,7 +312,6 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
-	 * @since 3.0
 	 */
 	private EClass abstractTokenAntlrActionEClass = null;
 
@@ -672,6 +667,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getAbstractElement_PreAntlrAction() {
 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(3);
@@ -681,6 +677,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getAbstractElement_PostAntlrAction() {
 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(4);
@@ -690,6 +687,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getAbstractElement_IsSemanticPredicate() {
 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(5);
@@ -872,6 +870,36 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
+	 */
+	public EAttribute getTerminalRule_PreAntlrAction() {
+		return (EAttribute)terminalRuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public EAttribute getTerminalRule_PostAntlrAction() {
+		return (EAttribute)terminalRuleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @since 3.0
+	 */
+	public EAttribute getTerminalRule_IsSemanticPredicate() {
+		return (EAttribute)terminalRuleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	public EClass getAbstractNegatedToken() {
 		return abstractNegatedTokenEClass;
@@ -980,6 +1008,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getGroup_GuardCondition() {
 		return (EReference)groupEClass.getEStructuralFeatures().get(0);
@@ -1093,6 +1122,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getNamedArgument_CalledByName() {
 		return (EAttribute)namedArgumentEClass.getEStructuralFeatures().get(2);
@@ -1102,6 +1132,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getCondition() {
 		return conditionEClass;
@@ -1111,6 +1142,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getConjunction() {
 		return conjunctionEClass;
@@ -1120,6 +1152,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getNegation() {
 		return negationEClass;
@@ -1129,6 +1162,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getNegation_Value() {
 		return (EReference)negationEClass.getEStructuralFeatures().get(0);
@@ -1138,6 +1172,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getDisjunction() {
 		return disjunctionEClass;
@@ -1147,6 +1182,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getCompositeCondition() {
 		return compositeConditionEClass;
@@ -1156,6 +1192,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getCompositeCondition_Left() {
 		return (EReference)compositeConditionEClass.getEStructuralFeatures().get(0);
@@ -1165,6 +1202,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getCompositeCondition_Right() {
 		return (EReference)compositeConditionEClass.getEStructuralFeatures().get(1);
@@ -1174,6 +1212,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getParameterReference() {
 		return parameterReferenceEClass;
@@ -1183,6 +1222,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EReference getParameterReference_Parameter() {
 		return (EReference)parameterReferenceEClass.getEStructuralFeatures().get(0);
@@ -1192,6 +1232,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EClass getLiteralCondition() {
 		return literalConditionEClass;
@@ -1201,6 +1242,7 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
+	 * @since 3.0
 	 */
 	public EAttribute getLiteralCondition_True() {
 		return (EAttribute)literalConditionEClass.getEStructuralFeatures().get(0);
@@ -1380,6 +1422,9 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 		terminalRuleEClass = createEClass(TERMINAL_RULE);
 		createEAttribute(terminalRuleEClass, TERMINAL_RULE__FRAGMENT);
+		createEAttribute(terminalRuleEClass, TERMINAL_RULE__PRE_ANTLR_ACTION);
+		createEAttribute(terminalRuleEClass, TERMINAL_RULE__POST_ANTLR_ACTION);
+		createEAttribute(terminalRuleEClass, TERMINAL_RULE__IS_SEMANTIC_PREDICATE);
 
 		abstractNegatedTokenEClass = createEClass(ABSTRACT_NEGATED_TOKEN);
 		createEReference(abstractNegatedTokenEClass, ABSTRACT_NEGATED_TOKEN__TERMINAL);
@@ -1577,6 +1622,9 @@ public class XtextPackageImpl extends EPackageImpl implements XtextPackage {
 
 		initEClass(terminalRuleEClass, TerminalRule.class, "TerminalRule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTerminalRule_Fragment(), theEcorePackage.getEBoolean(), "fragment", null, 0, 1, TerminalRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerminalRule_PreAntlrAction(), theEcorePackage.getEString(), "preAntlrAction", null, 0, 1, TerminalRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerminalRule_PostAntlrAction(), theEcorePackage.getEString(), "postAntlrAction", null, 0, 1, TerminalRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTerminalRule_IsSemanticPredicate(), theEcorePackage.getEBooleanObject(), "isSemanticPredicate", null, 0, 1, TerminalRule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractNegatedTokenEClass, AbstractNegatedToken.class, "AbstractNegatedToken", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractNegatedToken_Terminal(), this.getAbstractElement(), null, "terminal", null, 0, 1, AbstractNegatedToken.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

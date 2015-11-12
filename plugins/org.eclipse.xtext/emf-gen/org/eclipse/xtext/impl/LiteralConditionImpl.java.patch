@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/LiteralConditionImpl.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/LiteralConditionImpl.java	2015-11-12 19:59:16.892741414 +0100
+@@ -23,6 +23,7 @@
+  * </ul>
+  *
+  * @generated
++ * @since 3.0
+  */
+ public class LiteralConditionImpl extends ConditionImpl implements LiteralCondition {
+ 	/**

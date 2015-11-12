@@ -1,0 +1,234 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/XtextPackageImpl.java.orig	2015-11-12 18:40:01.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/impl/XtextPackageImpl.java	2015-11-12 20:11:22.870711051 +0100
+@@ -593,6 +593,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getParserRule_InitAfterActions() {
+ 		return (EReference)parserRuleEClass.getEStructuralFeatures().get(5);
+@@ -666,6 +667,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getAbstractElement_PreAntlrAction() {
+ 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(3);
+@@ -675,6 +677,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getAbstractElement_PostAntlrAction() {
+ 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(4);
+@@ -684,6 +687,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getAbstractElement_IsSemanticPredicate() {
+ 		return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(5);
+@@ -866,6 +870,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getTerminalRule_PreAntlrAction() {
+ 		return (EAttribute)terminalRuleEClass.getEStructuralFeatures().get(1);
+@@ -875,6 +880,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getTerminalRule_PostAntlrAction() {
+ 		return (EAttribute)terminalRuleEClass.getEStructuralFeatures().get(2);
+@@ -884,6 +890,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getTerminalRule_IsSemanticPredicate() {
+ 		return (EAttribute)terminalRuleEClass.getEStructuralFeatures().get(3);
+@@ -1001,6 +1008,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getGroup_GuardCondition() {
+ 		return (EReference)groupEClass.getEStructuralFeatures().get(0);
+@@ -1114,6 +1122,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getNamedArgument_CalledByName() {
+ 		return (EAttribute)namedArgumentEClass.getEStructuralFeatures().get(2);
+@@ -1123,6 +1132,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getCondition() {
+ 		return conditionEClass;
+@@ -1132,6 +1142,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getConjunction() {
+ 		return conjunctionEClass;
+@@ -1141,6 +1152,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getNegation() {
+ 		return negationEClass;
+@@ -1150,6 +1162,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getNegation_Value() {
+ 		return (EReference)negationEClass.getEStructuralFeatures().get(0);
+@@ -1159,6 +1172,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getDisjunction() {
+ 		return disjunctionEClass;
+@@ -1168,6 +1182,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getCompositeCondition() {
+ 		return compositeConditionEClass;
+@@ -1177,6 +1192,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getCompositeCondition_Left() {
+ 		return (EReference)compositeConditionEClass.getEStructuralFeatures().get(0);
+@@ -1186,6 +1202,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getCompositeCondition_Right() {
+ 		return (EReference)compositeConditionEClass.getEStructuralFeatures().get(1);
+@@ -1195,6 +1212,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getParameterReference() {
+ 		return parameterReferenceEClass;
+@@ -1204,6 +1222,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getParameterReference_Parameter() {
+ 		return (EReference)parameterReferenceEClass.getEStructuralFeatures().get(0);
+@@ -1213,6 +1232,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getLiteralCondition() {
+ 		return literalConditionEClass;
+@@ -1222,6 +1242,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getLiteralCondition_True() {
+ 		return (EAttribute)literalConditionEClass.getEStructuralFeatures().get(0);
+@@ -1231,6 +1252,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getInitAfterActions() {
+ 		return initAfterActionsEClass;
+@@ -1240,6 +1262,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getInitAfterActions_InitAction() {
+ 		return (EAttribute)initAfterActionsEClass.getEStructuralFeatures().get(0);
+@@ -1249,6 +1272,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getInitAfterActions_AfterAction() {
+ 		return (EAttribute)initAfterActionsEClass.getEStructuralFeatures().get(1);
+@@ -1258,6 +1282,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EClass getAbstractTokenAntlrAction() {
+ 		return abstractTokenAntlrActionEClass;
+@@ -1267,6 +1292,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getAbstractTokenAntlrAction_PreAction() {
+ 		return (EAttribute)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(0);
+@@ -1276,6 +1302,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getAbstractTokenAntlrAction_PostAction() {
+ 		return (EAttribute)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(1);
+@@ -1285,6 +1312,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EAttribute getAbstractTokenAntlrAction_IsSemanticPredicate2() {
+ 		return (EAttribute)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(2);
+@@ -1294,6 +1322,7 @@
+ 	 * <!-- begin-user-doc -->
+ 	 * <!-- end-user-doc -->
+ 	 * @generated
++	 * @since 3.0
+ 	 */
+ 	public EReference getAbstractTokenAntlrAction_Element() {
+ 		return (EReference)abstractTokenAntlrActionEClass.getEStructuralFeatures().get(3);

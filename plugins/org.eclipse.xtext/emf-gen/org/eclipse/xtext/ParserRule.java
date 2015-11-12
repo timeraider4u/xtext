@@ -24,8 +24,6 @@ import org.eclipse.emf.common.util.EList;
  * @see org.eclipse.xtext.XtextPackage#getParserRule()
  * @model
  * @generated
- * @noimplement This interface is not intended to be implemented by clients.
- * @noextend This interface is not intended to be extended by clients.
  */
 public interface ParserRule extends AbstractRule {
 	/**

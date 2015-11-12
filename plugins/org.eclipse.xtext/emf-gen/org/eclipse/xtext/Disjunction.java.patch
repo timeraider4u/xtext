@@ -1,0 +1,10 @@
+--- ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/Disjunction.java.orig	2015-11-12 18:40:03.000000000 +0100
++++ ./plugins/org.eclipse.xtext/emf-gen/org/eclipse/xtext/Disjunction.java	2015-11-12 19:43:08.486781915 +0100
+@@ -12,6 +12,7 @@
+  * @see org.eclipse.xtext.XtextPackage#getDisjunction()
+  * @model
+  * @generated
++ * @since 3.0
+  */
+ public interface Disjunction extends CompositeCondition {
+ } // Disjunction
