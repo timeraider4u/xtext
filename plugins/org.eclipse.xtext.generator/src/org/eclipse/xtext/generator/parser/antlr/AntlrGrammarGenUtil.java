@@ -29,6 +29,7 @@ import org.eclipse.xtext.ParameterReference;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.RuleNames;
+import org.eclipse.xtext.TerminalRule;
 import org.eclipse.xtext.util.Strings;
 import org.eclipse.xtext.util.XtextSwitch;
 import org.eclipse.xtext.xbase.lib.Functions;
@@ -410,5 +411,17 @@ public class AntlrGrammarGenUtil {
 		if (string == null)
 			return false;
 		return (!(string.isEmpty()));
+	}
+	
+	/***
+	 * @since 3.0
+	 */
+	public static TerminalRule getOriginalTerminalRule(TerminalRule rule) {
+		try {
+			return getOriginalElement(rule);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return null;
+		}
 	}
 }

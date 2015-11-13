@@ -39,18 +39,21 @@ public class TerminalRuleToLexerBody extends XtextSwitch<String>{
 	}
 
 	public String print(TerminalRule rule) {
-		System.err.println("TerminalRuleToLexerBody.print('" + rule.getName() + "')");
-		System.err.println("TerminalRuleToLexerBody.print('isSemantic='" + rule.getIsSemanticPredicate() + "'");
-		appendPreAntlrAction(rule);
+		final TerminalRule original = AntlrGrammarGenUtil.getOriginalTerminalRule(rule);
+		//System.err.println("TerminalRuleToLexerBody.print(object='" + rule.toString() + "')");
+		//System.err.println("TerminalRuleToLexerBody.print(original='" + original.toString() + "')");
+		appendPreAntlrAction(original);
 		doSwitch(rule.getAlternatives());
-		appendPostAntlrAction(rule);
-		System.err.println("result.toString()='" + result.toString() + "'");
+		appendPostAntlrAction(original);
+		//System.err.println("result.toString()='" + result.toString() + "'");
 		return result.toString();
 	}
 	
 	private void appendPreAntlrAction(TerminalRule object) {
+		if (object == null) {
+			return;
+		}
 		final String action = object.getPreAntlrAction();
-		System.err.println("TerminalRuleToLexerBody.appendPreAntlrAction, action='" + action + "'");
 		if (action == null || action.isEmpty()) {
 			return;
 		}
@@ -63,12 +66,14 @@ public class TerminalRuleToLexerBody extends XtextSwitch<String>{
 	}
 	
 	private void appendPostAntlrAction(TerminalRule object) {
+		if (object == null) {
+			return;
+		}
 		final String action = object.getPostAntlrAction();
-		System.err.println("TerminalRuleToLexerBody.appendPostAntlrAction, action='" + action + "'");
 		if (action == null || action.isEmpty()) {
 			return;
 		}
-		result.append("{");
+		result.append(" {");
 		result.append(action);
 		result.append("}");
 	}
