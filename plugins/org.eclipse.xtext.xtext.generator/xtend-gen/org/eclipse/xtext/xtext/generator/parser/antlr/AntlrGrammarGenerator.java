@@ -451,12 +451,17 @@ public class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenera
     _builder.newLine();
     {
       if ((it instanceof ParserRule)) {
-        _builder.append("\t");
-        InitAfterActions _initAfterActions_1 = ((ParserRule)it).getInitAfterActions();
-        String _afterAction = _initAfterActions_1.getAfterAction();
-        String _string_1 = _afterAction.toString();
-        _builder.append(_string_1, "\t");
-        _builder.newLineIfNotEmpty();
+        {
+          boolean _isActionInBacktrackingZero = options.isActionInBacktrackingZero();
+          if (_isActionInBacktrackingZero) {
+            _builder.append("\t");
+            InitAfterActions _initAfterActions_1 = ((ParserRule)it).getInitAfterActions();
+            String _afterAction = _initAfterActions_1.getAfterAction();
+            String _string_1 = _afterAction.toString();
+            _builder.append(_string_1, "\t");
+            _builder.newLineIfNotEmpty();
+          }
+        }
       }
     }
     _builder.append("}");

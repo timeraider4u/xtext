@@ -165,8 +165,10 @@ class AntlrGrammarGenerator extends AbstractAntlrGrammarWithActionsGenerator {
 		}
 		@after {
 			leaveRule();
-			«IF it instanceof ParserRule» 
-				«it.initAfterActions.afterAction.toString()»
+			«IF it instanceof ParserRule»
+				«IF options.actionInBacktrackingZero» 
+					«it.initAfterActions.afterAction.toString()»
+				«ENDIF»
 			«ENDIF»
 		}'''
 	

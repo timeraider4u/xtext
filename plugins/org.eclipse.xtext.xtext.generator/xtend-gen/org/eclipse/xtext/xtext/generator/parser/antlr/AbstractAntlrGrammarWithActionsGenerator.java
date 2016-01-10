@@ -21,6 +21,7 @@ import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
+import org.eclipse.xtext.InitAfterActions;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.UnorderedGroup;
@@ -183,6 +184,22 @@ public abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractA
         CharSequence _compileRestoreUnorderedGroups = this.compileRestoreUnorderedGroups(it, options);
         _builder.append(_compileRestoreUnorderedGroups, "\t");
         _builder.newLineIfNotEmpty();
+        {
+          if ((it instanceof ParserRule)) {
+            {
+              boolean _isActionInBacktrackingZero = options.isActionInBacktrackingZero();
+              boolean _not = (!_isActionInBacktrackingZero);
+              if (_not) {
+                _builder.append("\t");
+                InitAfterActions _initAfterActions = it.getInitAfterActions();
+                String _afterAction = _initAfterActions.getAfterAction();
+                String _string = _afterAction.toString();
+                _builder.append(_string, "\t");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          }
+        }
         _builder.append("}");
       }
     }

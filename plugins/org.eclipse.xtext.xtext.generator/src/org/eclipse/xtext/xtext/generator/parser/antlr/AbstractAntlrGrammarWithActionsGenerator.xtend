@@ -71,6 +71,11 @@ abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractAntlrGra
 		finally {
 			«compileRestoreHiddenTokens(options)»
 			«compileRestoreUnorderedGroups(options)»
+			«IF it instanceof ParserRule»
+				«IF !options.actionInBacktrackingZero» 
+					«it.initAfterActions.afterAction.toString()»
+				«ENDIF»
+			«ENDIF»
 		}«ENDIF»'''
 
 	protected def dispatch compileRestoreHiddenTokens(AbstractRule it, AntlrOptions options) {

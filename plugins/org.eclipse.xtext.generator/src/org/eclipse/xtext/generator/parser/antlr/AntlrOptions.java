@@ -25,6 +25,8 @@ public class AntlrOptions {
 	private int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS;
 	private boolean skipUnusedRules = false;
 	private boolean forceHoisting = false;
+	private boolean actionInBacktrackingZero = false;
+	private boolean semanticPredicateInBacktrackingZero = false;
 
 	public boolean isBacktrack() {
 		return backtrack;
@@ -119,6 +121,30 @@ public class AntlrOptions {
 	 */
 	public void setForceHoisting(boolean forceHoisting) {
 		this.forceHoisting = forceHoisting;
+	}
+	/**
+	 * @since 3.0
+	 */
+	public boolean isActionInBacktrackingZero() {
+		return actionInBacktrackingZero;
+	}
+	/**
+	 * @since 3.0
+	 */
+	public void setActionInBacktrackingZero(boolean actionInBacktrackingZero) {
+		this.actionInBacktrackingZero = actionInBacktrackingZero;
+	}
+	/**
+	 * @since 3.0
+	 */
+	public boolean isSemanticPredicateInBacktrackingZero() {
+		return semanticPredicateInBacktrackingZero;
+	}
+	/**
+	 * @since 3.0
+	 */
+	public void setSemanticPredicateInBacktrackingZero(boolean semanticPredicateInBacktrackingZero) {
+		this.semanticPredicateInBacktrackingZero = semanticPredicateInBacktrackingZero;
 	}
 
 }

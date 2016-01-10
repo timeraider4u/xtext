@@ -92,12 +92,12 @@ import «gaFQName()»;
 
 }
 
-«EXPAND antlrRules»
+«EXPAND antlrRules(options)»
 «ENDFILE»
 «ENDDEFINE»
 
-«DEFINE antlrRules FOR Grammar»
-«EXPAND rule(this) FOREACH allParserRules()»
+«DEFINE antlrRules(AntlrOptions options) FOR Grammar»
+«EXPAND rule(this, options) FOREACH allParserRules()»
 «EXPAND rule(this) FOREACH allEnumRules()»
 «EXPAND rule(this) FOREACH allAlternatives()»
 «EXPAND rule(this) FOREACH allGroups()»
@@ -106,7 +106,8 @@ import «gaFQName()»;
 «EXPAND rule FOREACH allTerminalRules()»
 «ENDDEFINE»
 
-«DEFINE rule(Grammar original) FOR ParserRule»
+«DEFINE rule(Grammar original, AntlrOptions options) FOR ParserRule»
+
 «IF isCalled(original,this)»
 «IF isValidEntryRule()-»
 // Entry rule «entryRuleName()»
@@ -136,10 +137,10 @@ finally {
 		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens(«FOREACH hiddenTokens AS hidden SEPARATOR ", "»"«hidden.ruleName()»"«ENDFOREACH-»);
 «ENDIF-»
 		int stackSize = keepStackSize();
-		«initAfterActionInit(this)»
+		«initAfterActionInit(this, options.actionInBacktrackingZero)»
     }
 	@after {
-    		«initAfterActionAfter(this)»
+    		«initAfterActionAfter(this, options.actionInBacktrackingZero)»
      }:
     «EXPAND ebnf FOR this.alternatives»
 ;

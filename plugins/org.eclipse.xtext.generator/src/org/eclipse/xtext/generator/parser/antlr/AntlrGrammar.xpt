@@ -166,7 +166,7 @@ finally {
 «IF !debugGrammar-»
 returns [EObject current=«IF fragment-»in_current«ELSE»null«ENDIF»] 
     @init { enterRule();
-   		«initAfterActionInit(this)»
+   		«initAfterActionInit(this, options.actionInBacktrackingZero)»
 «IF definesHiddenTokens-»
 		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens(«FOREACH hiddenTokens AS hidden SEPARATOR ", "»"«hidden.ruleName()»"«ENDFOREACH-»);
 «ENDIF-» 
@@ -179,7 +179,9 @@ returns [EObject current=«IF fragment-»in_current«ELSE»null«ENDIF»]
 «ENDIF-»
     }
     @after { leaveRule();
-    		«initAfterActionAfter(this)»
+    		«IF  options.actionInBacktrackingZero»
+    			«initAfterActionAfter(this, options.actionInBacktrackingZero)»
+    		«ENDIF»
      }«ENDIF»:
     «EXPAND ebnf(options, debugGrammar) FOR this.alternatives»
 ;
@@ -192,6 +194,9 @@ finally {
 «IF options.backtrack && !allContents().typeSelect(UnorderedGroup).isEmpty-»
 	myUnorderedGroupState.restore();
 «ENDIF-»
+«IF  !options.actionInBacktrackingZero»
+	«initAfterActionAfter(this, options.actionInBacktrackingZero)»
+«ENDIF»
 }
 «ENDIF-»
 «ENDIF-»

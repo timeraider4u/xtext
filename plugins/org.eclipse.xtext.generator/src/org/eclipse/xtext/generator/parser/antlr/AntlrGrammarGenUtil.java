@@ -365,7 +365,7 @@ public class AntlrGrammarGenUtil {
 	/**
 	 * @since 3.0
 	 */
-	public static String getInitAfterAction_Init(ParserRule rule) {
+	public static String getInitAfterAction_Init(ParserRule rule, Boolean actionInBacktrackingZero) {
 		ParserRule myRule = getOriginalElement(rule);
 		/*System.out.println("AntlrGrammarGenUtils.getInitAfterAction_Init");
 		System.out.println("rule='" + rule + "'");
@@ -378,16 +378,20 @@ public class AntlrGrammarGenUtil {
 			return "/*no init found*/";
 		}
 		final StringBuffer buffer = new StringBuffer();
-		buffer.append("if ( state.backtracking==0 ) {");
+		if (actionInBacktrackingZero) {
+			buffer.append("if ( state.backtracking==0 ) {");
+		}
 		buffer.append(action);
-		buffer.append("}");
+		if (actionInBacktrackingZero) {
+			buffer.append("}");
+		}
 		return buffer.toString();
 	}
 	
 	/**
 	 * @since 3.0
 	 */
-	public static String getInitAfterAction_After(ParserRule rule) {
+	public static String getInitAfterAction_After(ParserRule rule, Boolean actionInBacktrackingZero) {
 		ParserRule myRule = getOriginalElement(rule);
 		/*System.out.println("AntlrGrammarGenUtils.getInitAfterAction_After");
 		System.out.println("rule='" + rule + "'");

@@ -35,6 +35,10 @@ public class AntlrOptions {
   
   private boolean forceHoisting = false;
   
+  private boolean actionInBacktrackingZero = false;
+  
+  private boolean semanticPredicateInBacktrackingZero = false;
+  
   @Pure
   public boolean isBacktrack() {
     return this.backtrack;
@@ -123,5 +127,23 @@ public class AntlrOptions {
   
   public void setForceHoisting(final boolean forceHoisting) {
     this.forceHoisting = forceHoisting;
+  }
+  
+  @Pure
+  public boolean isActionInBacktrackingZero() {
+    return this.actionInBacktrackingZero;
+  }
+  
+  public void setActionInBacktrackingZero(final boolean actionInBacktrackingZero) {
+    this.actionInBacktrackingZero = actionInBacktrackingZero;
+  }
+  
+  @Pure
+  public boolean isSemanticPredicateInBacktrackingZero() {
+    return this.semanticPredicateInBacktrackingZero;
+  }
+  
+  public void setSemanticPredicateInBacktrackingZero(final boolean semanticPredicateInBacktrackingZero) {
+    this.semanticPredicateInBacktrackingZero = semanticPredicateInBacktrackingZero;
   }
 }

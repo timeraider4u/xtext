@@ -23,5 +23,6 @@ class AntlrOptions {
 	int methodsPerClass = PartialClassExtractor.METHODS_PER_CLASS
 	boolean skipUnusedRules = false
 	boolean forceHoisting = false
-	
+	boolean actionInBacktrackingZero = false;
+	boolean semanticPredicateInBacktrackingZero = false;
 }

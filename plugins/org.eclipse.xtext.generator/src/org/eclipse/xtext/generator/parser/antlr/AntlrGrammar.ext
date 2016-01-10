@@ -157,11 +157,11 @@ List[String] initialHiddenTokens(Grammar this):
   	initialHiddenTokens(usedGrammars.first()) 
   else {};
 
-String initAfterActionInit(ParserRule this):
-	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_Init(org.eclipse.xtext.ParserRule);
+String initAfterActionInit(ParserRule this, boolean actionInBacktrackingZero):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_Init(org.eclipse.xtext.ParserRule, java.lang.Boolean);
 
-String initAfterActionAfter(ParserRule this):
-	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_After(org.eclipse.xtext.ParserRule);
+String initAfterActionAfter(ParserRule this, boolean actionInBacktrackingZero):
+	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.getInitAfterAction_After(org.eclipse.xtext.ParserRule, java.lang.Boolean);
 
 boolean isValidString(String string):
 	JAVA org.eclipse.xtext.generator.parser.antlr.AntlrGrammarGenUtil.isValidString(java.lang.String);
