@@ -7,6 +7,7 @@
  */
 package org.eclipse.xtext.xtext.generator.parser.antlr;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import java.util.Arrays;
 import java.util.List;
@@ -166,44 +167,81 @@ public abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractA
     StringConcatenation _builder = new StringConcatenation();
     {
       boolean _or = false;
+      boolean _or_1 = false;
       boolean _isDefinesHiddenTokens = it.isDefinesHiddenTokens();
       if (_isDefinesHiddenTokens) {
-        _or = true;
+        _or_1 = true;
       } else {
         boolean _definesUnorderedGroups = this._grammarAccessExtensions.definesUnorderedGroups(it, options);
-        _or = _definesUnorderedGroups;
+        _or_1 = _definesUnorderedGroups;
+      }
+      if (_or_1) {
+        _or = true;
+      } else {
+        boolean _backtrackingNonZero = this.backtrackingNonZero(it, options);
+        _or = _backtrackingNonZero;
       }
       if (_or) {
         _builder.append("finally {");
         _builder.newLine();
-        _builder.append("\t");
-        CharSequence _compileRestoreHiddenTokens = this.compileRestoreHiddenTokens(it, options);
-        _builder.append(_compileRestoreHiddenTokens, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        CharSequence _compileRestoreUnorderedGroups = this.compileRestoreUnorderedGroups(it, options);
-        _builder.append(_compileRestoreUnorderedGroups, "\t");
-        _builder.newLineIfNotEmpty();
         {
-          if ((it instanceof ParserRule)) {
-            {
-              boolean _isActionInBacktrackingZero = options.isActionInBacktrackingZero();
-              boolean _not = (!_isActionInBacktrackingZero);
-              if (_not) {
-                _builder.append("\t");
-                InitAfterActions _initAfterActions = it.getInitAfterActions();
-                String _afterAction = _initAfterActions.getAfterAction();
-                String _string = _afterAction.toString();
-                _builder.append(_string, "\t");
-                _builder.newLineIfNotEmpty();
-              }
-            }
+          boolean _or_2 = false;
+          boolean _isDefinesHiddenTokens_1 = it.isDefinesHiddenTokens();
+          if (_isDefinesHiddenTokens_1) {
+            _or_2 = true;
+          } else {
+            boolean _definesUnorderedGroups_1 = this._grammarAccessExtensions.definesUnorderedGroups(it, options);
+            _or_2 = _definesUnorderedGroups_1;
+          }
+          if (_or_2) {
+            _builder.append("\t");
+            CharSequence _compileRestoreHiddenTokens = this.compileRestoreHiddenTokens(it, options);
+            _builder.append(_compileRestoreHiddenTokens, "\t");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            CharSequence _compileRestoreUnorderedGroups = this.compileRestoreUnorderedGroups(it, options);
+            _builder.append(_compileRestoreUnorderedGroups, "\t");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        {
+          boolean _backtrackingNonZero_1 = this.backtrackingNonZero(it, options);
+          if (_backtrackingNonZero_1) {
+            _builder.append("\t");
+            InitAfterActions _initAfterActions = it.getInitAfterActions();
+            String _afterAction = _initAfterActions.getAfterAction();
+            String _string = _afterAction.toString();
+            _builder.append(_string, "\t");
+            _builder.newLineIfNotEmpty();
           }
         }
         _builder.append("}");
+        _builder.newLine();
       }
     }
     return _builder;
+  }
+  
+  protected boolean backtrackingNonZero(final ParserRule it, final AntlrOptions options) {
+    boolean _isActionInBacktrackingZero = options.isActionInBacktrackingZero();
+    boolean _not = (!_isActionInBacktrackingZero);
+    if (_not) {
+      boolean _and = false;
+      InitAfterActions _initAfterActions = it.getInitAfterActions();
+      boolean _notEquals = (!Objects.equal(_initAfterActions, null));
+      if (!_notEquals) {
+        _and = false;
+      } else {
+        InitAfterActions _initAfterActions_1 = it.getInitAfterActions();
+        String _afterAction = _initAfterActions_1.getAfterAction();
+        boolean _notEquals_1 = (!Objects.equal(_afterAction, null));
+        _and = _notEquals_1;
+      }
+      if (_and) {
+        return true;
+      }
+    }
+    return false;
   }
   
   protected CharSequence _compileRestoreHiddenTokens(final AbstractRule it, final AntlrOptions options) {

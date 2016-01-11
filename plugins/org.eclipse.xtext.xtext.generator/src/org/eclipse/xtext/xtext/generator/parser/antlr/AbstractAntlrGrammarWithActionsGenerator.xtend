@@ -67,16 +67,26 @@ abstract class AbstractAntlrGrammarWithActionsGenerator extends AbstractAntlrGra
 	}
 			
 	protected def compileEntryFinally(ParserRule it, AntlrOptions options) '''
-		«IF definesHiddenTokens || definesUnorderedGroups(options)»
+		«IF definesHiddenTokens || definesUnorderedGroups(options) || backtrackingNonZero(it, options)»
 		finally {
-			«compileRestoreHiddenTokens(options)»
-			«compileRestoreUnorderedGroups(options)»
-			«IF it instanceof ParserRule»
-				«IF !options.actionInBacktrackingZero» 
-					«it.initAfterActions.afterAction.toString()»
-				«ENDIF»
+			«IF definesHiddenTokens || definesUnorderedGroups(options)»
+				«compileRestoreHiddenTokens(options)»
+				«compileRestoreUnorderedGroups(options)»
 			«ENDIF»
-		}«ENDIF»'''
+			«IF backtrackingNonZero(it, options)» 
+				«it.initAfterActions.afterAction.toString()»
+			«ENDIF»
+		}
+		«ENDIF»'''
+	
+	protected def boolean backtrackingNonZero(ParserRule it, AntlrOptions options) {
+		if (!options.actionInBacktrackingZero) {
+			if (it.initAfterActions != null && it.initAfterActions.afterAction != null) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	protected def dispatch compileRestoreHiddenTokens(AbstractRule it, AntlrOptions options) {
 		''

@@ -186,7 +186,7 @@ returns [EObject current=«IF fragment-»in_current«ELSE»null«ENDIF»]
     «EXPAND ebnf(options, debugGrammar) FOR this.alternatives»
 ;
 «IF !debugGrammar-»
-«IF definesHiddenTokens || (options.backtrack && !allContents().typeSelect(UnorderedGroup).isEmpty)-»
+«IF definesHiddenTokens || (options.backtrack && !allContents().typeSelect(UnorderedGroup).isEmpty) || !options.actionInBacktrackingZero-»
 finally {
 «IF definesHiddenTokens-»
 	myHiddenTokenState.restore();
