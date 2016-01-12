@@ -336,9 +336,7 @@ finally {
 
 «DEFINE ebnf FOR AbstractElement-»
 «IF isValidString(preAntlrAction)-»
-«IF !isSemanticPredicate-»{«ENDIF»
-{«preAntlrAction»}«IF isSemanticPredicate»?«ENDIF»
-«IF !isSemanticPredicate-»}«ENDIF»
+«IF !isSemanticPredicate»{«ENDIF»{«preAntlrAction»}«IF isSemanticPredicate»?«ELSE»}«ENDIF»
 «ENDIF»
 «EXPAND ebnfDoMore»
 «IF isValidString(postAntlrAction)-»
