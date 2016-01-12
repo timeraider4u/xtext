@@ -58,10 +58,16 @@ public class TerminalRuleToLexerBody extends XtextSwitch<String>{
 			return;
 		}
 		result.append("{");
+		if (!(object.getIsSemanticPredicate())) {
+			result.append("{");
+		}
 		result.append(action);
 		result.append("}");
 		if (object.getIsSemanticPredicate()) {
 			result.append("?=> ");
+		}
+		else {
+			result.append("}");
 		}
 	}
 	
@@ -74,7 +80,9 @@ public class TerminalRuleToLexerBody extends XtextSwitch<String>{
 			return;
 		}
 		result.append(" {");
+		result.append("{");
 		result.append(action);
+		result.append("}");
 		result.append("}");
 	}
 

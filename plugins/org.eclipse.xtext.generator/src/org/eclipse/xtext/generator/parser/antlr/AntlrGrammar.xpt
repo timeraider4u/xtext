@@ -299,11 +299,13 @@ finally {
 
 «DEFINE ebnf(AntlrOptions options, boolean debugGrammar) FOR AbstractElement-»
 «IF isValidString(preAntlrAction)-»
+«IF !isSemanticPredicate-»{«ENDIF»
 {«preAntlrAction»}«IF isSemanticPredicate»?«ENDIF»
+«IF !isSemanticPredicate-»}«ENDIF»
 «ENDIF»
 «EXPAND ebnfDoMore(options, debugGrammar)»
 «IF isValidString(postAntlrAction)-»
-{«postAntlrAction»}
+{{«postAntlrAction»}}
 «ENDIF»
 «ENDDEFINE»
 

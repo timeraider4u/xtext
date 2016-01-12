@@ -404,7 +404,13 @@ public class AntlrGrammarGenUtil {
 			return "/*no after found*/";
 		}
 		final StringBuffer buffer = new StringBuffer();
+		if (!actionInBacktrackingZero) {
+			buffer.append("{");
+		}
 		buffer.append(action);
+		if (!actionInBacktrackingZero) {
+			buffer.append("}");
+		}
 		return buffer.toString();
 	}
 
