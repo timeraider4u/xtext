@@ -195,14 +195,14 @@ public class DefaultXbaseRuntimeModule extends DefaultCommonTypesRuntimeModule {
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public Class<? extends IWorkspaceConfigProvider> bindWorkspaceConfigProvider() {
 		return RuntimeWorkspaceConfigProvider.class;
 	}
 	
 	/**
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	public Class<? extends ILinkingDiagnosticMessageProvider> bindILinkingDiagnosticMessageProvider() {
 		return UnresolvedFeatureCallTypeAwareMessageProvider.class;

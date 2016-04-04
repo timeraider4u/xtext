@@ -759,7 +759,7 @@ public class JvmTypesBuilder {
 	/**
 	 * Detects whether the type reference refers to primitive boolean.
 	 * 
-	 * @since 2.9
+	 * @since 3.0
 	 */
 	protected boolean isPrimitiveBoolean(JvmTypeReference typeRef) {
 		if (InferredTypeIndicator.isInferred(typeRef)) {
