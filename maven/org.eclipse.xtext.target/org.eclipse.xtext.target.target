@@ -19,10 +19,20 @@
 
 <repository location="http://download.eclipse.org/releases/luna/201502271000/"/>
 </location>
+<!--
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="org.eclipse.emf.mwe2.runtime" version="0.0.0"/>
+<repository location="http://download.eclipse.org/modeling/emft/mwe/updates/milestones/S201602020321/mwe/"/>
+</location>
 
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.7.1/"/>
+<repository location="http://download.eclipse.org/modeling/emft/mwe/updates/milestones/S201602020421/mwe2lang/"/>
+</location>
+-->
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/modeling/emft/mwe/updates/milestones/S201603221009/mwe2lang/"/>
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
