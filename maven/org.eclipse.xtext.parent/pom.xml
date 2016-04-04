@@ -179,6 +179,15 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.5</version>
+				<configuration>
+					<skip>true</skip>
+					<skip-deploy>true</skip-deploy>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.11</version>

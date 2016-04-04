@@ -27,7 +27,7 @@ public class XtextGeneratorIT {
 	@Test
 	public void simpleLang() throws Exception {
 		Verifier verifier = verifyErrorFreeLog(ROOT + "/simple-lang");
-		verifier.assertFileMatches(verifier.getBasedir() + "/src-gen/greetings.txt", "People to greet\\: maven");
+		verifier.assertFileMatches(verifier.getBasedir() + "/src-gen/greetings.txt", "People to greet\\: Test");
 	}
 
 	@Test
