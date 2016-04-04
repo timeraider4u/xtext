@@ -188,6 +188,7 @@
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
 					<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
 					<includes><include>**/*</include></includes>
+					<merge>true</merge>
 					<repositoryName>xtext</repositoryName>      <!-- github repo name -->
 					<repositoryOwner>timeraider4u</repositoryOwner>    <!-- github username  -->
 				</configuration>
