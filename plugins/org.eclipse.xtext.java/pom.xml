@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.common.types</artifactId>
-			<version>[${project.version}]</version>
+			<version>[${myother.version}]</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.emf</groupId>
