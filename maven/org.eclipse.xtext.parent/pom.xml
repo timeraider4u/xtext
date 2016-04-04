@@ -326,6 +326,15 @@
 			</pluginRepositories>
 		</profile>
 	</profiles>
+	
+	<repositories>
+		<repository>
+			<id>Xtext</id>
+			<name>Xtext</name>
+			<layout>p2</layout>
+			<url>http://timeraider4u.github.io/xtext/</url>
+		</repository>
+	</repositories>
 
 	<url>http://www.eclipse.org/xtend/</url>
 	<description>Xtend is a little language that compiles into idiomatic Java source code. You can use any existing Java library seamlessly from Xtend (and vice-versa). The compiled output is readable and pretty-printed, and tends to run as fast or faster than the equivalent handwritten Java code. It's the CoffeeScript for Java.</description>

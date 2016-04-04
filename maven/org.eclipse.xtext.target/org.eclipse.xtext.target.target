@@ -30,5 +30,10 @@
 <repository location="http://download.itemis.com/updates/releases/2.1.1/"/>
 </location>
 
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.xtext" version="0.0.0"/>
+<repository location="http://timeraider4u.github.io/xtext/"/>
+</location>
+
 </locations>
 </target>

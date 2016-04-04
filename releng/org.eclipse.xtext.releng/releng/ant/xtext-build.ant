@@ -58,6 +58,7 @@
 		<antcall target="compile-xtend" />
 		-->
 		<antcall target="buckminster-package" />
+		<antcall target="git-deploy" />
 	</target>
 
 	<target name="resolve-and-compile-all" depends="common.cleanup">
@@ -219,6 +220,71 @@
 		<run_buckminster commandsfile="${commands.file}" propertiesfile="${build.properties}" />
 		<echo message=" " />
 		<echo message="Updatesite output in: ${build.root}/buckminster.workspace/output/org.eclipse.xtext.build_*-eclipse.feature/zips/" />
+	</target>
+	
+	<macrodef name="git">
+		<attribute name="command" />
+		<attribute name="dir" default="" />
+		<attribute name="logTheError" default="false" />
+		<element name="args" optional="true" />
+		<sequential>
+			<echo>git @{command}</echo>
+			<exec executable="git" dir="@{dir}" failonerror="true" 
+				logError="@{logTheError}">
+				<arg value="@{command}" />
+				<args/>
+			</exec>
+		</sequential>
+	</macrodef>
+	
+	<target name="git-deploy">
+		<property name="p2.location.output" location="${build.root}/buckminster.workspace/output" />
+		<dirset dir="${p2.location.output}" id="dirBuckminsterFeatureBuildID">
+			<include name="org.eclipse.xtext.build_*-eclipse.feature"/>
+		</dirset>
+		<property name="p2.location.feature" refid="dirBuckminsterFeatureBuildID" />
+		<property name="p2.location.root" location="${p2.location.output}/${p2.location.feature}" />
+
+		<echo message="p2.location.root = ${p2.location.root}" />
+		<property name="p2.location.site" location="${p2.location.root}/site.p2" />
+		<property name="p2.location.git" location="${p2.location.root}/xtext" />
+		<echo message="P2 Updatesite at: ${p2.location.site}" />
+		<delete dir="${p2.location.git}" failonerror="false" />
+		<git command="clone" dir="${p2.location.root}">
+			<args>
+				<arg value="--progress" />
+				<arg value="-b"/>
+				<arg value="gh-pages" />
+				<arg value="--single-branch" />
+				<arg value="https://github.com/timeraider4u/xtext.git" />
+			</args>
+		</git>
+		<git command="rm" dir="${p2.location.git}">
+			<args>
+				<arg value="-rf" />
+				<arg value="." />
+			</args>
+		</git>
+		<copy todir="${p2.location.git}">
+			<fileset dir="${p2.location.site}">
+				<exclude name="**/*.gz"/>
+			</fileset>
+		</copy>
+		<git command="add" dir="${p2.location.git}">
+			<args>
+				<arg value="." />
+			</args>
+		</git>
+		<git command="commit" dir="${p2.location.git}">
+			<args>
+				<arg value="-am 'git deployment of local build to p2 repository on github'" />
+			</args>
+		</git>
+		<git command="push" dir="${p2.location.git}" logTheError="true" >
+			<args>
+				<arg value="--progress" />
+			</args>
+		</git>
 	</target>
 
 	<target name="buckminster-swtbot-tests">
