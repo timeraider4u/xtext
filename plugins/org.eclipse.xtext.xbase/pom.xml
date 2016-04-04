@@ -10,6 +10,7 @@
 	<packaging>eclipse-plugin</packaging>
 
 	<artifactId>org.eclipse.xtext.xbase</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
 	<name>Xbase Runtime Library</name>
 	
 	<dependencies>
@@ -21,12 +22,12 @@
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xbase.lib</artifactId>
-			<version>[${project.version}]</version>
+			<version>[${my.version}]</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib</artifactId>
-			<version>[${project.version}]</version>
+			<version>[${my.version}]</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>

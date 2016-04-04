@@ -15,7 +15,7 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Pure;
 
 /**
- * @since 3.0
+ * @since 2.9
  */
 @SuppressWarnings("all")
 public class StringConcatOutputImpl extends OutputImpl {

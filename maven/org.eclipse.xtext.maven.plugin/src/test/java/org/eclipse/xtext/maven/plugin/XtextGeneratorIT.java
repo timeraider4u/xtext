@@ -27,7 +27,7 @@ public class XtextGeneratorIT {
 	@Test
 	public void simpleLang() throws Exception {
 		Verifier verifier = verifyErrorFreeLog(ROOT + "/simple-lang");
-		verifier.assertFileMatches(verifier.getBasedir() + "/src-gen/greetings.txt", "People to greet\\: Test");
+		verifier.assertFileMatches(verifier.getBasedir() + "/src-gen/greetings.txt", "People to greet\\: maven");
 	}
 
 	@Test
@@ -83,7 +83,7 @@ public class XtextGeneratorIT {
 		verifier.addCliOption("-U");
 		verifier.assertFilePresent(verifier.getBasedir() + "/src-gen/org/eclipse/xcoretest/MyClass2.java");
 		verifier.assertFilePresent(verifier.getBasedir() + "/target/xtext-temp/classes/org/eclipse/xcoretest/MyClass2.class");
-		verifier.assertFileMatches(verifier.getBasedir() + "/src-gen/org/eclipse/xcoretest/MyEnum.java", "(?s).*MY_FIRST_LITERAL = -7.*MY_SECOND_LITERAL = 137.*");
+		verifier.assertFileMatches(verifier.getBasedir() + "/src-gen/org/eclipse/xcoretest/MyEnum.java", "(?s).*MY_FIRST_LITERAL[\\(]-7.*MY_SECOND_LITERAL[\\(]137.*");
 	}
 	
 	@Test

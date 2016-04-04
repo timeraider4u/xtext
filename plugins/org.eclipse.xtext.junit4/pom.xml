@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext</artifactId>
-			<version>[${project.version}]</version>
+			<version>[${myother.version}]</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

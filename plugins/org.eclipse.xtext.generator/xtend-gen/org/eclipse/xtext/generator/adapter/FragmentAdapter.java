@@ -69,7 +69,7 @@ import org.eclipse.xtext.xtext.generator.model.StandaloneSetupAccess;
 import org.eclipse.xtext.xtext.generator.model.TypeReference;
 
 /**
- * @since 3.0
+ * @since 2.9
  */
 @SuppressWarnings("all")
 public class FragmentAdapter extends AbstractGeneratorFragment2 {
