@@ -11,17 +11,18 @@
 
 	<name>Common Types Runtime Library</name>
 	<artifactId>org.eclipse.xtext.common.types</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.util</artifactId>
-			<version>[${project.version}]</version>
+			<version>[${my.version}]</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext</artifactId>
-			<version>[${project.version}]</version>
+			<version>[${myother.version}]</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.emf</groupId>

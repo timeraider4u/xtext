@@ -266,9 +266,7 @@
 			</args>
 		</git>
 		<copy todir="${p2.location.git}">
-			<fileset dir="${p2.location.site}">
-				<exclude name="**/*.gz"/>
-			</fileset>
+			<fileset dir="${p2.location.site}" />
 		</copy>
 		<git command="add" dir="${p2.location.git}">
 			<args>
