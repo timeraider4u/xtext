@@ -109,6 +109,17 @@
 								</exclusion>
 							</exclusions>
 						</dependency>
+						<dependency>
+							<groupId>org.antlr</groupId>
+							<artifactId>antlr-runtime</artifactId>
+							<version>3.5.3-SNAPSHOT</version>
+							<exclusions>
+								<exclusion>
+									<artifactId>stringtemplate</artifactId>
+									<groupId>org.antlr</groupId>
+								</exclusion>
+							</exclusions>
+						</dependency>
 					</dependencies>
 			</plugin>
 			<plugin>

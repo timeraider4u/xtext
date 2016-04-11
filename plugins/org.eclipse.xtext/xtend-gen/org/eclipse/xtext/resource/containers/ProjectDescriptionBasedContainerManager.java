@@ -25,7 +25,7 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 /**
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 3.0
+ * @since 2.9
  */
 @Beta
 @SuppressWarnings("all")

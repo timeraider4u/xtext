@@ -30,20 +30,45 @@
 <repository location="http://download.eclipse.org/modeling/emft/mwe/updates/milestones/S201602020421/mwe2lang/"/>
 </location>
 -->
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
-<unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/modeling/emft/mwe/updates/milestones/S201603221009/"/>
+
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="de.itemis.xtext.antlr.feature.feature.group" version="0.0.0"/>
+<repository location="http://timeraider4u.github.io/org.xtext.antlr.generator/"/>
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="de.itemis.xtext.antlr.sdk.feature.group" version="0.0.0"/>
-<repository location="http://download.itemis.com/updates/releases/2.1.1/"/>
+<unit id="org.antlr.generator" version="0.0.0"/>
+<repository location="http://timeraider4u.github.io/org.xtext.antlr.generator/"/>
 </location>
+
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.antlr.runtime" version="0.0.0"/>
+<repository location="http://timeraider4u.github.io/antlr3/"/>
+</location>
+
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.antlr.feature.feature.group" version="0.0.0"/>
+<repository location="http://timeraider4u.github.io/antlr3/"/>
+</location>
+
+
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.xtext" version="0.0.0"/>
 <repository location="http://timeraider4u.github.io/xtext/"/>
 </location>
+
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="0.0.0"/>
+<repository location="http://download.eclipse.org/modeling/emft/mwe/updates/milestones/S201603221009/"/>
+</location>
+
+<!--
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="de.itemis.xtext.antlr.sdk.feature.group" version="0.0.0"/>
+<repository location="http://download.itemis.com/updates/releases/2.1.1/"/>
+</location>
+-->
 
 </locations>
 </target>

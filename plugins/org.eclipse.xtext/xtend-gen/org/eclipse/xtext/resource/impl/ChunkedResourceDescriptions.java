@@ -50,7 +50,7 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
  * 
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 3.0
+ * @since 2.9
  */
 @Beta
 @EmfAdaptable

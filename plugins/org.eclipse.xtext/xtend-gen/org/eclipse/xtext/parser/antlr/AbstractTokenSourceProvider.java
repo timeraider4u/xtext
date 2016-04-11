@@ -9,11 +9,7 @@ package org.eclipse.xtext.parser.antlr;
 
 import java.io.Reader;
 import java.io.StringReader;
-import org.antlr.runtime.ANTLRReaderStream;
-import org.antlr.runtime.CharStream;
-import org.antlr.runtime.TokenSource;
 import org.eclipse.xtext.parser.antlr.TokenSourceProvider;
-import org.eclipse.xtext.xbase.lib.Exceptions;
 
 /**
  * @author kosyakov - Initial contribution and API
@@ -21,12 +17,9 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
  */
 @SuppressWarnings("all")
 public abstract class AbstractTokenSourceProvider implements TokenSourceProvider {
-  protected CharStream getCharStream(final Reader reader) {
-    try {
-      return new ANTLRReaderStream(reader);
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
+  protected /* CharStream */Object getCharStream(final Reader reader) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nANTLRReaderStream cannot be resolved.");
   }
   
   protected StringReader getReader(final CharSequence text) {
@@ -42,7 +35,7 @@ public abstract class AbstractTokenSourceProvider implements TokenSourceProvider
   
   @Override
   public TokenSource createTokenSource(final Reader reader) {
-    CharStream _charStream = this.getCharStream(reader);
-    return this.createTokenSource(_charStream);
+    throw new Error("Unresolved compilation problems:"
+      + "\ncreateTokenSource cannot be resolved");
   }
 }

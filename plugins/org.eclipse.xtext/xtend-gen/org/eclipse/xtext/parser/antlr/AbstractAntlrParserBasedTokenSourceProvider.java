@@ -9,11 +9,7 @@ package org.eclipse.xtext.parser.antlr;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import org.antlr.runtime.CharStream;
-import org.antlr.runtime.TokenSource;
-import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.parser.IParser;
-import org.eclipse.xtext.parser.antlr.AbstractAntlrParser;
 import org.eclipse.xtext.parser.antlr.AbstractTokenSourceProvider;
 
 /**
@@ -27,17 +23,8 @@ public class AbstractAntlrParserBasedTokenSourceProvider extends AbstractTokenSo
   private IParser parser;
   
   @Override
-  public TokenSource createTokenSource(final CharStream stream) {
-    if ((this.parser instanceof AbstractAntlrParser)) {
-      return ((AbstractAntlrParser)this.parser).createLexer(stream);
-    }
-    StringConcatenation _builder = new StringConcatenation();
-    Class<? extends IParser> _class = this.parser.getClass();
-    String _name = _class.getName();
-    _builder.append(_name, "");
-    _builder.append(" should be a subclass of ");
-    String _name_1 = AbstractAntlrParser.class.getName();
-    _builder.append(_name_1, "");
-    throw new IllegalStateException(_builder.toString());
+  public TokenSource createTokenSource(final /* CharStream */Object stream) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method createLexer(CharStream) is undefined for the type AbstractAntlrParser");
   }
 }

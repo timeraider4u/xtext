@@ -22,7 +22,7 @@ import org.eclipse.xtext.resource.IEObjectDescription;
  * behavior.
  * 
  * @author Sebastian Zarnekow - Initial contribution and API
- * @since 3.0
+ * @since 2.9
  */
 @FinalFieldsConstructor
 @SuppressWarnings("all")

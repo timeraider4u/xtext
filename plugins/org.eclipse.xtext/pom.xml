@@ -14,6 +14,16 @@
 
 	<dependencies>
 		<dependency>
+			<dependency>
+				<groupId>org.xtext</groupId>
+				<artifactId>org.antlr.generator</artifactId>
+				<version>3.5.3-SNAPSHOT</version>
+			</dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>org.antlr.runtime</artifactId>
+			<version>3.5.3-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.util</artifactId>
 			<version>[${my.version}]</version>
@@ -59,17 +69,6 @@
 			<groupId>com.ibm.icu</groupId>
 			<artifactId>icu4j</artifactId>
 			<version>${icu4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.antlr</groupId>
-			<artifactId>antlr-runtime</artifactId>
-			<version>[3.2]</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>stringtemplate</artifactId>
-					<groupId>org.antlr</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 	</dependencies>
 </project>

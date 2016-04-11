@@ -15,7 +15,7 @@ public class FileSystemAccessRequest implements Runnable {
   private final Runnable runMe;
   
   /**
-   * @since 3.0
+   * @since 2.9
    */
   @FinalFieldsConstructor
   public FileSystemAccessRequest(final URI uri, final Runnable runMe) {
@@ -33,7 +33,7 @@ public class FileSystemAccessRequest implements Runnable {
   }
   
   /**
-   * @since 3.0
+   * @since 2.9
    */
   @Override
   public void run() {
