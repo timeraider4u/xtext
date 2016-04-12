@@ -37,7 +37,11 @@ public class FlexerBasedTemplateBodyHighlighter extends TemplateBodyHighlighter 
     StringReader _stringReader = new StringReader(body);
     final FlexTokenSource tokenSource = this._flexerFactory.createTokenSource(_stringReader);
     Token token = tokenSource.nextToken();
-    while ((!Objects.equal(token, Token.EOF_TOKEN))) {
+    Token eofToken = null;
+    if (tokenSource instanceof Lexer) {
+		eofToken = ((Lexer)tokenSource).getEOFToken();
+    }
+    while ((!Objects.equal(token, eofToken))) {
       {
         int _type = token.getType();
         final String id = this._abstractAntlrTokenToAttributeIdMapper.getId(_type);

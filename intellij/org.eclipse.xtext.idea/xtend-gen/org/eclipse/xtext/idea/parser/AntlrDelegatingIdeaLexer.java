@@ -124,7 +124,7 @@ public class AntlrDelegatingIdeaLexer extends LexerBase {
           throw Exceptions.sneakyThrow(_t);
         }
       }
-      boolean _equals_1 = Objects.equal(this.token, Token.EOF_TOKEN);
+      boolean _equals_1 = Objects.equal(this.token, null);
       if (_equals_1) {
         this.token = null;
       }

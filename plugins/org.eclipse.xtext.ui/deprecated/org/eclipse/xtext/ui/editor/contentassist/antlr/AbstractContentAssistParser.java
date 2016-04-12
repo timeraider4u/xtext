@@ -88,7 +88,8 @@ public abstract class AbstractContentAssistParser implements IContentAssistParse
 								LookAheadTerminal lookAhead = iter.next();
 								return lookAhead.getToken();
 							}
-							return Token.EOF_TOKEN;
+							Lexer lexer = lexerProvider.get();
+							return lexer.getEOFToken();
 						}
 						@Override
 						public String getSourceName() {

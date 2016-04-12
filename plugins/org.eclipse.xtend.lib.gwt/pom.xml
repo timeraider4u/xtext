@@ -46,6 +46,7 @@
 							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
+							<includeGroupIds>org.eclipse.xtend</includeGroupIds>
 							<includeArtifactIds>org.eclipse.xtend.lib</includeArtifactIds>
 							<classifier>sources</classifier>
 							<overWrite>true</overWrite>

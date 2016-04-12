@@ -11,6 +11,7 @@ import java.io.Reader
 import java.io.StringReader
 import org.antlr.runtime.ANTLRReaderStream
 import org.antlr.runtime.CharStream
+import org.antlr.runtime.TokenSource
 
 /**
  * @author kosyakov - Initial contribution and API

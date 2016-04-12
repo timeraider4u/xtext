@@ -11,6 +11,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.eclipse.xtext.parser.IParser;
 import org.eclipse.xtext.parser.antlr.AbstractTokenSourceProvider;
+import org.antlr.runtime.TokenSource;
 
 /**
  * @author kosyakov - Initial contribution and API

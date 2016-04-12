@@ -14,11 +14,11 @@
 
 	<dependencies>
 		<dependency>
-			<dependency>
 				<groupId>org.xtext</groupId>
 				<artifactId>org.antlr.generator</artifactId>
 				<version>3.5.3-SNAPSHOT</version>
-			</dependency>
+		</dependency>
+		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>org.antlr.runtime</artifactId>
 			<version>3.5.3-SNAPSHOT</version>

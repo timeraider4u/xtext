@@ -90,7 +90,7 @@ class AntlrDelegatingIdeaLexer extends LexerBase {
 				// FIXME: throw an exception or log
 				e.printStackTrace()
 			}
-			if (token == Token.EOF_TOKEN) {
+			if (token == null) {
 				token = null
 			}
 		}

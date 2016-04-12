@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.Reader;
 
 import org.antlr.runtime.CommonToken;
+import org.antlr.runtime.Lexer;
 import org.antlr.runtime.Token;
 import org.antlr.runtime.TokenSource;
 import org.eclipse.xtend.core.parser.InternalFlexer;
@@ -38,7 +39,7 @@ public class FlexTokenSource implements TokenSource {
 		try {
 			int type = flexer.advance();
 			if (type == Token.EOF) {
-				return Token.EOF_TOKEN;
+				return new CommonToken(Token.EOF);
 			}
 			int length = flexer.getTokenLength();
 			final String tokenText = flexer.getTokenText();

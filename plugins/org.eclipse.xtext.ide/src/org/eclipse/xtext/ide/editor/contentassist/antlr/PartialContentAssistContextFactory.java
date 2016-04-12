@@ -23,10 +23,10 @@ public class PartialContentAssistContextFactory extends ContentAssistContextFact
 		if (!Strings.isEmpty(currentNodePrefix) && !currentNode.getText().equals(currentNodePrefix)) {
 			lexer.setCharStream(new ANTLRStringStream(currentNodePrefix));
 			Token token = lexer.nextToken();
-			if (token == Token.EOF_TOKEN) {
+			if (token == lexer.getEOFToken()) {
 				return;
 			}
-			while (token != Token.EOF_TOKEN) {
+			while (token != lexer.getEOFToken()) {
 				if (isErrorToken(token)) {
 					return;
 				}

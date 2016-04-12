@@ -32,7 +32,7 @@ public class BacktrackingLexerDocumentTokenSource extends DocumentTokenSource {
 		CommonToken token = (CommonToken) source.nextToken();
 		// find start idx
 		while (true) {
-			if (token == Token.EOF_TOKEN) {
+			if (token.getType() == Token.EOF) {
 				break;
 			}
 			if (tokenInfoIdx >= getInternalModifyableTokenInfos().size())

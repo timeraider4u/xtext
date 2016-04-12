@@ -82,7 +82,7 @@ public abstract class AbstractSmokeTest {
 				Lexer lexer = lexerProvider.get();
 				lexer.setCharStream(new ANTLRStringStream(string));
 				Token token = lexer.nextToken();
-				while (token != Token.EOF_TOKEN) {
+				while (token.getType() != Token.EOF) {
 					tokenList.add((CommonToken) token);
 					token = lexer.nextToken();
 				}
@@ -156,7 +156,7 @@ public abstract class AbstractSmokeTest {
 				Lexer lexer = lexerProvider.get();
 				lexer.setCharStream(new ANTLRStringStream(string));
 				Token token = lexer.nextToken();
-				while (token != Token.EOF_TOKEN) {
+				while (token.getType() != Token.EOF) {
 					tokenList.add((CommonToken) token);
 					token = lexer.nextToken();
 				}

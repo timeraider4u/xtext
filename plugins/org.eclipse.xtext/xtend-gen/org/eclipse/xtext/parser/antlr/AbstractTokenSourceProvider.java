@@ -10,6 +10,7 @@ package org.eclipse.xtext.parser.antlr;
 import java.io.Reader;
 import java.io.StringReader;
 import org.eclipse.xtext.parser.antlr.TokenSourceProvider;
+import org.antlr.runtime.TokenSource;
 
 /**
  * @author kosyakov - Initial contribution and API
