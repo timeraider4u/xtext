@@ -28,16 +28,6 @@
 </location>
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.antlr.runtime" version="0.0.0"/>
-<repository location="http://timeraider4u.github.io/antlr3/"/>
-</location>
-
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.antlr.feature.feature.group" version="0.0.0"/>
-<repository location="http://timeraider4u.github.io/antlr3/"/>
-</location>
-
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.xtext" version="0.0.0"/>
 <repository location="http://timeraider4u.github.io/xtext/"/>
 </location>
@@ -64,7 +54,7 @@
 -->
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="de.itemis.xtext.antlr.feature.feature.group" version="0.0.0"/>
+<unit id="org.xtext.antlr.generator.feature" version="0.0.0"/>
 <repository location="http://timeraider4u.github.io/org.xtext.antlr.generator/"/>
 </location>
 

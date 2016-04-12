@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
-<target name="org.eclipse.xtext.helios.target" sequenceNumber="4">
+<target name="org.eclipse.xtext.luna.target" sequenceNumber="4">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="false" type="InstallableUnit">
 <unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
@@ -32,10 +32,10 @@
 -->
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="de.itemis.xtext.antlr.feature.feature.group" version="0.0.0"/>
+<unit id="org.xtext.antlr.generator" version="0.0.0"/>
 <repository location="http://timeraider4u.github.io/org.xtext.antlr.generator/"/>
 </location>
-
+<!--
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.antlr.generator" version="0.0.0"/>
 <repository location="http://timeraider4u.github.io/org.xtext.antlr.generator/"/>
@@ -50,7 +50,7 @@
 <unit id="org.antlr.feature.feature.group" version="0.0.0"/>
 <repository location="http://timeraider4u.github.io/antlr3/"/>
 </location>
-
+-->
 
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">

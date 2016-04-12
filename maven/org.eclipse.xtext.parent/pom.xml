@@ -55,8 +55,8 @@
 		<equinox-common-version>3.6.200-v20130402-1505</equinox-common-version>
 		<jdt-core-version>3.10.0.v20140604-1726</jdt-core-version>
 		<icu4j.version>52.1</icu4j.version>
-		<antlr.version>3.5.3-SNAPSHOT</antlr.version>
-		<antlr-generator-version>3.5.3-SNAPSHOT</antlr-generator-version>
+		<antlr.version>3.2.1-SNAPSHOT</antlr.version>
+		<antlr.generator.version>3.2.1-SNAPSHOT</antlr.generator.version>
 		<junit-version>4.8.1</junit-version>
 
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
@@ -71,31 +71,39 @@
 	
 	<repositories>
 		<repository>
-			<id>org.xtext.antlr</id>
-			<name>org.xtext.antlr</name>
+			<id>org.xtext.antlr.generator</id>
+			<name>org.xtext.antlr.generator</name>
 			<layout>p2</layout>
-			<url>http://timeraider4u.github.io/org.xtext.antlr.generator/</url>
+			<url>https://timeraider4u.github.io/org.xtext.antlr.generator/</url>
 		</repository>
 		<repository>
-			<id>antlr3-maven</id>
-			<name>antlr3 mvn-repo</name>
-			<layout>default</layout>
-			<url>https://raw.githubusercontent.com/timeraider4u/antlr3/mvn-repo/</url>
-		</repository>
-		<repository>
-			<id>antlr3-eclipse</id>
-			<name>antlr3 eclipse</name>
+			<id>antlr3</id>
+			<name>antlr3</name>
 			<layout>p2</layout>
-			<url>http://timeraider4u.github.io/antlr3/</url>
+			<url>https://timeraider4u.github.io/antlr3/</url>
 		</repository>
 		<repository>
 			<id>Xtext</id>
 			<name>Xtext</name>
 			<layout>p2</layout>
-			<url>http://timeraider4u.github.io/xtext/</url>
+			<url>https://timeraider4u.github.io/xtext/</url>
 		</repository>
-		
+		<repository>
+			<id>antlr-mvnrepo-1</id>
+			<name>antlr-mvnrepo-1</name>
+			<url>https://raw.githubusercontent.com/timeraider4u/org.xtext.antlr.generator/mvn-repo/</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>antlr-mvnrepo-1</id>
+			<name>antlr-mvnrepo-1</name>
+			<url>https://raw.githubusercontent.com/timeraider4u/org.xtext.antlr.generator/mvn-repo/</url>
+			<layout>default</layout>
+		</pluginRepository>
+	</pluginRepositories>
 	
 	<licenses>
 		<license>

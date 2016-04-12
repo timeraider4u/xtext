@@ -35,9 +35,9 @@
 			<version>${emf.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.xtext</groupId>
-			<artifactId>xtext-antlr-generator</artifactId>
-			<version>${antlr-generator-version}</version>
+			<groupId>org.xtext</groupId>
+			<artifactId>antlr-generator</artifactId>
+			<version>${antlr.generator.version}</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -110,15 +110,17 @@
 							</exclusions>
 						</dependency>
 						<dependency>
-							<groupId>org.antlr</groupId>
-							<artifactId>antlr-runtime</artifactId>
-							<version>3.5.3-SNAPSHOT</version>
+							<groupId>org.xtext</groupId>
+							<artifactId>antlr-generator</artifactId>
+							<version>${antlr.generator.version}</version>
+							<!--
 							<exclusions>
 								<exclusion>
 									<artifactId>stringtemplate</artifactId>
 									<groupId>org.antlr</groupId>
 								</exclusion>
 							</exclusions>
+							-->
 						</dependency>
 					</dependencies>
 			</plugin>
