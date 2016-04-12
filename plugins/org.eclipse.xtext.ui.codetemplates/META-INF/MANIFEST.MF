@@ -8,14 +8,13 @@ Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.generator;resolution:=optional;x-installation:=greedy,
- de.itemis.xtext.antlr;resolution:=optional,
+ org.xtext.antlr.generator;bundle-version="3.2.1",
  org.eclipse.emf.codegen.ecore;bundle-version="2.10.2";resolution:=optional;x-installation:=greedy,
  org.eclipse.emf.mwe.utils;bundle-version="1.0.0";resolution:=optional,
  org.eclipse.emf.mwe2.launch;bundle-version="2.2.0";resolution:=optional,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore;bundle-version="2.10.2",
- org.eclipse.emf.common;bundle-version="2.10.1",
- org.antlr.runtime
+ org.eclipse.emf.common;bundle-version="2.10.1"
 Import-Package: com.ibm.icu.text;version="4.0.0";resolution:=optional,
  org.apache.commons.logging,
  org.apache.log4j;version="1.2.15"
