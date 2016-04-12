@@ -82,11 +82,19 @@
 			<layout>p2</layout>
 			<url>https://timeraider4u.github.io/antlr3/</url>
 		</repository>
+		<!--
 		<repository>
 			<id>Xtext</id>
 			<name>Xtext</name>
 			<layout>p2</layout>
 			<url>https://timeraider4u.github.io/xtext/</url>
+		</repository>
+		-->
+		<repository>
+			<id>Xtext</id>
+			<name>Xtext</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
 		</repository>
 		<repository>
 			<id>antlr-mvnrepo-1</id>
