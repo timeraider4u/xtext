@@ -83,15 +83,9 @@
 			<version>3.0</version>
 		</dependency>
 		<dependency>
-			<groupId>org.antlr</groupId>
-			<artifactId>antlr-runtime</artifactId>
-			<version>3.5.3-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>stringtemplate</artifactId>
-					<groupId>org.antlr</groupId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.xtext</groupId>
+			<artifactId>antlr-generator</artifactId>
+			<version>3.2.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

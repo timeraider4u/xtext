@@ -9,6 +9,7 @@ package org.eclipse.xtext.parser.antlr;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import org.antlr.runtime.TokenSource;
 import org.eclipse.xtext.parser.IParser;
 import org.eclipse.xtext.parser.antlr.AbstractTokenSourceProvider;
 

@@ -90,12 +90,45 @@
 			<layout>p2</layout>
 			<url>https://timeraider4u.github.io/xtext/</url>
 		</repository>
-		-->
+		
 		<repository>
 			<id>Xtext</id>
 			<name>Xtext</name>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.9.0/</url>
+		</repository>
+		
+		<repository>
+			<id>mwe2</id>
+			<name>mwe2</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.8.3/</url>
+		</repository>
+		<repository>
+			<id>xpand</id>
+			<name>xpand</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201505260349</url>
+		</repository>
+		<repository>
+			<id>Xtext-releases</id>
+			<name>Xtext-releases</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+		</repository>
+		
+	-->
+		<repository>
+			<id>mwe2</id>
+			<name>mwe2</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emft/mwe/updates/milestones/</url>
+		</repository>
+		<repository>
+			<id>Xtext-nightly</id>
+			<name>Xtext-nightly</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/latest/</url>
 		</repository>
 	</repositories>
 	

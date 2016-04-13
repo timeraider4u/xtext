@@ -9,6 +9,7 @@ package org.eclipse.xtext.parser.antlr;
 
 import java.io.Reader;
 import java.io.StringReader;
+import org.antlr.runtime.TokenSource;
 import org.eclipse.xtext.parser.antlr.TokenSourceProvider;
 
 /**

@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
  org.eclipse.xtext.xbase.lib,
- org.antlr.runtime,
+ org.xtext.antlr.generator,
  org.eclipse.xtend.lib
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -110,15 +110,9 @@
 		<!-- Explicit antl-runtime dependency to 3.2 to avoid loading of mismatched 
 			transitive dependencies -->
 		<dependency>
-			<groupId>org.antlr</groupId>
-			<artifactId>antlr-runtime</artifactId>
-			<version>${antlr.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>stringtemplate</artifactId>
-					<groupId>org.antlr</groupId>
-				</exclusion>
-			</exclusions>
+			<groupId>org.xtext</groupId>
+			<artifactId>antlr-generator</artifactId>
+			<version>${antlr.generator.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
