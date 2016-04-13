@@ -91,12 +91,15 @@
 				<artifactId>tycho-compiler-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
+					<compilerArgument>-warn:+discouraged,forbidden</compilerArgument>
 					<excludeResources>
 						<excludeResource>**/*.xtend</excludeResource>
 						<excludeResource>**/*.xtendbin</excludeResource>
 						<excludeResource>**/*._trace</excludeResource>
 					</excludeResources>
+					<!--
 					<useProjectSettings>true</useProjectSettings>
+					-->
 					</configuration>
 					<dependencies>
 						<dependency>
