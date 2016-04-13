@@ -96,6 +96,7 @@
 						<excludeResource>**/*.xtendbin</excludeResource>
 						<excludeResource>**/*._trace</excludeResource>
 					</excludeResources>
+					<useProjectSettings>true</useProjectSettings>
 					</configuration>
 					<dependencies>
 						<dependency>

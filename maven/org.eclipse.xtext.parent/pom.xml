@@ -76,13 +76,14 @@
 			<layout>p2</layout>
 			<url>https://timeraider4u.github.io/org.xtext.antlr.generator/</url>
 		</repository>
+		<!--
 		<repository>
 			<id>antlr3</id>
 			<name>antlr3</name>
 			<layout>p2</layout>
 			<url>https://timeraider4u.github.io/antlr3/</url>
 		</repository>
-		<!--
+		
 		<repository>
 			<id>Xtext</id>
 			<name>Xtext</name>
@@ -94,13 +95,7 @@
 			<id>Xtext</id>
 			<name>Xtext</name>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
-		</repository>
-		<repository>
-			<id>antlr-mvnrepo-1</id>
-			<name>antlr-mvnrepo-1</name>
-			<url>https://raw.githubusercontent.com/timeraider4u/org.xtext.antlr.generator/mvn-repo/</url>
-			<layout>default</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.9.0/</url>
 		</repository>
 	</repositories>
 	
