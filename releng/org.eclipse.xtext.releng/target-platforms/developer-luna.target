@@ -50,6 +50,7 @@
 -->
 
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+	<unit id="org.xtext.antlr.generator" version="0.0.0"/>
 	<unit id="org.xtext.antlr.generator.feature" version="0.0.0"/>
 	<repository location="http://timeraider4u.github.io/org.xtext.antlr.generator/"/>
 </location>

@@ -11,10 +11,14 @@
   <rm:property key="maven.p2.repository" value="${eclipse.download}/technology/m2e/releases/1.4/1.4.1.20140328-1905/"/>
   <rm:property key="maven.repository.uri" value="http://repo.maven.apache.org/maven2"/>
   <rm:property key="xtext.p2.repository" value="${eclipse.download}/modeling/tmf/xtext/updates/milestones/"/>
+  <rm:property key="org.xtext.antlr.generator.repository.uri" value="http://timeraider4u.github.io/org.xtext.antlr.generator/" />
   
   <rm:property key="orbit.p2.repository" value="${eclipse.download}/modeling/tmf/xtext/updates/orbit"/>
   <rm:property key="antlr_gen.p2.repository" value="http://download.itemis.de/updates/releases/2.0.0"/>
   <rm:property key="jdt_annotation.p2.repository" value="${eclipse.download}/eclipse/updates/3.8"/>
+  
+  <rm:locator pattern="^org\.xtext\.antlr\.generator$" searchPathRef="org.xtext.antlr.generator.releng"/>
+
 
   <rm:locator pattern="^org\.eclipse\.xtext\.releng$" searchPathRef="local.releng"/>
   <rm:locator pattern="^org\.eclipse\.xtext\.junit4$" searchPathRef="local.xtext.junit4" resolutionFilter="(DEV.BUILD=true)"/>
@@ -58,6 +62,20 @@
   <rm:locator pattern="^org.eclipse.jdt.annotation$" searchPathRef="jdt.annotation"/>
   
   <rm:locator searchPathRef="platform" failOnError="false"/>
+  
+  <rm:searchPath name="org.xtext.antlr.generator.releng">
+   <rm:provider componentTypes="eclipse.feature,osgi.bundle" 
+					 source="false" readerType="p2">
+      <rm:uri format="{0}">
+        <bc:propertyRef key="org.xtext.antlr.generator.repository.uri"/>
+      </rm:uri>
+		<rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:propertyRef key="org.xtext.antlr.generator.repository.uri"/>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
   
   <rm:searchPath name="google-maven">
     <rm:provider xsi:type="maven:MavenProvider" componentTypes="maven,osgi.bundle" source="false" readerType="maven2">
