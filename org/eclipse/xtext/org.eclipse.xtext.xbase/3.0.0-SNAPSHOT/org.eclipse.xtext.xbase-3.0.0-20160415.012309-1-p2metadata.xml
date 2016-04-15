@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.xtext.xbase' version='3.0.0.v20160415-0114'>
+    <update id='org.eclipse.xtext.xbase' range='[0.0.0,3.0.0.v20160415-0114)' severity='0'/>
+    <properties size='8'>
+      <property name='df_LT.providerName' value='Eclipse Modeling Project'/>
+      <property name='df_LT.pluginName' value='Xbase Model '/>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='org.eclipse.xtext'/>
+      <property name='maven-artifactId' value='org.eclipse.xtext.xbase'/>
+      <property name='maven-version' value='3.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='56'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase' version='3.0.0.v20160415-0114'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.xtext.xbase' version='3.0.0.v20160415-0114'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.formatting' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.formatting2' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.parser.antlr' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.parser.antlr.internal' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.serializer' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.services' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.typesystem' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.typing' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.validation' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.xAnnotations' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.xAnnotations.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.xAnnotations.util' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.compiler' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.compiler.output' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.controlflow' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.conversion' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.debug' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.featurecalls' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.formatting' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.formatting2' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.imports' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.interpreter' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.interpreter.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.jvmmodel' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.linking' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.parser.antlr' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.parser.antlr.internal' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.resource' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.scoping' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.scoping.batch' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.scoping.featurecalls' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.serializer' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.services' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.arguments' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.computation' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.conformance' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.internal' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.internal.util' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.legacy' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.override' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.references' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typesystem.util' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.typing' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.util' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.validation' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xtype' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xtype.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xtype.util' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <requires size='13'>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.10.2'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='2.10.1'/>
+      <required namespace='osgi.bundle' name='org.xtext.antlr.generator' range='3.2.1'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0' optional='true'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.objectweb.asm' range='[5.0.1,6.0.0)' optional='true' greedy='false'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.codegen' range='2.10.0'/>
+      <required namespace='java.package' name='com.ibm.icu.text' range='4.0.0' optional='true' greedy='false'/>
+      <required namespace='java.package' name='org.apache.log4j' range='1.2.15'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase' version='3.0.0.v20160415-0114'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.xtext.xbase;singleton:=true&#xA;Bundle-Version: 3.0.0.v20160415-0114&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
