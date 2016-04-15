@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.eclipse.xtext</groupId>
+  <artifactId>org.eclipse.xtext.xbase.lib</artifactId>
+  <versioning>
+    <versions>
+      <version>2.9.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160415011437</lastUpdated>
+  </versioning>
+</metadata>
