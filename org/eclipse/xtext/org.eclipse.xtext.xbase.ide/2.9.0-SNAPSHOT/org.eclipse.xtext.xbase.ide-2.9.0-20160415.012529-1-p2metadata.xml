@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.xtext.xbase.ide' version='2.9.0.v20160415-0114'>
+    <update id='org.eclipse.xtext.xbase.ide' range='[0.0.0,2.9.0.v20160415-0114)' severity='0'/>
+    <properties size='8'>
+      <property name='df_LT.providerName' value='Eclipse Modeling Project'/>
+      <property name='df_LT.pluginName' value='Xbase Generic IDE Services'/>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='org.eclipse.xtext'/>
+      <property name='maven-artifactId' value='org.eclipse.xtext.xbase.ide'/>
+      <property name='maven-version' value='2.9.0-SNAPSHOT'/>
+    </properties>
+    <provides size='8'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.ide' version='2.9.0.v20160415-0114'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ide' version='2.9.0.v20160415-0114'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.ide' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.ide.contentassist' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.ide.highlighting' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.xbase.ide.types' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.ide' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.objectweb.asm' range='[5.0.1,6.0.0)'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0' optional='true' greedy='false'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.ide' version='2.9.0.v20160415-0114'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.xtext.xbase.ide;singleton:=true&#xA;Bundle-Version: 2.9.0.v20160415-0114&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
