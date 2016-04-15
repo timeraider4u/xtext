@@ -15,7 +15,7 @@ import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
 /**
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 2.9
+ * @since 3.0
  */
 @ImplementedBy(ResourceDescriptionsProvider.class)
 @SuppressWarnings("all")
@@ -27,7 +27,7 @@ public interface IResourceDescriptionsProvider {
    *            the resource set that is currently used.
    * @return the {@link IResourceDescriptions} according to the usage context.
    * 
-   * @since 2.9
+   * @since 3.0
    */
   public abstract IResourceDescriptions getResourceDescriptions(final ResourceSet resourceSet);
 }

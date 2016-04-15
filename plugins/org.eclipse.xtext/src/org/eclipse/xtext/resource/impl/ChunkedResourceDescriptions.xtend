@@ -34,7 +34,7 @@ import org.eclipse.xtext.util.internal.EmfAdaptable
  * 
  * @author Sven Efftinge - Initial contribution and API
  * 
- * @since 2.9
+ * @since 3.0
  */
 @Beta
 @EmfAdaptable class ChunkedResourceDescriptions extends AbstractCompoundSelectable implements IResourceDescriptions, Externalizable {

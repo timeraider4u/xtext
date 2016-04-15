@@ -9,6 +9,8 @@ package org.eclipse.xtext.parser.antlr;
 
 import com.google.inject.ImplementedBy;
 import java.io.Reader;
+import org.antlr.runtime.CharStream;
+import org.antlr.runtime.TokenSource;
 import org.eclipse.xtext.parser.antlr.AbstractAntlrParserBasedTokenSourceProvider;
 
 /**
@@ -18,9 +20,9 @@ import org.eclipse.xtext.parser.antlr.AbstractAntlrParserBasedTokenSourceProvide
 @ImplementedBy(AbstractAntlrParserBasedTokenSourceProvider.class)
 @SuppressWarnings("all")
 public interface TokenSourceProvider {
-  public abstract /* TokenSource */Object createTokenSource(final CharSequence text);
+  public abstract TokenSource createTokenSource(final CharSequence text);
   
-  public abstract /* TokenSource */Object createTokenSource(final Reader reader);
+  public abstract TokenSource createTokenSource(final Reader reader);
   
-  public abstract /* TokenSource */Object createTokenSource(final /* CharStream */Object stream);
+  public abstract TokenSource createTokenSource(final CharStream stream);
 }

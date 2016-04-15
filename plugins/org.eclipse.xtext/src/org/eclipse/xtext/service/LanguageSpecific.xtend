@@ -14,7 +14,7 @@ import java.lang.annotation.RetentionPolicy
 /**
  * An annotation marking a binding as language specific in contrast to a global service.
  * 
- * @since 2.9
+ * @since 3.0
  * @author kosyakov - Initial contribution and API
  */
 @Retention(RetentionPolicy.RUNTIME)

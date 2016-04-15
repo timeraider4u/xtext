@@ -25,7 +25,7 @@ import java.io.ByteArrayOutputStream
 
 /**
  * A file system access implementation that is based on EMF URIs and URIConverter
- * @since 2.9
+ * @since 3.0
  */
 class URIBasedFileSystemAccess extends AbstractFileSystemAccess2 {
 	

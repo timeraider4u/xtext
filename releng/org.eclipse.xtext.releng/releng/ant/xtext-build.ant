@@ -250,19 +250,12 @@
 		<property name="p2.location.git" location="${p2.location.root}/xtext" />
 		<echo message="P2 Updatesite at: ${p2.location.site}" />
 		<delete dir="${p2.location.git}" failonerror="false" />
-		<git command="clone" dir="${p2.location.root}">
+		<mkdir dir="${p2.location.git}"/>
+		<git command="init" dir="${p2.location.git}" />
+		<git command="checkout" dir="${p2.location.git}">
 			<args>
-				<arg value="--progress" />
 				<arg value="-b"/>
 				<arg value="gh-pages" />
-				<arg value="--single-branch" />
-				<arg value="https://github.com/timeraider4u/xtext.git" />
-			</args>
-		</git>
-		<git command="rm" dir="${p2.location.git}">
-			<args>
-				<arg value="-rf" />
-				<arg value="." />
 			</args>
 		</git>
 		<copy todir="${p2.location.git}">
@@ -278,9 +271,20 @@
 				<arg value="-am 'git deployment of local build to p2 repository on github'" />
 			</args>
 		</git>
+		<git command="remote" dir="${p2.location.git}">
+			<args>
+				<arg value="add"/>
+				<arg value="origin" />
+				<arg value="https://github.com/timeraider4u/xtext.git" />
+			</args>
+		</git>
 		<git command="push" dir="${p2.location.git}" logTheError="true" >
 			<args>
+				<arg value="-f" />
 				<arg value="--progress" />
+				<arg value="--set-upstream" />
+				<arg value="origin" />
+				<arg value="gh-pages" />
 			</args>
 		</git>
 	</target>
