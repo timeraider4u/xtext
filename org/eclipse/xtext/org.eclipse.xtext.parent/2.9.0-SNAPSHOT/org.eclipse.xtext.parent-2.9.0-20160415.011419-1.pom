@@ -1,0 +1,507 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<name>Xtext Parent/Container</name>
+	<groupId>org.eclipse.xtext</groupId>
+	<artifactId>org.eclipse.xtext.parent</artifactId>
+	<packaging>pom</packaging>
+	<version>2.9.0-SNAPSHOT</version>
+
+	<modules>
+		<!-- OSGI bundles -->
+		<module>../org.eclipse.xtext.tycho.parent</module>
+
+		<!-- Pure maven -->
+		<module>../org.eclipse.xtext.xbase.lib.slim</module>
+		<module>../org.eclipse.xtext.maven.plugin</module>
+		<module>../org.eclipse.xtend.maven.plugin</module>
+		<module>../org.eclipse.xtend.maven.archetype</module>
+		<module>../org.eclipse.xtend.maven.android.archetype</module>
+
+		<!-- Deprecated -->
+		<module>../org.eclipse.xtext.xtext</module>
+
+		<!-- <module>../org.eclipse.xtend.lib.gwt.test</module> -->
+	</modules>
+
+	<properties>
+		<my.version>2.9.0-SNAPSHOT</my.version>
+		<myother.version>3.0.0-SNAPSHOT</myother.version>
+		<mavenVersion>3.2.1</mavenVersion>
+		<tycho-version>0.24.0</tycho-version>
+		<emf.version>(2.8,3.0)</emf.version>
+		<mwe2-version>(2.7,3.0)</mwe2-version>
+		<mwe-version>(1.2,2.0)</mwe-version>
+		<xpand-version>(1.9,3.0)</xpand-version>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<eclipse.name>luna</eclipse.name>
+
+		<maven-install-version>2.5.1</maven-install-version>
+		<jar-plugin-version>2.4</jar-plugin-version>
+		<asm.version>5.0.1</asm.version>
+		<guava.version>[10.0.1,14.0.1]</guava.version>
+		<javax-inject.version>1</javax-inject.version>
+		<google-inject.version>3.0</google-inject.version>
+		<log4j.version>1.2.16</log4j.version>
+		<commons-logging.version>1.1.3</commons-logging.version>
+		<commons-cli.version>1.2</commons-cli.version>
+		<equinox-common-version>3.6.200-v20130402-1505</equinox-common-version>
+		<jdt-core-version>3.10.0.v20140604-1726</jdt-core-version>
+		<icu4j.version>52.1</icu4j.version>
+		<antlr.version>3.2.1-SNAPSHOT</antlr.version>
+		<antlr.generator.version>3.2.1-SNAPSHOT</antlr.generator.version>
+		<junit-version>4.8.1</junit-version>
+
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>ISO-8859-1</project.reporting.outputEncoding>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+		<pgp.sign.skip>true</pgp.sign.skip>
+		<!-- github server corresponds to entry in ~/.m2/settings.xml -->
+		<github.global.server>github</github.global.server>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>org.xtext.antlr.generator</id>
+			<name>org.xtext.antlr.generator</name>
+			<layout>p2</layout>
+			<url>https://timeraider4u.github.io/org.xtext.antlr.generator/</url>
+		</repository>
+		<!--
+		<repository>
+			<id>antlr3</id>
+			<name>antlr3</name>
+			<layout>p2</layout>
+			<url>https://timeraider4u.github.io/antlr3/</url>
+		</repository>
+		
+		<repository>
+			<id>Xtext</id>
+			<name>Xtext</name>
+			<layout>p2</layout>
+			<url>https://timeraider4u.github.io/xtext/</url>
+		</repository>
+		
+		<repository>
+			<id>Xtext</id>
+			<name>Xtext</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/releases/2.9.0/</url>
+		</repository>
+		
+		<repository>
+			<id>mwe2</id>
+			<name>mwe2</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emft/mwe/updates/releases/2.8.3/</url>
+		</repository>
+		<repository>
+			<id>xpand</id>
+			<name>xpand</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201505260349</url>
+		</repository>
+		<repository>
+			<id>Xtext-releases</id>
+			<name>Xtext-releases</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+		</repository>
+		
+	-->
+		<repository>
+			<id>mwe2</id>
+			<name>mwe2</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/emft/mwe/updates/milestones/</url>
+		</repository>
+		<repository>
+			<id>Xtext-nightly</id>
+			<name>Xtext-nightly</name>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/latest/</url>
+		</repository>
+	</repositories>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>antlr-mvnrepo-1</id>
+			<name>antlr-mvnrepo-1</name>
+			<url>https://raw.githubusercontent.com/timeraider4u/org.xtext.antlr.generator/mvn-repo/</url>
+			<layout>default</layout>
+		</pluginRepository>
+	</pluginRepositories>
+	
+	<licenses>
+		<license>
+			<name>Eclipse Public License - v 1.0</name>
+			<url>http://www.eclipse.org/legal/epl-v10.html</url>
+		</license>
+	</licenses>
+	<build>
+		<extensions>
+			<!-- See https://jira.codehaus.org/browse/MINSTALL-102 -->
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.3</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<!-- See https://jira.codehaus.org/browse/MINSTALL-102 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>1.3.1</version>
+				<configuration>
+					<bannedPlugins>
+						<excludes>
+							<exclude>org.apache.maven.plugins:maven-install-plugin</exclude>
+							<exclude>org.apache.maven.plugins:maven-deploy-plugin</exclude>
+						</excludes>
+						<includes>
+							<include>org.apache.maven.plugins:maven-install-plugin:2.5.1</include>
+							<include>org.apache.maven.plugins:maven-deploy-plugin:2.8.1</include>
+						</includes>
+					</bannedPlugins>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.4</version>
+				<configuration>
+					<executable>/usr/local/bin/gpg</executable>
+					<skip>${pgp.sign.skip}</skip>
+				</configuration>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<compilerId>jdt</compilerId>
+					<optimize>true</optimize>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-compiler-jdt</artifactId>
+						<version>${tycho-version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<additionalparam>${javadoc.opts}</additionalparam>
+				</configuration>
+			</plugin>
+			<!-- add install and deploy here, otherwise deploying (deployAtEnd) may
+				be skipped -->
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>${maven-install-version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.1</version>
+				<configuration>
+					<deployAtEnd>false</deployAtEnd>
+					<altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.5</version>
+				<configuration>
+					<skip>true</skip>
+					<skip-deploy>true</skip-deploy>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.11</version>
+				<configuration>
+					<message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
+					<noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
+					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+					<branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
+					<includes><include>**/*</include></includes>
+					<merge>true</merge>
+					<repositoryName>xtext</repositoryName>      <!-- github repo name -->
+					<repositoryOwner>timeraider4u</repositoryOwner>    <!-- github username  -->
+				</configuration>
+				<executions>
+					<!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>deploy</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-plugin-plugin
+										</artifactId>
+										<versionRange>
+											[2.7,)
+										</versionRange>
+										<goals>
+											<goal>descriptor</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											build-helper-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.8,)
+										</versionRange>
+										<goals>
+											<goal>add-source</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.eclipse.tycho
+										</groupId>
+										<artifactId>
+											tycho-packaging-plugin
+										</artifactId>
+										<versionRange>
+											[0.22.0,)
+										</versionRange>
+										<goals>
+											<goal>build-qualifier</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-enforcer-plugin
+										</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>enforce</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<scm>
+		<connection>scm:git:git://git.eclipse.org/gitroot/tmf/org.eclipse.xtext.git</connection>
+		<developerConnection>scm:git:ssh://git.eclipse.org:29418/tmf/org.eclipse.xtext.git</developerConnection>
+		<url>http://git.eclipse.org/c/tmf/org.eclipse.xtext.git</url>
+	</scm>
+
+	<profiles>
+		<profile>
+			<id>doclint-java8-disable</id>
+			<activation>
+				<jdk>[1.8,)</jdk>
+			</activation>
+			<properties>
+				<javadoc.opts>-Xdoclint:none</javadoc.opts>
+			</properties>
+		</profile>
+		<profile>
+			<!-- Mac OSX Jdk fails to load javadoc -->
+			<id>javadoc-location-mac</id>
+			<activation>
+				<file>
+					<exists>${java.home}/../bin/javadoc</exists>
+					<missing>${java.home}/bin/javadoc</missing>
+				</file>
+			</activation>
+			<properties>
+				<javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
+			</properties>
+		</profile>
+		<profile>
+			<id>snapshot-build</id>
+			<repositories>
+				<repository>
+					<id>central snapshots</id>
+					<url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+					<snapshots>
+						<enabled>true</enabled>
+						<checksumPolicy>fail</checksumPolicy>
+					</snapshots>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central snapshots</id>
+					<url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+					<snapshots>
+						<enabled>true</enabled>
+						<checksumPolicy>fail</checksumPolicy>
+					</snapshots>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Temporary Staging Repository</name>
+			<url>file://${project.build.directory}/mvn-repo</url>
+		</repository>
+	</distributionManagement>
+
+	<url>http://www.eclipse.org/xtend/</url>
+	<description>Xtend is a little language that compiles into idiomatic Java source code. You can use any existing Java library seamlessly from Xtend (and vice-versa). The compiled output is readable and pretty-printed, and tends to run as fast or faster than the equivalent handwritten Java code. It's the CoffeeScript for Java.</description>
+	<developers>
+		<developer>
+			<id>dennis.huebner</id>
+			<name>Dennis</name>
+			<email>dennis.huebner@itemis.de</email>
+			<organization>itemis AG</organization>
+		</developer>
+		<developer>
+			<id>holger.schill</id>
+			<name>Holger</name>
+			<email>Holger.Schill@itemis.de</email>
+			<organization>itemis AG</organization>
+		</developer>
+		<developer>
+			<id>jan.koehnlein</id>
+			<name>Jan</name>
+			<email>jan.koehnlein@itemis.de</email>
+			<organization>itemis AG</organization>
+		</developer>
+		<developer>
+			<id>knut.wannheden</id>
+			<name>Knut</name>
+			<email>knut.wannheden@paranor.ch</email>
+			<organization>Paranor</organization>
+		</developer>
+		<developer>
+			<id>michael.clay</id>
+			<name>Michael</name>
+			<email>michael.clay@codeworkz.at</email>
+			<organization>Codeworkz</organization>
+		</developer>
+		<developer>
+			<id>moritz.eysholdt</id>
+			<name>Moritz</name>
+			<email>moritz.eysholdt@itemis.de</email>
+			<organization>itemis AG</organization>
+		</developer>
+		<developer>
+			<id>sebastian.zarnekow</id>
+			<name>Sebastian</name>
+			<email>sebastian.Zarnekow@itemis.de</email>
+			<organization>itemis AG</organization>
+		</developer>
+		<developer>
+			<id>sven.efftinge</id>
+			<name>Sven</name>
+			<email>sven.efftinge@itemis.de</email>
+			<organization>itemis AG</organization>
+			<roles>
+				<role>project lead</role>
+			</roles>
+		</developer>
+	</developers>
+</project>
