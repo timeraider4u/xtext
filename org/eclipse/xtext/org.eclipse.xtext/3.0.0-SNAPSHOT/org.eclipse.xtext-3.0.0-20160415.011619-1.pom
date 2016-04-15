@@ -1,0 +1,167 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.eclipse.xtext</groupId>
+		<artifactId>org.eclipse.xtext.tycho.parent</artifactId>
+		<version>2.9.0-SNAPSHOT</version>
+		<relativePath>../../maven/org.eclipse.xtext.tycho.parent</relativePath>
+	</parent>
+	<packaging>eclipse-plugin</packaging>
+	<artifactId>org.eclipse.xtext</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
+	<name>Xtext Runtime Bundle</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.xtext</groupId>
+			<artifactId>antlr-generator</artifactId>
+			<version>3.2.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.xtext</groupId>
+			<artifactId>org.eclipse.xtext.util</artifactId>
+			<version>[${my.version}]</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipse.xtend</groupId>
+			<artifactId>org.eclipse.xtend.lib</artifactId>
+			<version>[${my.version}]</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${google-inject.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+			<version>${emf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm.icu</groupId>
+			<artifactId>icu4j</artifactId>
+			<version>${icu4j.version}</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<!--
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+				<version>${xtext.version}</version>
+				<executions>
+					<execution>
+						<id>xtend-maven-gen</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>compile</goal>
+							<goal>xtend-install-debug-info</goal>
+							<goal>testCompile</goal>
+							<goal>xtend-test-install-debug-info</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputDirectory>xtend-gen</outputDirectory>
+				</configuration>
+			</plugin>
+			
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>xtend-generator</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<echo message="Executing xtend-generator"/>
+								<delete dir="xtend-gen"/>
+								<property name="classpathOuter" refid="maven.plugin.classpath" />
+								<path id="classpath">
+									<pathelement path="${classpathOuter}" />
+									<pathelement location="src"/>
+									<pathelement location="target/classes/"/>
+								</path>
+								<pathconvert pathsep="${path.separator}" 
+									property="classpath-string" 
+									refid="classpath">
+								</pathconvert>
+								<java classpathref="classpath"
+									classname="org.eclipse.xtend.core.compiler.batch.Main"
+									fork="true"
+									failonerror="yes">
+									<arg value="-cp" />
+									<arg value="${classpath-string}" />
+									<arg value="-d" />
+									<arg value="${basedir}/xtend-gen" />
+									<arg value="${basedir}/src" />
+								</java>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.xtext</groupId>
+						<artifactId>org.xtext.antlr.generator</artifactId>
+						<version>${antlr.generator.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.eclipse.xtend</groupId>
+						<artifactId>org.eclipse.xtend.core</artifactId>
+						<version>2.9.0</version>
+						<scope>system</scope>
+						<systemPath>/home/harry/.m2/repository/org/eclipse/xtend/org.eclipse.xtend.core/2.9.0/org.eclipse.xtend.core-2.9.0.jar</systemPath>
+					</dependency>
+					<dependency>
+						<groupId>org.eclipse.xtend</groupId>
+						<artifactId>xtend-maven-plugin</artifactId>
+						<version>2.9.0</version>
+						<scope>system</scope>
+						<systemPath>/home/harry/.m2/repository/org/eclipse/xtend/xtend-maven-plugin/2.9.0/xtend-maven-plugin-2.9.0.jar</systemPath>
+					</dependency>
+					<dependency>
+						<groupId>org.eclipse.xtext</groupId>
+						<artifactId>org.eclipse.xtext</artifactId>
+						<version>2.9.0</version>
+						<scope>system</scope>
+						<systemPath>/home/harry/.m2/repository/org/eclipse/xtext/org.eclipse.xtext/2.9.0/org.eclipse.xtext-2.9.0.jar</systemPath>
+					</dependency>
+				</dependencies>
+			</plugin>
+			-->
+		</plugins>
+	</build>
+	
+</project>
