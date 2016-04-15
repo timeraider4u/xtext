@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.xtext.common.types' version='3.0.0.v20160415-0114'>
+    <update id='org.eclipse.xtext.common.types' range='[0.0.0,3.0.0.v20160415-0114)' severity='0'/>
+    <properties size='8'>
+      <property name='df_LT.providerName' value='Eclipse Modeling Project'/>
+      <property name='df_LT.pluginName' value='Xtext Common Types'/>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='org.eclipse.xtext'/>
+      <property name='maven-artifactId' value='org.eclipse.xtext.common.types'/>
+      <property name='maven-version' value='3.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='14'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.common.types' version='3.0.0.v20160415-0114'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.xtext.common.types' version='3.0.0.v20160415-0114'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.access' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.access.binary' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.access.binary.asm' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.access.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.access.reflect' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.descriptions' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.util' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.common.types.xtext' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <requires size='10'>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.10.2'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='2.10.1'/>
+      <required namespace='osgi.bundle' name='com.google.inject' range='3.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.lib' range='2.2.0' optional='true'/>
+      <required namespace='osgi.bundle' name='org.objectweb.asm' range='[5.0.1,6.0.0)'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='com.google.guava' range='0.0.0'/>
+      <required namespace='java.package' name='org.apache.commons.logging' range='1.0.4' optional='true' greedy='false'/>
+      <required namespace='java.package' name='org.apache.log4j' range='1.2.15'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.xtext.common.types' version='3.0.0.v20160415-0114'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.xtext.common.types;singleton:=true&#xA;Bundle-Version: 3.0.0.v20160415-0114&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
