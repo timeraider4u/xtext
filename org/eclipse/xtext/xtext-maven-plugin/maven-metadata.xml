@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.eclipse.xtext</groupId>
+  <artifactId>xtext-maven-plugin</artifactId>
+  <versioning>
+    <latest>2.9.0-SNAPSHOT</latest>
+    <versions>
+      <version>2.9.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20160415013626</lastUpdated>
+  </versioning>
+</metadata>
