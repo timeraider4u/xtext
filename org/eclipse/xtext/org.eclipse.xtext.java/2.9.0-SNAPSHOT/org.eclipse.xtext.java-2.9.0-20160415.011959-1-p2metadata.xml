@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.xtext.java' version='2.9.0.v20160415-0114' singleton='false'>
+    <update id='org.eclipse.xtext.java' range='[0.0.0,2.9.0.v20160415-0114)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='Java Language'/>
+      <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org'/>
+      <property name='maven-groupId' value='org.eclipse.xtext'/>
+      <property name='maven-artifactId' value='org.eclipse.xtext.java'/>
+      <property name='maven-version' value='2.9.0-SNAPSHOT'/>
+    </properties>
+    <provides size='5'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.java' version='2.9.0.v20160415-0114'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.xtext.java' version='2.9.0.v20160415-0114'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.java' version='0.0.0'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.java.resource' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='6'>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.6.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='2.10.1'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.10.1'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.xtext.java' version='2.9.0.v20160415-0114'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.xtext.java&#xA;Bundle-Version: 2.9.0.v20160415-0114&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
