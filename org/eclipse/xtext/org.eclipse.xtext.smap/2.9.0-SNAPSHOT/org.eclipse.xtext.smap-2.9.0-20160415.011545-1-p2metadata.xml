@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.xtext.smap' version='2.9.0.v20160415-0114' singleton='false'>
+    <update id='org.eclipse.xtext.smap' range='[0.0.0,2.9.0.v20160415-0114)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='JSR-45 Smap installer'/>
+      <property name='org.eclipse.equinox.p2.provider' value='Eclipse Modeling Project'/>
+      <property name='maven-groupId' value='org.eclipse.xtext'/>
+      <property name='maven-artifactId' value='org.eclipse.xtext.smap'/>
+      <property name='maven-version' value='2.9.0-SNAPSHOT'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.smap' version='2.9.0.v20160415-0114'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.xtext.smap' version='2.9.0.v20160415-0114'/>
+      <provided namespace='java.package' name='org.eclipse.xtext.smap' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.xtext.smap' version='2.9.0.v20160415-0114'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.xtext.smap&#xA;Bundle-Version: 2.9.0.v20160415-0114&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
